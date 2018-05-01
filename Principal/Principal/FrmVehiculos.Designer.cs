@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgVehiculos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,20 +93,20 @@
             // 
             this.dtgVehiculos.AllowUserToDeleteRows = false;
             this.dtgVehiculos.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgVehiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgVehiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgVehiculos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgVehiculos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgVehiculos.BackgroundColor = System.Drawing.Color.CadetBlue;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Unicode MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgVehiculos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -160,8 +160,8 @@
             // 
             // Column5
             // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column5.FillWeight = 77.48927F;
             this.Column5.HeaderText = "Descripción";
             this.Column5.Name = "Column5";
@@ -218,8 +218,8 @@
             // 
             // Column13
             // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Column13.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column13.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column13.FillWeight = 77.48927F;
             this.Column13.HeaderText = "Fecha de Actualización";
             this.Column13.Name = "Column13";
@@ -227,9 +227,9 @@
             // 
             // btndtgEditar
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Olive;
-            this.btndtgEditar.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Olive;
+            this.btndtgEditar.DefaultCellStyle = dataGridViewCellStyle5;
             this.btndtgEditar.FillWeight = 50F;
             this.btndtgEditar.HeaderText = "mod";
             this.btndtgEditar.Name = "btndtgEditar";
@@ -258,35 +258,35 @@
             // 
             this.txtPlaca.Location = new System.Drawing.Point(408, 116);
             this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(112, 23);
+            this.txtPlaca.Size = new System.Drawing.Size(112, 22);
             this.txtPlaca.TabIndex = 69;
             // 
             // txtSeriemotor
             // 
             this.txtSeriemotor.Location = new System.Drawing.Point(106, 116);
             this.txtSeriemotor.Name = "txtSeriemotor";
-            this.txtSeriemotor.Size = new System.Drawing.Size(182, 23);
+            this.txtSeriemotor.Size = new System.Drawing.Size(182, 22);
             this.txtSeriemotor.TabIndex = 66;
             // 
             // txtSerie
             // 
             this.txtSerie.Location = new System.Drawing.Point(638, 52);
             this.txtSerie.Name = "txtSerie";
-            this.txtSerie.Size = new System.Drawing.Size(136, 23);
+            this.txtSerie.Size = new System.Drawing.Size(136, 22);
             this.txtSerie.TabIndex = 65;
             // 
             // txtColor
             // 
             this.txtColor.Location = new System.Drawing.Point(481, 55);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(111, 23);
+            this.txtColor.Size = new System.Drawing.Size(111, 22);
             this.txtColor.TabIndex = 63;
             // 
             // txtAño
             // 
             this.txtAño.Location = new System.Drawing.Point(334, 55);
             this.txtAño.Name = "txtAño";
-            this.txtAño.Size = new System.Drawing.Size(90, 23);
+            this.txtAño.Size = new System.Drawing.Size(90, 22);
             this.txtAño.TabIndex = 61;
             // 
             // txtDescripcion
@@ -303,7 +303,7 @@
             this.dtpActualizacion.Location = new System.Drawing.Point(527, 153);
             this.dtpActualizacion.Name = "dtpActualizacion";
             this.dtpActualizacion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtpActualizacion.Size = new System.Drawing.Size(178, 23);
+            this.dtpActualizacion.Size = new System.Drawing.Size(178, 22);
             this.dtpActualizacion.TabIndex = 75;
             // 
             // dtpAlta
@@ -312,28 +312,28 @@
             this.dtpAlta.Location = new System.Drawing.Point(175, 154);
             this.dtpAlta.Name = "dtpAlta";
             this.dtpAlta.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dtpAlta.Size = new System.Drawing.Size(178, 23);
+            this.dtpAlta.Size = new System.Drawing.Size(178, 22);
             this.dtpAlta.TabIndex = 72;
             // 
             // txtModelo
             // 
             this.txtModelo.Location = new System.Drawing.Point(345, 22);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(182, 23);
+            this.txtModelo.Size = new System.Drawing.Size(182, 22);
             this.txtModelo.TabIndex = 55;
             // 
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(195, 22);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(89, 23);
+            this.txtNumero.Size = new System.Drawing.Size(89, 22);
             this.txtNumero.TabIndex = 52;
             // 
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(34, 22);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(89, 23);
+            this.txtID.Size = new System.Drawing.Size(89, 22);
             this.txtID.TabIndex = 51;
             this.txtID.Text = "0";
             this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -344,7 +344,7 @@
             this.label13.Location = new System.Drawing.Point(382, 160);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(138, 16);
+            this.label13.Size = new System.Drawing.Size(173, 16);
             this.label13.TabIndex = 74;
             this.label13.Text = "Fecha de Actualización:";
             // 
@@ -354,7 +354,7 @@
             this.label12.Location = new System.Drawing.Point(82, 161);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 16);
+            this.label12.Size = new System.Drawing.Size(108, 16);
             this.label12.TabIndex = 73;
             this.label12.Text = "Fecha de Alta:";
             // 
@@ -364,7 +364,7 @@
             this.label11.Location = new System.Drawing.Point(527, 116);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 16);
+            this.label11.Size = new System.Drawing.Size(63, 16);
             this.label11.TabIndex = 71;
             this.label11.Text = "Estatus:";
             // 
@@ -374,7 +374,7 @@
             this.label10.Location = new System.Drawing.Point(295, 116);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(108, 16);
+            this.label10.Size = new System.Drawing.Size(132, 16);
             this.label10.TabIndex = 68;
             this.label10.Text = "Numero de Placa:";
             // 
@@ -384,7 +384,7 @@
             this.label9.Location = new System.Drawing.Point(1, 116);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 16);
+            this.label9.Size = new System.Drawing.Size(118, 16);
             this.label9.TabIndex = 67;
             this.label9.Text = "Serie del Motor:";
             // 
@@ -394,7 +394,7 @@
             this.label8.Location = new System.Drawing.Point(599, 55);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 16);
+            this.label8.Size = new System.Drawing.Size(49, 16);
             this.label8.TabIndex = 64;
             this.label8.Text = "Serie:";
             // 
@@ -404,7 +404,7 @@
             this.label7.Location = new System.Drawing.Point(431, 55);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 16);
+            this.label7.Size = new System.Drawing.Size(49, 16);
             this.label7.TabIndex = 62;
             this.label7.Text = "Color:";
             // 
@@ -414,7 +414,7 @@
             this.label6.Location = new System.Drawing.Point(294, 59);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 16);
+            this.label6.Size = new System.Drawing.Size(39, 16);
             this.label6.TabIndex = 60;
             this.label6.Text = "Año:";
             // 
@@ -424,7 +424,7 @@
             this.label5.Location = new System.Drawing.Point(7, 62);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 16);
+            this.label5.Size = new System.Drawing.Size(95, 16);
             this.label5.TabIndex = 59;
             this.label5.Text = "Descripción:";
             // 
@@ -434,7 +434,7 @@
             this.label4.Location = new System.Drawing.Point(534, 29);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 16);
+            this.label4.Size = new System.Drawing.Size(44, 16);
             this.label4.TabIndex = 57;
             this.label4.Text = "Tipo:";
             // 
@@ -444,7 +444,7 @@
             this.label3.Location = new System.Drawing.Point(294, 29);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 16);
+            this.label3.Size = new System.Drawing.Size(64, 16);
             this.label3.TabIndex = 54;
             this.label3.Text = "Modelo:";
             // 
@@ -454,7 +454,7 @@
             this.label2.Location = new System.Drawing.Point(130, 29);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 16);
+            this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 53;
             this.label2.Text = "Numero:";
             // 
@@ -464,7 +464,7 @@
             this.label14.Location = new System.Drawing.Point(7, 22);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(24, 16);
+            this.label14.Size = new System.Drawing.Size(27, 16);
             this.label14.TabIndex = 50;
             this.label14.Text = "ID:";
             // 
@@ -498,7 +498,7 @@
             this.gbVehiculos.Controls.Add(this.label7);
             this.gbVehiculos.Controls.Add(this.label9);
             this.gbVehiculos.Controls.Add(this.label8);
-            this.gbVehiculos.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbVehiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbVehiculos.Location = new System.Drawing.Point(33, 410);
             this.gbVehiculos.Name = "gbVehiculos";
             this.gbVehiculos.Size = new System.Drawing.Size(917, 205);
@@ -544,7 +544,7 @@
             // 
             // btnVguardar
             // 
-            this.btnVguardar.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVguardar.Image = global::Principal.Properties.Resources.guardar1;
             this.btnVguardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnVguardar.Location = new System.Drawing.Point(828, 22);
@@ -558,7 +558,7 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Image = global::Principal.Properties.Resources.REGRESAR1;
             this.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVolver.Location = new System.Drawing.Point(599, 59);
@@ -572,7 +572,7 @@
             // 
             // btnVeditar
             // 
-            this.btnVeditar.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVeditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVeditar.Image = global::Principal.Properties.Resources.icono_registro_a5;
             this.btnVeditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVeditar.Location = new System.Drawing.Point(486, 59);
@@ -586,7 +586,7 @@
             // 
             // btnVregistro
             // 
-            this.btnVregistro.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVregistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVregistro.Image = global::Principal.Properties.Resources.preuba_nuevo;
             this.btnVregistro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVregistro.Location = new System.Drawing.Point(330, 59);
@@ -600,7 +600,7 @@
             // 
             // btnVfiltrar
             // 
-            this.btnVfiltrar.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVfiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVfiltrar.Image = global::Principal.Properties.Resources.depositphotos_63778659_stock_illustration_vector_search_document_icon2;
             this.btnVfiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVfiltrar.Location = new System.Drawing.Point(176, 59);
