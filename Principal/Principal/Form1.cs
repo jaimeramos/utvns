@@ -62,5 +62,10 @@ namespace Principal
         {
             System.Environment.Exit(0);
         }
+
+        private void Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

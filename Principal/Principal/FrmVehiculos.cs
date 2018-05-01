@@ -32,7 +32,7 @@ namespace Principal
         {
           gbVehiculos.Enabled = false;
           dtgVehiculos.DataSource =  user.read();
-           // bool x = true;
+
          }
 
         
