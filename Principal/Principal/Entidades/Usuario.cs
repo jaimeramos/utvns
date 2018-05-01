@@ -8,24 +8,24 @@ namespace Principal.Entidades
 {
     class Usuario
     {
-    #region atributos
-        int id;
-        string name, nickname, lastname, email, pwd, token, admin;
-        DateTime expirationDate, createdAt, updatedAt;
-        bool active;
-      #endregion
-       
-    #region propiedades
-        public int Id
+        #region Atributos privados
+        static string Entity = "users";
+        string _id,  _name, _nickname, _lastname, _email, _pwd, _token, _admin;
+        DateTime _expirationDate, _createdAt, _updatedAt;
+        bool _active;
+        #endregion
+
+        #region Propiedades públicas
+        public string Id
         {
             get
             {
-                return id;
+                return _id;
             }
 
             set
             {
-                id = value;
+                _id = value;
             }
         }
 
@@ -33,12 +33,12 @@ namespace Principal.Entidades
         {
             get
             {
-                return name;
+                return _name;
             }
 
             set
             {
-                name = value;
+                _name = value;
             }
         }
 
@@ -46,12 +46,12 @@ namespace Principal.Entidades
         {
             get
             {
-                return nickname;
+                return _nickname;
             }
 
             set
             {
-                nickname = value;
+                _nickname = value;
             }
         }
 
@@ -59,12 +59,12 @@ namespace Principal.Entidades
         {
             get
             {
-                return lastname;
+                return _lastname;
             }
 
             set
             {
-                lastname = value;
+                _lastname = value;
             }
         }
 
@@ -72,12 +72,12 @@ namespace Principal.Entidades
         {
             get
             {
-                return email;
+                return _email;
             }
 
             set
             {
-                email = value;
+                _email = value;
             }
         }
 
@@ -85,12 +85,12 @@ namespace Principal.Entidades
         {
             get
             {
-                return pwd;
+                return _pwd;
             }
 
             set
             {
-                pwd = value;
+                _pwd = value;
             }
         }
 
@@ -98,12 +98,12 @@ namespace Principal.Entidades
         {
             get
             {
-                return token;
+                return _token;
             }
 
             set
             {
-                token = value;
+                _token = value;
             }
         }
 
@@ -111,12 +111,12 @@ namespace Principal.Entidades
         {
             get
             {
-                return admin;
+                return _admin;
             }
 
             set
             {
-                admin = value;
+                _admin = value;
             }
         }
 
@@ -124,12 +124,12 @@ namespace Principal.Entidades
         {
             get
             {
-                return expirationDate;
+                return _expirationDate;
             }
 
             set
             {
-                expirationDate = value;
+                _expirationDate = value;
             }
         }
 
@@ -137,12 +137,12 @@ namespace Principal.Entidades
         {
             get
             {
-                return createdAt;
+                return _createdAt;
             }
 
             set
             {
-                createdAt = value;
+                _createdAt = value;
             }
         }
 
@@ -150,12 +150,12 @@ namespace Principal.Entidades
         {
             get
             {
-                return updatedAt;
+                return _updatedAt;
             }
 
             set
             {
-                updatedAt = value;
+                _updatedAt = value;
             }
         }
 
@@ -163,45 +163,34 @@ namespace Principal.Entidades
         {
             get
             {
-                return active;
+                return _active;
             }
 
             set
             {
-                active = value;
+                _active = value;
             }
         }
+
         #endregion
 
-    #region metodos
+        #region metodos
 
+        /// <summary>
+        /// Obtiene un DataTable con todos los usuarios
+        /// </summary>
+        /// <returns>DataTable con los datos</returns>
         public DataTable read()
         {
-            var request = (HttpWebRequest)WebRequest.Create("https://utvns-jaraga.c9users.io/api/users");
-            
-            request.Method = "GET";
-            request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
-            request.Headers["x-access-token"] = Data.TOKEN;
-            var response = (HttpWebResponse)request.GetResponse();
-            string content = string.Empty;
-            using (var stream = response.GetResponseStream())
-            {
-                using (var sr = new StreamReader(stream))
-                {
-                    content = sr.ReadToEnd();
-                }
-            }
-            
-            DataTable dt = (DataTable) JsonConvert.DeserializeObject(content,typeof(DataTable));
-            return dt;
+            return Data.getData(Entity);
+
         }
         /// <summary>
         /// Agrega registros de usuarios
         /// </summary>
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
-        public void UpSert()
+        public bool UpSert()
         {
-            //sqlcommand cmd = accesobd.crearsqlcomando(k_prefijo + "_upsert");
             //accesobd.parameteradd(cmd, "@id", sqldbtype.int, this.id);
             //accesobd.parameteradd(cmd, "@nombre", sqldbtype.varchar, this.nombre);
             //accesobd.parameteradd(cmd, "@direccion", sqldbtype.varchar, this.direccion);
@@ -215,15 +204,16 @@ namespace Principal.Entidades
             //accesobd.parameteradd(cmd, "@id_tipoforjador", sqldbtype.int, this.id_tipoforjador);
             //accesobd.parameteradd(cmd, "@activo", sqldbtype.bit, this.activo);
             //accesobd.parameteradd(cmd, "@logo", sqldbtype.varchar, this.logo);
-            //if (this._id == 0)
-            //{
-            //    this._id = Convert.ToInt32(AccesoBD.EjecutarSQLScalar(cmd));
-            //    return this._id > 0;
-            //}
-            //else
-            //{
-            //    return AccesoBD.EjecutarSQLNonQuery(cmd) > 0;
-            //}
+            if (this.Id==String.Empty)
+            {
+            //    this.Id = Data.Post(Entity,args);
+                return this.Id != String.Empty;
+            }
+            else
+            {
+                //  return Data.Update(Entity,args);
+                return false;
+            }
         }
 
         #endregion
