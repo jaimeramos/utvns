@@ -32,9 +32,10 @@ namespace Principal.EnlaceDatos
             if (json.success != null) {
                 if (json.success == "true") {
                     TOKEN = json.token;
+                    return true;
                 }
             }
-            return  json.success!=null;
+            return  false;
         }
 
         /// <summary>
