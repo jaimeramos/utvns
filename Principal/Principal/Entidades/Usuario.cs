@@ -199,7 +199,7 @@ namespace Principal.Entidades
         {
             var request = (HttpWebRequest)WebRequest.Create("https://utvns-jaraga.c9users.io/api/users");
 
-            request.Method = "GET";
+            request.Method = "POST";
             request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
 
             var response = (HttpWebResponse)request.GetResponse();

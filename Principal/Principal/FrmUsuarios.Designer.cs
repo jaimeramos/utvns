@@ -239,6 +239,7 @@
             // 
             this.txtUcontraseña.Location = new System.Drawing.Point(426, 38);
             this.txtUcontraseña.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUcontraseña.MaxLength = 20;
             this.txtUcontraseña.Name = "txtUcontraseña";
             this.txtUcontraseña.PasswordChar = '*';
             this.txtUcontraseña.Size = new System.Drawing.Size(116, 23);
@@ -363,7 +364,7 @@
             // 
             this.btnUeditar.Image = global::Principal.Properties.Resources.Editar_usuario_little;
             this.btnUeditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUeditar.Location = new System.Drawing.Point(469, 16);
+            this.btnUeditar.Location = new System.Drawing.Point(439, 16);
             this.btnUeditar.Name = "btnUeditar";
             this.btnUeditar.Size = new System.Drawing.Size(128, 33);
             this.btnUeditar.TabIndex = 16;
@@ -376,7 +377,7 @@
             // 
             this.btnUregresar.Image = global::Principal.Properties.Resources.REGRESAR1;
             this.btnUregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUregresar.Location = new System.Drawing.Point(615, 16);
+            this.btnUregresar.Location = new System.Drawing.Point(573, 16);
             this.btnUregresar.Name = "btnUregresar";
             this.btnUregresar.Size = new System.Drawing.Size(94, 33);
             this.btnUregresar.TabIndex = 15;
@@ -389,7 +390,7 @@
             // 
             this.btnUusuario.Image = global::Principal.Properties.Resources.registro_usuario_1;
             this.btnUusuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUusuario.Location = new System.Drawing.Point(323, 16);
+            this.btnUusuario.Location = new System.Drawing.Point(304, 16);
             this.btnUusuario.Name = "btnUusuario";
             this.btnUusuario.Size = new System.Drawing.Size(129, 33);
             this.btnUusuario.TabIndex = 14;
