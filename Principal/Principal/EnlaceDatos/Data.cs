@@ -38,7 +38,7 @@ namespace Principal.EnlaceDatos
         }
 
         /// <summary>
-        /// Permite obtener los registros de la entidad
+        /// Permite realizar un GET con todos los registros de la entidad
         /// </summary>
         /// <param name="Entity">Nombre de la entidad</param>
         /// <returns>Regresa un DataTable</returns>
@@ -90,5 +90,15 @@ namespace Principal.EnlaceDatos
             }
             return result;
         }
+
+        /// <summary>
+        /// Permite realizar un POST para la entidad indicada
+        /// </summary>
+        /// <param name="Entity">Nombre de la entidad</param>
+        /// <param name="args">JSON string de la entidad</param>
+        /// <returns>Devuelve un JSON string de la entidad registrada</returns>
+        //public static DataTable sendData(string Entity, string args) {
+            
+        //}
     }
 }

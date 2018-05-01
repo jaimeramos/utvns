@@ -191,22 +191,10 @@ namespace Principal.Entidades
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
         public bool UpSert()
         {
-            //accesobd.parameteradd(cmd, "@id", sqldbtype.int, this.id);
-            //accesobd.parameteradd(cmd, "@nombre", sqldbtype.varchar, this.nombre);
-            //accesobd.parameteradd(cmd, "@direccion", sqldbtype.varchar, this.direccion);
-            //accesobd.parameteradd(cmd, "@telefono", sqldbtype.varchar, this.telefono);
-            //accesobd.parameteradd(cmd, "@website", sqldbtype.varchar, this.website);
-            //accesobd.parameteradd(cmd, "@id_categoria", sqldbtype.int, this.id_categoria);
-            //accesobd.parameteradd(cmd, "@corporativo", sqldbtype.varchar, this.corporativo);
-            //accesobd.parameteradd(cmd, "@ventasanualespromedio", sqldbtype.money, this.ventasanualespromedio);
-            //accesobd.parameteradd(cmd, "@id_giro", sqldbtype.int, this.id_giro);
-            //accesobd.parameteradd(cmd, "@id_sector", sqldbtype.int, this.id_sector);
-            //accesobd.parameteradd(cmd, "@id_tipoforjador", sqldbtype.int, this.id_tipoforjador);
-            //accesobd.parameteradd(cmd, "@activo", sqldbtype.bit, this.activo);
-            //accesobd.parameteradd(cmd, "@logo", sqldbtype.varchar, this.logo);
+
             if (this.Id==String.Empty)
             {
-            //    this.Id = Data.Post(Entity,args);
+              //  this.Id = Data.Post(Entity,args);
                 return this.Id != String.Empty;
             }
             else
