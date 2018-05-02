@@ -9,6 +9,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
+using System.Windows.Forms;
 
 namespace Principal.EnlaceDatos
 {
@@ -29,6 +30,7 @@ namespace Principal.EnlaceDatos
         /// <returns>Devuelve true si las credenciales son correctas, false si no</returns>
         public static bool Login(string usr, string pwd) {
             validLogin json = JsonConvert.DeserializeObject<validLogin>(getAuth("authenticate", new string[] { usr, pwd }));
+            if(json!=null)
             if (json.success != null) {
                 if (json.success == "true") {
                     TOKEN = json.token;
@@ -42,8 +44,8 @@ namespace Principal.EnlaceDatos
         /// Permite realizar un GET con todos los registros de la entidad
         /// </summary>
         /// <param name="Entity">Nombre de la entidad</param>
-        /// <returns>Regresa un DataTable</returns>
-        public static DataTable getData(string Entity) {
+        /// <returns>Regresa un JSON</returns>
+        public static string getData(string Entity) {
 
             var request = (HttpWebRequest)WebRequest.Create(url+Entity);
             request.Method = "GET";
@@ -58,8 +60,9 @@ namespace Principal.EnlaceDatos
                     content = sr.ReadToEnd();
                 }
             }
-            DataTable dt = (DataTable)JsonConvert.DeserializeObject(content, typeof(DataTable));
-            return dt;
+          // convierte un string JSON en DataTable
+          //  DataTable dt = (DataTable)JsonConvert.DeserializeObject(content, typeof(DataTable));
+            return content;
         }
         /// <summary>
         /// Realiza la autenticación mediante la API
@@ -71,35 +74,58 @@ namespace Principal.EnlaceDatos
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(url + entity);
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
+            string result= string.Empty;
+            try
+            {
+                using (var streamWriter = new
+
+                StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    string json = new JavaScriptSerializer().Serialize(new
+                    {
+                        nickname = args[0],
+                        pwd = args[1]
+                    });
+
+                    streamWriter.Write(json);
+                }
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    result = streamReader.ReadToEnd();
+                }
+            }
+            catch (Exception e) {
+                MessageBox.Show("Error"+e.StackTrace);
+            }
+            return result;
+        }
+        
+        /// <summary>
+        /// Permite realizar un POST para la entidad indicada
+        /// </summary>
+        /// <param name="Entity">Nombre de la entidad</param>
+        /// <param name="json">JSON string de la entidad</param>
+        /// <returns>Devuelve un JSON string de la entidad registrada</returns>
+        public static string sendData(string Entity, string json, string action) {
+                
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(url + Entity);
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = action;
+            httpWebRequest.Headers["x-access-token"] = Data.TOKEN;
             using (var streamWriter = new
 
             StreamWriter(httpWebRequest.GetRequestStream()))
             {
-                string json = new JavaScriptSerializer().Serialize(new
-                {
-                    nickname = args[0],
-                    pwd = args[1]
-                });
-
                 streamWriter.Write(json);
             }
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             string result;
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
-                 result = streamReader.ReadToEnd();
+                result = streamReader.ReadToEnd();
             }
             return result;
         }
-
-        /// <summary>
-        /// Permite realizar un POST para la entidad indicada
-        /// </summary>
-        /// <param name="Entity">Nombre de la entidad</param>
-        /// <param name="args">JSON string de la entidad</param>
-        /// <returns>Devuelve un JSON string de la entidad registrada</returns>
-        //public static DataTable sendData(string Entity, string args) {
-            
-        //}
     }
 }

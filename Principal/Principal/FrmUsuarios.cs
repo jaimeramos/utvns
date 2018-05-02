@@ -1,21 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Principal.Entidades;
-
+using System.Data;
+using System.Collections.Generic;
+using Principal.Tools;
+using System.Collections;
+using Newtonsoft.Json;
 
 namespace Principal
 {
     public partial class FrmUsuarios : Form
     {
         Usuario user = new Usuario();
-       
+        ArrayList  users = new ArrayList();
 
         public FrmUsuarios()
         {
@@ -49,9 +46,9 @@ namespace Principal
 
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
-          //  DataTable x =;
-           // x.Select("nickname = 'jramos'");
-            dtgUsuario.DataSource = user.read();
+            string json = user.read();
+           
+            dtgUsuario.DataSource = Util.convertToDataTable(json);
             //this.dtgUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dtgUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             
@@ -70,20 +67,16 @@ namespace Principal
             dtgUsuario.Columns["email"].DisplayIndex = 3;
             dtgUsuario.Columns["expirationdate"].DisplayIndex = 4;
             dtgUsuario.Columns["active"].DisplayIndex = 5;
-
-
         }
 
         private void btnFiltrarU_Click(object sender, EventArgs e)
         {
-
-            Usuario user = new Usuario();
             user.read();
         }
 
         private void btnUregresar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
         }
 
         private void btnNusuario_Click(object sender, EventArgs e)
@@ -101,42 +94,50 @@ namespace Principal
             btnUactualizar.Enabled = false;
             btnUguardar.Enabled = true;
             gbUsuarios1.Enabled = false;
-
-
         }
 
         private void btnUeditar_Click(object sender, EventArgs e)
         {
-
             gbUsuarios.Enabled = true;
             gbUsuarios1.Enabled = false;
             btnUguardar.Enabled = false;
             btnUactualizar.Enabled = true;
-
-
         }
 
         private void dtgUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = this.dtgUsuario.Rows[e.RowIndex];
-                txtUsuario.Text = row.Cells[3].Value.ToString();
-                txtUnombre.Text = row.Cells[4].Value.ToString();
-                txtUapellidos.Text = row.Cells[5].Value.ToString();
-                txtUemail.Text = row.Cells[7].Value.ToString();
-                dtpUfvencimiento.Text = row.Cells[1].Value.ToString();
-                chbUactivo.Checked = (bool)row.Cells[0].Value;
-
+                DataGridViewRow row = this.dtgUsuario.Rows[e.RowIndex];              
+                loadDataFromGrid(row);
             }
         }
-
+        public void loadDataFromGrid(DataGridViewRow row) {
+            user.Nickname= txtUsuario.Text = row.Cells[3].Value.ToString();
+            user.Name = txtUnombre.Text = row.Cells[4].Value.ToString();
+            user.Lastname= txtUapellidos.Text = row.Cells[5].Value.ToString();
+            user.Email= txtUemail.Text = row.Cells[7].Value.ToString();
+            dtpUfvencimiento.Text = row.Cells[1].Value.ToString().Substring(0,24);
+            user.ExpirationDate= DateTime.ParseExact(dtpUfvencimiento.Text, "dd/MM/yyyy",
+                                       System.Globalization.CultureInfo.InvariantCulture);
+            user.Id= row.Cells[2].Value.ToString();
+            user.Active=chbUactivo.Checked = (bool)row.Cells[0].Value;
+            user.Admin= chbUadmin.Checked=(bool)row.Cells[11].Value;
+        }
+        public void loadDataFromForm() {
+            user.Nickname = txtUsuario.Text ;
+            user.Name = txtUnombre.Text ;
+            user.Lastname = txtUapellidos.Text ;
+            user.Email = txtUemail.Text ;
+            user.ExpirationDate = DateTime.ParseExact(dtpUfvencimiento.Text, "dd/MM/yyyy",
+                                       System.Globalization.CultureInfo.InvariantCulture);
+            user.Active = chbUactivo.Checked ;
+            user.Admin = chbUadmin.Checked ;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             gbUsuarios1.Enabled = true;
             gbUsuarios.Enabled = false;
-
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -146,43 +147,40 @@ namespace Principal
                 dtgUsuario.CurrentCell = null;
                 foreach (DataGridViewRow r in dtgUsuario.Rows)
                 {
-                    //try
-                    //{
-                        r.Visible = false;
-                    //}
-                    //catch (Exception)
-                    //{
-
-                    //    throw;
-                    //}
+                    r.Visible = false;
                 }
                 foreach (DataGridViewRow r in dtgUsuario.Rows)
                 {
-                    bool valida = false;
                     foreach (DataGridViewCell c in r.Cells)
                     {
                         if ((c.Value.ToString().ToUpper()).IndexOf(txtUfiltro.Text.ToUpper()) == 0)
                         {
-                            valida = true;
                             r.Visible = true;
                             break;
-
                         }
                     }
-                   // if (valida == false) r.Visible = false;
                 }
             }
             else
             {
-
                 dtgUsuario.DataSource = user.read();
-
             }
         }
 
         private void btnUactualizar_Click(object sender, EventArgs e)
         {
+            loadDataFromForm();
+            user.upSert();
+            gbUsuarios.Enabled = false;
+            gbUsuarios1.Enabled = true;
+            btnUguardar.Enabled = true;
+            btnUactualizar.Enabled = false;
+        }
 
+        private void btnUguardar_Click(object sender, EventArgs e)
+        {
+            //user.upSert();
+            gbUsuarios.Enabled = false;
         }
     }
       
