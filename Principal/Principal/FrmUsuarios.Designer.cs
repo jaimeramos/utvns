@@ -68,15 +68,18 @@
             // dtgUsuario
             // 
             this.dtgUsuario.AllowUserToAddRows = false;
+            this.dtgUsuario.AllowUserToDeleteRows = false;
             this.dtgUsuario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUsuario.Location = new System.Drawing.Point(5, 70);
             this.dtgUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtgUsuario.Name = "dtgUsuario";
+            this.dtgUsuario.ReadOnly = true;
             this.dtgUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgUsuario.Size = new System.Drawing.Size(748, 185);
             this.dtgUsuario.TabIndex = 0;
             this.dtgUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsuario_CellContentClick);
+            this.dtgUsuario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsuario_RowEnter);
             // 
             // gbUsuarios
             // 
@@ -131,7 +134,7 @@
             this.btnUactualizar.Name = "btnUactualizar";
             this.btnUactualizar.Size = new System.Drawing.Size(116, 42);
             this.btnUactualizar.TabIndex = 19;
-            this.btnUactualizar.Text = "Actualizar";
+            this.btnUactualizar.Text = "Guardar";
             this.btnUactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUactualizar.UseVisualStyleBackColor = true;
             this.btnUactualizar.Click += new System.EventHandler(this.btnUactualizar_Click);
@@ -339,7 +342,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 29);
+            this.label1.Location = new System.Drawing.Point(11, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 16);
             this.label1.TabIndex = 4;
@@ -364,9 +367,9 @@
             // 
             this.btnUeditar.Image = global::Principal.Properties.Resources.Editar_usuario_little;
             this.btnUeditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUeditar.Location = new System.Drawing.Point(469, 16);
+            this.btnUeditar.Location = new System.Drawing.Point(481, 15);
             this.btnUeditar.Name = "btnUeditar";
-            this.btnUeditar.Size = new System.Drawing.Size(128, 33);
+            this.btnUeditar.Size = new System.Drawing.Size(142, 33);
             this.btnUeditar.TabIndex = 16;
             this.btnUeditar.Text = "Editar Usuario";
             this.btnUeditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -377,9 +380,9 @@
             // 
             this.btnUregresar.Image = global::Principal.Properties.Resources.REGRESAR1;
             this.btnUregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUregresar.Location = new System.Drawing.Point(615, 16);
+            this.btnUregresar.Location = new System.Drawing.Point(650, 16);
             this.btnUregresar.Name = "btnUregresar";
-            this.btnUregresar.Size = new System.Drawing.Size(94, 33);
+            this.btnUregresar.Size = new System.Drawing.Size(103, 33);
             this.btnUregresar.TabIndex = 15;
             this.btnUregresar.Text = "Regresar";
             this.btnUregresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -403,11 +406,11 @@
             // 
             this.btnUFiltrar.Image = global::Principal.Properties.Resources.depositphotos_63778659_stock_illustration_vector_search_document_icon2;
             this.btnUFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUFiltrar.Location = new System.Drawing.Point(214, 16);
+            this.btnUFiltrar.Location = new System.Drawing.Point(201, 16);
             this.btnUFiltrar.Name = "btnUFiltrar";
-            this.btnUFiltrar.Size = new System.Drawing.Size(84, 33);
+            this.btnUFiltrar.Size = new System.Drawing.Size(116, 33);
             this.btnUFiltrar.TabIndex = 13;
-            this.btnUFiltrar.Text = "Filtrar";
+            this.btnUFiltrar.Text = "Limpiar filtro";
             this.btnUFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUFiltrar.UseVisualStyleBackColor = true;
             this.btnUFiltrar.Click += new System.EventHandler(this.btnFiltrarU_Click);

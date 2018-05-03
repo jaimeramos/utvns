@@ -221,11 +221,10 @@ namespace Principal.Entidades
             }
             else
             {
-                Entity += "/" + this.Id;
                 if(this.Pwd==null)
-                    Data.sendData(Entity,json, "PUT");
+                    Data.sendData(Entity + "/" + this.Id, json, "PUT");
                 else
-                    Data.sendData(Entity, jsonPwd, "PUT");
+                    Data.sendData(Entity + "/" + this.Id, jsonPwd, "PUT");
 
 
                 //  return Data.Update(Entity,args);

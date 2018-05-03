@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using Principal.EnlaceDatos;
 namespace Principal
@@ -8,9 +9,9 @@ namespace Principal
         public frmLogin()
         {
             InitializeComponent();
-            pbImagen.Image = Image.FromFile("login.png");
-            pbUsuario.Image = Image.FromFile("usuario.png");
-            pbContraseña.Image = Image.FromFile("candado.png");
+            //pbImagen.Image = Image.FromFile("login.png");
+            //pbUsuario.Image = Image.FromFile("usuario.png");
+            //pbContraseña.Image = Image.FromFile("candado.png");
         }
 
         private void button1_Click(object sender, EventArgs e)
