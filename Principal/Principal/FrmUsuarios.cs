@@ -46,37 +46,43 @@ namespace Principal
 
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
+            fillGridView();
+        }
+        public void fillGridView() {
             string json = user.read();
-           
             dtgUsuario.DataSource = Util.convertToDataTable(json);
-            //this.dtgUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+
             dtgUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             
             gbUsuarios.Enabled = false;
          
-            this.dtgUsuario.Columns[6].Visible = false;
-            this.dtgUsuario.Columns[8].Visible = false;
+            this.dtgUsuario.Columns["pwd"].Visible = false;
+            this.dtgUsuario.Columns["created_at"].Visible = false;
+            this.dtgUsuario.Columns["updated_at"].Visible = false;
+            this.dtgUsuario.Columns["__v"].Visible = false;
+            this.dtgUsuario.Columns["_id"].Visible = false;
 
-            //this.dtgUsuario.Columns["_id"].SortMode =
-          //  DataGridViewColumnSortMode.Automatic;
-
-            dtgUsuario.Columns["_id"].Visible = false;
             dtgUsuario.Columns["nickname"].DisplayIndex = 0;
+            dtgUsuario.Columns["nickname"].HeaderText = "Usuario";
             dtgUsuario.Columns["name"].DisplayIndex = 1;
+            dtgUsuario.Columns["name"].HeaderText = "Nombre";
             dtgUsuario.Columns["lastname"].DisplayIndex = 2;
+            dtgUsuario.Columns["lastname"].HeaderText = "Apellidos";
+            dtgUsuario.Columns["lastname"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dtgUsuario.Columns["email"].DisplayIndex = 3;
+            dtgUsuario.Columns["email"].HeaderText = "Email";
+            dtgUsuario.Columns["email"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dtgUsuario.Columns["expirationdate"].DisplayIndex = 4;
+            dtgUsuario.Columns["expirationdate"].HeaderText = "Vigencia";
             dtgUsuario.Columns["active"].DisplayIndex = 5;
-            dtgUsuario.Columns["created_At"].Visible = false;
-            dtgUsuario.Columns["updated_At"].Visible = false;
-            
-
+            dtgUsuario.Columns["active"].HeaderText = "Activo";
+            dtgUsuario.Columns["admin"].DisplayIndex = 6;
+            dtgUsuario.Columns["admin"].HeaderText = "Administrador";
 
         }
-
         private void btnFiltrarU_Click(object sender, EventArgs e)
         {
-            user.read();
+            fillGridView();
         }
 
         private void btnUregresar_Click(object sender, EventArgs e)
@@ -111,18 +117,18 @@ namespace Principal
 
         private void dtgUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dtgUsuario.Rows[e.RowIndex];              
-                loadDataFromGrid(row);
-            }
+            //if (e.RowIndex >= 0)
+            //{
+            //    DataGridViewRow row = this.dtgUsuario.Rows[e.RowIndex];
+            //    loadDataFromGrid(row);
+            //}
         }
         public void loadDataFromGrid(DataGridViewRow row) {
             user.Nickname= txtUsuario.Text = row.Cells[3].Value.ToString();
             user.Name = txtUnombre.Text = row.Cells[4].Value.ToString();
             user.Lastname= txtUapellidos.Text = row.Cells[5].Value.ToString();
             user.Email= txtUemail.Text = row.Cells[7].Value.ToString();
-            dtpUfvencimiento.Text = row.Cells[1].Value.ToString();//.Substring(0,24);
+            dtpUfvencimiento.Text = row.Cells[9].Value.ToString();//.Substring(0,24);
             user.ExpirationDate= DateTime.ParseExact(dtpUfvencimiento.Text, "dd/MM/yyyy",
                                        System.Globalization.CultureInfo.InvariantCulture);
             user.Id= row.Cells[2].Value.ToString();
@@ -168,7 +174,7 @@ namespace Principal
             }
             else
             {
-                dtgUsuario.DataSource = user.read();
+                fillGridView();
             }
         }
 
@@ -180,12 +186,22 @@ namespace Principal
             gbUsuarios1.Enabled = true;
             btnUguardar.Enabled = true;
             btnUactualizar.Enabled = false;
+            fillGridView();
         }
 
         private void btnUguardar_Click(object sender, EventArgs e)
         {
             //user.upSert();
             gbUsuarios.Enabled = false;
+        }
+
+        private void dtgUsuario_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dtgUsuario.Rows[e.RowIndex];
+                loadDataFromGrid(row);
+            }
         }
     }
       
