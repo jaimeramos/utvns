@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Principal.EnlaceDatos;
 namespace Principal
@@ -23,9 +16,9 @@ namespace Principal
         private void button1_Click(object sender, EventArgs e)
         {
            if (Data.Login(txtLusuario.Text, txtLcontraseña.Text))
-                {
-                    this.Hide();
-                    new Principal().Show();
+            {
+                this.Hide();
+                new Principal().Show();
                 }
                 else
                 {

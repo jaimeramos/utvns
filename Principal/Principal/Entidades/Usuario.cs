@@ -1,18 +1,17 @@
 ﻿using System;
-using System.IO;
-using System.Net;
 using System.Data;
-using Newtonsoft.Json;
 using Principal.EnlaceDatos;
+using System.Web.Script.Serialization;
+
 namespace Principal.Entidades
 {
     class Usuario
     {
         #region Atributos privados
         static string Entity = "users";
-        string _id,  _name, _nickname, _lastname, _email, _pwd, _token, _admin;
+        string _id,  _name, _nickname, _lastname, _email, _pwd, _token;
         DateTime _expirationDate, _createdAt, _updatedAt;
-        bool _active;
+        bool _active, _admin;
         #endregion
 
         #region Propiedades públicas
@@ -107,7 +106,7 @@ namespace Principal.Entidades
             }
         }
 
-        public string Admin
+        public bool Admin
         {
             get
             {
@@ -180,7 +179,7 @@ namespace Principal.Entidades
         /// Obtiene un DataTable con todos los usuarios
         /// </summary>
         /// <returns>DataTable con los datos</returns>
-        public DataTable read()
+        public string read()
         {
             return Data.getData(Entity);
 
@@ -189,16 +188,46 @@ namespace Principal.Entidades
         /// Agrega registros de usuarios
         /// </summary>
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
-        public bool UpSert()
+        public bool upSert()
         {
-
+            string json = new JavaScriptSerializer().Serialize(new
+            {
+                _id=this.Id,
+                name = this.Name,
+                lastname = this.Lastname,
+                nickname= this.Nickname,
+                expirationDate= this.ExpirationDate,
+                email= this.Email,
+                active= this.Active,
+                admin= this.Admin
+            });
+            string jsonPwd = new JavaScriptSerializer().Serialize(new
+            {
+                id = this.Id,
+                name = this.Name,
+                lastname = this.Lastname,
+                nickname = this.Nickname,
+                pwd = this.Pwd,
+                expirationDate = this.ExpirationDate,
+                email = this.Email,
+                active = this.Active,
+                admin = this.Admin
+            });
             if (this.Id==String.Empty)
             {
-              //  this.Id = Data.Post(Entity,args);
+                //this.Id =
+                    Data.sendData(Entity, json, "POST");
                 return this.Id != String.Empty;
             }
             else
             {
+                Entity += "/" + this.Id;
+                if(this.Pwd==null)
+                    Data.sendData(Entity,json, "PUT");
+                else
+                    Data.sendData(Entity, jsonPwd, "PUT");
+
+
                 //  return Data.Update(Entity,args);
                 return false;
             }
