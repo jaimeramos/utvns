@@ -100,12 +100,13 @@ namespace Principal.EnlaceDatos
             }
             return result;
         }
-        
+
         /// <summary>
         /// Permite realizar un POST para la entidad indicada
         /// </summary>
         /// <param name="Entity">Nombre de la entidad</param>
         /// <param name="json">JSON string de la entidad</param>
+        /// <param name="action">Indica si se trata de un PUSH o un PUT</param>
         /// <returns>Devuelve un JSON string de la entidad registrada</returns>
         public static string sendData(string Entity, string json, string action) {
                 
