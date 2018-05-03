@@ -216,7 +216,7 @@ namespace Principal.Entidades
             if (this.Id==String.Empty)
             {
                 //this.Id =
-                    Data.sendData(Entity, json, "POST");
+                    Data.sendData(Entity, jsonPwd, "POST");
                 return this.Id != String.Empty;
             }
             else

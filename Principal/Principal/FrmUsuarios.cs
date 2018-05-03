@@ -67,6 +67,11 @@ namespace Principal
             dtgUsuario.Columns["email"].DisplayIndex = 3;
             dtgUsuario.Columns["expirationdate"].DisplayIndex = 4;
             dtgUsuario.Columns["active"].DisplayIndex = 5;
+            dtgUsuario.Columns["created_At"].Visible = false;
+            dtgUsuario.Columns["updated_At"].Visible = false;
+            
+
+
         }
 
         private void btnFiltrarU_Click(object sender, EventArgs e)
@@ -117,7 +122,7 @@ namespace Principal
             user.Name = txtUnombre.Text = row.Cells[4].Value.ToString();
             user.Lastname= txtUapellidos.Text = row.Cells[5].Value.ToString();
             user.Email= txtUemail.Text = row.Cells[7].Value.ToString();
-            dtpUfvencimiento.Text = row.Cells[1].Value.ToString().Substring(0,24);
+            dtpUfvencimiento.Text = row.Cells[1].Value.ToString();//.Substring(0,24);
             user.ExpirationDate= DateTime.ParseExact(dtpUfvencimiento.Text, "dd/MM/yyyy",
                                        System.Globalization.CultureInfo.InvariantCulture);
             user.Id= row.Cells[2].Value.ToString();

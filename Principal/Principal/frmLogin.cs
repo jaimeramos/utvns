@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Principal.EnlaceDatos;
+using System.Drawing;
 namespace Principal
 {
     public partial class frmLogin : Form
@@ -36,7 +37,7 @@ namespace Principal
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            txtLusuario.Focus();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -51,7 +52,6 @@ namespace Principal
 
         private void txtLcontraseña_Click(object sender, EventArgs e)
         {
-            txtLcontraseña.UseSystemPasswordChar = true;
             txtLcontraseña.Text = "";
         }
 
@@ -62,7 +62,20 @@ namespace Principal
 
         private void txtLcontraseña_TextChanged(object sender, EventArgs e)
         {
-          
+           txtLcontraseña.UseSystemPasswordChar = true;
+           
+        }
+
+        private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+
+        }
+
+        private void txtLusuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13) {
+                button1_Click(sender,e);
+            }
         }
     }
 }

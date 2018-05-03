@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarios));
             this.dtgUsuario = new System.Windows.Forms.DataGridView();
             this.gbUsuarios = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -37,9 +38,7 @@
             this.txtUccontraseña = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.chbUadmin = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.chbUactivo = new System.Windows.Forms.CheckBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtUnombre = new System.Windows.Forms.TextBox();
             this.txtUcontraseña = new System.Windows.Forms.TextBox();
@@ -125,11 +124,11 @@
             // btnUactualizar
             // 
             this.btnUactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUactualizar.Image = global::Principal.Properties.Resources.actualizar_little1;
+            this.btnUactualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnUactualizar.Image")));
             this.btnUactualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUactualizar.Location = new System.Drawing.Point(593, 85);
+            this.btnUactualizar.Location = new System.Drawing.Point(593, 83);
             this.btnUactualizar.Name = "btnUactualizar";
-            this.btnUactualizar.Size = new System.Drawing.Size(116, 42);
+            this.btnUactualizar.Size = new System.Drawing.Size(116, 48);
             this.btnUactualizar.TabIndex = 19;
             this.btnUactualizar.Text = "Actualizar";
             this.btnUactualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -155,7 +154,7 @@
             this.dtpUfvencimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 7.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpUfvencimiento.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpUfvencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpUfvencimiento.Location = new System.Drawing.Point(426, 105);
+            this.dtpUfvencimiento.Location = new System.Drawing.Point(454, 105);
             this.dtpUfvencimiento.Name = "dtpUfvencimiento";
             this.dtpUfvencimiento.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dtpUfvencimiento.Size = new System.Drawing.Size(116, 22);
@@ -164,7 +163,7 @@
             // 
             // txtUccontraseña
             // 
-            this.txtUccontraseña.Location = new System.Drawing.Point(426, 69);
+            this.txtUccontraseña.Location = new System.Drawing.Point(457, 69);
             this.txtUccontraseña.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUccontraseña.Name = "txtUccontraseña";
             this.txtUccontraseña.PasswordChar = '*';
@@ -174,54 +173,37 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.chbUadmin);
-            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.chbUactivo);
-            this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Location = new System.Drawing.Point(285, 134);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(257, 48);
+            this.groupBox2.Size = new System.Drawing.Size(285, 48);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             // 
             // chbUadmin
             // 
             this.chbUadmin.AutoSize = true;
-            this.chbUadmin.Location = new System.Drawing.Point(223, 23);
+            this.chbUadmin.Location = new System.Drawing.Point(156, 16);
             this.chbUadmin.Name = "chbUadmin";
-            this.chbUadmin.Size = new System.Drawing.Size(15, 14);
+            this.chbUadmin.Size = new System.Drawing.Size(123, 20);
             this.chbUadmin.TabIndex = 15;
+            this.chbUadmin.Text = "Administrador";
+            this.chbUadmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chbUadmin.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 19);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 16);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Activo:";
             // 
             // chbUactivo
             // 
             this.chbUactivo.AutoSize = true;
-            this.chbUactivo.Location = new System.Drawing.Point(78, 21);
+            this.chbUactivo.Location = new System.Drawing.Point(50, 16);
             this.chbUactivo.Name = "chbUactivo";
-            this.chbUactivo.Size = new System.Drawing.Size(15, 14);
+            this.chbUactivo.Size = new System.Drawing.Size(70, 20);
             this.chbUactivo.TabIndex = 14;
+            this.chbUactivo.Text = "Activo";
             this.chbUactivo.UseVisualStyleBackColor = true;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(114, 21);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(108, 16);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "Administrador:";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(71, 34);
+            this.txtUsuario.Location = new System.Drawing.Point(81, 31);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(116, 22);
@@ -229,7 +211,7 @@
             // 
             // txtUnombre
             // 
-            this.txtUnombre.Location = new System.Drawing.Point(73, 66);
+            this.txtUnombre.Location = new System.Drawing.Point(82, 66);
             this.txtUnombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUnombre.Name = "txtUnombre";
             this.txtUnombre.Size = new System.Drawing.Size(128, 22);
@@ -238,7 +220,7 @@
             // 
             // txtUcontraseña
             // 
-            this.txtUcontraseña.Location = new System.Drawing.Point(426, 38);
+            this.txtUcontraseña.Location = new System.Drawing.Point(457, 37);
             this.txtUcontraseña.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUcontraseña.Name = "txtUcontraseña";
             this.txtUcontraseña.PasswordChar = '*';
@@ -248,7 +230,7 @@
             // 
             // txtUapellidos
             // 
-            this.txtUapellidos.Location = new System.Drawing.Point(73, 100);
+            this.txtUapellidos.Location = new System.Drawing.Point(81, 100);
             this.txtUapellidos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUapellidos.Name = "txtUapellidos";
             this.txtUapellidos.Size = new System.Drawing.Size(182, 22);
@@ -266,7 +248,7 @@
             // 
             // txtUemail
             // 
-            this.txtUemail.Location = new System.Drawing.Point(73, 130);
+            this.txtUemail.Location = new System.Drawing.Point(81, 130);
             this.txtUemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUemail.Name = "txtUemail";
             this.txtUemail.Size = new System.Drawing.Size(158, 22);
@@ -285,7 +267,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(338, 41);
+            this.label6.Location = new System.Drawing.Point(282, 40);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 16);
             this.label6.TabIndex = 9;
@@ -416,12 +398,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 520);
+            this.ClientSize = new System.Drawing.Size(841, 520);
             this.Controls.Add(this.gbUsuarios1);
             this.Controls.Add(this.gbUsuarios);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmUsuarios";
             this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuario)).EndInit();
@@ -441,9 +424,7 @@
         private System.Windows.Forms.GroupBox gbUsuarios;
         private System.Windows.Forms.CheckBox chbUadmin;
         private System.Windows.Forms.CheckBox chbUactivo;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtUnombre;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtUapellidos;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtUemail;

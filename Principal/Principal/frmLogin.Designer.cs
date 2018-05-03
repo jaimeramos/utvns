@@ -38,6 +38,7 @@
             this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.epError = new System.Windows.Forms.ErrorProvider(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbContraseña)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
@@ -68,10 +69,12 @@
             this.txtLusuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLusuario.Click += new System.EventHandler(this.txtLusuario_Click);
             this.txtLusuario.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtLusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLusuario_KeyPress);
             this.txtLusuario.Validated += new System.EventHandler(this.txtLusuario_Validated);
             // 
             // txtLcontraseña
             // 
+            this.txtLcontraseña.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtLcontraseña.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLcontraseña.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtLcontraseña.Location = new System.Drawing.Point(75, 112);
@@ -79,10 +82,12 @@
             this.txtLcontraseña.Name = "txtLcontraseña";
             this.txtLcontraseña.Size = new System.Drawing.Size(166, 25);
             this.txtLcontraseña.TabIndex = 2;
-            this.txtLcontraseña.Text = "Contraseña";
+            this.txtLcontraseña.Text = "contraseña";
             this.txtLcontraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLcontraseña.UseWaitCursor = true;
             this.txtLcontraseña.Click += new System.EventHandler(this.txtLcontraseña_Click);
             this.txtLcontraseña.TextChanged += new System.EventHandler(this.txtLcontraseña_TextChanged);
+            this.txtLcontraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLusuario_KeyPress);
             // 
             // label3
             // 
@@ -141,6 +146,10 @@
             // 
             this.epError.ContainerControl = this;
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -178,5 +187,6 @@
         private System.Windows.Forms.PictureBox pbUsuario;
         private System.Windows.Forms.PictureBox pbImagen;
         private System.Windows.Forms.ErrorProvider epError;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
