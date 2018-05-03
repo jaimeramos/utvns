@@ -453,6 +453,16 @@ namespace Principal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap usuario_login {
+            get {
+                object obj = ResourceManager.GetObject("usuario login", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap volver_3 {
             get {
                 object obj = ResourceManager.GetObject("volver 3", resourceCulture);
