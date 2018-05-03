@@ -64,9 +64,7 @@ namespace Principal
             dtgUsuario.Columns["email"].DisplayIndex = 3;
             dtgUsuario.Columns["expirationdate"].DisplayIndex = 4;
             dtgUsuario.Columns["active"].DisplayIndex = 5;
-
         }
-
         private void btnFiltrarU_Click(object sender, EventArgs e)
         {
             Usuario user = new Usuario();
@@ -93,21 +91,14 @@ namespace Principal
             btnUactualizar.Enabled = false;
             btnUguardar.Enabled = true;
             gbUsuarios1.Enabled = false;
-
-
         }
-
         private void btnUeditar_Click(object sender, EventArgs e)
         {
-
             gbUsuarios.Enabled = true;
             gbUsuarios1.Enabled = false;
             btnUguardar.Enabled = false;
             btnUactualizar.Enabled = true;
-
-
         }
-
         private void dtgUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -119,40 +110,30 @@ namespace Principal
                 txtUemail.Text = row.Cells[7].Value.ToString();
                 dtpUfvencimiento.Text = row.Cells[1].Value.ToString();
                 chbUactivo.Checked = (bool)row.Cells[0].Value;
-
             }
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             gbUsuarios1.Enabled = true;
             gbUsuarios.Enabled = false;
-
-
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (txtUfiltro.Text !="")
             {
                 dtgUsuario.CurrentCell = null;
                 foreach (DataGridViewRow r in dtgUsuario.Rows)
-                {
-                   
+                {     
                         r.Visible = false;
-                   
-                }
+                 }
                 foreach (DataGridViewRow r in dtgUsuario.Rows)
                 {
-                  // bool valida = false;
-                    foreach (DataGridViewCell c in r.Cells)
+                  foreach (DataGridViewCell c in r.Cells)
                     {
                         if ((c.Value.ToString().ToUpper()).IndexOf(txtUfiltro.Text.ToUpper()) == 0)
                         {
-                          //  valida = true;
                             r.Visible = true;
                             break;
-
                         }
                     }
                    
@@ -170,13 +151,14 @@ namespace Principal
         {
             //txtUcontraseña.Text = "";
             //txtUccontraseña.Text = "";
+
             if (txtUcontraseña.Text == txtUccontraseña.Text)
             {
-                MessageBox.Show("Registro valido");
+                MessageBox.Show("Registro Actualizado");
             }
             else
             {
-                MessageBox.Show("La contraseña no coinciden");
+                MessageBox.Show("Las contraseñas no coinciden");
             }
             
             }

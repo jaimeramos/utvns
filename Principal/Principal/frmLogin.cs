@@ -22,13 +22,20 @@ namespace Principal
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Data.Login(txtLusuario.Text, txtLcontraseña.Text))
-            {
-                this.Hide();
-                new Principal().Show();
+           if (Data.Login(txtLusuario.Text, txtLcontraseña.Text))
+                {
+                    this.Hide();
+                    new Principal().Show();
+                }
+                else
+                {
+                    MessageBox.Show("El nombre de Usuario o la contraseña estan incorrectas");
+                txtLusuario.Text = "";
+                txtLcontraseña.Text = "";
             }
-        }
-
+            }
+        
+    
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -41,21 +48,28 @@ namespace Principal
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+        
         }
 
         private void txtLusuario_Click(object sender, EventArgs e)
         {
-
+            txtLusuario.Text = "";
         }
 
         private void txtLcontraseña_Click(object sender, EventArgs e)
         {
-
+            txtLcontraseña.UseSystemPasswordChar = true;
+            txtLcontraseña.Text = "";
         }
 
         private void txtLusuario_Validated(object sender, EventArgs e)
         {
+           
+        }
+
+        private void txtLcontraseña_TextChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }

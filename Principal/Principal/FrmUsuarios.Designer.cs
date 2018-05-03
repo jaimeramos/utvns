@@ -165,6 +165,7 @@
             // 
             this.txtUccontraseña.Location = new System.Drawing.Point(426, 69);
             this.txtUccontraseña.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUccontraseña.MaxLength = 20;
             this.txtUccontraseña.Name = "txtUccontraseña";
             this.txtUccontraseña.PasswordChar = '*';
             this.txtUccontraseña.Size = new System.Drawing.Size(116, 23);
