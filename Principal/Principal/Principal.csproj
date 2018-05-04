@@ -140,124 +140,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PALOMITA.JPG" />
+    <None Include="Resources\login.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cerrar.jpg" />
+    <None Include="Resources\usuario.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icono-download.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buscar1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\buscar.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\guardar.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icono_registro_a.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icono_registro_a1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\depositphotos_63778659-stock-illustration-vector-search-document-icon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\regresar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\regre.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\search_locate_find_icon-icons.com_67287.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\depositphotos_63778659-stock-illustration-vector-search-document-icon1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\depositphotos_63778659-stock-illustration-vector-search-document-icon2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\modificar1.JPG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\modificar.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\actualizar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\aversi.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icono_registro_a2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nuevo Registro little.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\nuevo Registro little1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\registro usuario .jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\registro usuario 1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icono_registro_a3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icono_registro_a4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\guardar1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\preuba nuevo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icono_registro_a5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\actualizar1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\actualizar11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\volver 3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\REGRESAR1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Editar usuario little.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cancelar usuar.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cancel rojo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\guardar Little.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\actualizar little.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cerrar little.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\save little.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\actualizar little1.png" />
+    <None Include="Resources\candado.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

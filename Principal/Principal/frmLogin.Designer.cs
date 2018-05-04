@@ -34,16 +34,16 @@
             this.txtLcontraseña = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pbContraseña = new System.Windows.Forms.PictureBox();
-            this.pbUsuario = new System.Windows.Forms.PictureBox();
-            this.pbImagen = new System.Windows.Forms.PictureBox();
             this.epError = new System.Windows.Forms.ErrorProvider(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.pbImagen = new System.Windows.Forms.PictureBox();
+            this.pbContraseña = new System.Windows.Forms.PictureBox();
+            this.pbUsuario = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbContraseña)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epError)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLacceder
@@ -114,8 +114,31 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
+            // epError
+            // 
+            this.epError.ContainerControl = this;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
+            // pbImagen
+            // 
+            this.pbImagen.ErrorImage = null;
+            this.pbImagen.Image = global::Principal.Properties.Resources.login;
+            this.pbImagen.InitialImage = null;
+            this.pbImagen.Location = new System.Drawing.Point(171, 45);
+            this.pbImagen.Name = "pbImagen";
+            this.pbImagen.Size = new System.Drawing.Size(183, 180);
+            this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImagen.TabIndex = 5;
+            this.pbImagen.TabStop = false;
+            // 
             // pbContraseña
             // 
+            this.pbContraseña.ErrorImage = null;
+            this.pbContraseña.Image = global::Principal.Properties.Resources.candado;
+            this.pbContraseña.InitialImage = null;
             this.pbContraseña.Location = new System.Drawing.Point(28, 99);
             this.pbContraseña.Name = "pbContraseña";
             this.pbContraseña.Size = new System.Drawing.Size(40, 40);
@@ -125,6 +148,7 @@
             // 
             // pbUsuario
             // 
+            this.pbUsuario.Image = global::Principal.Properties.Resources.usuario;
             this.pbUsuario.InitialImage = null;
             this.pbUsuario.Location = new System.Drawing.Point(28, 29);
             this.pbUsuario.Name = "pbUsuario";
@@ -132,23 +156,6 @@
             this.pbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbUsuario.TabIndex = 3;
             this.pbUsuario.TabStop = false;
-            // 
-            // pbImagen
-            // 
-            this.pbImagen.Location = new System.Drawing.Point(171, 45);
-            this.pbImagen.Name = "pbImagen";
-            this.pbImagen.Size = new System.Drawing.Size(183, 180);
-            this.pbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbImagen.TabIndex = 5;
-            this.pbImagen.TabStop = false;
-            // 
-            // epError
-            // 
-            this.epError.ContainerControl = this;
-            // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // frmLogin
             // 
@@ -167,10 +174,10 @@
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epError)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbContraseña)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbImagen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
