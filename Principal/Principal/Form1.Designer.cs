@@ -210,7 +210,7 @@
             // 
             // salirToolStripMenuItem1
             // 
-            this.salirToolStripMenuItem1.Image = global::Principal.Properties.Resources.cerrar;
+//            this.salirToolStripMenuItem1.Image = global::Principal.Properties.Resources.cerrar;
             this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
             this.salirToolStripMenuItem1.Size = new System.Drawing.Size(184, 22);
             this.salirToolStripMenuItem1.Text = "Salir";

@@ -12,36 +12,10 @@ namespace Principal
     public partial class FrmUsuarios : Form
     {
         Usuario user = new Usuario();
-        ArrayList  users = new ArrayList();
 
         public FrmUsuarios()
         {
             InitializeComponent();
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void FrmUsuarios_Load(object sender, EventArgs e)
@@ -66,6 +40,7 @@ namespace Principal
             dtgUsuario.Columns["nickname"].HeaderText = "Usuario";
             dtgUsuario.Columns["name"].DisplayIndex = 1;
             dtgUsuario.Columns["name"].HeaderText = "Nombre";
+            dtgUsuario.Columns["name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dtgUsuario.Columns["lastname"].DisplayIndex = 2;
             dtgUsuario.Columns["lastname"].HeaderText = "Apellidos";
             dtgUsuario.Columns["lastname"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -74,6 +49,7 @@ namespace Principal
             dtgUsuario.Columns["email"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dtgUsuario.Columns["expirationdate"].DisplayIndex = 4;
             dtgUsuario.Columns["expirationdate"].HeaderText = "Vigencia";
+            dtgUsuario.Columns["expirationdate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dtgUsuario.Columns["active"].DisplayIndex = 5;
             dtgUsuario.Columns["active"].HeaderText = "Activo";
             dtgUsuario.Columns["admin"].DisplayIndex = 6;
@@ -82,6 +58,7 @@ namespace Principal
         }
         private void btnFiltrarU_Click(object sender, EventArgs e)
         {
+            txtUfiltro.Text = string.Empty;
             fillGridView();
         }
 
@@ -100,10 +77,9 @@ namespace Principal
             txtUccontraseña.Text = "";
             dtpUfvencimiento.Text = "";
             chbUactivo.Text = "";
-
+            user = new Usuario();
             gbUsuarios.Enabled = true;
-            btnUactualizar.Enabled = false;
-            btnUguardar.Enabled = true;
+            btnUactualizar.Enabled = true;
             gbUsuarios1.Enabled = false;
         }
 
@@ -111,37 +87,29 @@ namespace Principal
         {
             gbUsuarios.Enabled = true;
             gbUsuarios1.Enabled = false;
-            btnUguardar.Enabled = false;
             btnUactualizar.Enabled = true;
         }
 
-        private void dtgUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //if (e.RowIndex >= 0)
-            //{
-            //    DataGridViewRow row = this.dtgUsuario.Rows[e.RowIndex];
-            //    loadDataFromGrid(row);
-            //}
-        }
         public void loadDataFromGrid(DataGridViewRow row) {
-            user.Nickname = txtUsuario.Text = row.Cells[3].Value.ToString();
-            user.Name = txtUnombre.Text = row.Cells[4].Value.ToString();
-            user.Lastname= txtUapellidos.Text = row.Cells[5].Value.ToString();
-            user.Email= txtUemail.Text = row.Cells[7].Value.ToString();
-            dtpUfvencimiento.Text = row.Cells[1].Value.ToString();//.Substring(0,24);
+            user.Nickname= txtUsuario.Text = row.Cells["nickname"].Value.ToString();
+            user.Name = txtUnombre.Text = row.Cells["name"].Value.ToString();
+            user.Lastname= txtUapellidos.Text = row.Cells["lastname"].Value.ToString();
+            user.Email= txtUemail.Text = row.Cells["email"].Value.ToString();
+            dtpUfvencimiento.Text = row.Cells["expirationdate"].Value.ToString();//.Substring(0,24);
             user.ExpirationDate= DateTime.ParseExact(dtpUfvencimiento.Text, "dd/MM/yyyy",
-                                       System.Globalization.CultureInfo.InvariantCulture);
-            user.Id= row.Cells[2].Value.ToString();
-            user.Active=chbUactivo.Checked = (bool)row.Cells[0].Value;
-            user.Admin= chbUadmin.Checked=(bool)row.Cells[11].Value;
+                                       System.Globalization.CultureInfo.CurrentCulture).ToString();
+            user.Id= row.Cells["_id"].Value.ToString();
+            user.Active=chbUactivo.Checked = (bool)row.Cells["active"].Value;
+            user.Admin= chbUadmin.Checked=(bool)row.Cells["admin"].Value;
         }
         public void loadDataFromForm() {
             user.Nickname = txtUsuario.Text ;
             user.Name = txtUnombre.Text ;
             user.Lastname = txtUapellidos.Text ;
             user.Email = txtUemail.Text ;
-            user.ExpirationDate = DateTime.ParseExact(dtpUfvencimiento.Text, "dd/MM/yyyy",
-                                       System.Globalization.CultureInfo.InvariantCulture);
+            DateTime dt = DateTime.ParseExact( dtpUfvencimiento.Text, "dd/MM/yyyy",
+                                       System.Globalization.CultureInfo.CreateSpecificCulture("en-US"));
+            user.ExpirationDate = dt.Month+"/"+dt.Day + "/"+dt.Year;
             user.Active = chbUactivo.Checked ;
             user.Admin = chbUadmin.Checked ;
         }
@@ -164,7 +132,7 @@ namespace Principal
                 {
                     foreach (DataGridViewCell c in r.Cells)
                     {
-                        if ((c.Value.ToString().ToUpper()).IndexOf(txtUfiltro.Text.ToUpper()) == 0)
+                        if ((c.Value.ToString().ToUpper()).Contains(txtUfiltro.Text.ToUpper()))
                         {
                             r.Visible = true;
                             break;
@@ -181,12 +149,32 @@ namespace Principal
         private void btnUactualizar_Click(object sender, EventArgs e)
         {
             loadDataFromForm();
-            user.upSert();
+            string pwd1= txtUccontraseña.Text.Trim(), pwd2= txtUcontraseña.Text.Trim();
+            if (pwd1.Equals(string.Empty) && pwd2.Equals(string.Empty))
+            {                
+                user.upSert(false);
+                reloadInitialState();
+            }
+            else {
+                if (pwd1.Length >= 8 && pwd2.Length >= 8 && pwd1.Equals(pwd2))
+                {
+                    user.Pwd = txtUcontraseña.Text;
+                    user.upSert(true);
+                    reloadInitialState();
+                }
+                else {
+                    MessageBox.Show("Verifique que la contraseña coincida.", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            
+        }
+        public void reloadInitialState() {
             gbUsuarios.Enabled = false;
             gbUsuarios1.Enabled = true;
-            btnUguardar.Enabled = true;
             btnUactualizar.Enabled = false;
             fillGridView();
+            filterActive();
+            txtUcontraseña.Text = txtUccontraseña.Text = string.Empty;
         }
 
         private void btnUguardar_Click(object sender, EventArgs e)
@@ -201,6 +189,42 @@ namespace Principal
             {
                 DataGridViewRow row = this.dtgUsuario.Rows[e.RowIndex];
                 loadDataFromGrid(row);
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            filterActive();
+        }
+
+        public void filterActive() {
+            if (!checkBox1.Checked)
+            {
+                checkBox1.Text = "Mostrar solo usuarios activos.";
+                dtgUsuario.CurrentCell = null;
+                foreach (DataGridViewRow r in dtgUsuario.Rows)
+                {
+                    r.Visible = false;
+                }
+                foreach (DataGridViewRow r in dtgUsuario.Rows)
+                {
+                    //foreach (DataGridViewCell c in r.Cells)
+                    {
+                        if ((bool)r.Cells["active"].Value)
+                        {
+                            r.Visible = true;
+                            //break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                checkBox1.Text = "Mostrar todos los usuarios.";
+                foreach (DataGridViewRow r in dtgUsuario.Rows)
+                {
+                    r.Visible = true;
+                }
             }
         }
     }

@@ -9,8 +9,7 @@ namespace Principal.Entidades
     {
         #region Atributos privados
         static string Entity = "users";
-        string _id,  _name, _nickname, _lastname, _email, _pwd, _token;
-        DateTime _expirationDate, _createdAt, _updatedAt;
+        string _id,  _name, _nickname, _lastname, _email, _pwd, _token, _expirationDate, _createdAt, _updatedAt;
         bool _active, _admin;
         #endregion
 
@@ -119,7 +118,7 @@ namespace Principal.Entidades
             }
         }
 
-        public DateTime ExpirationDate
+        public string ExpirationDate
         {
             get
             {
@@ -132,7 +131,7 @@ namespace Principal.Entidades
             }
         }
 
-        public DateTime CreatedAt
+        public string CreatedAt
         {
             get
             {
@@ -145,7 +144,7 @@ namespace Principal.Entidades
             }
         }
 
-        public DateTime UpdatedAt
+        public string UpdatedAt
         {
             get
             {
@@ -188,18 +187,19 @@ namespace Principal.Entidades
         /// Agrega registros de usuarios
         /// </summary>
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
-        public bool upSert()
+        /// <param name="opt">opt indica si trae o no contraseña</param>
+        public bool upSert(bool opt)
         {
             string json = new JavaScriptSerializer().Serialize(new
             {
-                _id=this.Id,
+                _id = this.Id,
                 name = this.Name,
                 lastname = this.Lastname,
-                nickname= this.Nickname,
-                expirationDate= this.ExpirationDate,
-                email= this.Email,
-                active= this.Active,
-                admin= this.Admin
+                nickname = this.Nickname,
+                expirationdate = this.ExpirationDate,
+                email = this.Email,
+                active = this.Active,
+                admin = this.Admin
             });
             string jsonPwd = new JavaScriptSerializer().Serialize(new
             {
@@ -208,25 +208,26 @@ namespace Principal.Entidades
                 lastname = this.Lastname,
                 nickname = this.Nickname,
                 pwd = this.Pwd,
-                expirationDate = this.ExpirationDate,
+                expirationdate = this.ExpirationDate,
                 email = this.Email,
                 active = this.Active,
                 admin = this.Admin
             });
-            if (this.Id==String.Empty)
+            string data;
+            // if opt is true then data must include PWD
+            if (opt)
+                data = jsonPwd;
+            else
+                data = json;
+            if (this.Id==null)
             {
                 //this.Id =
-                    Data.sendData(Entity, jsonPwd, "POST");
+                    Data.sendData(Entity, data, "POST");
                 return this.Id != String.Empty;
             }
             else
             {
-                if(this.Pwd==null)
-                    Data.sendData(Entity + "/" + this.Id, json, "PUT");
-                else
-                    Data.sendData(Entity + "/" + this.Id, jsonPwd, "PUT");
-
-
+                    Data.sendData(Entity + "/" + this.Id, data, "PUT");
                 //  return Data.Update(Entity,args);
                 return false;
             }

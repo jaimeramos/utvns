@@ -299,7 +299,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Image = global::Principal.Properties.Resources.guardar;
+//this.btnGuardar.Image = global::Principal.Properties.Resources.guardar;
             this.btnGuardar.Location = new System.Drawing.Point(199, 530);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(87, 82);
@@ -311,7 +311,7 @@
             // btnSalir
             // 
             this.btnSalir.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Image = global::Principal.Properties.Resources.regre;
+       //     this.btnSalir.Image = global::Principal.Properties.Resources.regre;
             this.btnSalir.Location = new System.Drawing.Point(311, 530);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(82, 82);
