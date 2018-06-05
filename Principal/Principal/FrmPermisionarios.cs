@@ -21,5 +21,20 @@ namespace Principal
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPregresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FrmPermisionarios_Load(object sender, EventArgs e)
+        {
+            gbPermisionarios.Enabled = false;
+        }
     }
 }

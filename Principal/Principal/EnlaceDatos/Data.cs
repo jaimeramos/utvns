@@ -15,7 +15,7 @@ namespace Principal.EnlaceDatos
 {
     class Data
     {
-        public static string TOKEN = "";
+        public static string TOKEN = "",user="";
         private static string url = "https://utvns-jaraga.c9users.io/api/";
         //Session State
         class validLogin {
@@ -34,6 +34,7 @@ namespace Principal.EnlaceDatos
             if (json.success != null) {
                 if (json.success == "true") {
                     TOKEN = json.token;
+                        user = json.name;
                     return true;
                 }
             }

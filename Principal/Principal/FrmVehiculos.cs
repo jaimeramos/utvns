@@ -59,29 +59,27 @@ namespace Principal
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
             gbVehiculos.Enabled = true;
-            btnVactualizar.Enabled = false;
             btnVguardar.Enabled = true;
 
-            txtID.Text = "";
-            txtNumero.Text = "";
-            txtModelo.Text = "";
-            cmbTipo.Text = "";
-            txtDescripcion.Text = "";
-            txtAño.Text = "";
-            txtColor.Text = "";
-            txtSerie.Text = "";
-            txtSeriemotor.Text = "";
-            txtPlaca.Text = "";
-            cmbEstatus.Text = "";
-            dtpAlta.Text = "";
-            dtpActualizacion.Text = "";
+            txtVnumero.Text = "";
+            txtVmodelo.Text = "";
+            cmbVtipo.Text = "";
+            txtVdescripcion.Text = "";
+            txtVaño.Text = "";
+            txtVcolor.Text = "";
+            txtVserie.Text = "";
+            txtVseriemotor.Text = "";
+            txtVplaca.Text = "";
+            cmbVestatus.Text = "";
+            dtpVfalta.Text = "";
+            dtpVfactualizacion.Text = "";
         }
 
         private void Editar_Click(object sender, EventArgs e)
         {
             gbVehiculos.Enabled = true;
             btnVguardar.Enabled = false;
-            btnVactualizar.Enabled = true;
+            btnVguardar.Enabled = true;
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)
@@ -98,6 +96,11 @@ namespace Principal
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void btnVregresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

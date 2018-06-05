@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarios));
             this.dtgUsuario = new System.Windows.Forms.DataGridView();
             this.gbUsuarios = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnUactualizar = new System.Windows.Forms.Button();
+            this.btnUcancelar = new System.Windows.Forms.Button();
+            this.btnUguardar = new System.Windows.Forms.Button();
             this.dtpUfvencimiento = new System.Windows.Forms.DateTimePicker();
             this.txtUccontraseña = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -56,7 +56,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnUeditar = new System.Windows.Forms.Button();
             this.btnUregresar = new System.Windows.Forms.Button();
-            this.btnUusuario = new System.Windows.Forms.Button();
+            this.btnUnuevo = new System.Windows.Forms.Button();
             this.btnUFiltrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuario)).BeginInit();
             this.gbUsuarios.SuspendLayout();
@@ -70,19 +70,19 @@
             this.dtgUsuario.AllowUserToDeleteRows = false;
             this.dtgUsuario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgUsuario.Location = new System.Drawing.Point(4, 66);
+            this.dtgUsuario.Location = new System.Drawing.Point(4, 74);
             this.dtgUsuario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.dtgUsuario.Name = "dtgUsuario";
             this.dtgUsuario.ReadOnly = true;
             this.dtgUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgUsuario.Size = new System.Drawing.Size(639, 195);
+            this.dtgUsuario.Size = new System.Drawing.Size(730, 195);
             this.dtgUsuario.TabIndex = 17;
             this.dtgUsuario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsuario_RowEnter);
             // 
             // gbUsuarios
             // 
-            this.gbUsuarios.Controls.Add(this.button1);
-            this.gbUsuarios.Controls.Add(this.btnUactualizar);
+            this.gbUsuarios.Controls.Add(this.btnUcancelar);
+            this.gbUsuarios.Controls.Add(this.btnUguardar);
             this.gbUsuarios.Controls.Add(this.dtpUfvencimiento);
             this.gbUsuarios.Controls.Add(this.txtUccontraseña);
             this.gbUsuarios.Controls.Add(this.groupBox2);
@@ -99,44 +99,53 @@
             this.gbUsuarios.Controls.Add(this.label3);
             this.gbUsuarios.Controls.Add(this.label4);
             this.gbUsuarios.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbUsuarios.Location = new System.Drawing.Point(2, 293);
+            this.gbUsuarios.Location = new System.Drawing.Point(29, 332);
             this.gbUsuarios.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.gbUsuarios.Name = "gbUsuarios";
             this.gbUsuarios.Padding = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.gbUsuarios.Size = new System.Drawing.Size(647, 189);
+            this.gbUsuarios.Size = new System.Drawing.Size(751, 189);
             this.gbUsuarios.TabIndex = 1;
             this.gbUsuarios.TabStop = false;
             this.gbUsuarios.Text = "Datos del Usuario";
             // 
-            // button1
+            // btnUcancelar
             // 
-            this.button1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(551, 106);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 58);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Cancelar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnUcancelar.FlatAppearance.BorderSize = 0;
+            this.btnUcancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnUcancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnUcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUcancelar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUcancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnUcancelar.Image")));
+            this.btnUcancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUcancelar.Location = new System.Drawing.Point(574, 99);
+            this.btnUcancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnUcancelar.Name = "btnUcancelar";
+            this.btnUcancelar.Size = new System.Drawing.Size(115, 40);
+            this.btnUcancelar.TabIndex = 11;
+            this.btnUcancelar.Text = "Cancelar";
+            this.btnUcancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUcancelar.UseVisualStyleBackColor = true;
+            this.btnUcancelar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnUactualizar
+            // btnUguardar
             // 
-            this.btnUactualizar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUactualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnUactualizar.Image")));
-            this.btnUactualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnUactualizar.Location = new System.Drawing.Point(551, 36);
-            this.btnUactualizar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnUactualizar.Name = "btnUactualizar";
-            this.btnUactualizar.Size = new System.Drawing.Size(74, 58);
-            this.btnUactualizar.TabIndex = 10;
-            this.btnUactualizar.Text = "Guardar";
-            this.btnUactualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnUactualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnUactualizar.UseVisualStyleBackColor = true;
-            this.btnUactualizar.Click += new System.EventHandler(this.btnUactualizar_Click);
+            this.btnUguardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnUguardar.FlatAppearance.BorderSize = 0;
+            this.btnUguardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnUguardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnUguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUguardar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnUguardar.Image")));
+            this.btnUguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUguardar.Location = new System.Drawing.Point(574, 35);
+            this.btnUguardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnUguardar.Name = "btnUguardar";
+            this.btnUguardar.Size = new System.Drawing.Size(115, 40);
+            this.btnUguardar.TabIndex = 10;
+            this.btnUguardar.Text = "Guardar";
+            this.btnUguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUguardar.UseVisualStyleBackColor = true;
+            this.btnUguardar.Click += new System.EventHandler(this.btnUactualizar_Click);
             // 
             // dtpUfvencimiento
             // 
@@ -167,7 +176,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox2.Size = new System.Drawing.Size(269, 45);
+            this.groupBox2.Size = new System.Drawing.Size(284, 45);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             // 
@@ -204,7 +213,7 @@
             // 
             // txtUnombre
             // 
-            this.txtUnombre.Location = new System.Drawing.Point(64, 62);
+            this.txtUnombre.Location = new System.Drawing.Point(63, 63);
             this.txtUnombre.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtUnombre.Name = "txtUnombre";
             this.txtUnombre.Size = new System.Drawing.Size(164, 23);
@@ -230,7 +239,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(232, 99);
+            this.label8.Location = new System.Drawing.Point(237, 99);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 15);
@@ -248,7 +257,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(231, 68);
+            this.label7.Location = new System.Drawing.Point(237, 68);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(131, 15);
@@ -258,7 +267,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(231, 35);
+            this.label6.Location = new System.Drawing.Point(295, 35);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 15);
@@ -278,7 +287,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 131);
+            this.label5.Location = new System.Drawing.Point(19, 131);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 15);
@@ -288,7 +297,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 68);
+            this.label3.Location = new System.Drawing.Point(2, 68);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 15);
@@ -298,7 +307,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 99);
+            this.label4.Location = new System.Drawing.Point(-2, 99);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 15);
@@ -307,17 +316,17 @@
             // 
             // txtUfiltro
             // 
-            this.txtUfiltro.Location = new System.Drawing.Point(53, 24);
+            this.txtUfiltro.Location = new System.Drawing.Point(53, 27);
             this.txtUfiltro.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtUfiltro.Name = "txtUfiltro";
-            this.txtUfiltro.Size = new System.Drawing.Size(174, 23);
+            this.txtUfiltro.Size = new System.Drawing.Size(148, 23);
             this.txtUfiltro.TabIndex = 12;
             this.txtUfiltro.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 27);
+            this.label1.Location = new System.Drawing.Point(9, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 15);
@@ -332,13 +341,13 @@
             this.gbUsuarios1.Controls.Add(this.dtgUsuario);
             this.gbUsuarios1.Controls.Add(this.btnUregresar);
             this.gbUsuarios1.Controls.Add(this.txtUfiltro);
-            this.gbUsuarios1.Controls.Add(this.btnUusuario);
+            this.gbUsuarios1.Controls.Add(this.btnUnuevo);
             this.gbUsuarios1.Controls.Add(this.btnUFiltrar);
-            this.gbUsuarios1.Location = new System.Drawing.Point(2, 0);
+            this.gbUsuarios1.Location = new System.Drawing.Point(29, 12);
             this.gbUsuarios1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbUsuarios1.Name = "gbUsuarios1";
             this.gbUsuarios1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gbUsuarios1.Size = new System.Drawing.Size(647, 292);
+            this.gbUsuarios1.Size = new System.Drawing.Size(751, 313);
             this.gbUsuarios1.TabIndex = 17;
             this.gbUsuarios1.TabStop = false;
             // 
@@ -347,7 +356,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(459, 267);
+            this.checkBox1.Location = new System.Drawing.Point(561, 275);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(173, 19);
@@ -358,11 +367,17 @@
             // 
             // btnUeditar
             // 
+            this.btnUeditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnUeditar.FlatAppearance.BorderSize = 0;
+            this.btnUeditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnUeditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnUeditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUeditar.Image = ((System.Drawing.Image)(resources.GetObject("btnUeditar.Image")));
             this.btnUeditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUeditar.Location = new System.Drawing.Point(447, 20);
+            this.btnUeditar.Location = new System.Drawing.Point(472, 20);
             this.btnUeditar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnUeditar.Name = "btnUeditar";
-            this.btnUeditar.Size = new System.Drawing.Size(110, 31);
+            this.btnUeditar.Size = new System.Drawing.Size(136, 40);
             this.btnUeditar.TabIndex = 15;
             this.btnUeditar.Text = "Editar Usuario";
             this.btnUeditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -371,37 +386,55 @@
             // 
             // btnUregresar
             // 
+            this.btnUregresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnUregresar.FlatAppearance.BorderSize = 0;
+            this.btnUregresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnUregresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnUregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUregresar.Image = ((System.Drawing.Image)(resources.GetObject("btnUregresar.Image")));
             this.btnUregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUregresar.Location = new System.Drawing.Point(562, 20);
+            this.btnUregresar.Location = new System.Drawing.Point(612, 20);
             this.btnUregresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnUregresar.Name = "btnUregresar";
-            this.btnUregresar.Size = new System.Drawing.Size(80, 31);
+            this.btnUregresar.Size = new System.Drawing.Size(98, 40);
             this.btnUregresar.TabIndex = 16;
             this.btnUregresar.Text = "Regresar";
             this.btnUregresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUregresar.UseVisualStyleBackColor = true;
             this.btnUregresar.Click += new System.EventHandler(this.btnUregresar_Click);
             // 
-            // btnUusuario
+            // btnUnuevo
             // 
-            this.btnUusuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUusuario.Location = new System.Drawing.Point(335, 19);
-            this.btnUusuario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnUusuario.Name = "btnUusuario";
-            this.btnUusuario.Size = new System.Drawing.Size(107, 31);
-            this.btnUusuario.TabIndex = 14;
-            this.btnUusuario.Text = "Nuevo Usuario";
-            this.btnUusuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUusuario.UseVisualStyleBackColor = true;
-            this.btnUusuario.Click += new System.EventHandler(this.btnNusuario_Click);
+            this.btnUnuevo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnUnuevo.FlatAppearance.BorderSize = 0;
+            this.btnUnuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnUnuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnUnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUnuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnUnuevo.Image")));
+            this.btnUnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUnuevo.Location = new System.Drawing.Point(334, 20);
+            this.btnUnuevo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnUnuevo.Name = "btnUnuevo";
+            this.btnUnuevo.Size = new System.Drawing.Size(134, 40);
+            this.btnUnuevo.TabIndex = 14;
+            this.btnUnuevo.Text = "Nuevo Usuario";
+            this.btnUnuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUnuevo.UseVisualStyleBackColor = true;
+            this.btnUnuevo.Click += new System.EventHandler(this.btnNusuario_Click);
             // 
             // btnUFiltrar
             // 
+            this.btnUFiltrar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUFiltrar.FlatAppearance.BorderSize = 0;
+            this.btnUFiltrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnUFiltrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnUFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUFiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnUFiltrar.Image")));
             this.btnUFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUFiltrar.Location = new System.Drawing.Point(231, 20);
+            this.btnUFiltrar.Location = new System.Drawing.Point(213, 20);
             this.btnUFiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnUFiltrar.Name = "btnUFiltrar";
-            this.btnUFiltrar.Size = new System.Drawing.Size(100, 31);
+            this.btnUFiltrar.Size = new System.Drawing.Size(117, 40);
             this.btnUFiltrar.TabIndex = 13;
             this.btnUFiltrar.Text = "Limpiar filtro";
             this.btnUFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -412,14 +445,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 488);
+            this.ClientSize = new System.Drawing.Size(793, 543);
             this.Controls.Add(this.gbUsuarios1);
             this.Controls.Add(this.gbUsuarios);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "FrmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UTVNS - Gestión de usuarios del sistema";
+            this.Text = "UTVNS - Gestión de Usuarios del Sistema";
             this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuario)).EndInit();
             this.gbUsuarios.ResumeLayout(false);
@@ -456,11 +490,11 @@
         private System.Windows.Forms.DateTimePicker dtpUfvencimiento;
         private System.Windows.Forms.TextBox txtUccontraseña;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnUactualizar;
-        private System.Windows.Forms.Button btnUusuario;
+        private System.Windows.Forms.Button btnUguardar;
+        private System.Windows.Forms.Button btnUnuevo;
         private System.Windows.Forms.Button btnUregresar;
         private System.Windows.Forms.Button btnUeditar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUcancelar;
         private System.Windows.Forms.GroupBox gbUsuarios1;
         private System.Windows.Forms.CheckBox checkBox1;
     }

@@ -76,10 +76,10 @@ namespace Principal
             txtUcontraseña.Text = "";
             txtUccontraseña.Text = "";
             dtpUfvencimiento.Text = "";
-            chbUactivo.Text = "";
+           // chbUactivo.Text = "";
             user = new Usuario();
             gbUsuarios.Enabled = true;
-            btnUactualizar.Enabled = true;
+            btnUguardar.Enabled = true;
             gbUsuarios1.Enabled = false;
         }
 
@@ -87,7 +87,7 @@ namespace Principal
         {
             gbUsuarios.Enabled = true;
             gbUsuarios1.Enabled = false;
-            btnUactualizar.Enabled = true;
+            btnUguardar.Enabled = true;
         }
 
         public void loadDataFromGrid(DataGridViewRow row) {
@@ -171,7 +171,7 @@ namespace Principal
         public void reloadInitialState() {
             gbUsuarios.Enabled = false;
             gbUsuarios1.Enabled = true;
-            btnUactualizar.Enabled = false;
+            btnUguardar.Enabled = false;
             fillGridView();
             filterActive();
             txtUcontraseña.Text = txtUccontraseña.Text = string.Empty;

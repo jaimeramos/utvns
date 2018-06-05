@@ -20,8 +20,9 @@ namespace Principal
            if (Data.Login(txtLusuario.Text, txtLcontraseña.Text))
             {
                 this.Hide();
-                new Principal().Show();
-                }
+               // new Principal().Show();
+                new FrmMenuprincipal().Show();
+            }
                 else
                 {
                     MessageBox.Show("El nombre de Usuario o la contraseña estan incorrectas");
