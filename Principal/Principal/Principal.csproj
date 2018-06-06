@@ -191,6 +191,41 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="imgs\botones\ActualizarUsuario.png" />
+    <Content Include="imgs\botones\AgregarUsuario.png" />
+    <Content Include="imgs\botones\automovil.png" />
+    <Content Include="imgs\botones\btnchofer.png" />
+    <Content Include="imgs\botones\btncuota.png" />
+    <Content Include="imgs\botones\btnegreso.png" />
+    <Content Include="imgs\botones\btnGestionusuarios.png" />
+    <Content Include="imgs\botones\btningresos.png" />
+    <Content Include="imgs\botones\btnpermisionario.png" />
+    <Content Include="imgs\botones\btnrecuperacion.png" />
+    <Content Include="imgs\botones\btnrespaldo.png" />
+    <Content Include="imgs\botones\btntransaccion.png" />
+    <Content Include="imgs\botones\btnvehiculo2.png" />
+    <Content Include="imgs\botones\catalogo.png" />
+    <Content Include="imgs\botones\cerrar.png" />
+    <Content Include="imgs\botones\cerrar1.png" />
+    <Content Include="imgs\botones\corregir cerrar.png" />
+    <Content Include="imgs\botones\EditarPermisionario.png" />
+    <Content Include="imgs\botones\EditarUsuario.png" />
+    <Content Include="imgs\botones\Editarvehiculo.png" />
+    <Content Include="imgs\botones\Expandir.jpg" />
+    <Content Include="imgs\botones\filtro.png" />
+    <Content Include="imgs\botones\Guardar.png" />
+    <Content Include="imgs\botones\lista.png" />
+    <Content Include="imgs\botones\maximizar.jpg" />
+    <Content Include="imgs\botones\minimizar venta.jpg" />
+    <Content Include="imgs\botones\minimizar.jpg" />
+    <Content Include="imgs\botones\NuevoPermisionario.png" />
+    <Content Include="imgs\botones\NuevoUsuario.png" />
+    <Content Include="imgs\botones\NuevoVehiculo.png" />
+    <Content Include="imgs\botones\regresar.png" />
+    <Content Include="imgs\botones\sistema.png" />
+    <Content Include="imgs\botones\usuario %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -485,11 +485,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 723);
+            this.ControlBox = false;
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.Barratitulo);
             this.Controls.Add(this.pnlMenuvertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMenuprincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMenuprincipal";
             this.Load += new System.EventHandler(this.FrmMenuprincipal_Load);
             this.pnlMenuvertical.ResumeLayout(false);

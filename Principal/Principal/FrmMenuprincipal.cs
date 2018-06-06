@@ -119,7 +119,7 @@ namespace Principal
         private void iconmaximizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-            this.Bounds = Screen.PrimaryScreen.Bounds;
+            FormBorderStyle = FormBorderStyle.None;
             iconrestaurar.Visible = true;
             iconmaximizar.Visible = false;
         }
