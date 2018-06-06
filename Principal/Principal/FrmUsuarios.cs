@@ -12,12 +12,12 @@ namespace Principal
     public partial class FrmUsuarios : Form
     {
         Usuario user = new Usuario();
-        
+
         public FrmUsuarios()
         {
             InitializeComponent();
         }
-        
+
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
             fillGridView();
@@ -54,7 +54,7 @@ namespace Principal
             dtgUsuario.Columns["active"].HeaderText = "Activo";
             dtgUsuario.Columns["admin"].DisplayIndex = 6;
             dtgUsuario.Columns["admin"].HeaderText = "Administrador";
-            
+
         }
         private void btnFiltrarU_Click(object sender, EventArgs e)
         {
@@ -76,10 +76,10 @@ namespace Principal
             txtUcontraseña.Text = "";
             txtUccontraseña.Text = "";
             dtpUfvencimiento.Text = "";
-            chbUactivo.Text = "";
+           // chbUactivo.Text = "";
             user = new Usuario();
             gbUsuarios.Enabled = true;
-            btnUactualizar.Enabled = true;
+            btnUguardar.Enabled = true;
             gbUsuarios1.Enabled = false;
         }
 
@@ -87,9 +87,9 @@ namespace Principal
         {
             gbUsuarios.Enabled = true;
             gbUsuarios1.Enabled = false;
-            btnUactualizar.Enabled = true;
+            btnUguardar.Enabled = true;
         }
-       
+
         public void loadDataFromGrid(DataGridViewRow row) {
             user.Nickname= txtUsuario.Text = row.Cells["nickname"].Value.ToString();
             user.Name = txtUnombre.Text = row.Cells["name"].Value.ToString();
@@ -171,7 +171,7 @@ namespace Principal
         public void reloadInitialState() {
             gbUsuarios.Enabled = false;
             gbUsuarios1.Enabled = true;
-            btnUactualizar.Enabled = false;
+            btnUguardar.Enabled = false;
             fillGridView();
             filterActive();
             txtUcontraseña.Text = txtUccontraseña.Text = string.Empty;
@@ -190,7 +190,7 @@ namespace Principal
                 DataGridViewRow row = this.dtgUsuario.Rows[e.RowIndex];
                 loadDataFromGrid(row);
             }
-        }        
+        }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
