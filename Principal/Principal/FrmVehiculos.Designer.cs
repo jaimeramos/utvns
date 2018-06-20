@@ -35,11 +35,9 @@
             this.txtVcolor = new System.Windows.Forms.TextBox();
             this.txtVaño = new System.Windows.Forms.TextBox();
             this.txtVdescripcion = new System.Windows.Forms.TextBox();
-            this.dtpVfactualizacion = new System.Windows.Forms.DateTimePicker();
             this.dtpVfalta = new System.Windows.Forms.DateTimePicker();
             this.txtVmodelo = new System.Windows.Forms.TextBox();
             this.txtVnumero = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -52,8 +50,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gbVehiculos = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtVmarca = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.btnVcancelar = new System.Windows.Forms.Button();
-            this.cmbVestatus = new System.Windows.Forms.ComboBox();
             this.btnVguardar = new System.Windows.Forms.Button();
             this.cmbVtipo = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -64,17 +64,17 @@
             this.btnVregresar = new System.Windows.Forms.Button();
             this.btnVnuevo = new System.Windows.Forms.Button();
             this.btnVFiltrar = new System.Windows.Forms.Button();
-            this.dtgVehiculos = new System.Windows.Forms.DataGridView();
+            this.dtgVehiculo = new System.Windows.Forms.DataGridView();
             this.txtVfiltro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gbVehiculos.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgVehiculos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgVehiculo)).BeginInit();
             this.SuspendLayout();
             // 
             // txtVplaca
             // 
-            this.txtVplaca.Location = new System.Drawing.Point(426, 83);
+            this.txtVplaca.Location = new System.Drawing.Point(482, 110);
             this.txtVplaca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVplaca.Name = "txtVplaca";
             this.txtVplaca.Size = new System.Drawing.Size(98, 23);
@@ -82,7 +82,7 @@
             // 
             // txtVseriemotor
             // 
-            this.txtVseriemotor.Location = new System.Drawing.Point(426, 49);
+            this.txtVseriemotor.Location = new System.Drawing.Point(482, 80);
             this.txtVseriemotor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVseriemotor.Name = "txtVseriemotor";
             this.txtVseriemotor.Size = new System.Drawing.Size(160, 23);
@@ -90,7 +90,7 @@
             // 
             // txtVserie
             // 
-            this.txtVserie.Location = new System.Drawing.Point(426, 15);
+            this.txtVserie.Location = new System.Drawing.Point(482, 50);
             this.txtVserie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVserie.Name = "txtVserie";
             this.txtVserie.Size = new System.Drawing.Size(120, 23);
@@ -98,7 +98,7 @@
             // 
             // txtVcolor
             // 
-            this.txtVcolor.Location = new System.Drawing.Point(155, 190);
+            this.txtVcolor.Location = new System.Drawing.Point(482, 20);
             this.txtVcolor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVcolor.Name = "txtVcolor";
             this.txtVcolor.Size = new System.Drawing.Size(98, 23);
@@ -106,7 +106,7 @@
             // 
             // txtVaño
             // 
-            this.txtVaño.Location = new System.Drawing.Point(155, 159);
+            this.txtVaño.Location = new System.Drawing.Point(143, 179);
             this.txtVaño.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVaño.Name = "txtVaño";
             this.txtVaño.Size = new System.Drawing.Size(79, 23);
@@ -114,27 +114,17 @@
             // 
             // txtVdescripcion
             // 
-            this.txtVdescripcion.Location = new System.Drawing.Point(155, 114);
+            this.txtVdescripcion.Location = new System.Drawing.Point(143, 136);
             this.txtVdescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVdescripcion.Multiline = true;
             this.txtVdescripcion.Name = "txtVdescripcion";
             this.txtVdescripcion.Size = new System.Drawing.Size(168, 37);
             this.txtVdescripcion.TabIndex = 58;
             // 
-            // dtpVfactualizacion
-            // 
-            this.dtpVfactualizacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpVfactualizacion.Location = new System.Drawing.Point(426, 185);
-            this.dtpVfactualizacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpVfactualizacion.Name = "dtpVfactualizacion";
-            this.dtpVfactualizacion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtpVfactualizacion.Size = new System.Drawing.Size(156, 23);
-            this.dtpVfactualizacion.TabIndex = 75;
-            // 
             // dtpVfalta
             // 
             this.dtpVfalta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpVfalta.Location = new System.Drawing.Point(426, 151);
+            this.dtpVfalta.Location = new System.Drawing.Point(482, 170);
             this.dtpVfalta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpVfalta.Name = "dtpVfalta";
             this.dtpVfalta.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -143,7 +133,7 @@
             // 
             // txtVmodelo
             // 
-            this.txtVmodelo.Location = new System.Drawing.Point(155, 52);
+            this.txtVmodelo.Location = new System.Drawing.Point(143, 78);
             this.txtVmodelo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVmodelo.Name = "txtVmodelo";
             this.txtVmodelo.Size = new System.Drawing.Size(130, 23);
@@ -151,26 +141,16 @@
             // 
             // txtVnumero
             // 
-            this.txtVnumero.Location = new System.Drawing.Point(155, 21);
+            this.txtVnumero.Location = new System.Drawing.Point(143, 20);
             this.txtVnumero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVnumero.Name = "txtVnumero";
             this.txtVnumero.Size = new System.Drawing.Size(93, 23);
             this.txtVnumero.TabIndex = 52;
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(290, 188);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(132, 15);
-            this.label13.TabIndex = 74;
-            this.label13.Text = "Fecha de Actualización:";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(338, 153);
+            this.label12.Location = new System.Drawing.Point(392, 173);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(84, 15);
@@ -180,17 +160,17 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(372, 119);
+            this.label11.Location = new System.Drawing.Point(339, 143);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 15);
+            this.label11.Size = new System.Drawing.Size(137, 15);
             this.label11.TabIndex = 71;
-            this.label11.Text = "Estatus:";
+            this.label11.Text = "Num. de Permisionario:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(318, 87);
+            this.label10.Location = new System.Drawing.Point(372, 113);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(104, 15);
@@ -200,7 +180,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(325, 51);
+            this.label9.Location = new System.Drawing.Point(379, 83);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(97, 15);
@@ -210,7 +190,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(383, 18);
+            this.label8.Location = new System.Drawing.Point(437, 53);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(39, 15);
@@ -220,7 +200,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(108, 191);
+            this.label7.Location = new System.Drawing.Point(436, 23);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 15);
@@ -230,7 +210,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(115, 160);
+            this.label6.Location = new System.Drawing.Point(104, 183);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 15);
@@ -240,7 +220,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(75, 124);
+            this.label5.Location = new System.Drawing.Point(64, 151);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 15);
@@ -250,7 +230,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(114, 87);
+            this.label4.Location = new System.Drawing.Point(103, 119);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 15);
@@ -260,7 +240,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(95, 56);
+            this.label3.Location = new System.Drawing.Point(84, 87);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 15);
@@ -270,7 +250,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(91, 24);
+            this.label2.Location = new System.Drawing.Point(80, 23);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
@@ -279,14 +259,14 @@
             // 
             // gbVehiculos
             // 
+            this.gbVehiculos.Controls.Add(this.textBox1);
+            this.gbVehiculos.Controls.Add(this.txtVmarca);
+            this.gbVehiculos.Controls.Add(this.label14);
             this.gbVehiculos.Controls.Add(this.btnVcancelar);
-            this.gbVehiculos.Controls.Add(this.cmbVestatus);
             this.gbVehiculos.Controls.Add(this.btnVguardar);
             this.gbVehiculos.Controls.Add(this.cmbVtipo);
-            this.gbVehiculos.Controls.Add(this.dtpVfactualizacion);
             this.gbVehiculos.Controls.Add(this.txtVnumero);
             this.gbVehiculos.Controls.Add(this.label2);
-            this.gbVehiculos.Controls.Add(this.label13);
             this.gbVehiculos.Controls.Add(this.txtVmodelo);
             this.gbVehiculos.Controls.Add(this.txtVserie);
             this.gbVehiculos.Controls.Add(this.dtpVfalta);
@@ -306,14 +286,40 @@
             this.gbVehiculos.Controls.Add(this.label9);
             this.gbVehiculos.Controls.Add(this.label8);
             this.gbVehiculos.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbVehiculos.Location = new System.Drawing.Point(29, 342);
+            this.gbVehiculos.Location = new System.Drawing.Point(29, 367);
             this.gbVehiculos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbVehiculos.Name = "gbVehiculos";
             this.gbVehiculos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbVehiculos.Size = new System.Drawing.Size(867, 224);
+            this.gbVehiculos.Size = new System.Drawing.Size(867, 212);
             this.gbVehiculos.TabIndex = 79;
             this.gbVehiculos.TabStop = false;
             this.gbVehiculos.Text = "Datos del Vehiculo";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(482, 140);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(98, 23);
+            this.textBox1.TabIndex = 91;
+            // 
+            // txtVmarca
+            // 
+            this.txtVmarca.Location = new System.Drawing.Point(143, 49);
+            this.txtVmarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtVmarca.Name = "txtVmarca";
+            this.txtVmarca.Size = new System.Drawing.Size(130, 23);
+            this.txtVmarca.TabIndex = 90;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(93, 55);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(44, 15);
+            this.label14.TabIndex = 89;
+            this.label14.Text = "Marca:";
             // 
             // btnVcancelar
             // 
@@ -324,7 +330,7 @@
             this.btnVcancelar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVcancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnVcancelar.Image")));
             this.btnVcancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVcancelar.Location = new System.Drawing.Point(670, 125);
+            this.btnVcancelar.Location = new System.Drawing.Point(719, 126);
             this.btnVcancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVcancelar.Name = "btnVcancelar";
             this.btnVcancelar.Size = new System.Drawing.Size(115, 40);
@@ -332,18 +338,6 @@
             this.btnVcancelar.Text = "Cancelar";
             this.btnVcancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVcancelar.UseVisualStyleBackColor = true;
-            // 
-            // cmbVestatus
-            // 
-            this.cmbVestatus.FormattingEnabled = true;
-            this.cmbVestatus.Items.AddRange(new object[] {
-            "Activo",
-            "Desactivo"});
-            this.cmbVestatus.Location = new System.Drawing.Point(426, 117);
-            this.cmbVestatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbVestatus.Name = "cmbVestatus";
-            this.cmbVestatus.Size = new System.Drawing.Size(120, 23);
-            this.cmbVestatus.TabIndex = 76;
             // 
             // btnVguardar
             // 
@@ -355,7 +349,7 @@
             this.btnVguardar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnVguardar.Image")));
             this.btnVguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVguardar.Location = new System.Drawing.Point(670, 59);
+            this.btnVguardar.Location = new System.Drawing.Point(719, 69);
             this.btnVguardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVguardar.Name = "btnVguardar";
             this.btnVguardar.Size = new System.Drawing.Size(115, 40);
@@ -367,11 +361,7 @@
             // cmbVtipo
             // 
             this.cmbVtipo.FormattingEnabled = true;
-            this.cmbVtipo.Items.AddRange(new object[] {
-            "Taxi Ejecutivo",
-            "Taxi Tradicional",
-            "Taxi Radio"});
-            this.cmbVtipo.Location = new System.Drawing.Point(155, 83);
+            this.cmbVtipo.Location = new System.Drawing.Point(143, 107);
             this.cmbVtipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbVtipo.Name = "cmbVtipo";
             this.cmbVtipo.Size = new System.Drawing.Size(106, 23);
@@ -390,13 +380,13 @@
             this.groupBox1.Controls.Add(this.btnVregresar);
             this.groupBox1.Controls.Add(this.btnVnuevo);
             this.groupBox1.Controls.Add(this.btnVFiltrar);
-            this.groupBox1.Controls.Add(this.dtgVehiculos);
+            this.groupBox1.Controls.Add(this.dtgVehiculo);
             this.groupBox1.Controls.Add(this.txtVfiltro);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(29, 26);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(867, 300);
+            this.groupBox1.Size = new System.Drawing.Size(867, 336);
             this.groupBox1.TabIndex = 87;
             this.groupBox1.TabStop = false;
             // 
@@ -405,7 +395,7 @@
             this.chbVehiculos.AutoSize = true;
             this.chbVehiculos.Checked = true;
             this.chbVehiculos.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chbVehiculos.Location = new System.Drawing.Point(673, 275);
+            this.chbVehiculos.Location = new System.Drawing.Point(670, 311);
             this.chbVehiculos.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.chbVehiculos.Name = "chbVehiculos";
             this.chbVehiculos.Size = new System.Drawing.Size(176, 19);
@@ -486,19 +476,19 @@
             this.btnVFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVFiltrar.UseVisualStyleBackColor = true;
             // 
-            // dtgVehiculos
+            // dtgVehiculo
             // 
-            this.dtgVehiculos.AllowUserToAddRows = false;
-            this.dtgVehiculos.AllowUserToDeleteRows = false;
-            this.dtgVehiculos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtgVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgVehiculos.Location = new System.Drawing.Point(21, 76);
-            this.dtgVehiculos.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.dtgVehiculos.Name = "dtgVehiculos";
-            this.dtgVehiculos.ReadOnly = true;
-            this.dtgVehiculos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgVehiculos.Size = new System.Drawing.Size(825, 195);
-            this.dtgVehiculos.TabIndex = 89;
+            this.dtgVehiculo.AllowUserToAddRows = false;
+            this.dtgVehiculo.AllowUserToDeleteRows = false;
+            this.dtgVehiculo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtgVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgVehiculo.Location = new System.Drawing.Point(21, 76);
+            this.dtgVehiculo.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.dtgVehiculo.Name = "dtgVehiculo";
+            this.dtgVehiculo.ReadOnly = true;
+            this.dtgVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgVehiculo.Size = new System.Drawing.Size(825, 228);
+            this.dtgVehiculo.TabIndex = 89;
             // 
             // txtVfiltro
             // 
@@ -521,7 +511,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 582);
+            this.ClientSize = new System.Drawing.Size(911, 590);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbVehiculos);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -535,7 +525,7 @@
             this.gbVehiculos.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgVehiculos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgVehiculo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -547,11 +537,9 @@
         private System.Windows.Forms.TextBox txtVcolor;
         private System.Windows.Forms.TextBox txtVaño;
         private System.Windows.Forms.TextBox txtVdescripcion;
-        private System.Windows.Forms.DateTimePicker dtpVfactualizacion;
         private System.Windows.Forms.DateTimePicker dtpVfalta;
         private System.Windows.Forms.TextBox txtVmodelo;
         private System.Windows.Forms.TextBox txtVnumero;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -566,7 +554,6 @@
         private System.Windows.Forms.GroupBox gbVehiculos;
         private System.Windows.Forms.ComboBox cmbVtipo;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.ComboBox cmbVestatus;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnVcancelar;
         private System.Windows.Forms.Button btnVguardar;
@@ -575,9 +562,12 @@
         private System.Windows.Forms.Button btnVregresar;
         private System.Windows.Forms.Button btnVnuevo;
         private System.Windows.Forms.Button btnVFiltrar;
-        private System.Windows.Forms.DataGridView dtgVehiculos;
+        private System.Windows.Forms.DataGridView dtgVehiculo;
         private System.Windows.Forms.TextBox txtVfiltro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chbVehiculos;
+        private System.Windows.Forms.TextBox txtVmarca;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

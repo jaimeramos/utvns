@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Principal
 {
-    public partial class FrmRegVehiculos : Form
+    public partial class FrmTiposIngresos : Form
     {
-        public FrmRegVehiculos()
+        public FrmTiposIngresos()
         {
             InitializeComponent();
         }

@@ -83,6 +83,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEgresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEgresos.Designer.cs">
+      <DependentUpon>FrmEgresos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEjecutivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEjecutivos.Designer.cs">
+      <DependentUpon>FrmEjecutivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresos.Designer.cs">
+      <DependentUpon>FrmIngresos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,11 +119,17 @@
     <Compile Include="FrmPermisionarios.Designer.cs">
       <DependentUpon>FrmPermisionarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRegVehiculos.cs">
+    <Compile Include="FrmPermisos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRegVehiculos.Designer.cs">
-      <DependentUpon>FrmRegVehiculos.cs</DependentUpon>
+    <Compile Include="FrmPermisos.Designer.cs">
+      <DependentUpon>FrmPermisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTiposIngresos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTiposIngresos.Designer.cs">
+      <DependentUpon>FrmTiposIngresos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUsuarios.cs">
       <SubType>Form</SubType>
@@ -130,6 +154,15 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEgresos.resx">
+      <DependentUpon>FrmEgresos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEjecutivos.resx">
+      <DependentUpon>FrmEjecutivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngresos.resx">
+      <DependentUpon>FrmIngresos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,8 +172,11 @@
     <EmbeddedResource Include="FrmPermisionarios.resx">
       <DependentUpon>FrmPermisionarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegVehiculos.resx">
-      <DependentUpon>FrmRegVehiculos.cs</DependentUpon>
+    <EmbeddedResource Include="FrmPermisos.resx">
+      <DependentUpon>FrmPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTiposIngresos.resx">
+      <DependentUpon>FrmTiposIngresos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.cs</DependentUpon>

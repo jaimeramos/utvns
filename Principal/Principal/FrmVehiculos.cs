@@ -31,7 +31,7 @@ namespace Principal
         private void Vehiculos_Load(object sender, EventArgs e)
         {
           gbVehiculos.Enabled = false;
-          dtgVehiculos.DataSource =  user.read();
+          dtgVehiculo.DataSource =  user.read();
 
          }
 
@@ -58,22 +58,8 @@ namespace Principal
 
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
-            gbVehiculos.Enabled = true;
-            btnVguardar.Enabled = true;
-
-            txtVnumero.Text = "";
-            txtVmodelo.Text = "";
-            cmbVtipo.Text = "";
-            txtVdescripcion.Text = "";
-            txtVaño.Text = "";
-            txtVcolor.Text = "";
-            txtVserie.Text = "";
-            txtVseriemotor.Text = "";
-            txtVplaca.Text = "";
-            cmbVestatus.Text = "";
-            dtpVfalta.Text = "";
-            dtpVfactualizacion.Text = "";
-        }
+            
+       }
 
         private void Editar_Click(object sender, EventArgs e)
         {

@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace Principal
 {
-    public partial class FrmUsuarios : Form
+        public partial class FrmUsuarios : Form
     {
         Usuario user = new Usuario();
 
@@ -18,18 +18,55 @@ namespace Principal
             InitializeComponent();
         }
 
+        public bool vacio; // Variable utilizada para saber si hay algún TextBox vacio. 
+        private void validar(Form formulario)
+        {
+            foreach (Control oControls in gbUsuarios.Controls) // Buscamos en cada TextBox de nuestro Formulario. 
+            {
+                if (oControls is TextBox & oControls.Text == String.Empty) // Verificamos que no este vacio. 
+                {
+                    vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable. 
+                }
+            }
+            if (vacio == true) MessageBox.Show("Favor de llenar los campos vacios."); // Si nuestra variable es verdadera mostramos un mensaje. 
+           
+            vacio = false; // Devolvemos el valor original a nuestra variable. 
+            
+
+            loadDataFromForm();
+            string pwd1 = txtUccontraseña.Text.Trim(), pwd2 = txtUcontraseña.Text.Trim();
+            if (pwd1.Equals(string.Empty) && pwd2.Equals(string.Empty))
+            {
+                user.upSert(false);
+                reloadInitialState();
+            }
+            else
+            {
+                if (pwd1.Length >= 8 && pwd2.Length >= 8 && pwd1.Equals(pwd2))
+                {
+                    user.Pwd = txtUcontraseña.Text;
+                    user.upSert(true);
+                    reloadInitialState();
+                }
+                else
+                {
+                    MessageBox.Show("Verifique que la contraseña coincida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
+
             fillGridView();
+
         }
         public void fillGridView() {
             string json = user.read();
             dtgUsuario.DataSource = Util.convertToDataTable(json);
-
             dtgUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            
+
             gbUsuarios.Enabled = false;
-         
+
             this.dtgUsuario.Columns["pwd"].Visible = false;
             this.dtgUsuario.Columns["created_at"].Visible = false;
             this.dtgUsuario.Columns["updated_at"].Visible = false;
@@ -76,7 +113,7 @@ namespace Principal
             txtUcontraseña.Text = "";
             txtUccontraseña.Text = "";
             dtpUfvencimiento.Text = "";
-           // chbUactivo.Text = "";
+            // chbUactivo.Text = "";
             user = new Usuario();
             gbUsuarios.Enabled = true;
             btnUguardar.Enabled = true;
@@ -91,27 +128,27 @@ namespace Principal
         }
 
         public void loadDataFromGrid(DataGridViewRow row) {
-            user.Nickname= txtUsuario.Text = row.Cells["nickname"].Value.ToString();
+            user.Nickname = txtUsuario.Text = row.Cells["nickname"].Value.ToString();
             user.Name = txtUnombre.Text = row.Cells["name"].Value.ToString();
-            user.Lastname= txtUapellidos.Text = row.Cells["lastname"].Value.ToString();
-            user.Email= txtUemail.Text = row.Cells["email"].Value.ToString();
+            user.Lastname = txtUapellidos.Text = row.Cells["lastname"].Value.ToString();
+            user.Email = txtUemail.Text = row.Cells["email"].Value.ToString();
             dtpUfvencimiento.Text = row.Cells["expirationdate"].Value.ToString();//.Substring(0,24);
-            user.ExpirationDate= DateTime.ParseExact(dtpUfvencimiento.Text, "dd/MM/yyyy",
+            user.ExpirationDate = DateTime.ParseExact(dtpUfvencimiento.Text, "dd/MM/yyyy",
                                        System.Globalization.CultureInfo.CurrentCulture).ToString();
-            user.Id= row.Cells["_id"].Value.ToString();
-            user.Active=chbUactivo.Checked = (bool)row.Cells["active"].Value;
-            user.Admin= chbUadmin.Checked=(bool)row.Cells["admin"].Value;
+            user.Id = row.Cells["_id"].Value.ToString();
+            user.Active = chbUactivo.Checked = (bool)row.Cells["active"].Value;
+            user.Admin = chbUadmin.Checked = (bool)row.Cells["admin"].Value;
         }
         public void loadDataFromForm() {
-            user.Nickname = txtUsuario.Text ;
-            user.Name = txtUnombre.Text ;
-            user.Lastname = txtUapellidos.Text ;
-            user.Email = txtUemail.Text ;
-            DateTime dt = DateTime.ParseExact( dtpUfvencimiento.Text, "dd/MM/yyyy",
+            user.Nickname = txtUsuario.Text;
+            user.Name = txtUnombre.Text;
+            user.Lastname = txtUapellidos.Text;
+            user.Email = txtUemail.Text;
+            DateTime dt = DateTime.ParseExact(dtpUfvencimiento.Text, "dd/MM/yyyy",
                                        System.Globalization.CultureInfo.CreateSpecificCulture("en-US"));
-            user.ExpirationDate = dt.Month+"/"+dt.Day + "/"+dt.Year;
-            user.Active = chbUactivo.Checked ;
-            user.Admin = chbUadmin.Checked ;
+            user.ExpirationDate = dt.Month + "/" + dt.Day + "/" + dt.Year;
+            user.Active = chbUactivo.Checked;
+            user.Admin = chbUadmin.Checked;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -121,7 +158,7 @@ namespace Principal
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (txtUfiltro.Text !="")
+            if (txtUfiltro.Text != "")
             {
                 dtgUsuario.CurrentCell = null;
                 foreach (DataGridViewRow r in dtgUsuario.Rows)
@@ -148,27 +185,47 @@ namespace Principal
 
         private void btnUactualizar_Click(object sender, EventArgs e)
         {
-            loadDataFromForm();
-            string pwd1= txtUccontraseña.Text.Trim(), pwd2= txtUcontraseña.Text.Trim();
-            if (pwd1.Equals(string.Empty) && pwd2.Equals(string.Empty))
-            {                
-                user.upSert(false);
-                reloadInitialState();
+           
+                // Llamar la función validar
+                validar(this);
+
+
+
+
+                //   if (txtUsuario.Text.Length == 0)
+                //   {
+                //        MessageBox.Show("El usuario no debe estar vacio");
+                //    }
+                //     else if (txtUnombre.Text.Length == 0 || txtUapellidos.Text.Length == 0)
+                //     {
+                //         MessageBox.Show("El campo Nombre o Apellido no deben estar vacios");
+                //     }
+                // else
+                //   {
+            //    loadDataFromForm();
+            //    string pwd1 = txtUccontraseña.Text.Trim(), pwd2 = txtUcontraseña.Text.Trim();
+            //    if (pwd1.Equals(string.Empty) && pwd2.Equals(string.Empty))
+            //    {
+            //        user.upSert(false);
+             //       reloadInitialState();
+           //     }
+            //    else
+            //    {
+            //        if (pwd1.Length >= 8 && pwd2.Length >= 8 && pwd1.Equals(pwd2))
+            //        {
+            //            user.Pwd = txtUcontraseña.Text;
+            //            user.upSert(true);
+            //            reloadInitialState();
+            //        }
+            //        else
+             //       {
+            //            MessageBox.Show("Verifique que la contraseña coincida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        }
+           //     }
             }
-            else {
-                if (pwd1.Length >= 8 && pwd2.Length >= 8 && pwd1.Equals(pwd2))
-                {
-                    user.Pwd = txtUcontraseña.Text;
-                    user.upSert(true);
-                    reloadInitialState();
-                }
-                else {
-                    MessageBox.Show("Verifique que la contraseña coincida.", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            
-        }
-        public void reloadInitialState() {
+         
+        
+          public void reloadInitialState() {
             gbUsuarios.Enabled = false;
             gbUsuarios1.Enabled = true;
             btnUguardar.Enabled = false;
@@ -225,6 +282,45 @@ namespace Principal
                 {
                     r.Visible = true;
                 }
+            }
+        }
+
+        private void txtUsuario_Validated(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Trim() == "")
+            {
+                eperror.SetError(txtUsuario, "Introduce un Usuario...");
+                txtUsuario.Focus();
+            }
+            else
+            {
+                eperror.Clear();
+            }
+      }
+
+        private void txtUnombre_Validated(object sender, EventArgs e)
+        {
+            if (txtUnombre.Text.Trim() == "")
+            {
+                eperror.SetError(txtUnombre, "Introduce un Nombre...");
+                txtUnombre.Focus();
+            }
+            else
+            {
+                eperror.Clear();
+            }
+        }
+
+        private void txtUapellidos_Validated(object sender, EventArgs e)
+        {
+            if (txtUapellidos.Text.Trim() == "")
+            {
+                eperror.SetError(txtUapellidos, "Introduce un Apellido...");
+                txtUapellidos.Focus();
+            }
+            else
+            {
+                eperror.Clear();
             }
         }
     }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuarios));
             this.dtgUsuario = new System.Windows.Forms.DataGridView();
             this.gbUsuarios = new System.Windows.Forms.GroupBox();
@@ -35,7 +36,7 @@
             this.btnUguardar = new System.Windows.Forms.Button();
             this.dtpUfvencimiento = new System.Windows.Forms.DateTimePicker();
             this.txtUccontraseña = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbUtipo = new System.Windows.Forms.GroupBox();
             this.chbUadmin = new System.Windows.Forms.CheckBox();
             this.chbUactivo = new System.Windows.Forms.CheckBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -57,11 +58,13 @@
             this.btnUeditar = new System.Windows.Forms.Button();
             this.btnUregresar = new System.Windows.Forms.Button();
             this.btnUnuevo = new System.Windows.Forms.Button();
-            this.btnUFiltrar = new System.Windows.Forms.Button();
+            this.btnUfiltrar = new System.Windows.Forms.Button();
+            this.eperror = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuario)).BeginInit();
             this.gbUsuarios.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbUtipo.SuspendLayout();
             this.gbUsuarios1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eperror)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgUsuario
@@ -85,7 +88,7 @@
             this.gbUsuarios.Controls.Add(this.btnUguardar);
             this.gbUsuarios.Controls.Add(this.dtpUfvencimiento);
             this.gbUsuarios.Controls.Add(this.txtUccontraseña);
-            this.gbUsuarios.Controls.Add(this.groupBox2);
+            this.gbUsuarios.Controls.Add(this.gbUtipo);
             this.gbUsuarios.Controls.Add(this.txtUsuario);
             this.gbUsuarios.Controls.Add(this.txtUnombre);
             this.gbUsuarios.Controls.Add(this.txtUcontraseña);
@@ -152,7 +155,7 @@
             this.dtpUfvencimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 7.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpUfvencimiento.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpUfvencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpUfvencimiento.Location = new System.Drawing.Point(376, 94);
+            this.dtpUfvencimiento.Location = new System.Drawing.Point(389, 94);
             this.dtpUfvencimiento.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtpUfvencimiento.Name = "dtpUfvencimiento";
             this.dtpUfvencimiento.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -161,24 +164,24 @@
             // 
             // txtUccontraseña
             // 
-            this.txtUccontraseña.Location = new System.Drawing.Point(376, 62);
+            this.txtUccontraseña.Location = new System.Drawing.Point(389, 62);
             this.txtUccontraseña.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtUccontraseña.Name = "txtUccontraseña";
             this.txtUccontraseña.PasswordChar = '*';
             this.txtUccontraseña.Size = new System.Drawing.Size(142, 23);
             this.txtUccontraseña.TabIndex = 5;
             // 
-            // groupBox2
+            // gbUtipo
             // 
-            this.groupBox2.Controls.Add(this.chbUadmin);
-            this.groupBox2.Controls.Add(this.chbUactivo);
-            this.groupBox2.Location = new System.Drawing.Point(234, 119);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox2.Size = new System.Drawing.Size(284, 45);
-            this.groupBox2.TabIndex = 16;
-            this.groupBox2.TabStop = false;
+            this.gbUtipo.Controls.Add(this.chbUadmin);
+            this.gbUtipo.Controls.Add(this.chbUactivo);
+            this.gbUtipo.Location = new System.Drawing.Point(247, 119);
+            this.gbUtipo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gbUtipo.Name = "gbUtipo";
+            this.gbUtipo.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.gbUtipo.Size = new System.Drawing.Size(284, 45);
+            this.gbUtipo.TabIndex = 16;
+            this.gbUtipo.TabStop = false;
             // 
             // chbUadmin
             // 
@@ -210,6 +213,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(164, 23);
             this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.Validated += new System.EventHandler(this.txtUsuario_Validated);
             // 
             // txtUnombre
             // 
@@ -218,10 +222,11 @@
             this.txtUnombre.Name = "txtUnombre";
             this.txtUnombre.Size = new System.Drawing.Size(164, 23);
             this.txtUnombre.TabIndex = 1;
+            this.txtUnombre.Validated += new System.EventHandler(this.txtUnombre_Validated);
             // 
             // txtUcontraseña
             // 
-            this.txtUcontraseña.Location = new System.Drawing.Point(376, 32);
+            this.txtUcontraseña.Location = new System.Drawing.Point(389, 32);
             this.txtUcontraseña.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtUcontraseña.Name = "txtUcontraseña";
             this.txtUcontraseña.PasswordChar = '*';
@@ -235,11 +240,12 @@
             this.txtUapellidos.Name = "txtUapellidos";
             this.txtUapellidos.Size = new System.Drawing.Size(164, 23);
             this.txtUapellidos.TabIndex = 2;
+            this.txtUapellidos.Validated += new System.EventHandler(this.txtUapellidos_Validated);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(237, 99);
+            this.label8.Location = new System.Drawing.Point(250, 99);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 15);
@@ -257,7 +263,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(237, 68);
+            this.label7.Location = new System.Drawing.Point(250, 68);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(131, 15);
@@ -267,7 +273,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(295, 35);
+            this.label6.Location = new System.Drawing.Point(308, 35);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 15);
@@ -277,7 +283,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 35);
+            this.label2.Location = new System.Drawing.Point(12, 35);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 15);
@@ -287,7 +293,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 131);
+            this.label5.Location = new System.Drawing.Point(24, 131);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 15);
@@ -297,7 +303,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 68);
+            this.label3.Location = new System.Drawing.Point(7, 68);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 15);
@@ -307,7 +313,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(-2, 99);
+            this.label4.Location = new System.Drawing.Point(3, 99);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 15);
@@ -342,7 +348,7 @@
             this.gbUsuarios1.Controls.Add(this.btnUregresar);
             this.gbUsuarios1.Controls.Add(this.txtUfiltro);
             this.gbUsuarios1.Controls.Add(this.btnUnuevo);
-            this.gbUsuarios1.Controls.Add(this.btnUFiltrar);
+            this.gbUsuarios1.Controls.Add(this.btnUfiltrar);
             this.gbUsuarios1.Location = new System.Drawing.Point(29, 12);
             this.gbUsuarios1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.gbUsuarios1.Name = "gbUsuarios1";
@@ -422,30 +428,34 @@
             this.btnUnuevo.UseVisualStyleBackColor = true;
             this.btnUnuevo.Click += new System.EventHandler(this.btnNusuario_Click);
             // 
-            // btnUFiltrar
+            // btnUfiltrar
             // 
-            this.btnUFiltrar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUFiltrar.FlatAppearance.BorderSize = 0;
-            this.btnUFiltrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnUFiltrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnUFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUFiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnUFiltrar.Image")));
-            this.btnUFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUFiltrar.Location = new System.Drawing.Point(213, 20);
-            this.btnUFiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnUFiltrar.Name = "btnUFiltrar";
-            this.btnUFiltrar.Size = new System.Drawing.Size(117, 40);
-            this.btnUFiltrar.TabIndex = 13;
-            this.btnUFiltrar.Text = "Limpiar filtro";
-            this.btnUFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUFiltrar.UseVisualStyleBackColor = true;
-            this.btnUFiltrar.Click += new System.EventHandler(this.btnFiltrarU_Click);
+            this.btnUfiltrar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUfiltrar.FlatAppearance.BorderSize = 0;
+            this.btnUfiltrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnUfiltrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnUfiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUfiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnUfiltrar.Image")));
+            this.btnUfiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUfiltrar.Location = new System.Drawing.Point(213, 20);
+            this.btnUfiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnUfiltrar.Name = "btnUfiltrar";
+            this.btnUfiltrar.Size = new System.Drawing.Size(117, 40);
+            this.btnUfiltrar.TabIndex = 13;
+            this.btnUfiltrar.Text = "Limpiar filtro";
+            this.btnUfiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUfiltrar.UseVisualStyleBackColor = true;
+            this.btnUfiltrar.Click += new System.EventHandler(this.btnFiltrarU_Click);
+            // 
+            // eperror
+            // 
+            this.eperror.ContainerControl = this;
             // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 543);
+            this.ClientSize = new System.Drawing.Size(797, 547);
             this.Controls.Add(this.gbUsuarios1);
             this.Controls.Add(this.gbUsuarios);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -458,10 +468,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuario)).EndInit();
             this.gbUsuarios.ResumeLayout(false);
             this.gbUsuarios.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbUtipo.ResumeLayout(false);
+            this.gbUtipo.PerformLayout();
             this.gbUsuarios1.ResumeLayout(false);
             this.gbUsuarios1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eperror)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -486,10 +497,10 @@
         private System.Windows.Forms.TextBox txtUfiltro;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnUFiltrar;
+        private System.Windows.Forms.Button btnUfiltrar;
         private System.Windows.Forms.DateTimePicker dtpUfvencimiento;
         private System.Windows.Forms.TextBox txtUccontraseña;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbUtipo;
         private System.Windows.Forms.Button btnUguardar;
         private System.Windows.Forms.Button btnUnuevo;
         private System.Windows.Forms.Button btnUregresar;
@@ -497,5 +508,6 @@
         private System.Windows.Forms.Button btnUcancelar;
         private System.Windows.Forms.GroupBox gbUsuarios1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ErrorProvider eperror;
     }
 }

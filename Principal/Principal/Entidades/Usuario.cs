@@ -223,11 +223,13 @@ namespace Principal.Entidades
             {
                 //this.Id =
                     Data.sendData(Entity, data, "POST");
+
                 return this.Id != String.Empty;
             }
             else
             {
                     Data.sendData(Entity + "/" + this.Id, data, "PUT");
+
                 //  return Data.Update(Entity,args);
                 return false;
             }
