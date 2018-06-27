@@ -50,7 +50,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gbVehiculos = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtVnumpermisionario = new System.Windows.Forms.TextBox();
             this.txtVmarca = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btnVcancelar = new System.Windows.Forms.Button();
@@ -58,7 +58,7 @@
             this.cmbVtipo = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbVehiculos1 = new System.Windows.Forms.GroupBox();
             this.chbVehiculos = new System.Windows.Forms.CheckBox();
             this.btnVeditar = new System.Windows.Forms.Button();
             this.btnVregresar = new System.Windows.Forms.Button();
@@ -68,7 +68,7 @@
             this.txtVfiltro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gbVehiculos.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbVehiculos1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVehiculo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -259,7 +259,7 @@
             // 
             // gbVehiculos
             // 
-            this.gbVehiculos.Controls.Add(this.textBox1);
+            this.gbVehiculos.Controls.Add(this.txtVnumpermisionario);
             this.gbVehiculos.Controls.Add(this.txtVmarca);
             this.gbVehiculos.Controls.Add(this.label14);
             this.gbVehiculos.Controls.Add(this.btnVcancelar);
@@ -295,13 +295,13 @@
             this.gbVehiculos.TabStop = false;
             this.gbVehiculos.Text = "Datos del Vehiculo";
             // 
-            // textBox1
+            // txtVnumpermisionario
             // 
-            this.textBox1.Location = new System.Drawing.Point(482, 140);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(98, 23);
-            this.textBox1.TabIndex = 91;
+            this.txtVnumpermisionario.Location = new System.Drawing.Point(482, 140);
+            this.txtVnumpermisionario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtVnumpermisionario.Name = "txtVnumpermisionario";
+            this.txtVnumpermisionario.Size = new System.Drawing.Size(98, 23);
+            this.txtVnumpermisionario.TabIndex = 91;
             // 
             // txtVmarca
             // 
@@ -338,6 +338,7 @@
             this.btnVcancelar.Text = "Cancelar";
             this.btnVcancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVcancelar.UseVisualStyleBackColor = true;
+            this.btnVcancelar.Click += new System.EventHandler(this.btnVcancelar_Click);
             // 
             // btnVguardar
             // 
@@ -357,6 +358,7 @@
             this.btnVguardar.Text = "Guardar";
             this.btnVguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVguardar.UseVisualStyleBackColor = true;
+            this.btnVguardar.Click += new System.EventHandler(this.btnVguardar_Click);
             // 
             // cmbVtipo
             // 
@@ -373,22 +375,22 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 39;
             // 
-            // groupBox1
+            // gbVehiculos1
             // 
-            this.groupBox1.Controls.Add(this.chbVehiculos);
-            this.groupBox1.Controls.Add(this.btnVeditar);
-            this.groupBox1.Controls.Add(this.btnVregresar);
-            this.groupBox1.Controls.Add(this.btnVnuevo);
-            this.groupBox1.Controls.Add(this.btnVFiltrar);
-            this.groupBox1.Controls.Add(this.dtgVehiculo);
-            this.groupBox1.Controls.Add(this.txtVfiltro);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(29, 26);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(867, 336);
-            this.groupBox1.TabIndex = 87;
-            this.groupBox1.TabStop = false;
+            this.gbVehiculos1.Controls.Add(this.chbVehiculos);
+            this.gbVehiculos1.Controls.Add(this.btnVeditar);
+            this.gbVehiculos1.Controls.Add(this.btnVregresar);
+            this.gbVehiculos1.Controls.Add(this.btnVnuevo);
+            this.gbVehiculos1.Controls.Add(this.btnVFiltrar);
+            this.gbVehiculos1.Controls.Add(this.dtgVehiculo);
+            this.gbVehiculos1.Controls.Add(this.txtVfiltro);
+            this.gbVehiculos1.Controls.Add(this.label1);
+            this.gbVehiculos1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbVehiculos1.Location = new System.Drawing.Point(29, 26);
+            this.gbVehiculos1.Name = "gbVehiculos1";
+            this.gbVehiculos1.Size = new System.Drawing.Size(867, 336);
+            this.gbVehiculos1.TabIndex = 87;
+            this.gbVehiculos1.TabStop = false;
             // 
             // chbVehiculos
             // 
@@ -420,6 +422,7 @@
             this.btnVeditar.Text = "Editar Vehículo";
             this.btnVeditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVeditar.UseVisualStyleBackColor = true;
+            this.btnVeditar.Click += new System.EventHandler(this.btnVeditar_Click);
             // 
             // btnVregresar
             // 
@@ -457,6 +460,7 @@
             this.btnVnuevo.Text = "Nuevo Vehículo";
             this.btnVnuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVnuevo.UseVisualStyleBackColor = true;
+            this.btnVnuevo.Click += new System.EventHandler(this.btnVnuevo_Click);
             // 
             // btnVFiltrar
             // 
@@ -475,6 +479,7 @@
             this.btnVFiltrar.Text = "Limpiar Filtro";
             this.btnVFiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVFiltrar.UseVisualStyleBackColor = true;
+            this.btnVFiltrar.Click += new System.EventHandler(this.btnVFiltrar_Click);
             // 
             // dtgVehiculo
             // 
@@ -497,6 +502,7 @@
             this.txtVfiltro.Name = "txtVfiltro";
             this.txtVfiltro.Size = new System.Drawing.Size(144, 23);
             this.txtVfiltro.TabIndex = 88;
+            this.txtVfiltro.TextChanged += new System.EventHandler(this.txtVfiltro_TextChanged);
             // 
             // label1
             // 
@@ -512,7 +518,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 590);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbVehiculos1);
             this.Controls.Add(this.gbVehiculos);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -523,8 +529,8 @@
             this.Load += new System.EventHandler(this.Vehiculos_Load);
             this.gbVehiculos.ResumeLayout(false);
             this.gbVehiculos.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbVehiculos1.ResumeLayout(false);
+            this.gbVehiculos1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVehiculo)).EndInit();
             this.ResumeLayout(false);
 
@@ -557,7 +563,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnVcancelar;
         private System.Windows.Forms.Button btnVguardar;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbVehiculos1;
         private System.Windows.Forms.Button btnVeditar;
         private System.Windows.Forms.Button btnVregresar;
         private System.Windows.Forms.Button btnVnuevo;
@@ -568,6 +574,6 @@
         private System.Windows.Forms.CheckBox chbVehiculos;
         private System.Windows.Forms.TextBox txtVmarca;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtVnumpermisionario;
     }
 }

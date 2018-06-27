@@ -18,39 +18,50 @@ namespace Principal
             InitializeComponent();
         }
 
-        public bool vacio; // Variable utilizada para saber si hay algún TextBox vacio. 
+       // Variable utilizada para saber si hay algún TextBox vacio. 
         private void validar(Form formulario)
-        {
+        { 
+            bool vacio=true; 
             foreach (Control oControls in gbUsuarios.Controls) // Buscamos en cada TextBox de nuestro Formulario. 
             {
-                if (oControls is TextBox & oControls.Text == String.Empty) // Verificamos que no este vacio. 
+                if (oControls is TextBox)
                 {
-                    vacio = true; // Si esta vacio el TextBox asignamos el valor True a nuestra variable. 
-                }
-            }
-            if (vacio == true) MessageBox.Show("Favor de llenar los campos vacios."); // Si nuestra variable es verdadera mostramos un mensaje. 
-           
-            vacio = false; // Devolvemos el valor original a nuestra variable. 
-            
+                    if (oControls.Text == String.Empty) // Verificamos que no este vacio. 
+                    {
+                       
+                       // vacio = true;
+                        // if (vacio == true)
+                        MessageBox.Show("Favor de llenar los campos vacios."); // Si nuestra variable es verdadera mostramos un mensaje.
+                           break;                                                     // Si esta vacio el TextBox asignamos el valor True a nuestra variable. 
+                    }
+                    else
+                    {
 
-            loadDataFromForm();
-            string pwd1 = txtUccontraseña.Text.Trim(), pwd2 = txtUcontraseña.Text.Trim();
-            if (pwd1.Equals(string.Empty) && pwd2.Equals(string.Empty))
-            {
-                user.upSert(false);
-                reloadInitialState();
-            }
-            else
-            {
-                if (pwd1.Length >= 8 && pwd2.Length >= 8 && pwd1.Equals(pwd2))
-                {
-                    user.Pwd = txtUcontraseña.Text;
-                    user.upSert(true);
-                    reloadInitialState();
-                }
-                else
-                {
-                    MessageBox.Show("Verifique que la contraseña coincida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //vacio = false; // Devolvemos el valor original a nuestra variable. 
+
+
+                        loadDataFromForm();
+                        string pwd1 = txtUccontraseña.Text.Trim(), pwd2 = txtUcontraseña.Text.Trim();
+                        if (pwd1.Equals(string.Empty) && pwd2.Equals(string.Empty))
+                        {
+                            user.upSert(false);
+                            reloadInitialState();
+                        }
+                        else
+                        {
+                            if (pwd1.Length >= 8 && pwd2.Length >= 8 && pwd1.Equals(pwd2))
+                            {
+                                user.Pwd = txtUcontraseña.Text;
+                                user.upSert(true);
+                                reloadInitialState();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Verifique que la contraseña coincida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                break;
+                            }
+                        }
+                    }
                 }
             }
         }
