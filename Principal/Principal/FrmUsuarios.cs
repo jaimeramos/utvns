@@ -21,7 +21,7 @@ namespace Principal
        // Variable utilizada para saber si hay algún TextBox vacio. 
         private void validar(Form formulario)
         { 
-            bool vacio=true; 
+            //bool vacio = true; 
             foreach (Control oControls in gbUsuarios.Controls) // Buscamos en cada TextBox de nuestro Formulario. 
             {
                 if (oControls is TextBox)
@@ -124,7 +124,7 @@ namespace Principal
             txtUcontraseña.Text = "";
             txtUccontraseña.Text = "";
             dtpUfvencimiento.Text = "";
-            // chbUactivo.Text = "";
+           
             user = new Usuario();
             gbUsuarios.Enabled = true;
             btnUguardar.Enabled = true;
