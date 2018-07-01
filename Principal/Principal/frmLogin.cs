@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Principal.EnlaceDatos;
-
 namespace Principal
 {
     public partial class frmLogin : Form
@@ -10,7 +9,7 @@ namespace Principal
         public frmLogin()
         {
             InitializeComponent();
-       
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
