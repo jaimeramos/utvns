@@ -20,7 +20,8 @@ namespace Principal
 
        // Variable utilizada para saber si hay algún TextBox vacio. 
         private void validar(Form formulario)
-        { 
+        {
+            //     return false;
             //bool vacio = true; 
             foreach (Control oControls in gbUsuarios.Controls) // Buscamos en cada TextBox de nuestro Formulario. 
             {
@@ -28,19 +29,15 @@ namespace Principal
                 {
                     if (oControls.Text == String.Empty) // Verificamos que no este vacio. 
                     {
-                       
-                       // vacio = true;
-                        // if (vacio == true)
+                        //            // vacio = true;
+                        //            // if (vacio == true)
                         MessageBox.Show("Favor de llenar los campos vacios."); // Si nuestra variable es verdadera mostramos un mensaje.
-                           break;                                                     // Si esta vacio el TextBox asignamos el valor True a nuestra variable. 
+                        break;
                     }
                     else
                     {
-
                         //vacio = false; // Devolvemos el valor original a nuestra variable. 
-
-
-                        loadDataFromForm();
+                       loadDataFromForm();
                         string pwd1 = txtUccontraseña.Text.Trim(), pwd2 = txtUcontraseña.Text.Trim();
                         if (pwd1.Equals(string.Empty) && pwd2.Equals(string.Empty))
                         {

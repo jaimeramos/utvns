@@ -48,8 +48,11 @@ namespace Principal
         private void btnCatalogos_MouseHover(object sender, EventArgs e)
         {
             pnlCatalogo.Visible = true;
+            pnlCatalogo.Location = new Point(52, 216);
             pnlTransacciones.Visible = false;
+            btnTransacciones.Location = new Point(21, 522);
             pnlSistemas.Visible = false;
+            btnSistemas.Location = new Point(21, 572);
         }
         
         private void pnlMenuvertical_MouseHover(object sender, EventArgs e)
@@ -57,6 +60,7 @@ namespace Principal
             pnlTransacciones.Visible = false;
             pnlCatalogo.Visible = false;
             pnlSistemas.Visible = false;
+            
         }
 
         
@@ -66,16 +70,19 @@ namespace Principal
             pnlTransacciones.Visible = false;
             pnlCatalogo.Visible = false;
             pnlSistemas.Visible = false;
+            btnCatalogos.Location = new Point(21, 172);
+            btnTransacciones.Location = new Point(21, 272);
+            btnSistemas.Location = new Point(21, 372);
         }
 
         private void btnslide_Click(object sender, EventArgs e)
         {
-            if (pnlMenuvertical.Width == 271)
+            if (pnlMenuvertical.Width == 281)
             {
-                pnlMenuvertical.Width = 81;
+                pnlMenuvertical.Width = 82;
             }
             else
-                pnlMenuvertical.Width = 271;
+                pnlMenuvertical.Width = 281;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -132,6 +139,9 @@ namespace Principal
         private void btnTransacciones_MouseHover(object sender, EventArgs e)
         {
             pnlTransacciones.Visible = true;
+            btnTransacciones.Location = new Point(21, 272);
+            pnlTransacciones.Location = new Point(52, 318);
+            btnSistemas.Location = new Point(21, 392);
             pnlCatalogo.Visible = false;
             pnlSistemas.Visible = false;
         }
@@ -139,6 +149,7 @@ namespace Principal
         private void btnSistemas_MouseHover(object sender, EventArgs e)
         {
             pnlSistemas.Visible = true;
+            pnlSistemas.Location = new Point(52, 439);
             pnlCatalogo.Visible = false;
             pnlTransacciones.Visible = false;
         }
@@ -148,6 +159,9 @@ namespace Principal
             pnlTransacciones.Visible = false;
             pnlCatalogo.Visible = false;
             pnlSistemas.Visible = false;
+            btnCatalogos.Location = new Point(21, 172);
+            btnTransacciones.Location = new Point(21, 272);
+            btnSistemas.Location = new Point(21, 372);
         }
 
         private void panelContenedor_MouseHover_1(object sender, EventArgs e)
@@ -155,6 +169,9 @@ namespace Principal
             pnlTransacciones.Visible = false;
             pnlCatalogo.Visible = false;
             pnlSistemas.Visible = false;
+            btnCatalogos.Location = new Point(21, 172);
+            btnTransacciones.Location = new Point(21, 272);
+            btnSistemas.Location = new Point(21, 372);
         }
 
         private void panelContenedor_Paint(object sender, PaintEventArgs e)

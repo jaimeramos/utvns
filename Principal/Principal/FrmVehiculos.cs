@@ -20,7 +20,30 @@ namespace Principal
         {
             InitializeComponent();
         }
-
+        private void validar(Form formulario)
+        {
+            //bool vacio = true; 
+            foreach (Control oControls in gbVehiculos.Controls) // Buscamos en cada TextBox de nuestro Formulario. 
+            {
+                if (oControls is TextBox)
+                {
+                    if (oControls.Text == String.Empty) // Verificamos que no este vacio. 
+                    {
+                        // vacio = true;
+                        // if (vacio == true)
+                        MessageBox.Show("Favor de llenar los campos vacios."); // Si nuestra variable es verdadera mostramos un mensaje.
+                        break;                                                     // Si esta vacio el TextBox asignamos el valor True a nuestra variable. 
+                    }
+                    else
+                    {
+                        //vacio = false; // Devolvemos el valor original a nuestra variable. 
+                        loadDataFromForm();
+                        vehicle.upSert(false);
+                        reloadInitialState();
+                    }
+                }
+            }
+        }
         private void lblVehiculo_Click(object sender, EventArgs e)
         {
 
@@ -36,10 +59,6 @@ namespace Principal
           gbVehiculos.Enabled = false;
           fillGridView();
           //dtgVehiculo.DataSource =  user.read();
-
-
-            fillGridView();
-
         }
         public void fillGridView()
         {
@@ -51,11 +70,13 @@ namespace Principal
 
             this.dtgVehiculo.Columns["created_at"].Visible = false;
             this.dtgVehiculo.Columns["updated_at"].Visible = false;
-            this.dtgVehiculo.Columns["__v"].Visible = false;
             this.dtgVehiculo.Columns["_id"].Visible = false;
+            this.dtgVehiculo.Columns["active"].Visible = false;
+           
 
             dtgVehiculo.Columns["number"].DisplayIndex = 0;
             dtgVehiculo.Columns["number"].HeaderText = "Numero";
+            dtgVehiculo.Columns["number"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dtgVehiculo.Columns["brand"].DisplayIndex = 1;
             dtgVehiculo.Columns["brand"].HeaderText = "Marca";
             dtgVehiculo.Columns["brand"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -81,15 +102,12 @@ namespace Principal
             dtgVehiculo.Columns["motorserie"].HeaderText = "Serie motor";
             dtgVehiculo.Columns["motorserie"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dtgVehiculo.Columns["plate"].DisplayIndex = 9;
-            dtgVehiculo.Columns["palte"].HeaderText = "Placa";
-            dtgVehiculo.Columns["pate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dtgVehiculo.Columns["plate"].HeaderText = "Placa";
+            dtgVehiculo.Columns["plate"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dtgVehiculo.Columns["iddriver"].DisplayIndex = 10;
             dtgVehiculo.Columns["iddriver"].HeaderText = "Numero permisionario";
             dtgVehiculo.Columns["iddriver"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dtgVehiculo.Columns["created_at"].DisplayIndex = 11;
-            dtgVehiculo.Columns["create_at"].HeaderText = "Fecha de Alta";
-            dtgVehiculo.Columns["create_at"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-
+            
         }
 
         
@@ -108,9 +126,6 @@ namespace Principal
         {
             gbVehiculos.Enabled = false;
            
-
-            // FrmRegVehiculos vreg = new FrmRegVehiculos();
-            //vreg.Show();
         }
 
         private void btnSalir_Click_1(object sender, EventArgs e)
@@ -193,8 +208,6 @@ namespace Principal
             txtVseriemotor.Text = "";
             txtVplaca.Text = "";
             txtVnumpermisionario.Text = "";
-            dtpVfalta.Text = "";
-            // chbUactivo.Text = "";
             vehicle = new Vehiculo();
             gbVehiculos.Enabled = true;
             btnVguardar.Enabled = true;
@@ -219,9 +232,6 @@ namespace Principal
             vehicle.Motorserie = txtVseriemotor.Text = row.Cells["motorserie"].Value.ToString();
             vehicle.Plate = txtVplaca.Text = row.Cells["plate"].Value.ToString();
             vehicle.Iddriver = txtVnumpermisionario.Text = row.Cells["iddriver"].Value.ToString();
-            dtpVfalta.Text = row.Cells["created_at"].Value.ToString();//.Substring(0,24);
-            vehicle.CreatedAt = DateTime.ParseExact(dtpVfalta.Text, "dd/MM/yyyy",
-                                       System.Globalization.CultureInfo.CurrentCulture).ToString();
             vehicle.Id = row.Cells["_id"].Value.ToString();
             
         }
@@ -239,11 +249,7 @@ namespace Principal
             vehicle.Plate = txtVplaca.Text;
             vehicle.Iddriver = txtVnumpermisionario.Text;
 
-            DateTime dt = DateTime.ParseExact(dtpVfalta.Text, "dd/MM/yyyy",
-                                       System.Globalization.CultureInfo.CreateSpecificCulture("en-US"));
-            vehicle.CreatedAt = dt.Month + "/" + dt.Day + "/" + dt.Year;
-            
-        }
+                   }
 
 
         private void btnVcancelar_Click(object sender, EventArgs e)
@@ -254,12 +260,15 @@ namespace Principal
 
         private void btnVguardar_Click(object sender, EventArgs e)
         {
-            loadDataFromForm();
+            validar(this);
+
+
+            //  loadDataFromForm();
             //    string pwd1 = txtUccontraseña.Text.Trim(), pwd2 = txtUcontraseña.Text.Trim();
             //    if (pwd1.Equals(string.Empty) && pwd2.Equals(string.Empty))
             //    {
-           //        vehicle.upSert(false);
-                  
+            //        vehicle.upSert(false);
+
             //     }
             //    else
             //    {
@@ -273,7 +282,7 @@ namespace Principal
             //       {
             //            MessageBox.Show("Verifique que la contraseña coincida.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //        }
-                 }
+        }
         public void reloadInitialState()
         {
             gbVehiculos.Enabled = false;
@@ -281,6 +290,15 @@ namespace Principal
             btnVguardar.Enabled = false;
             fillGridView();
             
+        }
+
+        private void dtgVehiculo_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dtgVehiculo.Rows[e.RowIndex];
+                loadDataFromGrid(row);
+            }
         }
     }
 }

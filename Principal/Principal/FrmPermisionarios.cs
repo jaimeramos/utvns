@@ -34,7 +34,7 @@ namespace Principal
 
         private void FrmPermisionarios_Load(object sender, EventArgs e)
         {
-            gbPermisionarios.Enabled = false;
+            gbDatospermisionario.Enabled = false;
         }
     }
 }
