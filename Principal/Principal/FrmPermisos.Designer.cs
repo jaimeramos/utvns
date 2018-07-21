@@ -37,8 +37,8 @@
             this.txtPefiltro = new System.Windows.Forms.TextBox();
             this.btnPenuevo = new System.Windows.Forms.Button();
             this.btnPefiltrar = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbPermisos = new System.Windows.Forms.GroupBox();
+            this.gbdatospermisos = new System.Windows.Forms.GroupBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.btnPecancelar = new System.Windows.Forms.Button();
             this.btnPeguardar = new System.Windows.Forms.Button();
@@ -54,8 +54,8 @@
             this.txtPedescripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPermiso)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbPermisos.SuspendLayout();
+            this.gbdatospermisos.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -175,46 +175,46 @@
             this.btnPefiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPefiltrar.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // gbPermisos
             // 
-            this.groupBox1.Controls.Add(this.txtPefiltro);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.btnPefiltrar);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnPenuevo);
-            this.groupBox1.Controls.Add(this.btnPeeditar);
-            this.groupBox1.Controls.Add(this.btnPeregresar);
-            this.groupBox1.Controls.Add(this.dtgPermiso);
-            this.groupBox1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(781, 370);
-            this.groupBox1.TabIndex = 27;
-            this.groupBox1.TabStop = false;
+            this.gbPermisos.Controls.Add(this.txtPefiltro);
+            this.gbPermisos.Controls.Add(this.checkBox1);
+            this.gbPermisos.Controls.Add(this.btnPefiltrar);
+            this.gbPermisos.Controls.Add(this.label1);
+            this.gbPermisos.Controls.Add(this.btnPenuevo);
+            this.gbPermisos.Controls.Add(this.btnPeeditar);
+            this.gbPermisos.Controls.Add(this.btnPeregresar);
+            this.gbPermisos.Controls.Add(this.dtgPermiso);
+            this.gbPermisos.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbPermisos.Location = new System.Drawing.Point(12, 12);
+            this.gbPermisos.Name = "gbPermisos";
+            this.gbPermisos.Size = new System.Drawing.Size(781, 370);
+            this.gbPermisos.TabIndex = 27;
+            this.gbPermisos.TabStop = false;
             // 
-            // groupBox2
+            // gbdatospermisos
             // 
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.btnPecancelar);
-            this.groupBox2.Controls.Add(this.btnPeguardar);
-            this.groupBox2.Controls.Add(this.txtPenpermisionario);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.chbPeactivo);
-            this.groupBox2.Controls.Add(this.dtpPevencimiento);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.cmbPetipo);
-            this.groupBox2.Controls.Add(this.txtPenumero);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtPedescripcion);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(18, 403);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(781, 171);
-            this.groupBox2.TabIndex = 28;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos de Permisos";
+            this.gbdatospermisos.Controls.Add(this.checkBox2);
+            this.gbdatospermisos.Controls.Add(this.btnPecancelar);
+            this.gbdatospermisos.Controls.Add(this.btnPeguardar);
+            this.gbdatospermisos.Controls.Add(this.txtPenpermisionario);
+            this.gbdatospermisos.Controls.Add(this.label2);
+            this.gbdatospermisos.Controls.Add(this.chbPeactivo);
+            this.gbdatospermisos.Controls.Add(this.dtpPevencimiento);
+            this.gbdatospermisos.Controls.Add(this.label12);
+            this.gbdatospermisos.Controls.Add(this.cmbPetipo);
+            this.gbdatospermisos.Controls.Add(this.txtPenumero);
+            this.gbdatospermisos.Controls.Add(this.label15);
+            this.gbdatospermisos.Controls.Add(this.label9);
+            this.gbdatospermisos.Controls.Add(this.txtPedescripcion);
+            this.gbdatospermisos.Controls.Add(this.label4);
+            this.gbdatospermisos.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbdatospermisos.Location = new System.Drawing.Point(18, 403);
+            this.gbdatospermisos.Name = "gbdatospermisos";
+            this.gbdatospermisos.Size = new System.Drawing.Size(781, 171);
+            this.gbdatospermisos.TabIndex = 28;
+            this.gbdatospermisos.TabStop = false;
+            this.gbdatospermisos.Text = "Datos de Permisos";
             // 
             // checkBox2
             // 
@@ -364,17 +364,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 586);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbdatospermisos);
+            this.Controls.Add(this.gbPermisos);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPermisos";
             this.Text = "FrmPermisos";
             ((System.ComponentModel.ISupportInitialize)(this.dtgPermiso)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbPermisos.ResumeLayout(false);
+            this.gbPermisos.PerformLayout();
+            this.gbdatospermisos.ResumeLayout(false);
+            this.gbdatospermisos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -389,8 +389,8 @@
         private System.Windows.Forms.TextBox txtPefiltro;
         private System.Windows.Forms.Button btnPenuevo;
         private System.Windows.Forms.Button btnPefiltrar;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbPermisos;
+        private System.Windows.Forms.GroupBox gbdatospermisos;
         private System.Windows.Forms.ComboBox cmbPetipo;
         private System.Windows.Forms.TextBox txtPenumero;
         private System.Windows.Forms.Label label15;
