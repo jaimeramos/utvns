@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using Principal.EnlaceDatos;
+using System.Drawing;
 namespace Principal
 {
     public partial class frmLogin : Form

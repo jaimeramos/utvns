@@ -16,5 +16,10 @@ namespace Principal
         {
             InitializeComponent();
         }
+
+        private void FrmEgresos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
