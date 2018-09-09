@@ -8,11 +8,11 @@ using System.Web.Script.Serialization;
 
 namespace Principal.Entidades
 {
-    class Permiso
+    public class Permiso
     {
         #region Atributos privados
         static string Entity = "permits";
-        string _id, _number, _type, _description, _validityAt, _idadmin, _createdAt, _updatedAt;
+        string _id, _number, _type, _description, _validity_at, _idadmin, _createdAt, _updatedAt;
         bool _active;
         #endregion
 
@@ -73,12 +73,12 @@ namespace Principal.Entidades
         {
             get
             {
-                return _validityAt;
+                return _validity_at;
             }
 
             set
             {
-                _validityAt = value;
+                _validity_at = value;
             }
         }
 
@@ -152,7 +152,7 @@ namespace Principal.Entidades
         /// </summary>
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
 
-        public bool upSert(bool opt)
+        public string upSert()
         {
             string json = new JavaScriptSerializer().Serialize(new
             {
@@ -160,27 +160,35 @@ namespace Principal.Entidades
                 number = this.Number,
                 type = this.Type,
                 description = this.Description,
-                validityAt = this.ValidityAt,
+                validity_at = this.ValidityAt,
                 idadmin = this.Idadmin,
-
+                active=this.Active
             });
 
             string data;
             data = json;
             if (this.Id == null)
             {
-                Data.sendData(Entity, data, "POST");
+                 return Data.sendData(Entity, data, "POST");
 
-                return this.Id != String.Empty;
+               // return this.Id != String.Empty;
             }
             else
             {
-                Data.sendData(Entity + "/" + this.Id, data, "PUT");
+                return Data.sendData(Entity + "/" + this.Id, data, "PUT");
 
-                return false;
+               // return false;
             }
         }
+        /// <summary>
+        /// Obtiene un DataTable con todos los Tipos de Permisionarios
+        /// </summary>
+        /// <returns>DataTable con los datos</returns>
+        public string readTypes()
+        {
+            return Data.getData("permitstypes");
 
+        }
         #endregion
     }
 }

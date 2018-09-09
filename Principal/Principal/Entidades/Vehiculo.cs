@@ -12,8 +12,8 @@ namespace Principal.Entidades
     {
         #region atributos
         static string Entity = "vehicles";
-        string _id, _token, _number, _brand, _model, _type, _description, _year, _color, _serie, _motorserie, _plate, _iddriver, _createdAt, _updatedAt;
-        
+        string _id, _token, _number, _brand, _model, _type, _description, _year, _color, _serie, _motorserie, _plate, _iddriver, _idpermit, _createdAt, _updatedAt;
+        bool _active;
         #endregion
 
         #region Propiedades
@@ -186,6 +186,19 @@ namespace Principal.Entidades
             }
         }
 
+        public string Idpermit
+        {
+            get
+            {
+                return _idpermit;
+            }
+
+            set
+            {
+                _idpermit = value;
+            }
+        }
+
         public string CreatedAt
         {
             get
@@ -212,6 +225,19 @@ namespace Principal.Entidades
             }
         }
 
+        public bool Active
+        {
+            get
+            {
+                return _active;
+            }
+
+            set
+            {
+                _active = value;
+            }
+        }
+
         #endregion
 
         #region metodos
@@ -230,7 +256,7 @@ namespace Principal.Entidades
         /// </summary>
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
         /// <param name="opt">opt indica si trae o no contraseña</param>
-        public bool upSert(bool opt)
+        public string upSert()
         {
             string json = new JavaScriptSerializer().Serialize(new
             {
@@ -246,43 +272,18 @@ namespace Principal.Entidades
                 motorserie = this._motorserie,
                 plate = this.Plate,
                 iddriver = this.Iddriver,
-                 
+                idpermit = this.Idpermit,
+                active = this.Active
             });
-            //string jsonPwd = new JavaScriptSerializer().Serialize(new
-            //{
-            //    id = this.Id,
-            //    number = this.Number,
-            //    brand = this.Brand,
-            //    model = this.Model,
-            //    type = this.Type,
-            //    description = this.Description,
-            //    year = this.Year,
-            //    color = this.Color,
-            //    serie = this.Serie,
-            //    motorserie = this.Motorserie,
-            //    plate = this.Plate,
-            //    iddriver = this.Iddriver,
-
-            //});
-            string data;
-            //// if opt is true then data must include PWD
-            //if (opt)
-            //    data = jsonPwd;
-            //else
-                data = json;
+            
+            string data = json;
             if (this.Id == null)
             {
-                //this.Id =
-                Data.sendData(Entity, data, "POST");
-
-                return this.Id != String.Empty;
+                return Data.sendData(Entity, data, "POST");
             }
             else
             {
-                Data.sendData(Entity + "/" + this.Id, data, "PUT");
-
-                //  return Data.Update(Entity,args);
-                return false;
+                return Data.sendData(Entity + "/" + this.Id, data, "PUT");
             }
         }
 

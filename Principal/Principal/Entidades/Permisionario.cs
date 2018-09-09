@@ -8,10 +8,10 @@ using System.Web.Script.Serialization;
 
 namespace Principal.Entidades
 {
-    class Permisionario
+    public class Permisionario
     {
         #region Atributos privados
-        static string Entity = "permithoders";
+        static string Entity = "permitholders";
         string _id, _number, _firstname, _lastname, _address, _rfc, _phone1, _phone2, _email, _type, _license, _licensevalidity, _dateadmission, _createdAt, _updatedAt;
         bool _active;
         #endregion
@@ -239,11 +239,20 @@ namespace Principal.Entidades
 
         }
         /// <summary>
+        /// Obtiene un DataTable con todos los Permisionarios
+        /// </summary>
+        /// <returns>DataTable con los datos</returns>
+        public string readById(string ID)
+        {
+            return Data.getData(Entity+"/"+ID);
+
+        }
+        /// <summary>
         /// Agrega registros de Permisionarios
         /// </summary>
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
         /// <param name="opt">opt indica si trae o no contraseña</param>
-        public bool upSert(bool opt)
+        public bool upSert()
         {
             string json = new JavaScriptSerializer().Serialize(new
             {
@@ -260,7 +269,7 @@ namespace Principal.Entidades
                 license = this.License,
                 licensevalidity = this.LicenseValidity,
                 dateadmission = this.DateAdmission,
-
+                active = this.Active
             });
            
             string data;
@@ -280,7 +289,15 @@ namespace Principal.Entidades
                return false;
             }
         }
+        /// <summary>
+        /// Obtiene un DataTable con todos los Tipos de Permisionarios
+        /// </summary>
+        /// <returns>DataTable con los datos</returns>
+        public string readTypes()
+        {
+            return Data.getData("permitholderstypes");
 
+        }
         #endregion
     }
 }

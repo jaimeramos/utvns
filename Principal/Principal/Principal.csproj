@@ -74,14 +74,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buscarchoferes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscarchoferes.Designer.cs">
+      <DependentUpon>Buscarchoferes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buscarpermisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscarpermisos.Designer.cs">
+      <DependentUpon>Buscarpermisos.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnlaceDatos\Data.cs" />
     <Compile Include="Entidades\Detalleventa.cs" />
+    <Compile Include="Entidades\Driverassign.cs" />
     <Compile Include="Entidades\Egreso.cs" />
     <Compile Include="Entidades\Ingreso.cs" />
     <Compile Include="Entidades\Lineanegocio.cs" />
     <Compile Include="Entidades\Mecanico.cs" />
     <Compile Include="Entidades\Permisionario.cs" />
     <Compile Include="Entidades\Permiso.cs" />
+    <Compile Include="Entidades\Permitassign.cs" />
+    <Compile Include="Entidades\Permitvehicle.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="Entidades\Servicioexecutivo.cs" />
     <Compile Include="Entidades\TipoIngreso.cs" />
@@ -216,6 +231,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Tools\Util.cs" />
+    <EmbeddedResource Include="Buscarchoferes.resx">
+      <DependentUpon>Buscarchoferes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buscarpermisos.resx">
+      <DependentUpon>Buscarpermisos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,9 +251,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDetalledeventaservicios.resx">
       <DependentUpon>FrmDetalledeventaservicios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmEgresos.resx">
-      <DependentUpon>FrmEgresos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEjecutivos.resx">
       <DependentUpon>FrmEjecutivos.cs</DependentUpon>
@@ -353,6 +371,7 @@
     <Content Include="imgs\botones\regresar.png" />
     <Content Include="imgs\botones\sistema.png" />
     <Content Include="imgs\botones\usuario %281%29.png" />
+    <None Include="imgs\steering-wheel.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

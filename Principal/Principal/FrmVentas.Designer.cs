@@ -265,6 +265,7 @@
             this.btnVtguardar.Text = "Guardar";
             this.btnVtguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVtguardar.UseVisualStyleBackColor = true;
+            this.btnVtguardar.Click += new System.EventHandler(this.btnVtguardar_Click);
             // 
             // txtVtfolio
             // 

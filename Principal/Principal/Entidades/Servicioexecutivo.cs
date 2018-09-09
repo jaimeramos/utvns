@@ -13,244 +13,28 @@ namespace Principal.Entidades
     {
         #region Atributos privados
         static string Entity = "executivesvcs";
-        string _id, _number, _linenumber, _imei, _simcard, _model, _brand, _contractnumber, _validity, _startdate, _cutoffdate, _amount, _idvehicle, _iddriver, _idpermitholder, _createdAt, _updatedAt;
+        string _id, _number, _linenumber, _imei, _simcard, _model, _brand, _contractnumber, _validity, _startdate, _cutoffdate, _amount, _idvehicle, _createdAt, _updatedAt;
         bool _active;
         #endregion
 
         #region Propiedades públicas
-        public string Id
-        {
-            get
-            {
-                return _id;
-            }
 
-            set
-            {
-                _id = value;
-            }
-        }
-
-        public string Number
-        {
-            get
-            {
-                return _number;
-            }
-
-            set
-            {
-                _number = value;
-            }
-        }
-
-        public string Linenumber
-        {
-            get
-            {
-                return _linenumber;
-            }
-
-            set
-            {
-                _linenumber = value;
-            }
-        }
-
-        public string Imei
-        {
-            get
-            {
-                return _imei;
-            }
-
-            set
-            {
-                _imei = value;
-            }
-        }
-
-        public string Simcard
-        {
-            get
-            {
-                return _simcard;
-            }
-
-            set
-            {
-                _simcard = value;
-            }
-        }
-
-        public string Model
-        {
-            get
-            {
-                return _model;
-            }
-
-            set
-            {
-                _model = value;
-            }
-        }
-
-        public string Brand
-        {
-            get
-            {
-                return _brand;
-            }
-
-            set
-            {
-                _brand = value;
-            }
-        }
-
-        public string Contractnumber
-        {
-            get
-            {
-                return _contractnumber;
-            }
-
-            set
-            {
-                _contractnumber = value;
-            }
-        }
-
-        public string Validity
-        {
-            get
-            {
-                return _validity;
-            }
-
-            set
-            {
-                _validity = value;
-            }
-        }
-
-        public string Startdate
-        {
-            get
-            {
-                return _startdate;
-            }
-
-            set
-            {
-                _startdate = value;
-            }
-        }
-
-        public string Cutoffdate
-        {
-            get
-            {
-                return _cutoffdate;
-            }
-
-            set
-            {
-                _cutoffdate = value;
-            }
-        }
-
-        public string Amount
-        {
-            get
-            {
-                return _amount;
-            }
-
-            set
-            {
-                _amount = value;
-            }
-        }
-
-        public string Idvehicle
-        {
-            get
-            {
-                return _idvehicle;
-            }
-
-            set
-            {
-                _idvehicle = value;
-            }
-        }
-
-        public string Iddriver
-        {
-            get
-            {
-                return _iddriver;
-            }
-
-            set
-            {
-                _iddriver = value;
-            }
-        }
-
-        public string Idpermitholder
-        {
-            get
-            {
-                return _idpermitholder;
-            }
-
-            set
-            {
-                _idpermitholder = value;
-            }
-        }
-
-        public string CreatedAt
-        {
-            get
-            {
-                return _createdAt;
-            }
-
-            set
-            {
-                _createdAt = value;
-            }
-        }
-
-        public string UpdatedAt
-        {
-            get
-            {
-                return _updatedAt;
-            }
-
-            set
-            {
-                _updatedAt = value;
-            }
-        }
-
-        public bool Active
-        {
-            get
-            {
-                return _active;
-            }
-
-            set
-            {
-                _active = value;
-            }
-        }
+        public string Id { get => _id; set => _id = value; }
+        public string Number { get => _number; set => _number = value; }
+        public string Linenumber { get => _linenumber; set => _linenumber = value; }
+        public string Imei { get => _imei; set => _imei = value; }
+        public string Simcard { get => _simcard; set => _simcard = value; }
+        public string Model { get => _model; set => _model = value; }
+        public string Brand { get => _brand; set => _brand = value; }
+        public string Contractnumber { get => _contractnumber; set => _contractnumber = value; }
+        public string Validity { get => _validity; set => _validity = value; }
+        public string Startdate { get => _startdate; set => _startdate = value; }
+        public string Cutoffdate { get => _cutoffdate; set => _cutoffdate = value; }
+        public string Amount { get => _amount; set => _amount = value; }
+        public string Idvehicle { get => _idvehicle; set => _idvehicle = value; }
+        public string CreatedAt { get => _createdAt; set => _createdAt = value; }
+        public string UpdatedAt { get => _updatedAt; set => _updatedAt = value; }
+        public bool Active { get => _active; set => _active = value; }
 
         #endregion
 
@@ -270,7 +54,7 @@ namespace Principal.Entidades
         /// </summary>
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
         /// <param name="opt">opt indica si trae o no contraseña</param>
-        public bool upSert(bool opt)
+        public string upSert(bool opt)
         {
             string json = new JavaScriptSerializer().Serialize(new
             {
@@ -287,27 +71,17 @@ namespace Principal.Entidades
                 cutoffdate = this.Cutoffdate,
                 amount = this.Amount,
                 idvehicle = this.Idvehicle,
-                iddriver = this.Iddriver,
-                idpermitholder = this.Idpermitholder,
-
-
+                active = this.Active
             });
 
-            string data;
-
-            data = json;
+            string data = json;
             if (this.Id == null)
             {
-
-                Data.sendData(Entity, data, "POST");
-
-                return this.Id != String.Empty;
+                return Data.sendData(Entity, data, "POST");
             }
             else
             {
-                Data.sendData(Entity + "/" + this.Id, data, "PUT");
-
-                return false;
+               return Data.sendData(Entity + "/" + this.Id, data, "PUT");
             }
         }
 

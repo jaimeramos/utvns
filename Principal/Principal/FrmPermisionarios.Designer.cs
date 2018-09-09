@@ -30,14 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPermisionarios));
             this.gbDatospermisionario = new System.Windows.Forms.GroupBox();
+            this.gbStatus = new System.Windows.Forms.GroupBox();
+            this.rbInactivo = new System.Windows.Forms.RadioButton();
+            this.rbActivo = new System.Windows.Forms.RadioButton();
             this.txtPlicencia = new System.Windows.Forms.TextBox();
-            this.gbPtipo = new System.Windows.Forms.GroupBox();
-            this.chbPinactivo = new System.Windows.Forms.CheckBox();
-            this.chbPactivo = new System.Windows.Forms.CheckBox();
             this.dtpPvigencia = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.txtPapellido = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnPcancelar = new System.Windows.Forms.Button();
+            this.btnPguardar = new System.Windows.Forms.Button();
             this.dtpPfadmision = new System.Windows.Forms.DateTimePicker();
             this.cmbPtipo = new System.Windows.Forms.ComboBox();
             this.txtPnumero = new System.Windows.Forms.TextBox();
@@ -59,25 +61,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.gbPermisionarios = new System.Windows.Forms.GroupBox();
             this.dtgPermisionario = new System.Windows.Forms.DataGridView();
-            this.chbPermisionarios = new System.Windows.Forms.CheckBox();
-            this.txtPfiltro = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnPeditar = new System.Windows.Forms.Button();
             this.btnPregresar = new System.Windows.Forms.Button();
+            this.chbPermisionarios = new System.Windows.Forms.CheckBox();
             this.btnPnuevo = new System.Windows.Forms.Button();
             this.btnPfiltrar = new System.Windows.Forms.Button();
-            this.btnPcancelar = new System.Windows.Forms.Button();
-            this.btnPguardar = new System.Windows.Forms.Button();
+            this.txtPfiltro = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbDatospermisionario.SuspendLayout();
-            this.gbPtipo.SuspendLayout();
+            this.gbStatus.SuspendLayout();
             this.gbPermisionarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPermisionario)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatospermisionario
             // 
+            this.gbDatospermisionario.Controls.Add(this.gbStatus);
             this.gbDatospermisionario.Controls.Add(this.txtPlicencia);
-            this.gbDatospermisionario.Controls.Add(this.gbPtipo);
             this.gbDatospermisionario.Controls.Add(this.dtpPvigencia);
             this.gbDatospermisionario.Controls.Add(this.label12);
             this.gbDatospermisionario.Controls.Add(this.txtPapellido);
@@ -103,49 +103,52 @@
             this.gbDatospermisionario.Controls.Add(this.label5);
             this.gbDatospermisionario.Controls.Add(this.label4);
             this.gbDatospermisionario.Controls.Add(this.label3);
-            this.gbDatospermisionario.Location = new System.Drawing.Point(23, 383);
+            this.gbDatospermisionario.Location = new System.Drawing.Point(23, 377);
             this.gbDatospermisionario.Name = "gbDatospermisionario";
             this.gbDatospermisionario.Size = new System.Drawing.Size(885, 190);
             this.gbDatospermisionario.TabIndex = 6;
             this.gbDatospermisionario.TabStop = false;
             this.gbDatospermisionario.Text = "Datos del Permisionario";
             // 
+            // gbStatus
+            // 
+            this.gbStatus.Controls.Add(this.rbInactivo);
+            this.gbStatus.Controls.Add(this.rbActivo);
+            this.gbStatus.Location = new System.Drawing.Point(457, 94);
+            this.gbStatus.Name = "gbStatus";
+            this.gbStatus.Size = new System.Drawing.Size(242, 64);
+            this.gbStatus.TabIndex = 116;
+            this.gbStatus.TabStop = false;
+            this.gbStatus.Text = "Estado";
+            // 
+            // rbInactivo
+            // 
+            this.rbInactivo.AutoSize = true;
+            this.rbInactivo.Location = new System.Drawing.Point(154, 21);
+            this.rbInactivo.Name = "rbInactivo";
+            this.rbInactivo.Size = new System.Drawing.Size(64, 18);
+            this.rbInactivo.TabIndex = 115;
+            this.rbInactivo.TabStop = true;
+            this.rbInactivo.Text = "Inactivo";
+            this.rbInactivo.UseVisualStyleBackColor = true;
+            // 
+            // rbActivo
+            // 
+            this.rbActivo.AutoSize = true;
+            this.rbActivo.Location = new System.Drawing.Point(50, 21);
+            this.rbActivo.Name = "rbActivo";
+            this.rbActivo.Size = new System.Drawing.Size(56, 18);
+            this.rbActivo.TabIndex = 114;
+            this.rbActivo.TabStop = true;
+            this.rbActivo.Text = "Activo";
+            this.rbActivo.UseVisualStyleBackColor = true;
+            // 
             // txtPlicencia
             // 
-            this.txtPlicencia.Location = new System.Drawing.Point(283, 136);
+            this.txtPlicencia.Location = new System.Drawing.Point(294, 134);
             this.txtPlicencia.Name = "txtPlicencia";
-            this.txtPlicencia.Size = new System.Drawing.Size(130, 22);
-            this.txtPlicencia.TabIndex = 105;
-            // 
-            // gbPtipo
-            // 
-            this.gbPtipo.Controls.Add(this.chbPinactivo);
-            this.gbPtipo.Controls.Add(this.chbPactivo);
-            this.gbPtipo.Location = new System.Drawing.Point(481, 98);
-            this.gbPtipo.Name = "gbPtipo";
-            this.gbPtipo.Size = new System.Drawing.Size(198, 46);
-            this.gbPtipo.TabIndex = 104;
-            this.gbPtipo.TabStop = false;
-            // 
-            // chbPinactivo
-            // 
-            this.chbPinactivo.AutoSize = true;
-            this.chbPinactivo.Location = new System.Drawing.Point(112, 17);
-            this.chbPinactivo.Name = "chbPinactivo";
-            this.chbPinactivo.Size = new System.Drawing.Size(65, 18);
-            this.chbPinactivo.TabIndex = 1;
-            this.chbPinactivo.Text = "Inactivo";
-            this.chbPinactivo.UseVisualStyleBackColor = true;
-            // 
-            // chbPactivo
-            // 
-            this.chbPactivo.AutoSize = true;
-            this.chbPactivo.Location = new System.Drawing.Point(29, 17);
-            this.chbPactivo.Name = "chbPactivo";
-            this.chbPactivo.Size = new System.Drawing.Size(57, 18);
-            this.chbPactivo.TabIndex = 0;
-            this.chbPactivo.Text = "Activo";
-            this.chbPactivo.UseVisualStyleBackColor = true;
+            this.txtPlicencia.Size = new System.Drawing.Size(156, 22);
+            this.txtPlicencia.TabIndex = 9;
             // 
             // dtpPvigencia
             // 
@@ -158,7 +161,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(454, 26);
+            this.label12.Location = new System.Drawing.Point(457, 26);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(109, 14);
             this.label12.TabIndex = 102;
@@ -168,7 +171,7 @@
             // 
             this.txtPapellido.Location = new System.Drawing.Point(63, 77);
             this.txtPapellido.Name = "txtPapellido";
-            this.txtPapellido.Size = new System.Drawing.Size(141, 22);
+            this.txtPapellido.Size = new System.Drawing.Size(156, 22);
             this.txtPapellido.TabIndex = 2;
             // 
             // label2
@@ -179,6 +182,45 @@
             this.label2.Size = new System.Drawing.Size(50, 14);
             this.label2.TabIndex = 99;
             this.label2.Text = "Apellido:";
+            // 
+            // btnPcancelar
+            // 
+            this.btnPcancelar.FlatAppearance.BorderSize = 0;
+            this.btnPcancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnPcancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnPcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPcancelar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPcancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnPcancelar.Image")));
+            this.btnPcancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPcancelar.Location = new System.Drawing.Point(741, 104);
+            this.btnPcancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnPcancelar.Name = "btnPcancelar";
+            this.btnPcancelar.Size = new System.Drawing.Size(115, 40);
+            this.btnPcancelar.TabIndex = 15;
+            this.btnPcancelar.Text = "Cancelar";
+            this.btnPcancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPcancelar.UseVisualStyleBackColor = true;
+            this.btnPcancelar.Click += new System.EventHandler(this.btnPcancelar_Click);
+            // 
+            // btnPguardar
+            // 
+            this.btnPguardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnPguardar.FlatAppearance.BorderSize = 0;
+            this.btnPguardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnPguardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnPguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPguardar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnPguardar.Image")));
+            this.btnPguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPguardar.Location = new System.Drawing.Point(741, 37);
+            this.btnPguardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnPguardar.Name = "btnPguardar";
+            this.btnPguardar.Size = new System.Drawing.Size(115, 40);
+            this.btnPguardar.TabIndex = 14;
+            this.btnPguardar.Text = "Guardar";
+            this.btnPguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPguardar.UseVisualStyleBackColor = true;
+            this.btnPguardar.Click += new System.EventHandler(this.btnPguardar_Click);
             // 
             // dtpPfadmision
             // 
@@ -191,16 +233,16 @@
             // cmbPtipo
             // 
             this.cmbPtipo.FormattingEnabled = true;
-            this.cmbPtipo.Location = new System.Drawing.Point(283, 105);
+            this.cmbPtipo.Location = new System.Drawing.Point(294, 106);
             this.cmbPtipo.Name = "cmbPtipo";
-            this.cmbPtipo.Size = new System.Drawing.Size(130, 22);
+            this.cmbPtipo.Size = new System.Drawing.Size(156, 22);
             this.cmbPtipo.TabIndex = 8;
             // 
             // txtPnumero
             // 
             this.txtPnumero.Location = new System.Drawing.Point(63, 21);
             this.txtPnumero.Name = "txtPnumero";
-            this.txtPnumero.Size = new System.Drawing.Size(83, 22);
+            this.txtPnumero.Size = new System.Drawing.Size(156, 22);
             this.txtPnumero.TabIndex = 0;
             // 
             // label15
@@ -210,11 +252,11 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(50, 14);
             this.label15.TabIndex = 30;
-            this.label15.Text = "Numero:";
+            this.label15.Text = "Número:";
             // 
             // txtPemail
             // 
-            this.txtPemail.Location = new System.Drawing.Point(283, 78);
+            this.txtPemail.Location = new System.Drawing.Point(294, 78);
             this.txtPemail.Name = "txtPemail";
             this.txtPemail.Size = new System.Drawing.Size(156, 22);
             this.txtPemail.TabIndex = 7;
@@ -222,7 +264,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(246, 107);
+            this.label9.Location = new System.Drawing.Point(229, 109);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 14);
             this.label9.TabIndex = 18;
@@ -231,7 +273,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(243, 81);
+            this.label8.Location = new System.Drawing.Point(229, 81);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 14);
             this.label8.TabIndex = 11;
@@ -240,7 +282,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(460, 57);
+            this.label11.Location = new System.Drawing.Point(457, 57);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(103, 14);
             this.label11.TabIndex = 21;
@@ -249,7 +291,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(225, 138);
+            this.label10.Location = new System.Drawing.Point(229, 137);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 14);
             this.label10.TabIndex = 19;
@@ -257,23 +299,23 @@
             // 
             // txtPcelular
             // 
-            this.txtPcelular.Location = new System.Drawing.Point(283, 50);
+            this.txtPcelular.Location = new System.Drawing.Point(294, 50);
             this.txtPcelular.Name = "txtPcelular";
-            this.txtPcelular.Size = new System.Drawing.Size(103, 22);
+            this.txtPcelular.Size = new System.Drawing.Size(156, 22);
             this.txtPcelular.TabIndex = 6;
             // 
             // txtPtelefono
             // 
-            this.txtPtelefono.Location = new System.Drawing.Point(283, 22);
+            this.txtPtelefono.Location = new System.Drawing.Point(294, 22);
             this.txtPtelefono.Name = "txtPtelefono";
-            this.txtPtelefono.Size = new System.Drawing.Size(105, 22);
+            this.txtPtelefono.Size = new System.Drawing.Size(156, 22);
             this.txtPtelefono.TabIndex = 5;
             // 
             // txtPrfc
             // 
-            this.txtPrfc.Location = new System.Drawing.Point(63, 136);
+            this.txtPrfc.Location = new System.Drawing.Point(63, 133);
             this.txtPrfc.Name = "txtPrfc";
-            this.txtPrfc.Size = new System.Drawing.Size(112, 22);
+            this.txtPrfc.Size = new System.Drawing.Size(156, 22);
             this.txtPrfc.TabIndex = 4;
             // 
             // txtPdireccion
@@ -285,15 +327,15 @@
             // 
             // txtPnombre
             // 
-            this.txtPnombre.Location = new System.Drawing.Point(63, 48);
+            this.txtPnombre.Location = new System.Drawing.Point(63, 49);
             this.txtPnombre.Name = "txtPnombre";
-            this.txtPnombre.Size = new System.Drawing.Size(141, 22);
+            this.txtPnombre.Size = new System.Drawing.Size(156, 22);
             this.txtPnombre.TabIndex = 1;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(217, 53);
+            this.label7.Location = new System.Drawing.Point(229, 53);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 14);
             this.label7.TabIndex = 10;
@@ -306,12 +348,12 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 14);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Telefono:";
+            this.label6.Text = "Teléfono:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 136);
+            this.label5.Location = new System.Drawing.Point(9, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 14);
             this.label5.TabIndex = 8;
@@ -320,7 +362,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 108);
+            this.label4.Location = new System.Drawing.Point(9, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 14);
             this.label4.TabIndex = 7;
@@ -364,32 +406,7 @@
             this.dtgPermisionario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgPermisionario.Size = new System.Drawing.Size(839, 246);
             this.dtgPermisionario.TabIndex = 6;
-            // 
-            // chbPermisionarios
-            // 
-            this.chbPermisionarios.AutoSize = true;
-            this.chbPermisionarios.Location = new System.Drawing.Point(662, 335);
-            this.chbPermisionarios.Name = "chbPermisionarios";
-            this.chbPermisionarios.Size = new System.Drawing.Size(188, 18);
-            this.chbPermisionarios.TabIndex = 5;
-            this.chbPermisionarios.Text = "Mostrar todos los Permisionarios";
-            this.chbPermisionarios.UseVisualStyleBackColor = true;
-            // 
-            // txtPfiltro
-            // 
-            this.txtPfiltro.Location = new System.Drawing.Point(62, 40);
-            this.txtPfiltro.Name = "txtPfiltro";
-            this.txtPfiltro.Size = new System.Drawing.Size(136, 22);
-            this.txtPfiltro.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 14);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Filtro:";
+            this.dtgPermisionario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPermisionario_RowEnter);
             // 
             // btnPeditar
             // 
@@ -408,6 +425,7 @@
             this.btnPeditar.Text = "Editar Permisionario";
             this.btnPeditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPeditar.UseVisualStyleBackColor = true;
+            this.btnPeditar.Click += new System.EventHandler(this.btnPeditar_Click);
             // 
             // btnPregresar
             // 
@@ -428,6 +446,17 @@
             this.btnPregresar.UseVisualStyleBackColor = true;
             this.btnPregresar.Click += new System.EventHandler(this.btnPregresar_Click);
             // 
+            // chbPermisionarios
+            // 
+            this.chbPermisionarios.AutoSize = true;
+            this.chbPermisionarios.Location = new System.Drawing.Point(593, 335);
+            this.chbPermisionarios.Name = "chbPermisionarios";
+            this.chbPermisionarios.Size = new System.Drawing.Size(188, 18);
+            this.chbPermisionarios.TabIndex = 5;
+            this.chbPermisionarios.Text = "Mostrar todos los permisionarios";
+            this.chbPermisionarios.UseVisualStyleBackColor = true;
+            this.chbPermisionarios.CheckedChanged += new System.EventHandler(this.chbPermisionarios_CheckedChanged);
+            // 
             // btnPnuevo
             // 
             this.btnPnuevo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -445,6 +474,7 @@
             this.btnPnuevo.Text = "Nuevo Permisionario";
             this.btnPnuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPnuevo.UseVisualStyleBackColor = true;
+            this.btnPnuevo.Click += new System.EventHandler(this.btnPnuevo_Click);
             // 
             // btnPfiltrar
             // 
@@ -463,49 +493,30 @@
             this.btnPfiltrar.Text = "Limpiar Filtro";
             this.btnPfiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPfiltrar.UseVisualStyleBackColor = true;
+            this.btnPfiltrar.Click += new System.EventHandler(this.btnPfiltrar_Click);
             // 
-            // btnPcancelar
+            // txtPfiltro
             // 
-            this.btnPcancelar.FlatAppearance.BorderSize = 0;
-            this.btnPcancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnPcancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnPcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPcancelar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPcancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnPcancelar.Image")));
-            this.btnPcancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPcancelar.Location = new System.Drawing.Point(746, 104);
-            this.btnPcancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnPcancelar.Name = "btnPcancelar";
-            this.btnPcancelar.Size = new System.Drawing.Size(115, 40);
-            this.btnPcancelar.TabIndex = 15;
-            this.btnPcancelar.Text = "Cancelar";
-            this.btnPcancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPcancelar.UseVisualStyleBackColor = true;
+            this.txtPfiltro.Location = new System.Drawing.Point(62, 40);
+            this.txtPfiltro.Name = "txtPfiltro";
+            this.txtPfiltro.Size = new System.Drawing.Size(136, 22);
+            this.txtPfiltro.TabIndex = 0;
+            this.txtPfiltro.TextChanged += new System.EventHandler(this.txtPfiltro_TextChanged);
             // 
-            // btnPguardar
+            // label1
             // 
-            this.btnPguardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnPguardar.FlatAppearance.BorderSize = 0;
-            this.btnPguardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnPguardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnPguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPguardar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnPguardar.Image")));
-            this.btnPguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPguardar.Location = new System.Drawing.Point(746, 37);
-            this.btnPguardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnPguardar.Name = "btnPguardar";
-            this.btnPguardar.Size = new System.Drawing.Size(115, 40);
-            this.btnPguardar.TabIndex = 14;
-            this.btnPguardar.Text = "Guardar";
-            this.btnPguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPguardar.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 14);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Filtro:";
             // 
             // FrmPermisionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 601);
+            this.ClientSize = new System.Drawing.Size(928, 601);
             this.Controls.Add(this.gbPermisionarios);
             this.Controls.Add(this.gbDatospermisionario);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -515,8 +526,8 @@
             this.Load += new System.EventHandler(this.FrmPermisionarios_Load);
             this.gbDatospermisionario.ResumeLayout(false);
             this.gbDatospermisionario.PerformLayout();
-            this.gbPtipo.ResumeLayout(false);
-            this.gbPtipo.PerformLayout();
+            this.gbStatus.ResumeLayout(false);
+            this.gbStatus.PerformLayout();
             this.gbPermisionarios.ResumeLayout(false);
             this.gbPermisionarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPermisionario)).EndInit();
@@ -558,11 +569,11 @@
         private System.Windows.Forms.DataGridView dtgPermisionario;
         private System.Windows.Forms.TextBox txtPapellido;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox chbPactivo;
-        private System.Windows.Forms.CheckBox chbPinactivo;
         private System.Windows.Forms.DateTimePicker dtpPvigencia;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.GroupBox gbPtipo;
         private System.Windows.Forms.TextBox txtPlicencia;
+        private System.Windows.Forms.GroupBox gbStatus;
+        private System.Windows.Forms.RadioButton rbInactivo;
+        private System.Windows.Forms.RadioButton rbActivo;
     }
 }
