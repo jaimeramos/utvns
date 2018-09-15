@@ -1,6 +1,6 @@
 ﻿namespace Principal
 {
-    partial class Buscarchoferes
+    partial class Buscarvehiculos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buscarchoferes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buscarvehiculos));
             this.gbPermisos = new System.Windows.Forms.GroupBox();
-            this.dtgChoferes = new System.Windows.Forms.DataGridView();
+            this.dtgVehiculo = new System.Windows.Forms.DataGridView();
             this.btnVeditar = new System.Windows.Forms.Button();
             this.txtPefiltro = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -38,12 +38,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnPeregresar = new System.Windows.Forms.Button();
             this.gbPermisos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgChoferes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgVehiculo)).BeginInit();
             this.SuspendLayout();
             // 
             // gbPermisos
             // 
-            this.gbPermisos.Controls.Add(this.dtgChoferes);
+            this.gbPermisos.Controls.Add(this.dtgVehiculo);
             this.gbPermisos.Controls.Add(this.btnVeditar);
             this.gbPermisos.Controls.Add(this.txtPefiltro);
             this.gbPermisos.Controls.Add(this.checkBox1);
@@ -51,26 +51,26 @@
             this.gbPermisos.Controls.Add(this.label1);
             this.gbPermisos.Controls.Add(this.btnPeregresar);
             this.gbPermisos.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbPermisos.Location = new System.Drawing.Point(12, 12);
+            this.gbPermisos.Location = new System.Drawing.Point(7, 12);
             this.gbPermisos.Name = "gbPermisos";
             this.gbPermisos.Size = new System.Drawing.Size(781, 370);
-            this.gbPermisos.TabIndex = 29;
+            this.gbPermisos.TabIndex = 30;
             this.gbPermisos.TabStop = false;
             // 
-            // dtgChoferes
+            // dtgVehiculo
             // 
-            this.dtgChoferes.AllowUserToAddRows = false;
-            this.dtgChoferes.AllowUserToDeleteRows = false;
-            this.dtgChoferes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtgChoferes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgChoferes.Location = new System.Drawing.Point(16, 69);
-            this.dtgChoferes.MultiSelect = false;
-            this.dtgChoferes.Name = "dtgChoferes";
-            this.dtgChoferes.ReadOnly = true;
-            this.dtgChoferes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgChoferes.Size = new System.Drawing.Size(759, 270);
-            this.dtgChoferes.TabIndex = 94;
-            this.dtgChoferes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgChoferes_CellContentDoubleClick);
+            this.dtgVehiculo.AllowUserToAddRows = false;
+            this.dtgVehiculo.AllowUserToDeleteRows = false;
+            this.dtgVehiculo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtgVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgVehiculo.Location = new System.Drawing.Point(16, 69);
+            this.dtgVehiculo.MultiSelect = false;
+            this.dtgVehiculo.Name = "dtgVehiculo";
+            this.dtgVehiculo.ReadOnly = true;
+            this.dtgVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgVehiculo.Size = new System.Drawing.Size(759, 270);
+            this.dtgVehiculo.TabIndex = 94;
+            this.dtgVehiculo.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgVehiculos_CellContentDoubleClick);
             // 
             // btnVeditar
             // 
@@ -158,21 +158,19 @@
             this.btnPeregresar.UseVisualStyleBackColor = true;
             this.btnPeregresar.Click += new System.EventHandler(this.btnPeregresar_Click);
             // 
-            // Buscarchoferes
+            // Buscarvehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbPermisos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Buscarchoferes";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Buscarchoferes";
-            this.Load += new System.EventHandler(this.Buscarchoferes_Load);
+            this.Name = "Buscarvehiculos";
+            this.Text = "Buscarvehiculos";
+            this.Load += new System.EventHandler(this.Buscarvehiculos_Load);
             this.gbPermisos.ResumeLayout(false);
             this.gbPermisos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgChoferes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgVehiculo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,7 +178,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbPermisos;
-        private System.Windows.Forms.DataGridView dtgChoferes;
+        private System.Windows.Forms.DataGridView dtgVehiculo;
         private System.Windows.Forms.Button btnVeditar;
         private System.Windows.Forms.TextBox txtPefiltro;
         private System.Windows.Forms.CheckBox checkBox1;

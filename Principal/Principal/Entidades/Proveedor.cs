@@ -13,7 +13,7 @@ namespace Principal.Entidades
     {
         #region Atributos privados
         static string Entity = "providers";
-        string _id, _number, _name, _address, _rfc, _phone1, _phone2, _email, _createdAt, _updatedAt;
+        string _id, _number, _firstname, _lastname, _address, _rfc, _phone1, _phone2, _email, _createdAt, _updatedAt;
         bool _active;
         #endregion
 
@@ -44,16 +44,29 @@ namespace Principal.Entidades
             }
         }
 
-        public string Name
+        public string Firstname
         {
             get
             {
-                return _name;
+                return _firstname;
             }
 
             set
             {
-                _name = value;
+                _firstname = value;
+            }
+        }
+
+        public string Lastname
+        {
+            get
+            {
+                return _lastname;
+            }
+
+            set
+            {
+                _lastname = value;
             }
         }
 
@@ -179,19 +192,20 @@ namespace Principal.Entidades
         /// </summary>
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
         /// <param name="opt">opt indica si trae o no contraseña</param>
-        public bool upSert(bool opt)
+        public bool upSert()
         {
             string json = new JavaScriptSerializer().Serialize(new
             {
                 _id = this.Id,
                 number = this.Number,
-                name = this.Name,
+                firstname = this.Firstname,
+                lastname = this.Lastname,
                 address = this.Address,
                 rfc = this.Rfc,
                 phone1 = this.Phone1,
                 phone2 = this.Phone2,
                 email = this.Email,
- 
+                active= this.Active
             });
 
             string data;

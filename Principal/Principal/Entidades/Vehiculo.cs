@@ -8,7 +8,7 @@ using System.Web.Script.Serialization;
 
 namespace Principal.Entidades
 {
-    class Vehiculo
+    public class Vehiculo
     {
         #region atributos
         static string Entity = "vehicles";

@@ -206,6 +206,27 @@ namespace Principal
             pnlMenuvertical.Enabled = false;
             Barratitulo.Enabled = false;
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            abrirfrmMenu(new FrmEjecutivos());
+            pnlMenuvertical.Enabled = false;
+            Barratitulo.Enabled = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            abrirfrmMenu(new FrmMecanicos());
+            pnlMenuvertical.Enabled = false;
+            Barratitulo.Enabled = false;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            abrirfrmMenu(new FrmProveedores());
+            pnlMenuvertical.Enabled = false;
+            Barratitulo.Enabled = false;
+        }
     }
   }
 

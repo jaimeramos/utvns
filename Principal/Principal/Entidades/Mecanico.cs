@@ -191,7 +191,7 @@ namespace Principal.Entidades
         /// </summary>
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
         /// <param name="opt">opt indica si trae o no contraseña</param>
-        public bool upSert(bool opt)
+        public bool upSert()
         {
             string json = new JavaScriptSerializer().Serialize(new
             {
@@ -204,7 +204,7 @@ namespace Principal.Entidades
                 phone2 = this.Phone2,
                 email = this.Email,
                 dateadmission = this.DateAdmission,
-
+                active = this.Active
             });
 
             string data;

@@ -117,6 +117,7 @@ namespace Principal
             permit.ValidityAt = DateTime.ParseExact(dtpPevencimiento.Text, "dd/MM/yyyy",
                                             System.Globalization.CultureInfo.CurrentCulture).ToString();
             permit.Active           = rbActivo.Checked = (bool) row.Cells["active"].Value;
+            
             rbInactivo.Checked = !rbActivo.Checked;
         }
 

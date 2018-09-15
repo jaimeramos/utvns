@@ -31,8 +31,6 @@ namespace Principal
             _iddriver = iddriver;
         }
 
-        
-
         public void fillGridView()
         {
             string json = driver.read();
@@ -103,6 +101,11 @@ namespace Principal
             _caller.SelectedDriver((Permisionario)chofer);
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void Buscarchoferes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

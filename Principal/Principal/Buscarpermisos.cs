@@ -94,5 +94,20 @@ namespace Principal
         {
 
         }
+
+        private void txtPefiltro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPefiltrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

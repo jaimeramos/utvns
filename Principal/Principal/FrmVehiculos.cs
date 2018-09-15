@@ -19,10 +19,12 @@ namespace Principal
     {
         void SelectedDriver(Permisionario chofer);
     }
+
     public interface IFindPermit
     {
         void Selected(Permiso permit);
     }
+
     public partial class FrmVehiculos : Form, IFindPermit, IFindDriver
     {
         Vehiculo vehicle = new Vehiculo();
@@ -410,6 +412,16 @@ namespace Principal
         {
             Buscarchoferes bChoferes = new Buscarchoferes(this, cmbPermit.SelectedValue.ToString());
             bChoferes.ShowDialog();
+        }
+
+        private void rbActivo_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgVehiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -86,10 +86,17 @@
     <Compile Include="Buscarpermisos.Designer.cs">
       <DependentUpon>Buscarpermisos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Buscarvehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscarvehiculos.Designer.cs">
+      <DependentUpon>Buscarvehiculos.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnlaceDatos\Data.cs" />
     <Compile Include="Entidades\Detalleventa.cs" />
     <Compile Include="Entidades\Driverassign.cs" />
     <Compile Include="Entidades\Egreso.cs" />
+    <Compile Include="Entidades\Executivesvc.cs" />
     <Compile Include="Entidades\Ingreso.cs" />
     <Compile Include="Entidades\Lineanegocio.cs" />
     <Compile Include="Entidades\Mecanico.cs" />
@@ -236,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Buscarpermisos.resx">
       <DependentUpon>Buscarpermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buscarvehiculos.resx">
+      <DependentUpon>Buscarvehiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

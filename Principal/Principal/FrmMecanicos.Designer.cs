@@ -28,17 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbMecanicos = new System.Windows.Forms.GroupBox();
+            this.gbDatosGrid = new System.Windows.Forms.GroupBox();
             this.dtgMecanico = new System.Windows.Forms.DataGridView();
-            this.chbPermisionarios = new System.Windows.Forms.CheckBox();
+            this.btnMeditar = new System.Windows.Forms.Button();
+            this.btnMregresar = new System.Windows.Forms.Button();
+            this.chbMecanicos = new System.Windows.Forms.CheckBox();
+            this.btnMnuevo = new System.Windows.Forms.Button();
+            this.btnMfiltrar = new System.Windows.Forms.Button();
             this.txtMfiltro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.gbDatosmecanico = new System.Windows.Forms.GroupBox();
-            this.gbPtipo = new System.Windows.Forms.GroupBox();
-            this.chbMinactivo = new System.Windows.Forms.CheckBox();
-            this.chbMactivo = new System.Windows.Forms.CheckBox();
+            this.gbDatosForm = new System.Windows.Forms.GroupBox();
+            this.gbStatus = new System.Windows.Forms.GroupBox();
+            this.rbInactivo = new System.Windows.Forms.RadioButton();
+            this.rbActivo = new System.Windows.Forms.RadioButton();
             this.txtMapellido = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnMcancelar = new System.Windows.Forms.Button();
+            this.btnMguardar = new System.Windows.Forms.Button();
             this.dtpMfadmision = new System.Windows.Forms.DateTimePicker();
             this.txtMnumero = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -53,33 +59,27 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnMeditar = new System.Windows.Forms.Button();
-            this.btnMregresar = new System.Windows.Forms.Button();
-            this.btnMnuevo = new System.Windows.Forms.Button();
-            this.btnMfiltrar = new System.Windows.Forms.Button();
-            this.btnMcancelar = new System.Windows.Forms.Button();
-            this.btnMguardar = new System.Windows.Forms.Button();
-            this.gbMecanicos.SuspendLayout();
+            this.gbDatosGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMecanico)).BeginInit();
-            this.gbDatosmecanico.SuspendLayout();
-            this.gbPtipo.SuspendLayout();
+            this.gbDatosForm.SuspendLayout();
+            this.gbStatus.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gbMecanicos
+            // gbDatosGrid
             // 
-            this.gbMecanicos.Controls.Add(this.dtgMecanico);
-            this.gbMecanicos.Controls.Add(this.btnMeditar);
-            this.gbMecanicos.Controls.Add(this.btnMregresar);
-            this.gbMecanicos.Controls.Add(this.chbPermisionarios);
-            this.gbMecanicos.Controls.Add(this.btnMnuevo);
-            this.gbMecanicos.Controls.Add(this.btnMfiltrar);
-            this.gbMecanicos.Controls.Add(this.txtMfiltro);
-            this.gbMecanicos.Controls.Add(this.label1);
-            this.gbMecanicos.Location = new System.Drawing.Point(12, 12);
-            this.gbMecanicos.Name = "gbMecanicos";
-            this.gbMecanicos.Size = new System.Drawing.Size(796, 359);
-            this.gbMecanicos.TabIndex = 11;
-            this.gbMecanicos.TabStop = false;
+            this.gbDatosGrid.Controls.Add(this.dtgMecanico);
+            this.gbDatosGrid.Controls.Add(this.btnMeditar);
+            this.gbDatosGrid.Controls.Add(this.btnMregresar);
+            this.gbDatosGrid.Controls.Add(this.chbMecanicos);
+            this.gbDatosGrid.Controls.Add(this.btnMnuevo);
+            this.gbDatosGrid.Controls.Add(this.btnMfiltrar);
+            this.gbDatosGrid.Controls.Add(this.txtMfiltro);
+            this.gbDatosGrid.Controls.Add(this.label1);
+            this.gbDatosGrid.Location = new System.Drawing.Point(12, 12);
+            this.gbDatosGrid.Name = "gbDatosGrid";
+            this.gbDatosGrid.Size = new System.Drawing.Size(796, 359);
+            this.gbDatosGrid.TabIndex = 11;
+            this.gbDatosGrid.TabStop = false;
             // 
             // dtgMecanico
             // 
@@ -94,16 +94,90 @@
             this.dtgMecanico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgMecanico.Size = new System.Drawing.Size(761, 246);
             this.dtgMecanico.TabIndex = 6;
+            this.dtgMecanico.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMecanico_RowEnter);
             // 
-            // chbPermisionarios
+            // btnMeditar
             // 
-            this.chbPermisionarios.AutoSize = true;
-            this.chbPermisionarios.Location = new System.Drawing.Point(605, 335);
-            this.chbPermisionarios.Name = "chbPermisionarios";
-            this.chbPermisionarios.Size = new System.Drawing.Size(167, 18);
-            this.chbPermisionarios.TabIndex = 5;
-            this.chbPermisionarios.Text = "Mostrar todos los Mecanicos";
-            this.chbPermisionarios.UseVisualStyleBackColor = true;
+            this.btnMeditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMeditar.FlatAppearance.BorderSize = 0;
+            this.btnMeditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnMeditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnMeditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMeditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMeditar.Location = new System.Drawing.Point(483, 30);
+            this.btnMeditar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMeditar.Name = "btnMeditar";
+            this.btnMeditar.Size = new System.Drawing.Size(126, 40);
+            this.btnMeditar.TabIndex = 3;
+            this.btnMeditar.Text = "Editar Mecanico";
+            this.btnMeditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMeditar.UseVisualStyleBackColor = true;
+            this.btnMeditar.Click += new System.EventHandler(this.btnMeditar_Click);
+            // 
+            // btnMregresar
+            // 
+            this.btnMregresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMregresar.FlatAppearance.BorderSize = 0;
+            this.btnMregresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnMregresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnMregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMregresar.Location = new System.Drawing.Point(613, 30);
+            this.btnMregresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMregresar.Name = "btnMregresar";
+            this.btnMregresar.Size = new System.Drawing.Size(98, 40);
+            this.btnMregresar.TabIndex = 4;
+            this.btnMregresar.Text = "Regresar";
+            this.btnMregresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMregresar.UseVisualStyleBackColor = true;
+            this.btnMregresar.Click += new System.EventHandler(this.btnMregresar_Click);
+            // 
+            // chbMecanicos
+            // 
+            this.chbMecanicos.AutoSize = true;
+            this.chbMecanicos.Location = new System.Drawing.Point(605, 335);
+            this.chbMecanicos.Name = "chbMecanicos";
+            this.chbMecanicos.Size = new System.Drawing.Size(167, 18);
+            this.chbMecanicos.TabIndex = 5;
+            this.chbMecanicos.Text = "Mostrar todos los Mecanicos";
+            this.chbMecanicos.UseVisualStyleBackColor = true;
+            this.chbMecanicos.CheckedChanged += new System.EventHandler(this.chbMecanicos_CheckedChanged);
+            // 
+            // btnMnuevo
+            // 
+            this.btnMnuevo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMnuevo.FlatAppearance.BorderSize = 0;
+            this.btnMnuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnMnuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnMnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMnuevo.Location = new System.Drawing.Point(342, 30);
+            this.btnMnuevo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMnuevo.Name = "btnMnuevo";
+            this.btnMnuevo.Size = new System.Drawing.Size(130, 40);
+            this.btnMnuevo.TabIndex = 2;
+            this.btnMnuevo.Text = "Nuevo Mecanico";
+            this.btnMnuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMnuevo.UseVisualStyleBackColor = true;
+            this.btnMnuevo.Click += new System.EventHandler(this.btnMnuevo_Click);
+            // 
+            // btnMfiltrar
+            // 
+            this.btnMfiltrar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMfiltrar.FlatAppearance.BorderSize = 0;
+            this.btnMfiltrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnMfiltrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnMfiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMfiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMfiltrar.Location = new System.Drawing.Point(220, 30);
+            this.btnMfiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMfiltrar.Name = "btnMfiltrar";
+            this.btnMfiltrar.Size = new System.Drawing.Size(117, 40);
+            this.btnMfiltrar.TabIndex = 1;
+            this.btnMfiltrar.Text = "Limpiar Filtro";
+            this.btnMfiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMfiltrar.UseVisualStyleBackColor = true;
+            this.btnMfiltrar.Click += new System.EventHandler(this.btnMfiltrar_Click);
             // 
             // txtMfiltro
             // 
@@ -111,6 +185,7 @@
             this.txtMfiltro.Name = "txtMfiltro";
             this.txtMfiltro.Size = new System.Drawing.Size(136, 22);
             this.txtMfiltro.TabIndex = 0;
+            this.txtMfiltro.TextChanged += new System.EventHandler(this.txtMfiltro_TextChanged);
             // 
             // label1
             // 
@@ -121,63 +196,66 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Filtro:";
             // 
-            // gbDatosmecanico
+            // gbDatosForm
             // 
-            this.gbDatosmecanico.Controls.Add(this.gbPtipo);
-            this.gbDatosmecanico.Controls.Add(this.txtMapellido);
-            this.gbDatosmecanico.Controls.Add(this.label2);
-            this.gbDatosmecanico.Controls.Add(this.btnMcancelar);
-            this.gbDatosmecanico.Controls.Add(this.btnMguardar);
-            this.gbDatosmecanico.Controls.Add(this.dtpMfadmision);
-            this.gbDatosmecanico.Controls.Add(this.txtMnumero);
-            this.gbDatosmecanico.Controls.Add(this.label15);
-            this.gbDatosmecanico.Controls.Add(this.txtMemail);
-            this.gbDatosmecanico.Controls.Add(this.label8);
-            this.gbDatosmecanico.Controls.Add(this.label11);
-            this.gbDatosmecanico.Controls.Add(this.txtMcelular);
-            this.gbDatosmecanico.Controls.Add(this.txtMtelefono);
-            this.gbDatosmecanico.Controls.Add(this.txtMdireccion);
-            this.gbDatosmecanico.Controls.Add(this.txtMnombre);
-            this.gbDatosmecanico.Controls.Add(this.label7);
-            this.gbDatosmecanico.Controls.Add(this.label6);
-            this.gbDatosmecanico.Controls.Add(this.label4);
-            this.gbDatosmecanico.Controls.Add(this.label3);
-            this.gbDatosmecanico.Location = new System.Drawing.Point(12, 391);
-            this.gbDatosmecanico.Name = "gbDatosmecanico";
-            this.gbDatosmecanico.Size = new System.Drawing.Size(796, 170);
-            this.gbDatosmecanico.TabIndex = 10;
-            this.gbDatosmecanico.TabStop = false;
-            this.gbDatosmecanico.Text = "Datos del Mecanico";
+            this.gbDatosForm.Controls.Add(this.gbStatus);
+            this.gbDatosForm.Controls.Add(this.txtMapellido);
+            this.gbDatosForm.Controls.Add(this.label2);
+            this.gbDatosForm.Controls.Add(this.btnMcancelar);
+            this.gbDatosForm.Controls.Add(this.btnMguardar);
+            this.gbDatosForm.Controls.Add(this.dtpMfadmision);
+            this.gbDatosForm.Controls.Add(this.txtMnumero);
+            this.gbDatosForm.Controls.Add(this.label15);
+            this.gbDatosForm.Controls.Add(this.txtMemail);
+            this.gbDatosForm.Controls.Add(this.label8);
+            this.gbDatosForm.Controls.Add(this.label11);
+            this.gbDatosForm.Controls.Add(this.txtMcelular);
+            this.gbDatosForm.Controls.Add(this.txtMtelefono);
+            this.gbDatosForm.Controls.Add(this.txtMdireccion);
+            this.gbDatosForm.Controls.Add(this.txtMnombre);
+            this.gbDatosForm.Controls.Add(this.label7);
+            this.gbDatosForm.Controls.Add(this.label6);
+            this.gbDatosForm.Controls.Add(this.label4);
+            this.gbDatosForm.Controls.Add(this.label3);
+            this.gbDatosForm.Location = new System.Drawing.Point(12, 391);
+            this.gbDatosForm.Name = "gbDatosForm";
+            this.gbDatosForm.Size = new System.Drawing.Size(796, 170);
+            this.gbDatosForm.TabIndex = 10;
+            this.gbDatosForm.TabStop = false;
+            this.gbDatosForm.Text = "Datos del Mecanico";
             // 
-            // gbPtipo
+            // gbStatus
             // 
-            this.gbPtipo.Controls.Add(this.chbMinactivo);
-            this.gbPtipo.Controls.Add(this.chbMactivo);
-            this.gbPtipo.Location = new System.Drawing.Point(532, 29);
-            this.gbPtipo.Name = "gbPtipo";
-            this.gbPtipo.Size = new System.Drawing.Size(120, 99);
-            this.gbPtipo.TabIndex = 104;
-            this.gbPtipo.TabStop = false;
+            this.gbStatus.Controls.Add(this.rbInactivo);
+            this.gbStatus.Controls.Add(this.rbActivo);
+            this.gbStatus.Location = new System.Drawing.Point(470, 24);
+            this.gbStatus.Name = "gbStatus";
+            this.gbStatus.Size = new System.Drawing.Size(242, 64);
+            this.gbStatus.TabIndex = 117;
+            this.gbStatus.TabStop = false;
+            this.gbStatus.Text = "Estado";
             // 
-            // chbMinactivo
+            // rbInactivo
             // 
-            this.chbMinactivo.AutoSize = true;
-            this.chbMinactivo.Location = new System.Drawing.Point(29, 57);
-            this.chbMinactivo.Name = "chbMinactivo";
-            this.chbMinactivo.Size = new System.Drawing.Size(65, 18);
-            this.chbMinactivo.TabIndex = 1;
-            this.chbMinactivo.Text = "Inactivo";
-            this.chbMinactivo.UseVisualStyleBackColor = true;
+            this.rbInactivo.AutoSize = true;
+            this.rbInactivo.Location = new System.Drawing.Point(154, 21);
+            this.rbInactivo.Name = "rbInactivo";
+            this.rbInactivo.Size = new System.Drawing.Size(64, 18);
+            this.rbInactivo.TabIndex = 115;
+            this.rbInactivo.TabStop = true;
+            this.rbInactivo.Text = "Inactivo";
+            this.rbInactivo.UseVisualStyleBackColor = true;
             // 
-            // chbMactivo
+            // rbActivo
             // 
-            this.chbMactivo.AutoSize = true;
-            this.chbMactivo.Location = new System.Drawing.Point(29, 17);
-            this.chbMactivo.Name = "chbMactivo";
-            this.chbMactivo.Size = new System.Drawing.Size(57, 18);
-            this.chbMactivo.TabIndex = 0;
-            this.chbMactivo.Text = "Activo";
-            this.chbMactivo.UseVisualStyleBackColor = true;
+            this.rbActivo.AutoSize = true;
+            this.rbActivo.Location = new System.Drawing.Point(50, 21);
+            this.rbActivo.Name = "rbActivo";
+            this.rbActivo.Size = new System.Drawing.Size(56, 18);
+            this.rbActivo.TabIndex = 114;
+            this.rbActivo.TabStop = true;
+            this.rbActivo.Text = "Activo";
+            this.rbActivo.UseVisualStyleBackColor = true;
             // 
             // txtMapellido
             // 
@@ -194,6 +272,43 @@
             this.label2.Size = new System.Drawing.Size(50, 14);
             this.label2.TabIndex = 99;
             this.label2.Text = "Apellido:";
+            // 
+            // btnMcancelar
+            // 
+            this.btnMcancelar.FlatAppearance.BorderSize = 0;
+            this.btnMcancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnMcancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnMcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMcancelar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMcancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMcancelar.Location = new System.Drawing.Point(670, 94);
+            this.btnMcancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMcancelar.Name = "btnMcancelar";
+            this.btnMcancelar.Size = new System.Drawing.Size(115, 40);
+            this.btnMcancelar.TabIndex = 15;
+            this.btnMcancelar.Text = "Cancelar";
+            this.btnMcancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMcancelar.UseVisualStyleBackColor = true;
+            this.btnMcancelar.Click += new System.EventHandler(this.btnMcancelar_Click);
+            // 
+            // btnMguardar
+            // 
+            this.btnMguardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMguardar.FlatAppearance.BorderSize = 0;
+            this.btnMguardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnMguardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnMguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMguardar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMguardar.Location = new System.Drawing.Point(670, 35);
+            this.btnMguardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnMguardar.Name = "btnMguardar";
+            this.btnMguardar.Size = new System.Drawing.Size(115, 40);
+            this.btnMguardar.TabIndex = 14;
+            this.btnMguardar.Text = "Guardar";
+            this.btnMguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMguardar.UseVisualStyleBackColor = true;
+            this.btnMguardar.Click += new System.EventHandler(this.btnMguardar_Click);
             // 
             // dtpMfadmision
             // 
@@ -308,146 +423,41 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Nombre:";
             // 
-            // btnMeditar
-            // 
-            this.btnMeditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnMeditar.FlatAppearance.BorderSize = 0;
-            this.btnMeditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnMeditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnMeditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMeditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMeditar.Location = new System.Drawing.Point(483, 30);
-            this.btnMeditar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnMeditar.Name = "btnMeditar";
-            this.btnMeditar.Size = new System.Drawing.Size(126, 40);
-            this.btnMeditar.TabIndex = 3;
-            this.btnMeditar.Text = "Editar Mecanico";
-            this.btnMeditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMeditar.UseVisualStyleBackColor = true;
-            // 
-            // btnMregresar
-            // 
-            this.btnMregresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnMregresar.FlatAppearance.BorderSize = 0;
-            this.btnMregresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnMregresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnMregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMregresar.Location = new System.Drawing.Point(613, 30);
-            this.btnMregresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnMregresar.Name = "btnMregresar";
-            this.btnMregresar.Size = new System.Drawing.Size(98, 40);
-            this.btnMregresar.TabIndex = 4;
-            this.btnMregresar.Text = "Regresar";
-            this.btnMregresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMregresar.UseVisualStyleBackColor = true;
-            // 
-            // btnMnuevo
-            // 
-            this.btnMnuevo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnMnuevo.FlatAppearance.BorderSize = 0;
-            this.btnMnuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnMnuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnMnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMnuevo.Location = new System.Drawing.Point(342, 30);
-            this.btnMnuevo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnMnuevo.Name = "btnMnuevo";
-            this.btnMnuevo.Size = new System.Drawing.Size(130, 40);
-            this.btnMnuevo.TabIndex = 2;
-            this.btnMnuevo.Text = "Nuevo Mecanico";
-            this.btnMnuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMnuevo.UseVisualStyleBackColor = true;
-            // 
-            // btnMfiltrar
-            // 
-            this.btnMfiltrar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMfiltrar.FlatAppearance.BorderSize = 0;
-            this.btnMfiltrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnMfiltrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnMfiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMfiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMfiltrar.Location = new System.Drawing.Point(220, 30);
-            this.btnMfiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnMfiltrar.Name = "btnMfiltrar";
-            this.btnMfiltrar.Size = new System.Drawing.Size(117, 40);
-            this.btnMfiltrar.TabIndex = 1;
-            this.btnMfiltrar.Text = "Limpiar Filtro";
-            this.btnMfiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMfiltrar.UseVisualStyleBackColor = true;
-            // 
-            // btnMcancelar
-            // 
-            this.btnMcancelar.FlatAppearance.BorderSize = 0;
-            this.btnMcancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnMcancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnMcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMcancelar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMcancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMcancelar.Location = new System.Drawing.Point(670, 94);
-            this.btnMcancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnMcancelar.Name = "btnMcancelar";
-            this.btnMcancelar.Size = new System.Drawing.Size(115, 40);
-            this.btnMcancelar.TabIndex = 15;
-            this.btnMcancelar.Text = "Cancelar";
-            this.btnMcancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMcancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnMguardar
-            // 
-            this.btnMguardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnMguardar.FlatAppearance.BorderSize = 0;
-            this.btnMguardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnMguardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnMguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMguardar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMguardar.Location = new System.Drawing.Point(670, 35);
-            this.btnMguardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnMguardar.Name = "btnMguardar";
-            this.btnMguardar.Size = new System.Drawing.Size(115, 40);
-            this.btnMguardar.TabIndex = 14;
-            this.btnMguardar.Text = "Guardar";
-            this.btnMguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMguardar.UseVisualStyleBackColor = true;
-            // 
             // FrmMecanicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(827, 581);
-            this.Controls.Add(this.gbMecanicos);
-            this.Controls.Add(this.gbDatosmecanico);
+            this.Controls.Add(this.gbDatosGrid);
+            this.Controls.Add(this.gbDatosForm);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMecanicos";
             this.Text = "FrmMecanicos";
-            this.gbMecanicos.ResumeLayout(false);
-            this.gbMecanicos.PerformLayout();
+            this.Load += new System.EventHandler(this.FrmMecanicos_Load);
+            this.gbDatosGrid.ResumeLayout(false);
+            this.gbDatosGrid.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMecanico)).EndInit();
-            this.gbDatosmecanico.ResumeLayout(false);
-            this.gbDatosmecanico.PerformLayout();
-            this.gbPtipo.ResumeLayout(false);
-            this.gbPtipo.PerformLayout();
+            this.gbDatosForm.ResumeLayout(false);
+            this.gbDatosForm.PerformLayout();
+            this.gbStatus.ResumeLayout(false);
+            this.gbStatus.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gbMecanicos;
+        private System.Windows.Forms.GroupBox gbDatosGrid;
         private System.Windows.Forms.DataGridView dtgMecanico;
         private System.Windows.Forms.Button btnMeditar;
         private System.Windows.Forms.Button btnMregresar;
-        private System.Windows.Forms.CheckBox chbPermisionarios;
+        private System.Windows.Forms.CheckBox chbMecanicos;
         private System.Windows.Forms.Button btnMnuevo;
         private System.Windows.Forms.Button btnMfiltrar;
         private System.Windows.Forms.TextBox txtMfiltro;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox gbDatosmecanico;
-        private System.Windows.Forms.GroupBox gbPtipo;
-        private System.Windows.Forms.CheckBox chbMinactivo;
-        private System.Windows.Forms.CheckBox chbMactivo;
+        private System.Windows.Forms.GroupBox gbDatosForm;
         private System.Windows.Forms.TextBox txtMapellido;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnMcancelar;
@@ -466,5 +476,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox gbStatus;
+        private System.Windows.Forms.RadioButton rbInactivo;
+        private System.Windows.Forms.RadioButton rbActivo;
     }
 }

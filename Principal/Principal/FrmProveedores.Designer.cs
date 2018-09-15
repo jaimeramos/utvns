@@ -29,19 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProveedores));
-            this.gbProveedores = new System.Windows.Forms.GroupBox();
+            this.gbDatosGrid = new System.Windows.Forms.GroupBox();
             this.dtgProveedor = new System.Windows.Forms.DataGridView();
             this.btnPreditar = new System.Windows.Forms.Button();
             this.btnPrregresar = new System.Windows.Forms.Button();
-            this.chbPermisionarios = new System.Windows.Forms.CheckBox();
+            this.chbProveedores = new System.Windows.Forms.CheckBox();
             this.btnPrnuevo = new System.Windows.Forms.Button();
             this.btnPrfiltrar = new System.Windows.Forms.Button();
             this.txtPrfiltro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.gbDatosproveedor = new System.Windows.Forms.GroupBox();
-            this.gbPtipo = new System.Windows.Forms.GroupBox();
-            this.chbPrinactivo = new System.Windows.Forms.CheckBox();
-            this.chbPractivo = new System.Windows.Forms.CheckBox();
+            this.gbDatosForm = new System.Windows.Forms.GroupBox();
             this.txtPrdireccion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnPrcancelar = new System.Windows.Forms.Button();
@@ -58,27 +55,32 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.gbProveedores.SuspendLayout();
+            this.gbStatus = new System.Windows.Forms.GroupBox();
+            this.rbInactivo = new System.Windows.Forms.RadioButton();
+            this.rbActivo = new System.Windows.Forms.RadioButton();
+            this.txtPrapellido = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.gbDatosGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProveedor)).BeginInit();
-            this.gbDatosproveedor.SuspendLayout();
-            this.gbPtipo.SuspendLayout();
+            this.gbDatosForm.SuspendLayout();
+            this.gbStatus.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gbProveedores
+            // gbDatosGrid
             // 
-            this.gbProveedores.Controls.Add(this.dtgProveedor);
-            this.gbProveedores.Controls.Add(this.btnPreditar);
-            this.gbProveedores.Controls.Add(this.btnPrregresar);
-            this.gbProveedores.Controls.Add(this.chbPermisionarios);
-            this.gbProveedores.Controls.Add(this.btnPrnuevo);
-            this.gbProveedores.Controls.Add(this.btnPrfiltrar);
-            this.gbProveedores.Controls.Add(this.txtPrfiltro);
-            this.gbProveedores.Controls.Add(this.label1);
-            this.gbProveedores.Location = new System.Drawing.Point(12, 12);
-            this.gbProveedores.Name = "gbProveedores";
-            this.gbProveedores.Size = new System.Drawing.Size(813, 359);
-            this.gbProveedores.TabIndex = 13;
-            this.gbProveedores.TabStop = false;
+            this.gbDatosGrid.Controls.Add(this.dtgProveedor);
+            this.gbDatosGrid.Controls.Add(this.btnPreditar);
+            this.gbDatosGrid.Controls.Add(this.btnPrregresar);
+            this.gbDatosGrid.Controls.Add(this.chbProveedores);
+            this.gbDatosGrid.Controls.Add(this.btnPrnuevo);
+            this.gbDatosGrid.Controls.Add(this.btnPrfiltrar);
+            this.gbDatosGrid.Controls.Add(this.txtPrfiltro);
+            this.gbDatosGrid.Controls.Add(this.label1);
+            this.gbDatosGrid.Location = new System.Drawing.Point(12, 12);
+            this.gbDatosGrid.Name = "gbDatosGrid";
+            this.gbDatosGrid.Size = new System.Drawing.Size(813, 359);
+            this.gbDatosGrid.TabIndex = 13;
+            this.gbDatosGrid.TabStop = false;
             // 
             // dtgProveedor
             // 
@@ -93,6 +95,7 @@
             this.dtgProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgProveedor.Size = new System.Drawing.Size(781, 246);
             this.dtgProveedor.TabIndex = 6;
+            this.dtgProveedor.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProveedor_RowEnter);
             // 
             // btnPreditar
             // 
@@ -111,6 +114,7 @@
             this.btnPreditar.Text = "Editar Proveedor";
             this.btnPreditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPreditar.UseVisualStyleBackColor = true;
+            this.btnPreditar.Click += new System.EventHandler(this.btnPreditar_Click);
             // 
             // btnPrregresar
             // 
@@ -129,16 +133,18 @@
             this.btnPrregresar.Text = "Regresar";
             this.btnPrregresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrregresar.UseVisualStyleBackColor = true;
+            this.btnPrregresar.Click += new System.EventHandler(this.btnPrregresar_Click);
             // 
-            // chbPermisionarios
+            // chbProveedores
             // 
-            this.chbPermisionarios.AutoSize = true;
-            this.chbPermisionarios.Location = new System.Drawing.Point(616, 335);
-            this.chbPermisionarios.Name = "chbPermisionarios";
-            this.chbPermisionarios.Size = new System.Drawing.Size(176, 18);
-            this.chbPermisionarios.TabIndex = 5;
-            this.chbPermisionarios.Text = "Mostrar todos los Proveedores";
-            this.chbPermisionarios.UseVisualStyleBackColor = true;
+            this.chbProveedores.AutoSize = true;
+            this.chbProveedores.Location = new System.Drawing.Point(616, 335);
+            this.chbProveedores.Name = "chbProveedores";
+            this.chbProveedores.Size = new System.Drawing.Size(176, 18);
+            this.chbProveedores.TabIndex = 5;
+            this.chbProveedores.Text = "Mostrar todos los Proveedores";
+            this.chbProveedores.UseVisualStyleBackColor = true;
+            this.chbProveedores.CheckedChanged += new System.EventHandler(this.chbProveedores_CheckedChanged);
             // 
             // btnPrnuevo
             // 
@@ -157,6 +163,7 @@
             this.btnPrnuevo.Text = "Nuevo Proveedor";
             this.btnPrnuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrnuevo.UseVisualStyleBackColor = true;
+            this.btnPrnuevo.Click += new System.EventHandler(this.btnPrnuevo_Click);
             // 
             // btnPrfiltrar
             // 
@@ -175,6 +182,7 @@
             this.btnPrfiltrar.Text = "Limpiar Filtro";
             this.btnPrfiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrfiltrar.UseVisualStyleBackColor = true;
+            this.btnPrfiltrar.Click += new System.EventHandler(this.btnPrfiltrar_Click);
             // 
             // txtPrfiltro
             // 
@@ -182,6 +190,7 @@
             this.txtPrfiltro.Name = "txtPrfiltro";
             this.txtPrfiltro.Size = new System.Drawing.Size(136, 22);
             this.txtPrfiltro.TabIndex = 0;
+            this.txtPrfiltro.TextChanged += new System.EventHandler(this.txtPrfiltro_TextChanged);
             // 
             // label1
             // 
@@ -192,65 +201,37 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Filtro:";
             // 
-            // gbDatosproveedor
+            // gbDatosForm
             // 
-            this.gbDatosproveedor.Controls.Add(this.gbPtipo);
-            this.gbDatosproveedor.Controls.Add(this.txtPrdireccion);
-            this.gbDatosproveedor.Controls.Add(this.label2);
-            this.gbDatosproveedor.Controls.Add(this.btnPrcancelar);
-            this.gbDatosproveedor.Controls.Add(this.btnPrguardar);
-            this.gbDatosproveedor.Controls.Add(this.txtPrnumero);
-            this.gbDatosproveedor.Controls.Add(this.label15);
-            this.gbDatosproveedor.Controls.Add(this.txtPremail);
-            this.gbDatosproveedor.Controls.Add(this.label8);
-            this.gbDatosproveedor.Controls.Add(this.txtPrcelular);
-            this.gbDatosproveedor.Controls.Add(this.txtPrtelefono);
-            this.gbDatosproveedor.Controls.Add(this.txtPrrfc);
-            this.gbDatosproveedor.Controls.Add(this.txtPrnombre);
-            this.gbDatosproveedor.Controls.Add(this.label7);
-            this.gbDatosproveedor.Controls.Add(this.label6);
-            this.gbDatosproveedor.Controls.Add(this.label4);
-            this.gbDatosproveedor.Controls.Add(this.label3);
-            this.gbDatosproveedor.Location = new System.Drawing.Point(12, 391);
-            this.gbDatosproveedor.Name = "gbDatosproveedor";
-            this.gbDatosproveedor.Size = new System.Drawing.Size(813, 170);
-            this.gbDatosproveedor.TabIndex = 12;
-            this.gbDatosproveedor.TabStop = false;
-            this.gbDatosproveedor.Text = "Datos del Proveedor";
-            // 
-            // gbPtipo
-            // 
-            this.gbPtipo.Controls.Add(this.chbPrinactivo);
-            this.gbPtipo.Controls.Add(this.chbPractivo);
-            this.gbPtipo.Location = new System.Drawing.Point(359, 116);
-            this.gbPtipo.Name = "gbPtipo";
-            this.gbPtipo.Size = new System.Drawing.Size(205, 42);
-            this.gbPtipo.TabIndex = 104;
-            this.gbPtipo.TabStop = false;
-            // 
-            // chbPrinactivo
-            // 
-            this.chbPrinactivo.AutoSize = true;
-            this.chbPrinactivo.Location = new System.Drawing.Point(104, 17);
-            this.chbPrinactivo.Name = "chbPrinactivo";
-            this.chbPrinactivo.Size = new System.Drawing.Size(65, 18);
-            this.chbPrinactivo.TabIndex = 1;
-            this.chbPrinactivo.Text = "Inactivo";
-            this.chbPrinactivo.UseVisualStyleBackColor = true;
-            // 
-            // chbPractivo
-            // 
-            this.chbPractivo.AutoSize = true;
-            this.chbPractivo.Location = new System.Drawing.Point(29, 17);
-            this.chbPractivo.Name = "chbPractivo";
-            this.chbPractivo.Size = new System.Drawing.Size(57, 18);
-            this.chbPractivo.TabIndex = 0;
-            this.chbPractivo.Text = "Activo";
-            this.chbPractivo.UseVisualStyleBackColor = true;
+            this.gbDatosForm.Controls.Add(this.txtPrapellido);
+            this.gbDatosForm.Controls.Add(this.label5);
+            this.gbDatosForm.Controls.Add(this.gbStatus);
+            this.gbDatosForm.Controls.Add(this.txtPrdireccion);
+            this.gbDatosForm.Controls.Add(this.label2);
+            this.gbDatosForm.Controls.Add(this.btnPrcancelar);
+            this.gbDatosForm.Controls.Add(this.btnPrguardar);
+            this.gbDatosForm.Controls.Add(this.txtPrnumero);
+            this.gbDatosForm.Controls.Add(this.label15);
+            this.gbDatosForm.Controls.Add(this.txtPremail);
+            this.gbDatosForm.Controls.Add(this.label8);
+            this.gbDatosForm.Controls.Add(this.txtPrcelular);
+            this.gbDatosForm.Controls.Add(this.txtPrtelefono);
+            this.gbDatosForm.Controls.Add(this.txtPrrfc);
+            this.gbDatosForm.Controls.Add(this.txtPrnombre);
+            this.gbDatosForm.Controls.Add(this.label7);
+            this.gbDatosForm.Controls.Add(this.label6);
+            this.gbDatosForm.Controls.Add(this.label4);
+            this.gbDatosForm.Controls.Add(this.label3);
+            this.gbDatosForm.Location = new System.Drawing.Point(12, 391);
+            this.gbDatosForm.Name = "gbDatosForm";
+            this.gbDatosForm.Size = new System.Drawing.Size(813, 170);
+            this.gbDatosForm.TabIndex = 12;
+            this.gbDatosForm.TabStop = false;
+            this.gbDatosForm.Text = "Datos del Proveedor";
             // 
             // txtPrdireccion
             // 
-            this.txtPrdireccion.Location = new System.Drawing.Point(111, 86);
+            this.txtPrdireccion.Location = new System.Drawing.Point(111, 112);
             this.txtPrdireccion.Name = "txtPrdireccion";
             this.txtPrdireccion.Size = new System.Drawing.Size(187, 22);
             this.txtPrdireccion.TabIndex = 2;
@@ -258,7 +239,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 89);
+            this.label2.Location = new System.Drawing.Point(45, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 14);
             this.label2.TabIndex = 99;
@@ -281,6 +262,7 @@
             this.btnPrcancelar.Text = "Cancelar";
             this.btnPrcancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrcancelar.UseVisualStyleBackColor = true;
+            this.btnPrcancelar.Click += new System.EventHandler(this.btnPrcancelar_Click);
             // 
             // btnPrguardar
             // 
@@ -300,6 +282,7 @@
             this.btnPrguardar.Text = "Guardar";
             this.btnPrguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrguardar.UseVisualStyleBackColor = true;
+            this.btnPrguardar.Click += new System.EventHandler(this.btnPrguardar_Click);
             // 
             // txtPrnumero
             // 
@@ -349,7 +332,7 @@
             // 
             // txtPrrfc
             // 
-            this.txtPrrfc.Location = new System.Drawing.Point(111, 114);
+            this.txtPrrfc.Location = new System.Drawing.Point(111, 140);
             this.txtPrrfc.Name = "txtPrrfc";
             this.txtPrrfc.Size = new System.Drawing.Size(141, 22);
             this.txtPrrfc.TabIndex = 3;
@@ -382,7 +365,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(76, 117);
+            this.label4.Location = new System.Drawing.Point(76, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 14);
             this.label4.TabIndex = 7;
@@ -397,43 +380,90 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Nombre:";
             // 
+            // gbStatus
+            // 
+            this.gbStatus.Controls.Add(this.rbInactivo);
+            this.gbStatus.Controls.Add(this.rbActivo);
+            this.gbStatus.Location = new System.Drawing.Point(342, 115);
+            this.gbStatus.Name = "gbStatus";
+            this.gbStatus.Size = new System.Drawing.Size(242, 43);
+            this.gbStatus.TabIndex = 119;
+            this.gbStatus.TabStop = false;
+            this.gbStatus.Text = "Estado";
+            // 
+            // rbInactivo
+            // 
+            this.rbInactivo.AutoSize = true;
+            this.rbInactivo.Location = new System.Drawing.Point(154, 21);
+            this.rbInactivo.Name = "rbInactivo";
+            this.rbInactivo.Size = new System.Drawing.Size(64, 18);
+            this.rbInactivo.TabIndex = 115;
+            this.rbInactivo.TabStop = true;
+            this.rbInactivo.Text = "Inactivo";
+            this.rbInactivo.UseVisualStyleBackColor = true;
+            // 
+            // rbActivo
+            // 
+            this.rbActivo.AutoSize = true;
+            this.rbActivo.Location = new System.Drawing.Point(50, 21);
+            this.rbActivo.Name = "rbActivo";
+            this.rbActivo.Size = new System.Drawing.Size(56, 18);
+            this.rbActivo.TabIndex = 114;
+            this.rbActivo.TabStop = true;
+            this.rbActivo.Text = "Activo";
+            this.rbActivo.UseVisualStyleBackColor = true;
+            // 
+            // txtPrapellido
+            // 
+            this.txtPrapellido.Location = new System.Drawing.Point(111, 84);
+            this.txtPrapellido.Name = "txtPrapellido";
+            this.txtPrapellido.Size = new System.Drawing.Size(187, 22);
+            this.txtPrapellido.TabIndex = 120;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(57, 88);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 14);
+            this.label5.TabIndex = 121;
+            this.label5.Text = "Apellidos";
+            // 
             // FrmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(837, 574);
-            this.Controls.Add(this.gbProveedores);
-            this.Controls.Add(this.gbDatosproveedor);
+            this.Controls.Add(this.gbDatosGrid);
+            this.Controls.Add(this.gbDatosForm);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProveedores";
             this.Text = "FrmProveedor";
-            this.gbProveedores.ResumeLayout(false);
-            this.gbProveedores.PerformLayout();
+            this.Load += new System.EventHandler(this.FrmProveedores_Load);
+            this.gbDatosGrid.ResumeLayout(false);
+            this.gbDatosGrid.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProveedor)).EndInit();
-            this.gbDatosproveedor.ResumeLayout(false);
-            this.gbDatosproveedor.PerformLayout();
-            this.gbPtipo.ResumeLayout(false);
-            this.gbPtipo.PerformLayout();
+            this.gbDatosForm.ResumeLayout(false);
+            this.gbDatosForm.PerformLayout();
+            this.gbStatus.ResumeLayout(false);
+            this.gbStatus.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gbProveedores;
+        private System.Windows.Forms.GroupBox gbDatosGrid;
         private System.Windows.Forms.DataGridView dtgProveedor;
         private System.Windows.Forms.Button btnPreditar;
         private System.Windows.Forms.Button btnPrregresar;
-        private System.Windows.Forms.CheckBox chbPermisionarios;
+        private System.Windows.Forms.CheckBox chbProveedores;
         private System.Windows.Forms.Button btnPrnuevo;
         private System.Windows.Forms.Button btnPrfiltrar;
         private System.Windows.Forms.TextBox txtPrfiltro;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox gbDatosproveedor;
-        private System.Windows.Forms.GroupBox gbPtipo;
-        private System.Windows.Forms.CheckBox chbPrinactivo;
-        private System.Windows.Forms.CheckBox chbPractivo;
+        private System.Windows.Forms.GroupBox gbDatosForm;
         private System.Windows.Forms.TextBox txtPrdireccion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnPrcancelar;
@@ -450,5 +480,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox gbStatus;
+        private System.Windows.Forms.RadioButton rbInactivo;
+        private System.Windows.Forms.RadioButton rbActivo;
+        private System.Windows.Forms.TextBox txtPrapellido;
+        private System.Windows.Forms.Label label5;
     }
 }

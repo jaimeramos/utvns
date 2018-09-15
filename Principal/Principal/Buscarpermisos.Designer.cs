@@ -97,6 +97,7 @@
             this.txtPefiltro.Name = "txtPefiltro";
             this.txtPefiltro.Size = new System.Drawing.Size(303, 23);
             this.txtPefiltro.TabIndex = 20;
+            this.txtPefiltro.TextChanged += new System.EventHandler(this.txtPefiltro_TextChanged);
             // 
             // checkBox1
             // 
@@ -110,6 +111,7 @@
             this.checkBox1.TabIndex = 26;
             this.checkBox1.Text = "Mostrar todos los Permisos";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // btnPefiltrar
             // 
@@ -128,6 +130,7 @@
             this.btnPefiltrar.Text = "Limpiar filtro";
             this.btnPefiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPefiltrar.UseVisualStyleBackColor = true;
+            this.btnPefiltrar.Click += new System.EventHandler(this.btnPefiltrar_Click);
             // 
             // label1
             // 

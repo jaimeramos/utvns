@@ -323,6 +323,7 @@
             this.rbActivo.TabStop = true;
             this.rbActivo.Text = "Activo";
             this.rbActivo.UseVisualStyleBackColor = true;
+            this.rbActivo.CheckedChanged += new System.EventHandler(this.rbActivo_CheckedChanged);
             // 
             // cmbPermit
             // 
@@ -533,6 +534,7 @@
             this.dtgVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgVehiculo.Size = new System.Drawing.Size(895, 228);
             this.dtgVehiculo.TabIndex = 89;
+            this.dtgVehiculo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgVehiculo_CellContentClick);
             this.dtgVehiculo.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgVehiculo_RowEnter);
             // 
             // txtVfiltro
