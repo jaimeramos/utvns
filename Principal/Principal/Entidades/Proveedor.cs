@@ -9,7 +9,7 @@ using System.Web.Script.Serialization;
 
 namespace Principal.Entidades
 {
-    class Proveedor
+    public class Proveedor
     {
         #region Atributos privados
         static string Entity = "providers";

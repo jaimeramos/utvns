@@ -47,41 +47,41 @@ namespace Principal
             if (!json.Equals("[]"))
             {
                 DataTable data = Tools.Util.convertToDataTable(json);
-                dtgPermisos.AutoGenerateColumns = true;
-                dtgPermisos.DataSource = data;
-                dtgPermisos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGrid.AutoGenerateColumns = true;
+                dataGrid.DataSource = data;
+                dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-                dtgPermisos.Columns["active"].Visible = true;
-                dtgPermisos.Columns["idadmin"].Visible = false;
-                dtgPermisos.Columns["created_at"].Visible = false;
-                dtgPermisos.Columns["updated_at"].Visible = false;
-                dtgPermisos.Columns["__v"].Visible = false;
-                dtgPermisos.Columns["_id"].Visible = false;
+                dataGrid.Columns["active"].Visible = true;
+                dataGrid.Columns["idadmin"].Visible = false;
+                dataGrid.Columns["created_at"].Visible = false;
+                dataGrid.Columns["updated_at"].Visible = false;
+                dataGrid.Columns["__v"].Visible = false;
+                dataGrid.Columns["_id"].Visible = false;
 
-                dtgPermisos.Columns["number"].DisplayIndex = 0;
-                dtgPermisos.Columns["number"].HeaderText = "Número";
-                dtgPermisos.Columns["type"].DisplayIndex = 1;
-                dtgPermisos.Columns["type"].HeaderText = "Tipo";
-                dtgPermisos.Columns["type"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-                dtgPermisos.Columns["description"].DisplayIndex = 2;
-                dtgPermisos.Columns["description"].HeaderText = "Descripción";
-                dtgPermisos.Columns["description"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-                dtgPermisos.Columns["validity_at"].DisplayIndex = 3;
-                dtgPermisos.Columns["validity_at"].HeaderText = "Vigencia";
-                dtgPermisos.Columns["active"].DisplayIndex = 4;
-                dtgPermisos.Columns["active"].HeaderText = "Status";
+                dataGrid.Columns["number"].DisplayIndex = 0;
+                dataGrid.Columns["number"].HeaderText = "Número";
+                dataGrid.Columns["type"].DisplayIndex = 1;
+                dataGrid.Columns["type"].HeaderText = "Tipo";
+                dataGrid.Columns["type"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                dataGrid.Columns["description"].DisplayIndex = 2;
+                dataGrid.Columns["description"].HeaderText = "Descripción";
+                dataGrid.Columns["description"].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                dataGrid.Columns["validity_at"].DisplayIndex = 3;
+                dataGrid.Columns["validity_at"].HeaderText = "Vigencia";
+                dataGrid.Columns["active"].DisplayIndex = 4;
+                dataGrid.Columns["active"].HeaderText = "Status";
 
             }
         }
 
          private void dtgPermisos_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (dtgPermisos.CurrentRow == null)
+            if (dataGrid.CurrentRow == null)
             {
                 return;
             }
             int selectedrowindex = e.RowIndex;
-            DataGridViewRow selectedRow = dtgPermisos.Rows[selectedrowindex];
+            DataGridViewRow selectedRow = dataGrid.Rows[selectedrowindex];
             string a = Convert.ToString(selectedRow.Cells["_id"].Value);
             Permiso permiso = new Permiso();
             permiso.Id = a;

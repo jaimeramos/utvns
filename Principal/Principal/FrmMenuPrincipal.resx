@@ -118,6 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABUAAAARCAYAAAAyhueAAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAAFzSURBVDhPrdI/KEVRAMfxV8Ik
+        fyYWm155KcWgDP4tBhkofxYpLDYiTHqL/AtJj/JSTGKQP4PJQBlMZqEUSf6VCJHj+3v3nrpeMVz3V586
+        53bP75173gkZYyQb09jGhg9aN4kshGzhMv6bL6wgR6W9ekKGUI4KH7RuAMqgStdxjBTY4/DrEGsaDOMa
+        mfC+EMY45lDjPvtLBk4xo0kDlCLYF7TrXdicoxGziGPRtYQRpCIPn+hSQSk+0ApbmoYj2LxhHg+J2c9c
+        QqVliZkxVSooxCN00LZUn/sEb7Zg/5hKVzVKoDXduEVYk1ycYQHe0nd4c4BO9EE3RvoRgdboS7TrfFui
+        PyPmji2d9RVuoKPQ5dZYR/Hq0g+3Q+9HsYp0TQrQDJ1pvasOtdDN0A3ogXY1hVGPMbRBa9TRgohK9/Fb
+        tJtnaEei8UuS5GyqdM8ZB5YdlU4448ASV2mHMw4sUZXq+gSZJpXq8p/gHroyft3hwhhT/A3ZPgvpZlWl
+        4gAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="button6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABoAAAAQCAYAAAAI0W+oAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1

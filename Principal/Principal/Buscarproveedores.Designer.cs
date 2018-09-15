@@ -1,6 +1,6 @@
 ﻿namespace Principal
 {
-    partial class Buscarpermisos
+    partial class Buscarproveedores
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buscarpermisos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buscarproveedores));
             this.gbPermisos = new System.Windows.Forms.GroupBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.btnVeditar = new System.Windows.Forms.Button();
@@ -51,10 +51,10 @@
             this.gbPermisos.Controls.Add(this.label1);
             this.gbPermisos.Controls.Add(this.btnPeregresar);
             this.gbPermisos.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbPermisos.Location = new System.Drawing.Point(10, 40);
+            this.gbPermisos.Location = new System.Drawing.Point(10, 24);
             this.gbPermisos.Name = "gbPermisos";
             this.gbPermisos.Size = new System.Drawing.Size(781, 370);
-            this.gbPermisos.TabIndex = 28;
+            this.gbPermisos.TabIndex = 29;
             this.gbPermisos.TabStop = false;
             // 
             // dataGrid
@@ -69,7 +69,7 @@
             this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGrid.Size = new System.Drawing.Size(759, 270);
             this.dataGrid.TabIndex = 94;
-            this.dataGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPermisos_CellContentDoubleClick_1);
+            this.dataGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentDoubleClick);
             // 
             // btnVeditar
             // 
@@ -88,7 +88,6 @@
             this.btnVeditar.Text = "Seleccionar";
             this.btnVeditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVeditar.UseVisualStyleBackColor = true;
-            this.btnVeditar.Click += new System.EventHandler(this.btnVeditar_Click);
             // 
             // txtPefiltro
             // 
@@ -97,7 +96,6 @@
             this.txtPefiltro.Name = "txtPefiltro";
             this.txtPefiltro.Size = new System.Drawing.Size(303, 23);
             this.txtPefiltro.TabIndex = 20;
-            this.txtPefiltro.TextChanged += new System.EventHandler(this.txtPefiltro_TextChanged);
             // 
             // checkBox1
             // 
@@ -111,7 +109,6 @@
             this.checkBox1.TabIndex = 26;
             this.checkBox1.Text = "Mostrar todos los Permisos";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // btnPefiltrar
             // 
@@ -130,7 +127,6 @@
             this.btnPefiltrar.Text = "Limpiar filtro";
             this.btnPefiltrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPefiltrar.UseVisualStyleBackColor = true;
-            this.btnPefiltrar.Click += new System.EventHandler(this.btnPefiltrar_Click);
             // 
             // label1
             // 
@@ -161,17 +157,17 @@
             this.btnPeregresar.UseVisualStyleBackColor = true;
             this.btnPeregresar.Click += new System.EventHandler(this.btnPeregresar_Click);
             // 
-            // Buscarpermisos
+            // Buscarproveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbPermisos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Buscarpermisos";
+            this.Name = "Buscarproveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Buscarpermisos";
-            this.Load += new System.EventHandler(this.Buscarpermisos_Load);
+            this.Text = "Buscarproveedores";
+            this.Load += new System.EventHandler(this.Buscarproveedores_Load);
             this.gbPermisos.ResumeLayout(false);
             this.gbPermisos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
@@ -182,12 +178,12 @@
         #endregion
 
         private System.Windows.Forms.GroupBox gbPermisos;
+        private System.Windows.Forms.DataGridView dataGrid;
+        private System.Windows.Forms.Button btnVeditar;
         private System.Windows.Forms.TextBox txtPefiltro;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button btnPefiltrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPeregresar;
-        private System.Windows.Forms.Button btnVeditar;
-        private System.Windows.Forms.DataGridView dataGrid;
     }
 }

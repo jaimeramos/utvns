@@ -227,6 +227,13 @@ namespace Principal
             pnlMenuvertical.Enabled = false;
             Barratitulo.Enabled = false;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            abrirfrmMenu(new FrmPiezasrecambios());
+            pnlMenuvertical.Enabled = false;
+            Barratitulo.Enabled = false;
+        }
     }
   }
 

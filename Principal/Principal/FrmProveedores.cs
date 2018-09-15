@@ -77,6 +77,7 @@ namespace Principal
 
         private void btnPrnuevo_Click(object sender, EventArgs e)
         {
+            provider = new Proveedor();
             txtPrnumero.Text = "";
             txtPrnombre.Text = "";
             txtPrapellido.Text = "";

@@ -39,6 +39,11 @@
             this.txtPrfiltro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gbDatosForm = new System.Windows.Forms.GroupBox();
+            this.txtPrapellido = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.gbStatus = new System.Windows.Forms.GroupBox();
+            this.rbInactivo = new System.Windows.Forms.RadioButton();
+            this.rbActivo = new System.Windows.Forms.RadioButton();
             this.txtPrdireccion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnPrcancelar = new System.Windows.Forms.Button();
@@ -55,11 +60,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.gbStatus = new System.Windows.Forms.GroupBox();
-            this.rbInactivo = new System.Windows.Forms.RadioButton();
-            this.rbActivo = new System.Windows.Forms.RadioButton();
-            this.txtPrapellido = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.gbDatosGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProveedor)).BeginInit();
             this.gbDatosForm.SuspendLayout();
@@ -229,6 +229,55 @@
             this.gbDatosForm.TabStop = false;
             this.gbDatosForm.Text = "Datos del Proveedor";
             // 
+            // txtPrapellido
+            // 
+            this.txtPrapellido.Location = new System.Drawing.Point(111, 84);
+            this.txtPrapellido.Name = "txtPrapellido";
+            this.txtPrapellido.Size = new System.Drawing.Size(187, 22);
+            this.txtPrapellido.TabIndex = 120;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(57, 88);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 14);
+            this.label5.TabIndex = 121;
+            this.label5.Text = "Apellidos";
+            // 
+            // gbStatus
+            // 
+            this.gbStatus.Controls.Add(this.rbInactivo);
+            this.gbStatus.Controls.Add(this.rbActivo);
+            this.gbStatus.Location = new System.Drawing.Point(342, 115);
+            this.gbStatus.Name = "gbStatus";
+            this.gbStatus.Size = new System.Drawing.Size(242, 43);
+            this.gbStatus.TabIndex = 119;
+            this.gbStatus.TabStop = false;
+            this.gbStatus.Text = "Estado";
+            // 
+            // rbInactivo
+            // 
+            this.rbInactivo.AutoSize = true;
+            this.rbInactivo.Location = new System.Drawing.Point(154, 21);
+            this.rbInactivo.Name = "rbInactivo";
+            this.rbInactivo.Size = new System.Drawing.Size(64, 18);
+            this.rbInactivo.TabIndex = 115;
+            this.rbInactivo.TabStop = true;
+            this.rbInactivo.Text = "Inactivo";
+            this.rbInactivo.UseVisualStyleBackColor = true;
+            // 
+            // rbActivo
+            // 
+            this.rbActivo.AutoSize = true;
+            this.rbActivo.Location = new System.Drawing.Point(50, 21);
+            this.rbActivo.Name = "rbActivo";
+            this.rbActivo.Size = new System.Drawing.Size(56, 18);
+            this.rbActivo.TabIndex = 114;
+            this.rbActivo.TabStop = true;
+            this.rbActivo.Text = "Activo";
+            this.rbActivo.UseVisualStyleBackColor = true;
+            // 
             // txtPrdireccion
             // 
             this.txtPrdireccion.Location = new System.Drawing.Point(111, 112);
@@ -379,55 +428,6 @@
             this.label3.Size = new System.Drawing.Size(50, 14);
             this.label3.TabIndex = 6;
             this.label3.Text = "Nombre:";
-            // 
-            // gbStatus
-            // 
-            this.gbStatus.Controls.Add(this.rbInactivo);
-            this.gbStatus.Controls.Add(this.rbActivo);
-            this.gbStatus.Location = new System.Drawing.Point(342, 115);
-            this.gbStatus.Name = "gbStatus";
-            this.gbStatus.Size = new System.Drawing.Size(242, 43);
-            this.gbStatus.TabIndex = 119;
-            this.gbStatus.TabStop = false;
-            this.gbStatus.Text = "Estado";
-            // 
-            // rbInactivo
-            // 
-            this.rbInactivo.AutoSize = true;
-            this.rbInactivo.Location = new System.Drawing.Point(154, 21);
-            this.rbInactivo.Name = "rbInactivo";
-            this.rbInactivo.Size = new System.Drawing.Size(64, 18);
-            this.rbInactivo.TabIndex = 115;
-            this.rbInactivo.TabStop = true;
-            this.rbInactivo.Text = "Inactivo";
-            this.rbInactivo.UseVisualStyleBackColor = true;
-            // 
-            // rbActivo
-            // 
-            this.rbActivo.AutoSize = true;
-            this.rbActivo.Location = new System.Drawing.Point(50, 21);
-            this.rbActivo.Name = "rbActivo";
-            this.rbActivo.Size = new System.Drawing.Size(56, 18);
-            this.rbActivo.TabIndex = 114;
-            this.rbActivo.TabStop = true;
-            this.rbActivo.Text = "Activo";
-            this.rbActivo.UseVisualStyleBackColor = true;
-            // 
-            // txtPrapellido
-            // 
-            this.txtPrapellido.Location = new System.Drawing.Point(111, 84);
-            this.txtPrapellido.Name = "txtPrapellido";
-            this.txtPrapellido.Size = new System.Drawing.Size(187, 22);
-            this.txtPrapellido.TabIndex = 120;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(57, 88);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 14);
-            this.label5.TabIndex = 121;
-            this.label5.Text = "Apellidos";
             // 
             // FrmProveedores
             // 
