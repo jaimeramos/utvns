@@ -126,7 +126,7 @@ namespace Principal.Entidades
         /// </summary>
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
 
-        public bool upSert(bool opt)
+        public bool upSert()
         {
             string json = new JavaScriptSerializer().Serialize(new
             {
@@ -134,7 +134,7 @@ namespace Principal.Entidades
                 number = this.Number,
                 name = this.Name,
                 description = this.Description,
-                
+                active= this.Active
 
             });
 

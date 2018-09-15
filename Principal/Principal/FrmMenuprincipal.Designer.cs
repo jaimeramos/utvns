@@ -61,6 +61,7 @@
             this.iconcerrar = new System.Windows.Forms.PictureBox();
             this.btnslide = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.pnlMenuvertical.SuspendLayout();
             this.pnlCatalogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -98,6 +99,7 @@
             // pnlCatalogo
             // 
             this.pnlCatalogo.BackColor = System.Drawing.Color.Teal;
+            this.pnlCatalogo.Controls.Add(this.button7);
             this.pnlCatalogo.Controls.Add(this.button3);
             this.pnlCatalogo.Controls.Add(this.button1);
             this.pnlCatalogo.Controls.Add(this.button6);
@@ -110,7 +112,7 @@
             this.pnlCatalogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnlCatalogo.Location = new System.Drawing.Point(21, 12);
             this.pnlCatalogo.Name = "pnlCatalogo";
-            this.pnlCatalogo.Size = new System.Drawing.Size(227, 311);
+            this.pnlCatalogo.Size = new System.Drawing.Size(227, 327);
             this.pnlCatalogo.TabIndex = 3;
             this.pnlCatalogo.Visible = false;
             // 
@@ -403,7 +405,7 @@
             this.btnSistemas.ForeColor = System.Drawing.Color.White;
             this.btnSistemas.Image = ((System.Drawing.Image)(resources.GetObject("btnSistemas.Image")));
             this.btnSistemas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSistemas.Location = new System.Drawing.Point(21, 372);
+            this.btnSistemas.Location = new System.Drawing.Point(21, 425);
             this.btnSistemas.Name = "btnSistemas";
             this.btnSistemas.Size = new System.Drawing.Size(168, 51);
             this.btnSistemas.TabIndex = 11;
@@ -582,6 +584,25 @@
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             this.panelContenedor.MouseHover += new System.EventHandler(this.panelContenedor_MouseHover_1);
             // 
+            // button7
+            // 
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(3, 292);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(221, 30);
+            this.button7.TabIndex = 13;
+            this.button7.Text = "Líneas de negocio";
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // FrmMenuprincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -651,5 +672,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }

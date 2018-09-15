@@ -241,6 +241,13 @@ namespace Principal
             pnlMenuvertical.Enabled = false;
             Barratitulo.Enabled = false;
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            abrirfrmMenu(new FrmLineadenegocios());
+            pnlMenuvertical.Enabled = false;
+            Barratitulo.Enabled = false;
+        }
     }
   }
 
