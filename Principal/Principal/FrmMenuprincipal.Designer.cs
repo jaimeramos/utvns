@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuprincipal));
             this.pnlMenuvertical = new System.Windows.Forms.Panel();
             this.pnlCatalogo = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -50,6 +51,7 @@
             this.btnMrespaldo = new System.Windows.Forms.Button();
             this.btnSistemas = new System.Windows.Forms.Button();
             this.pnlTransacciones = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.btnMegresos = new System.Windows.Forms.Button();
             this.btnMingresos = new System.Windows.Forms.Button();
             this.btnTransacciones = new System.Windows.Forms.Button();
@@ -61,7 +63,6 @@
             this.iconcerrar = new System.Windows.Forms.PictureBox();
             this.btnslide = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
             this.pnlMenuvertical.SuspendLayout();
             this.pnlCatalogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -110,11 +111,30 @@
             this.pnlCatalogo.Controls.Add(this.btnMvehiculos);
             this.pnlCatalogo.Controls.Add(this.btnMpermisionarios);
             this.pnlCatalogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlCatalogo.Location = new System.Drawing.Point(21, 12);
+            this.pnlCatalogo.Location = new System.Drawing.Point(21, 16);
             this.pnlCatalogo.Name = "pnlCatalogo";
             this.pnlCatalogo.Size = new System.Drawing.Size(227, 327);
             this.pnlCatalogo.TabIndex = 3;
             this.pnlCatalogo.Visible = false;
+            // 
+            // button7
+            // 
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(3, 292);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(221, 30);
+            this.button7.TabIndex = 13;
+            this.button7.Text = "Líneas de negocio";
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button3
             // 
@@ -339,7 +359,7 @@
             this.pnlSistemas.Controls.Add(this.btnMrecuperación);
             this.pnlSistemas.Controls.Add(this.btnMrespaldo);
             this.pnlSistemas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlSistemas.Location = new System.Drawing.Point(3, 560);
+            this.pnlSistemas.Location = new System.Drawing.Point(3, 564);
             this.pnlSistemas.Name = "pnlSistemas";
             this.pnlSistemas.Size = new System.Drawing.Size(227, 104);
             this.pnlSistemas.TabIndex = 12;
@@ -405,7 +425,7 @@
             this.btnSistemas.ForeColor = System.Drawing.Color.White;
             this.btnSistemas.Image = ((System.Drawing.Image)(resources.GetObject("btnSistemas.Image")));
             this.btnSistemas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSistemas.Location = new System.Drawing.Point(21, 425);
+            this.btnSistemas.Location = new System.Drawing.Point(21, 346);
             this.btnSistemas.Name = "btnSistemas";
             this.btnSistemas.Size = new System.Drawing.Size(168, 51);
             this.btnSistemas.TabIndex = 11;
@@ -417,14 +437,33 @@
             // pnlTransacciones
             // 
             this.pnlTransacciones.BackColor = System.Drawing.Color.Teal;
+            this.pnlTransacciones.Controls.Add(this.button8);
             this.pnlTransacciones.Controls.Add(this.btnMegresos);
             this.pnlTransacciones.Controls.Add(this.btnMingresos);
             this.pnlTransacciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlTransacciones.Location = new System.Drawing.Point(6, 483);
+            this.pnlTransacciones.Location = new System.Drawing.Point(6, 398);
             this.pnlTransacciones.Name = "pnlTransacciones";
-            this.pnlTransacciones.Size = new System.Drawing.Size(227, 71);
+            this.pnlTransacciones.Size = new System.Drawing.Size(242, 124);
             this.pnlTransacciones.TabIndex = 9;
             this.pnlTransacciones.Visible = false;
+            // 
+            // button8
+            // 
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(4, 65);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(219, 30);
+            this.button8.TabIndex = 10;
+            this.button8.Text = "Tipos de ingreso";
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // btnMegresos
             // 
@@ -435,12 +474,14 @@
             this.btnMegresos.ForeColor = System.Drawing.Color.White;
             this.btnMegresos.Image = ((System.Drawing.Image)(resources.GetObject("btnMegresos.Image")));
             this.btnMegresos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMegresos.Location = new System.Drawing.Point(5, 35);
+            this.btnMegresos.Location = new System.Drawing.Point(4, 35);
             this.btnMegresos.Name = "btnMegresos";
             this.btnMegresos.Size = new System.Drawing.Size(219, 30);
             this.btnMegresos.TabIndex = 9;
             this.btnMegresos.Text = "Egresos";
+            this.btnMegresos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMegresos.UseVisualStyleBackColor = true;
+            this.btnMegresos.Click += new System.EventHandler(this.btnMegresos_Click);
             // 
             // btnMingresos
             // 
@@ -451,11 +492,12 @@
             this.btnMingresos.ForeColor = System.Drawing.Color.White;
             this.btnMingresos.Image = ((System.Drawing.Image)(resources.GetObject("btnMingresos.Image")));
             this.btnMingresos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMingresos.Location = new System.Drawing.Point(5, 3);
+            this.btnMingresos.Location = new System.Drawing.Point(4, 3);
             this.btnMingresos.Name = "btnMingresos";
             this.btnMingresos.Size = new System.Drawing.Size(219, 30);
             this.btnMingresos.TabIndex = 8;
             this.btnMingresos.Text = "Ingresos";
+            this.btnMingresos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMingresos.UseVisualStyleBackColor = true;
             // 
             // btnTransacciones
@@ -584,25 +626,6 @@
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             this.panelContenedor.MouseHover += new System.EventHandler(this.panelContenedor_MouseHover_1);
             // 
-            // button7
-            // 
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(3, 292);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(221, 30);
-            this.button7.TabIndex = 13;
-            this.button7.Text = "Líneas de negocio";
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // FrmMenuprincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -673,5 +696,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }

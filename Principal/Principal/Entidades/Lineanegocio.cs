@@ -8,7 +8,7 @@ using System.Web.Script.Serialization;
 
 namespace Principal.Entidades
 {
-    class Lineanegocio
+    public class Lineanegocio
     {
         #region Atributos privados
         static string Entity = "businesslines";

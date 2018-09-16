@@ -248,6 +248,20 @@ namespace Principal
             pnlMenuvertical.Enabled = false;
             Barratitulo.Enabled = false;
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            abrirfrmMenu(new FrmIncometypes());
+            pnlMenuvertical.Enabled = false;
+            Barratitulo.Enabled = false;
+        }
+
+        private void btnMegresos_Click(object sender, EventArgs e)
+        {
+            abrirfrmMenu(new FrmOutcomes());
+            pnlMenuvertical.Enabled = false;
+            Barratitulo.Enabled = false;
+        }
     }
   }
 

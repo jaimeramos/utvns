@@ -1,6 +1,6 @@
 ﻿namespace Principal
 {
-    partial class FrmWorkshopsvcs
+    partial class FrmIncometypes
     {
         /// <summary>
         /// Required designer variable.
@@ -99,7 +99,7 @@
             this.btnPreditar.Name = "btnPreditar";
             this.btnPreditar.Size = new System.Drawing.Size(113, 40);
             this.btnPreditar.TabIndex = 3;
-            this.btnPreditar.Text = "Editar servicio";
+            this.btnPreditar.Text = "Editar tipo de ingreso";
             this.btnPreditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPreditar.UseVisualStyleBackColor = true;
             this.btnPreditar.Click += new System.EventHandler(this.btnPreditar_Click);
@@ -127,9 +127,9 @@
             this.chbRecambios.AutoSize = true;
             this.chbRecambios.Location = new System.Drawing.Point(461, 336);
             this.chbRecambios.Name = "chbRecambios";
-            this.chbRecambios.Size = new System.Drawing.Size(190, 17);
+            this.chbRecambios.Size = new System.Drawing.Size(183, 17);
             this.chbRecambios.TabIndex = 5;
-            this.chbRecambios.Text = "Mostrar todos los servicios de taller";
+            this.chbRecambios.Text = "Mostrar todos los tipos de ingreso";
             this.chbRecambios.UseVisualStyleBackColor = true;
             this.chbRecambios.CheckedChanged += new System.EventHandler(this.chbRecambios_CheckedChanged);
             // 
@@ -146,7 +146,7 @@
             this.btnPrnuevo.Name = "btnPrnuevo";
             this.btnPrnuevo.Size = new System.Drawing.Size(112, 40);
             this.btnPrnuevo.TabIndex = 2;
-            this.btnPrnuevo.Text = "Nuevo servicio";
+            this.btnPrnuevo.Text = "Nuevo tipo de ingreso";
             this.btnPrnuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrnuevo.UseVisualStyleBackColor = true;
             this.btnPrnuevo.Click += new System.EventHandler(this.btnPrnuevo_Click);
@@ -202,7 +202,7 @@
             this.gbDatosForm.Size = new System.Drawing.Size(710, 141);
             this.gbDatosForm.TabIndex = 19;
             this.gbDatosForm.TabStop = false;
-            this.gbDatosForm.Text = "Datos de los servicios de taller";
+            this.gbDatosForm.Text = "Datos de los tipos de ingreso";
             // 
             // gbStatus
             // 
@@ -322,7 +322,7 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Descripción:";
             // 
-            // FrmWorkshopsvcs
+            // FrmIncometypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -330,7 +330,7 @@
             this.Controls.Add(this.gbDatosForm);
             this.Controls.Add(this.gbDatosGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmWorkshopsvcs";
+            this.Name = "FrmIncometypes";
             this.Text = "FrmWorkshopsvcs";
             this.Load += new System.EventHandler(this.FrmWorkshopsvcs_Load);
             this.gbDatosGrid.ResumeLayout(false);

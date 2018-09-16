@@ -80,6 +80,12 @@
     <Compile Include="Buscarchoferes.Designer.cs">
       <DependentUpon>Buscarchoferes.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuscarBussinesLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarBussinesLine.Designer.cs">
+      <DependentUpon>BuscarBussinesLine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Buscarpermisos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,7 @@
     <Compile Include="Entidades\Driverassign.cs" />
     <Compile Include="Entidades\Egreso.cs" />
     <Compile Include="Entidades\Executivesvc.cs" />
+    <Compile Include="Entidades\Incometype.cs" />
     <Compile Include="Entidades\Ingreso.cs" />
     <Compile Include="Entidades\Lineanegocio.cs" />
     <Compile Include="Entidades\Mecanico.cs" />
@@ -113,7 +120,6 @@
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="Entidades\Servicioexecutivo.cs" />
     <Compile Include="Entidades\Sparepart.cs" />
-    <Compile Include="Entidades\TipoIngreso.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Entidades\Vehiculo.cs" />
     <Compile Include="Entidades\Venta.cs" />
@@ -190,6 +196,12 @@
     <Compile Include="FrmMenuprincipal.Designer.cs">
       <DependentUpon>FrmMenuprincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmOutcomes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOutcomes.Designer.cs">
+      <DependentUpon>FrmOutcomes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPermisionarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +244,12 @@
     <Compile Include="FrmVentas.Designer.cs">
       <DependentUpon>FrmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIncometypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIncometypes.Designer.cs">
+      <DependentUpon>FrmIncometypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmWorkshopsvcs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +272,9 @@
     <Compile Include="Tools\Util.cs" />
     <EmbeddedResource Include="Buscarchoferes.resx">
       <DependentUpon>Buscarchoferes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarBussinesLine.resx">
+      <DependentUpon>BuscarBussinesLine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Buscarpermisos.resx">
       <DependentUpon>Buscarpermisos.cs</DependentUpon>
@@ -297,6 +318,9 @@
     <EmbeddedResource Include="FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuprincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmOutcomes.resx">
+      <DependentUpon>FrmOutcomes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPermisionarios.resx">
       <DependentUpon>FrmPermisionarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -317,6 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIncometypes.resx">
+      <DependentUpon>FrmIncometypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmWorkshopsvcs.resx">
       <DependentUpon>FrmWorkshopsvcs.cs</DependentUpon>

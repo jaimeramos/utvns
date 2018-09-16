@@ -66,20 +66,21 @@
             this.gbDatosForm.Controls.Add(this.label15);
             this.gbDatosForm.Controls.Add(this.txtPrdescripcion);
             this.gbDatosForm.Controls.Add(this.label3);
+            this.gbDatosForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.gbDatosForm.Location = new System.Drawing.Point(21, 386);
             this.gbDatosForm.Name = "gbDatosForm";
-            this.gbDatosForm.Size = new System.Drawing.Size(710, 158);
+            this.gbDatosForm.Size = new System.Drawing.Size(710, 138);
             this.gbDatosForm.TabIndex = 21;
             this.gbDatosForm.TabStop = false;
-            this.gbDatosForm.Text = "Datos de los servicios de taller";
+            this.gbDatosForm.Text = "Datos de las líneas de negocio";
             // 
             // gbStatus
             // 
             this.gbStatus.Controls.Add(this.rbInactivo);
             this.gbStatus.Controls.Add(this.rbActivo);
-            this.gbStatus.Location = new System.Drawing.Point(253, 94);
+            this.gbStatus.Location = new System.Drawing.Point(302, 69);
             this.gbStatus.Name = "gbStatus";
-            this.gbStatus.Size = new System.Drawing.Size(242, 50);
+            this.gbStatus.Size = new System.Drawing.Size(196, 50);
             this.gbStatus.TabIndex = 120;
             this.gbStatus.TabStop = false;
             this.gbStatus.Text = "Estado";
@@ -87,10 +88,10 @@
             // rbInactivo
             // 
             this.rbInactivo.AutoSize = true;
-            this.rbInactivo.Location = new System.Drawing.Point(154, 21);
+            this.rbInactivo.Location = new System.Drawing.Point(102, 20);
             this.rbInactivo.Name = "rbInactivo";
-            this.rbInactivo.Size = new System.Drawing.Size(74, 19);
-            this.rbInactivo.TabIndex = 115;
+            this.rbInactivo.Size = new System.Drawing.Size(63, 17);
+            this.rbInactivo.TabIndex = 4;
             this.rbInactivo.TabStop = true;
             this.rbInactivo.Text = "Inactivo";
             this.rbInactivo.UseVisualStyleBackColor = true;
@@ -98,27 +99,27 @@
             // rbActivo
             // 
             this.rbActivo.AutoSize = true;
-            this.rbActivo.Location = new System.Drawing.Point(50, 21);
+            this.rbActivo.Location = new System.Drawing.Point(31, 21);
             this.rbActivo.Name = "rbActivo";
-            this.rbActivo.Size = new System.Drawing.Size(62, 19);
-            this.rbActivo.TabIndex = 114;
+            this.rbActivo.Size = new System.Drawing.Size(55, 17);
+            this.rbActivo.TabIndex = 3;
             this.rbActivo.TabStop = true;
             this.rbActivo.Text = "Activo";
             this.rbActivo.UseVisualStyleBackColor = true;
             // 
             // txtPrname
             // 
-            this.txtPrname.Location = new System.Drawing.Point(78, 91);
+            this.txtPrname.Location = new System.Drawing.Point(362, 29);
             this.txtPrname.Name = "txtPrname";
-            this.txtPrname.Size = new System.Drawing.Size(159, 21);
+            this.txtPrname.Size = new System.Drawing.Size(136, 20);
             this.txtPrname.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 94);
+            this.label2.Location = new System.Drawing.Point(306, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 15);
+            this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 99;
             this.label2.Text = "Costo:";
             // 
@@ -128,13 +129,13 @@
             this.btnVtcancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnVtcancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnVtcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVtcancelar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVtcancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnVtcancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVtcancelar.Location = new System.Drawing.Point(568, 82);
+            this.btnVtcancelar.Location = new System.Drawing.Point(556, 82);
             this.btnVtcancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVtcancelar.Name = "btnVtcancelar";
             this.btnVtcancelar.Size = new System.Drawing.Size(115, 40);
-            this.btnVtcancelar.TabIndex = 15;
+            this.btnVtcancelar.TabIndex = 6;
             this.btnVtcancelar.Text = "Cancelar";
             this.btnVtcancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVtcancelar.UseVisualStyleBackColor = true;
@@ -147,13 +148,13 @@
             this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(568, 24);
+            this.btnGuardar.Location = new System.Drawing.Point(556, 24);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(115, 40);
-            this.btnGuardar.TabIndex = 14;
+            this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -161,33 +162,33 @@
             // 
             // txtPrnumero
             // 
-            this.txtPrnumero.Location = new System.Drawing.Point(78, 29);
+            this.txtPrnumero.Location = new System.Drawing.Point(118, 34);
             this.txtPrnumero.Name = "txtPrnumero";
-            this.txtPrnumero.Size = new System.Drawing.Size(159, 21);
+            this.txtPrnumero.Size = new System.Drawing.Size(159, 20);
             this.txtPrnumero.TabIndex = 0;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(10, 32);
+            this.label15.Location = new System.Drawing.Point(29, 37);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(62, 15);
+            this.label15.Size = new System.Drawing.Size(47, 13);
             this.label15.TabIndex = 30;
             this.label15.Text = "Numero:";
             // 
             // txtPrdescripcion
             // 
-            this.txtPrdescripcion.Location = new System.Drawing.Point(78, 60);
+            this.txtPrdescripcion.Location = new System.Drawing.Point(118, 72);
             this.txtPrdescripcion.Name = "txtPrdescripcion";
-            this.txtPrdescripcion.Size = new System.Drawing.Size(159, 21);
+            this.txtPrdescripcion.Size = new System.Drawing.Size(159, 20);
             this.txtPrdescripcion.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 63);
+            this.label3.Location = new System.Drawing.Point(29, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 15);
+            this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Descripción:";
             // 
@@ -201,6 +202,7 @@
             this.gbDatosGrid.Controls.Add(this.btnPrfiltrar);
             this.gbDatosGrid.Controls.Add(this.txtPrfiltro);
             this.gbDatosGrid.Controls.Add(this.label1);
+            this.gbDatosGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.gbDatosGrid.Location = new System.Drawing.Point(21, 11);
             this.gbDatosGrid.Name = "gbDatosGrid";
             this.gbDatosGrid.Size = new System.Drawing.Size(710, 359);
@@ -235,7 +237,7 @@
             this.btnPreditar.Name = "btnPreditar";
             this.btnPreditar.Size = new System.Drawing.Size(113, 40);
             this.btnPreditar.TabIndex = 3;
-            this.btnPreditar.Text = "Editar servicio";
+            this.btnPreditar.Text = "Editar línea";
             this.btnPreditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPreditar.UseVisualStyleBackColor = true;
             this.btnPreditar.Click += new System.EventHandler(this.btnPreditar_Click);
@@ -261,11 +263,11 @@
             // chbRecambios
             // 
             this.chbRecambios.AutoSize = true;
-            this.chbRecambios.Location = new System.Drawing.Point(461, 336);
+            this.chbRecambios.Location = new System.Drawing.Point(429, 335);
             this.chbRecambios.Name = "chbRecambios";
-            this.chbRecambios.Size = new System.Drawing.Size(254, 19);
+            this.chbRecambios.Size = new System.Drawing.Size(194, 17);
             this.chbRecambios.TabIndex = 5;
-            this.chbRecambios.Text = "Mostrar todos los servicios de taller";
+            this.chbRecambios.Text = "Mostrar todas las líneas de negocio";
             this.chbRecambios.UseVisualStyleBackColor = true;
             this.chbRecambios.CheckedChanged += new System.EventHandler(this.chbRecambios_CheckedChanged);
             // 
@@ -282,7 +284,7 @@
             this.btnPrnuevo.Name = "btnPrnuevo";
             this.btnPrnuevo.Size = new System.Drawing.Size(112, 40);
             this.btnPrnuevo.TabIndex = 2;
-            this.btnPrnuevo.Text = "Nuevo servicio";
+            this.btnPrnuevo.Text = "Nuevo línea";
             this.btnPrnuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrnuevo.UseVisualStyleBackColor = true;
             this.btnPrnuevo.Click += new System.EventHandler(this.btnPrnuevo_Click);
@@ -309,7 +311,7 @@
             // 
             this.txtPrfiltro.Location = new System.Drawing.Point(62, 40);
             this.txtPrfiltro.Name = "txtPrfiltro";
-            this.txtPrfiltro.Size = new System.Drawing.Size(136, 21);
+            this.txtPrfiltro.Size = new System.Drawing.Size(136, 20);
             this.txtPrfiltro.TabIndex = 0;
             this.txtPrfiltro.TextChanged += new System.EventHandler(this.txtPrfiltro_TextChanged);
             // 
@@ -318,7 +320,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(20, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 15);
+            this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "Filtro:";
             // 

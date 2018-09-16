@@ -28,7 +28,7 @@ namespace Principal
         {
             fillGridView();
             gbDatospermisionario.Enabled = false;
-        }      
+        }
 
         private void btnPnuevo_Click(object sender, EventArgs e)
         {
