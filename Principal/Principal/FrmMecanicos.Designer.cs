@@ -229,9 +229,9 @@
             // 
             this.gbStatus.Controls.Add(this.rbInactivo);
             this.gbStatus.Controls.Add(this.rbActivo);
-            this.gbStatus.Location = new System.Drawing.Point(470, 24);
+            this.gbStatus.Location = new System.Drawing.Point(521, 27);
             this.gbStatus.Name = "gbStatus";
-            this.gbStatus.Size = new System.Drawing.Size(242, 64);
+            this.gbStatus.Size = new System.Drawing.Size(127, 80);
             this.gbStatus.TabIndex = 117;
             this.gbStatus.TabStop = false;
             this.gbStatus.Text = "Estado";
@@ -239,7 +239,7 @@
             // rbInactivo
             // 
             this.rbInactivo.AutoSize = true;
-            this.rbInactivo.Location = new System.Drawing.Point(154, 21);
+            this.rbInactivo.Location = new System.Drawing.Point(36, 45);
             this.rbInactivo.Name = "rbInactivo";
             this.rbInactivo.Size = new System.Drawing.Size(64, 18);
             this.rbInactivo.TabIndex = 115;
@@ -250,7 +250,7 @@
             // rbActivo
             // 
             this.rbActivo.AutoSize = true;
-            this.rbActivo.Location = new System.Drawing.Point(50, 21);
+            this.rbActivo.Location = new System.Drawing.Point(36, 21);
             this.rbActivo.Name = "rbActivo";
             this.rbActivo.Size = new System.Drawing.Size(56, 18);
             this.rbActivo.TabIndex = 114;
@@ -262,7 +262,7 @@
             // 
             this.txtMapellido.Location = new System.Drawing.Point(74, 88);
             this.txtMapellido.Name = "txtMapellido";
-            this.txtMapellido.Size = new System.Drawing.Size(141, 22);
+            this.txtMapellido.Size = new System.Drawing.Size(156, 22);
             this.txtMapellido.TabIndex = 2;
             // 
             // label2
@@ -316,14 +316,14 @@
             this.dtpMfadmision.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpMfadmision.Location = new System.Drawing.Point(359, 117);
             this.dtpMfadmision.Name = "dtpMfadmision";
-            this.dtpMfadmision.Size = new System.Drawing.Size(130, 22);
+            this.dtpMfadmision.Size = new System.Drawing.Size(156, 22);
             this.dtpMfadmision.TabIndex = 11;
             // 
             // txtMnumero
             // 
             this.txtMnumero.Location = new System.Drawing.Point(74, 32);
             this.txtMnumero.Name = "txtMnumero";
-            this.txtMnumero.Size = new System.Drawing.Size(83, 22);
+            this.txtMnumero.Size = new System.Drawing.Size(156, 22);
             this.txtMnumero.TabIndex = 0;
             // 
             // label15
@@ -364,14 +364,14 @@
             // 
             this.txtMcelular.Location = new System.Drawing.Point(359, 57);
             this.txtMcelular.Name = "txtMcelular";
-            this.txtMcelular.Size = new System.Drawing.Size(103, 22);
+            this.txtMcelular.Size = new System.Drawing.Size(156, 22);
             this.txtMcelular.TabIndex = 6;
             // 
             // txtMtelefono
             // 
             this.txtMtelefono.Location = new System.Drawing.Point(359, 27);
             this.txtMtelefono.Name = "txtMtelefono";
-            this.txtMtelefono.Size = new System.Drawing.Size(105, 22);
+            this.txtMtelefono.Size = new System.Drawing.Size(156, 22);
             this.txtMtelefono.TabIndex = 5;
             // 
             // txtMdireccion
@@ -385,7 +385,7 @@
             // 
             this.txtMnombre.Location = new System.Drawing.Point(74, 59);
             this.txtMnombre.Name = "txtMnombre";
-            this.txtMnombre.Size = new System.Drawing.Size(141, 22);
+            this.txtMnombre.Size = new System.Drawing.Size(156, 22);
             this.txtMnombre.TabIndex = 1;
             // 
             // label7

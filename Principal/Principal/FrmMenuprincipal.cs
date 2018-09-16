@@ -255,6 +255,24 @@ namespace Principal
             btnSistemas.Location = new Point(14, 120);
             pnlSistemas.Location = new Point(121,btnSistemas.Location.Y+51);
         }
+
+        private void Barratitulo_EnabledChanged(object sender, EventArgs e)
+        {
+            if (!Barratitulo.Enabled) Barratitulo.BackColor = Color.Gray;
+            else Barratitulo.BackColor = Color.Azure;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            abrirfrmMenu(new FrmSales());
+            pnlMenuvertical.Enabled = false;
+            Barratitulo.Enabled = false;
+        }
+
+        private void FrmMenuprincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
   }
 

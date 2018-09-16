@@ -70,6 +70,7 @@ namespace Principal
 
         private void btnMnuevo_Click(object sender, EventArgs e)
         {
+            mechanic = new Mecanico();
             txtMnumero.Text = "";
             txtMnombre.Text = "";
             txtMapellido.Text = "";

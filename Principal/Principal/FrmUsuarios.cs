@@ -38,6 +38,7 @@ namespace Principal
 
         private void btnNusuario_Click(object sender, EventArgs e)
         {
+            user = new Usuario();
             txtUsuario.Text = "";
             txtUnombre.Text = "";
             txtUapellidos.Text = "";

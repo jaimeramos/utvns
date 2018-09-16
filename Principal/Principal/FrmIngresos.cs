@@ -21,5 +21,10 @@ namespace Principal
         {
 
         }
+
+        private void btnInuevo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

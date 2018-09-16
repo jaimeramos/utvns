@@ -165,6 +165,7 @@ namespace Principal
 
         private void btnEjnuevo_Click(object sender, EventArgs e)
         {
+            executivesvc = new Executivesvc();
             txtEjnumero.Text = "";
             txtEjnumlinea.Text = "";
             txtEjimei.Text = "";

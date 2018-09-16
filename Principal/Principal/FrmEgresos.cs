@@ -16,5 +16,10 @@ namespace Principal
         {
             InitializeComponent();
         }
+
+        private void btnEnuevo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

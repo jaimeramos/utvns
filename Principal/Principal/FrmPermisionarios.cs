@@ -32,6 +32,7 @@ namespace Principal
 
         private void btnPnuevo_Click(object sender, EventArgs e)
         {
+            permitholder = new Permisionario();
             txtPnumero.Text = "";
             txtPnombre.Text = "";
             txtPapellido.Text = "";

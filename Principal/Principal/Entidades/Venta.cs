@@ -9,7 +9,7 @@ using System.Web.Script.Serialization;
 
 namespace Principal.Entidades
 {
-    class Venta
+    public class Venta
     {
         #region Atributos privados
         static string Entity = "sales";
@@ -182,7 +182,15 @@ namespace Principal.Entidades
                 return false;
             }
         }
+        /// <summary>
+        /// Obtiene un DataTable con todos los Tipos de Permisionarios
+        /// </summary>
+        /// <returns>DataTable con los datos</returns>
+        public string readTypes()
+        {
+            return Data.getData("salestypes");
 
+        }
         #endregion
     }
 }

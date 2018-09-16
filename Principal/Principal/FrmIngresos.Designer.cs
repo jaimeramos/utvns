@@ -340,6 +340,7 @@
             this.btnInuevo.Text = "Nuevo Ingreso";
             this.btnInuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInuevo.UseVisualStyleBackColor = true;
+            this.btnInuevo.Click += new System.EventHandler(this.btnInuevo_Click);
             // 
             // btnIeditar
             // 

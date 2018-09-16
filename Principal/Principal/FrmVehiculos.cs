@@ -15,11 +15,6 @@ using Principal.Tools;
 
 namespace Principal
 {
-    public interface IFindDriver
-    {
-        void SelectedDriver(Permisionario chofer);
-    }
-
     public interface IFindPermit
     {
         void Selected(Permiso permit);
@@ -137,6 +132,7 @@ namespace Principal
 
         private void btnVnuevo_Click(object sender, EventArgs e)
         {
+            vehicle = new Vehiculo();
             txtVnumero.Text = "";
             txtVmarca.Text = "";
             txtVmodelo.Text = "";

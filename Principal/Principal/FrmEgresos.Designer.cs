@@ -297,6 +297,7 @@
             this.btnEnuevo.Text = "Nuevo Egreso";
             this.btnEnuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEnuevo.UseVisualStyleBackColor = true;
+            this.btnEnuevo.Click += new System.EventHandler(this.btnEnuevo_Click);
             // 
             // btnEeditar
             // 

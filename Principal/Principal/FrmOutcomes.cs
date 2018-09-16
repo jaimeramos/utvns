@@ -33,6 +33,7 @@ namespace Principal
 
         private void btnPnuevo_Click(object sender, EventArgs e)
         {
+            outcome = new Egreso();
             txtFolio.Text = "";
             txtDescripcion.Text = "";
             txtReferencia.Text = "";

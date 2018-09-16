@@ -12,7 +12,11 @@ using Principal.Entidades;
 
 namespace Principal
 {
-    public partial class FrmPermisos : Form
+    public interface IFindDriver
+    {
+        void SelectedDriver(Permisionario permitholder);
+    }
+    public partial class FrmPermisos : Form, IFindDriver
     {
 
         Permiso permit = new Permiso();
@@ -35,6 +39,7 @@ namespace Principal
 
         private void btnPenuevo_Click(object sender, EventArgs e)
         {
+            permit = new Permiso();
             txtPenumero.Text = "";
             cmbPetipo.Text = "";
             txtPedescripcion.Text = "";
@@ -271,7 +276,14 @@ namespace Principal
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Buscarchoferes bPermisionarios = new Buscarchoferes(this, cmbPermitholder.SelectedValue.ToString());
+            bPermisionarios.ShowDialog();
+        }
 
+        public void SelectedDriver(Permisionario permitholderselected)
+        {
+            permit.Idadmin = permitholderselected.Id;
+            cmbPermitholder.SelectedValue = permit.Idadmin;
         }
     }
 }

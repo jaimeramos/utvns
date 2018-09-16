@@ -66,7 +66,7 @@
             this.gbVentas.Controls.Add(this.btnVtfiltrar);
             this.gbVentas.Controls.Add(this.txtVtfiltro);
             this.gbVentas.Controls.Add(this.label1);
-            this.gbVentas.Location = new System.Drawing.Point(12, 12);
+            this.gbVentas.Location = new System.Drawing.Point(17, 12);
             this.gbVentas.Name = "gbVentas";
             this.gbVentas.Size = new System.Drawing.Size(756, 359);
             this.gbVentas.TabIndex = 15;
@@ -198,7 +198,7 @@
             this.gbDatosdeventa.Controls.Add(this.label6);
             this.gbDatosdeventa.Controls.Add(this.label4);
             this.gbDatosdeventa.Controls.Add(this.label3);
-            this.gbDatosdeventa.Location = new System.Drawing.Point(12, 391);
+            this.gbDatosdeventa.Location = new System.Drawing.Point(17, 391);
             this.gbDatosdeventa.Name = "gbDatosdeventa";
             this.gbDatosdeventa.Size = new System.Drawing.Size(756, 158);
             this.gbDatosdeventa.TabIndex = 14;

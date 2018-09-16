@@ -16,8 +16,8 @@ namespace Principal.EnlaceDatos
     class Data
     {
         public static string TOKEN = "",user="";
-        //private static string url = "https://utvns-jaraga.c9users.io/api/";
-        private static string url = " http://127.0.0.1:8080/api/";
+        private static string url = "https://utvns-jaraga.c9users.io/api/";
+        //private static string url = " http://127.0.0.1:8080/api/";
         //Session State
         class validLogin {
            public string token="",success = "", name = "", message = "";
