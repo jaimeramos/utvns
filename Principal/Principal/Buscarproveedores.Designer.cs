@@ -164,6 +164,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbPermisos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Buscarproveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Buscarproveedores";

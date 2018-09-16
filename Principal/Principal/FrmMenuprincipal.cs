@@ -45,16 +45,30 @@ namespace Principal
             Barratitulo.Enabled = false;
         }
 
-        private void btnCatalogos_MouseHover(object sender, EventArgs e)
+       private void btnSistemas_MouseHover(object sender, EventArgs e)
         {
-            pnlCatalogo.Visible = true;
-            pnlCatalogo.Location = new Point(52, 216);
-            pnlTransacciones.Visible = false;
-            btnTransacciones.Location = new Point(21, 522);
-            pnlSistemas.Visible = false;
-            btnSistemas.Location = new Point(21, 572);
+            
         }
-        
+
+        private void pnlMenuvertical_MouseHover_1(object sender, EventArgs e)
+        {
+            pnlTransacciones.Visible = false;
+            pnlCatalogo.Visible = false;
+            pnlSistemas.Visible = false;
+            //btnCatalogos.Location = new Point(21, 172);
+            btnTransacciones.Location = new Point(14, 60);
+            btnSistemas.Location = new Point(14, 120);
+        }
+
+        private void panelContenedor_MouseHover_1(object sender, EventArgs e)
+        {
+            pnlTransacciones.Visible = false;
+            pnlCatalogo.Visible = false;
+            pnlSistemas.Visible = false;
+            //btnCatalogos.Location = new Point(21, 172);
+            //btnTransacciones.Location = new Point(21, 272);
+            //btnSistemas.Location = new Point(21, 372);
+        }
         private void pnlMenuvertical_MouseHover(object sender, EventArgs e)
         {
             pnlTransacciones.Visible = false;
@@ -62,19 +76,6 @@ namespace Principal
             pnlSistemas.Visible = false;
             
         }
-
-        
-        private void panelContenedor_MouseHover(object sender, EventArgs e)
-        {
-
-            pnlTransacciones.Visible = false;
-            pnlCatalogo.Visible = false;
-            pnlSistemas.Visible = false;
-            btnCatalogos.Location = new Point(21, 172);
-            btnTransacciones.Location = new Point(21, 272);
-            btnSistemas.Location = new Point(21, 372);
-        }
-
         private void btnslide_Click(object sender, EventArgs e)
         {
             if (pnlMenuvertical.Width == 281)
@@ -131,48 +132,9 @@ namespace Principal
             iconmaximizar.Visible = false;
         }
 
-        private void btnCatalogos_Click(object sender, EventArgs e)
-        {
-           
-        }
+        
 
-        private void btnTransacciones_MouseHover(object sender, EventArgs e)
-        {
-            pnlTransacciones.Visible = true;
-            btnTransacciones.Location = new Point(21, 272);
-            pnlTransacciones.Location = new Point(52, 318);
-            btnSistemas.Location = new Point(21, 392);
-            pnlCatalogo.Visible = false;
-            pnlSistemas.Visible = false;
-        }
-
-        private void btnSistemas_MouseHover(object sender, EventArgs e)
-        {
-            pnlSistemas.Visible = true;
-            pnlSistemas.Location = new Point(52, 439);
-            pnlCatalogo.Visible = false;
-            pnlTransacciones.Visible = false;
-        }
-
-        private void pnlMenuvertical_MouseHover_1(object sender, EventArgs e)
-        {
-            pnlTransacciones.Visible = false;
-            pnlCatalogo.Visible = false;
-            pnlSistemas.Visible = false;
-            btnCatalogos.Location = new Point(21, 172);
-            btnTransacciones.Location = new Point(21, 272);
-            btnSistemas.Location = new Point(21, 372);
-        }
-
-        private void panelContenedor_MouseHover_1(object sender, EventArgs e)
-        {
-            pnlTransacciones.Visible = false;
-            pnlCatalogo.Visible = false;
-            pnlSistemas.Visible = false;
-            btnCatalogos.Location = new Point(21, 172);
-            btnTransacciones.Location = new Point(21, 272);
-            btnSistemas.Location = new Point(21, 372);
-        }
+        
 
         private void panelContenedor_Paint(object sender, PaintEventArgs e)
         {
@@ -261,6 +223,37 @@ namespace Principal
             abrirfrmMenu(new FrmOutcomes());
             pnlMenuvertical.Enabled = false;
             Barratitulo.Enabled = false;
+        }
+        private void btnCatalogos_Click(object sender, EventArgs e)
+        {
+            pnlCatalogo.Visible = true;
+            pnlTransacciones.Visible = false;
+            pnlSistemas.Visible = false;
+            btnCatalogos.Location = new Point(14, 5);
+            btnTransacciones.Location = new Point(14, 60 + pnlCatalogo.Size.Height);
+            btnSistemas.Location = new Point(14, btnTransacciones.Location.Y + 60);
+            pnlTransacciones.Location = new Point(121, 110);
+        }
+        private void btnTransacciones_Click(object sender, EventArgs e)
+        {
+            pnlCatalogo.Visible = false;
+            pnlTransacciones.Visible = true;
+            pnlSistemas.Visible = false;
+            btnCatalogos.Location = new Point(14, 5);
+            btnTransacciones.Location = new Point(14, 60);
+            btnSistemas.Location = new Point(14, btnTransacciones.Location.Y +51+ pnlTransacciones.Size.Height);
+            pnlTransacciones.Location = new Point(121, 111);
+        }
+
+        private void btnSistemas_Click(object sender, EventArgs e)
+        {
+            pnlCatalogo.Visible = false;
+            pnlTransacciones.Visible = false;
+            pnlSistemas.Visible = true;
+            btnCatalogos.Location = new Point(14, 5);
+            btnTransacciones.Location = new Point(14, 60);
+            btnSistemas.Location = new Point(14, 120);
+            pnlSistemas.Location = new Point(121,btnSistemas.Location.Y+51);
         }
     }
   }

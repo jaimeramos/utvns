@@ -38,7 +38,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.btnMcuotas = new System.Windows.Forms.Button();
             this.btnMvehiculos = new System.Windows.Forms.Button();
             this.btnMpermisionarios = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,11 +48,11 @@
             this.btnMgusuarios = new System.Windows.Forms.Button();
             this.btnMrecuperación = new System.Windows.Forms.Button();
             this.btnMrespaldo = new System.Windows.Forms.Button();
-            this.btnSistemas = new System.Windows.Forms.Button();
             this.pnlTransacciones = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.btnMegresos = new System.Windows.Forms.Button();
             this.btnMingresos = new System.Windows.Forms.Button();
+            this.btnSistemas = new System.Windows.Forms.Button();
             this.btnTransacciones = new System.Windows.Forms.Button();
             this.btnCatalogos = new System.Windows.Forms.Button();
             this.Barratitulo = new System.Windows.Forms.Panel();
@@ -86,8 +85,8 @@
             this.pnlMenuvertical.Controls.Add(this.pictureBox2);
             this.pnlMenuvertical.Controls.Add(this.pictureBox1);
             this.pnlMenuvertical.Controls.Add(this.pnlSistemas);
-            this.pnlMenuvertical.Controls.Add(this.btnSistemas);
             this.pnlMenuvertical.Controls.Add(this.pnlTransacciones);
+            this.pnlMenuvertical.Controls.Add(this.btnSistemas);
             this.pnlMenuvertical.Controls.Add(this.btnTransacciones);
             this.pnlMenuvertical.Controls.Add(this.btnCatalogos);
             this.pnlMenuvertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -107,13 +106,12 @@
             this.pnlCatalogo.Controls.Add(this.button5);
             this.pnlCatalogo.Controls.Add(this.button2);
             this.pnlCatalogo.Controls.Add(this.button4);
-            this.pnlCatalogo.Controls.Add(this.btnMcuotas);
             this.pnlCatalogo.Controls.Add(this.btnMvehiculos);
             this.pnlCatalogo.Controls.Add(this.btnMpermisionarios);
             this.pnlCatalogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlCatalogo.Location = new System.Drawing.Point(21, 16);
+            this.pnlCatalogo.Location = new System.Drawing.Point(121, 56);
             this.pnlCatalogo.Name = "pnlCatalogo";
-            this.pnlCatalogo.Size = new System.Drawing.Size(227, 327);
+            this.pnlCatalogo.Size = new System.Drawing.Size(155, 327);
             this.pnlCatalogo.TabIndex = 3;
             this.pnlCatalogo.Visible = false;
             // 
@@ -123,13 +121,13 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(3, 292);
+            this.button7.Location = new System.Drawing.Point(3, 134);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(221, 30);
+            this.button7.Size = new System.Drawing.Size(150, 30);
             this.button7.TabIndex = 13;
             this.button7.Text = "Líneas de negocio";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -142,13 +140,13 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(3, 201);
+            this.button3.Location = new System.Drawing.Point(3, 198);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(221, 30);
+            this.button3.Size = new System.Drawing.Size(150, 30);
             this.button3.TabIndex = 10;
             this.button3.Text = "Refacciones";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -161,13 +159,13 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 233);
+            this.button1.Location = new System.Drawing.Point(3, 230);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 30);
+            this.button1.Size = new System.Drawing.Size(150, 30);
             this.button1.TabIndex = 11;
             this.button1.Text = "Servicios de Taller";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -180,13 +178,13 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(3, 101);
+            this.button6.Location = new System.Drawing.Point(3, 102);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(221, 30);
+            this.button6.Size = new System.Drawing.Size(150, 30);
             this.button6.TabIndex = 9;
             this.button6.Text = "Servicio Ejecutivo";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -199,13 +197,13 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(3, 265);
+            this.button5.Location = new System.Drawing.Point(3, 262);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(221, 30);
+            this.button5.Size = new System.Drawing.Size(150, 30);
             this.button5.TabIndex = 12;
             this.button5.Text = "Proveedores";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -218,13 +216,13 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(2, 133);
+            this.button2.Location = new System.Drawing.Point(3, 70);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(221, 30);
+            this.button2.Size = new System.Drawing.Size(150, 30);
             this.button2.TabIndex = 8;
             this.button2.Text = "Permisos";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -237,36 +235,18 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 169);
+            this.button4.Location = new System.Drawing.Point(3, 166);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(221, 30);
+            this.button4.Size = new System.Drawing.Size(150, 30);
             this.button4.TabIndex = 9;
             this.button4.Text = "Mecanicos";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // btnMcuotas
-            // 
-            this.btnMcuotas.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnMcuotas.FlatAppearance.BorderSize = 0;
-            this.btnMcuotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnMcuotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMcuotas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMcuotas.ForeColor = System.Drawing.Color.White;
-            this.btnMcuotas.Image = ((System.Drawing.Image)(resources.GetObject("btnMcuotas.Image")));
-            this.btnMcuotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMcuotas.Location = new System.Drawing.Point(3, 69);
-            this.btnMcuotas.Name = "btnMcuotas";
-            this.btnMcuotas.Size = new System.Drawing.Size(221, 30);
-            this.btnMcuotas.TabIndex = 7;
-            this.btnMcuotas.Text = "Tipos de Ingresos";
-            this.btnMcuotas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMcuotas.UseVisualStyleBackColor = true;
             // 
             // btnMvehiculos
             // 
@@ -274,13 +254,13 @@
             this.btnMvehiculos.FlatAppearance.BorderSize = 0;
             this.btnMvehiculos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnMvehiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMvehiculos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMvehiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMvehiculos.ForeColor = System.Drawing.Color.White;
             this.btnMvehiculos.Image = ((System.Drawing.Image)(resources.GetObject("btnMvehiculos.Image")));
             this.btnMvehiculos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMvehiculos.Location = new System.Drawing.Point(3, 6);
             this.btnMvehiculos.Name = "btnMvehiculos";
-            this.btnMvehiculos.Size = new System.Drawing.Size(221, 30);
+            this.btnMvehiculos.Size = new System.Drawing.Size(150, 30);
             this.btnMvehiculos.TabIndex = 4;
             this.btnMvehiculos.Text = "Vehículos";
             this.btnMvehiculos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -293,13 +273,13 @@
             this.btnMpermisionarios.FlatAppearance.BorderSize = 0;
             this.btnMpermisionarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnMpermisionarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMpermisionarios.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMpermisionarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMpermisionarios.ForeColor = System.Drawing.Color.White;
             this.btnMpermisionarios.Image = ((System.Drawing.Image)(resources.GetObject("btnMpermisionarios.Image")));
             this.btnMpermisionarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMpermisionarios.Location = new System.Drawing.Point(3, 38);
             this.btnMpermisionarios.Name = "btnMpermisionarios";
-            this.btnMpermisionarios.Size = new System.Drawing.Size(221, 30);
+            this.btnMpermisionarios.Size = new System.Drawing.Size(150, 30);
             this.btnMpermisionarios.TabIndex = 5;
             this.btnMpermisionarios.Text = "Permisionarios";
             this.btnMpermisionarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -344,7 +324,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(21, 679);
+            this.pictureBox1.Location = new System.Drawing.Point(37, 679);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -359,9 +339,9 @@
             this.pnlSistemas.Controls.Add(this.btnMrecuperación);
             this.pnlSistemas.Controls.Add(this.btnMrespaldo);
             this.pnlSistemas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlSistemas.Location = new System.Drawing.Point(3, 564);
+            this.pnlSistemas.Location = new System.Drawing.Point(120, 560);
             this.pnlSistemas.Name = "pnlSistemas";
-            this.pnlSistemas.Size = new System.Drawing.Size(227, 104);
+            this.pnlSistemas.Size = new System.Drawing.Size(155, 104);
             this.pnlSistemas.TabIndex = 12;
             this.pnlSistemas.Visible = false;
             // 
@@ -370,16 +350,17 @@
             this.btnMgusuarios.FlatAppearance.BorderSize = 0;
             this.btnMgusuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnMgusuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMgusuarios.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMgusuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMgusuarios.ForeColor = System.Drawing.Color.White;
             this.btnMgusuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnMgusuarios.Image")));
             this.btnMgusuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMgusuarios.Location = new System.Drawing.Point(3, 3);
             this.btnMgusuarios.Name = "btnMgusuarios";
-            this.btnMgusuarios.Size = new System.Drawing.Size(221, 30);
+            this.btnMgusuarios.Size = new System.Drawing.Size(150, 30);
             this.btnMgusuarios.TabIndex = 4;
             this.btnMgusuarios.Text = "Gestion de usuarios";
             this.btnMgusuarios.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMgusuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMgusuarios.UseVisualStyleBackColor = true;
             this.btnMgusuarios.Click += new System.EventHandler(this.btnMgusuarios_Click);
             // 
@@ -388,15 +369,16 @@
             this.btnMrecuperación.FlatAppearance.BorderSize = 0;
             this.btnMrecuperación.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnMrecuperación.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMrecuperación.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMrecuperación.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMrecuperación.ForeColor = System.Drawing.Color.White;
             this.btnMrecuperación.Image = ((System.Drawing.Image)(resources.GetObject("btnMrecuperación.Image")));
             this.btnMrecuperación.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMrecuperación.Location = new System.Drawing.Point(3, 67);
             this.btnMrecuperación.Name = "btnMrecuperación";
-            this.btnMrecuperación.Size = new System.Drawing.Size(221, 30);
+            this.btnMrecuperación.Size = new System.Drawing.Size(150, 30);
             this.btnMrecuperación.TabIndex = 6;
             this.btnMrecuperación.Text = "Recuperación";
+            this.btnMrecuperación.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMrecuperación.UseVisualStyleBackColor = true;
             // 
             // btnMrespaldo
@@ -404,35 +386,17 @@
             this.btnMrespaldo.FlatAppearance.BorderSize = 0;
             this.btnMrespaldo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnMrespaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMrespaldo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMrespaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMrespaldo.ForeColor = System.Drawing.Color.White;
             this.btnMrespaldo.Image = ((System.Drawing.Image)(resources.GetObject("btnMrespaldo.Image")));
             this.btnMrespaldo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMrespaldo.Location = new System.Drawing.Point(3, 35);
             this.btnMrespaldo.Name = "btnMrespaldo";
-            this.btnMrespaldo.Size = new System.Drawing.Size(221, 30);
+            this.btnMrespaldo.Size = new System.Drawing.Size(150, 30);
             this.btnMrespaldo.TabIndex = 5;
             this.btnMrespaldo.Text = "Respaldo";
+            this.btnMrespaldo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMrespaldo.UseVisualStyleBackColor = true;
-            // 
-            // btnSistemas
-            // 
-            this.btnSistemas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSistemas.FlatAppearance.BorderSize = 0;
-            this.btnSistemas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnSistemas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSistemas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSistemas.ForeColor = System.Drawing.Color.White;
-            this.btnSistemas.Image = ((System.Drawing.Image)(resources.GetObject("btnSistemas.Image")));
-            this.btnSistemas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSistemas.Location = new System.Drawing.Point(21, 346);
-            this.btnSistemas.Name = "btnSistemas";
-            this.btnSistemas.Size = new System.Drawing.Size(168, 51);
-            this.btnSistemas.TabIndex = 11;
-            this.btnSistemas.Text = "Sistemas";
-            this.btnSistemas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSistemas.UseVisualStyleBackColor = true;
-            this.btnSistemas.MouseHover += new System.EventHandler(this.btnSistemas_MouseHover);
             // 
             // pnlTransacciones
             // 
@@ -441,9 +405,9 @@
             this.pnlTransacciones.Controls.Add(this.btnMegresos);
             this.pnlTransacciones.Controls.Add(this.btnMingresos);
             this.pnlTransacciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pnlTransacciones.Location = new System.Drawing.Point(6, 398);
+            this.pnlTransacciones.Location = new System.Drawing.Point(121, 412);
             this.pnlTransacciones.Name = "pnlTransacciones";
-            this.pnlTransacciones.Size = new System.Drawing.Size(242, 124);
+            this.pnlTransacciones.Size = new System.Drawing.Size(155, 106);
             this.pnlTransacciones.TabIndex = 9;
             this.pnlTransacciones.Visible = false;
             // 
@@ -452,13 +416,13 @@
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.Location = new System.Drawing.Point(4, 65);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(219, 30);
+            this.button8.Size = new System.Drawing.Size(150, 30);
             this.button8.TabIndex = 10;
             this.button8.Text = "Tipos de ingreso";
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -470,13 +434,13 @@
             this.btnMegresos.FlatAppearance.BorderSize = 0;
             this.btnMegresos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnMegresos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMegresos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMegresos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMegresos.ForeColor = System.Drawing.Color.White;
             this.btnMegresos.Image = ((System.Drawing.Image)(resources.GetObject("btnMegresos.Image")));
             this.btnMegresos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMegresos.Location = new System.Drawing.Point(4, 35);
             this.btnMegresos.Name = "btnMegresos";
-            this.btnMegresos.Size = new System.Drawing.Size(219, 30);
+            this.btnMegresos.Size = new System.Drawing.Size(150, 30);
             this.btnMegresos.TabIndex = 9;
             this.btnMegresos.Text = "Egresos";
             this.btnMegresos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -488,17 +452,38 @@
             this.btnMingresos.FlatAppearance.BorderSize = 0;
             this.btnMingresos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnMingresos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMingresos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMingresos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMingresos.ForeColor = System.Drawing.Color.White;
             this.btnMingresos.Image = ((System.Drawing.Image)(resources.GetObject("btnMingresos.Image")));
             this.btnMingresos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMingresos.Location = new System.Drawing.Point(4, 3);
             this.btnMingresos.Name = "btnMingresos";
-            this.btnMingresos.Size = new System.Drawing.Size(219, 30);
+            this.btnMingresos.Size = new System.Drawing.Size(150, 30);
             this.btnMingresos.TabIndex = 8;
             this.btnMingresos.Text = "Ingresos";
             this.btnMingresos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMingresos.UseVisualStyleBackColor = true;
+            // 
+            // btnSistemas
+            // 
+            this.btnSistemas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSistemas.FlatAppearance.BorderSize = 0;
+            this.btnSistemas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnSistemas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSistemas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSistemas.ForeColor = System.Drawing.Color.White;
+            this.btnSistemas.Image = ((System.Drawing.Image)(resources.GetObject("btnSistemas.Image")));
+            this.btnSistemas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSistemas.Location = new System.Drawing.Point(14, 123);
+            this.btnSistemas.Name = "btnSistemas";
+            this.btnSistemas.Size = new System.Drawing.Size(134, 51);
+            this.btnSistemas.TabIndex = 11;
+            this.btnSistemas.Text = "Sistemas";
+            this.btnSistemas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSistemas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSistemas.UseVisualStyleBackColor = true;
+            this.btnSistemas.Click += new System.EventHandler(this.btnSistemas_Click);
+            this.btnSistemas.MouseHover += new System.EventHandler(this.btnSistemas_MouseHover);
             // 
             // btnTransacciones
             // 
@@ -510,14 +495,15 @@
             this.btnTransacciones.ForeColor = System.Drawing.Color.White;
             this.btnTransacciones.Image = ((System.Drawing.Image)(resources.GetObject("btnTransacciones.Image")));
             this.btnTransacciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransacciones.Location = new System.Drawing.Point(21, 272);
+            this.btnTransacciones.Location = new System.Drawing.Point(14, 64);
             this.btnTransacciones.Name = "btnTransacciones";
-            this.btnTransacciones.Size = new System.Drawing.Size(209, 51);
+            this.btnTransacciones.Size = new System.Drawing.Size(168, 51);
             this.btnTransacciones.TabIndex = 10;
             this.btnTransacciones.Text = "Transacciones";
             this.btnTransacciones.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTransacciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTransacciones.UseVisualStyleBackColor = true;
-            this.btnTransacciones.MouseHover += new System.EventHandler(this.btnTransacciones_MouseHover);
+            this.btnTransacciones.Click += new System.EventHandler(this.btnTransacciones_Click);
             // 
             // btnCatalogos
             // 
@@ -529,15 +515,15 @@
             this.btnCatalogos.ForeColor = System.Drawing.Color.White;
             this.btnCatalogos.Image = ((System.Drawing.Image)(resources.GetObject("btnCatalogos.Image")));
             this.btnCatalogos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCatalogos.Location = new System.Drawing.Point(21, 171);
+            this.btnCatalogos.Location = new System.Drawing.Point(14, 5);
             this.btnCatalogos.Name = "btnCatalogos";
-            this.btnCatalogos.Size = new System.Drawing.Size(179, 51);
+            this.btnCatalogos.Size = new System.Drawing.Size(147, 51);
             this.btnCatalogos.TabIndex = 2;
             this.btnCatalogos.Text = "Catálogos";
             this.btnCatalogos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCatalogos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCatalogos.UseVisualStyleBackColor = true;
             this.btnCatalogos.Click += new System.EventHandler(this.btnCatalogos_Click);
-            this.btnCatalogos.MouseHover += new System.EventHandler(this.btnCatalogos_MouseHover);
             // 
             // Barratitulo
             // 
@@ -665,7 +651,6 @@
 
         private System.Windows.Forms.Panel pnlMenuvertical;
         private System.Windows.Forms.Panel pnlCatalogo;
-        private System.Windows.Forms.Button btnMcuotas;
         private System.Windows.Forms.Button btnMvehiculos;
         private System.Windows.Forms.Button btnMpermisionarios;
         private System.Windows.Forms.Button btnCatalogos;

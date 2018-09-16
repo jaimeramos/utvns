@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buscarpermisos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuscarBussinesLine));
             this.gbPermisos = new System.Windows.Forms.GroupBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.btnVeditar = new System.Windows.Forms.Button();
@@ -161,14 +161,15 @@
             this.btnPeregresar.UseVisualStyleBackColor = true;
             this.btnPeregresar.Click += new System.EventHandler(this.btnPeregresar_Click);
             // 
-            // Buscarpermisos
+            // BuscarBussinesLine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbPermisos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Buscarpermisos";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "BuscarBussinesLine";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Buscarpermisos";
             this.Load += new System.EventHandler(this.Buscarpermisos_Load);

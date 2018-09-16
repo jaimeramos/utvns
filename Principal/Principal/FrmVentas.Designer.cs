@@ -333,6 +333,7 @@
             this.Controls.Add(this.gbDatosdeventa);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmVentas";
             this.Text = "FrmVentas";
             this.gbVentas.ResumeLayout(false);

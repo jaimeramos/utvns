@@ -163,7 +163,6 @@
             this.btnEcancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnEcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEcancelar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEcancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnEcancelar.Image")));
             this.btnEcancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEcancelar.Location = new System.Drawing.Point(632, 92);
             this.btnEcancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -182,7 +181,6 @@
             this.btnEguardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnEguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEguardar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnEguardar.Image")));
             this.btnEguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEguardar.Location = new System.Drawing.Point(632, 35);
             this.btnEguardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -263,7 +261,6 @@
             this.btnEfiltrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnEfiltrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnEfiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEfiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEfiltrar.Image")));
             this.btnEfiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEfiltrar.Location = new System.Drawing.Point(232, 14);
             this.btnEfiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -291,7 +288,6 @@
             this.btnEnuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnEnuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnEnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnEnuevo.Image")));
             this.btnEnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEnuevo.Location = new System.Drawing.Point(372, 14);
             this.btnEnuevo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -309,7 +305,6 @@
             this.btnEeditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnEeditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnEeditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEeditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEeditar.Image")));
             this.btnEeditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEeditar.Location = new System.Drawing.Point(508, 14);
             this.btnEeditar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -327,7 +322,6 @@
             this.btnEregresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnEregresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnEregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEregresar.Image = ((System.Drawing.Image)(resources.GetObject("btnEregresar.Image")));
             this.btnEregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEregresar.Location = new System.Drawing.Point(655, 14);
             this.btnEregresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -360,6 +354,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEgresos";
             this.Text = "FrmEgresos";
             this.groupBox2.ResumeLayout(false);

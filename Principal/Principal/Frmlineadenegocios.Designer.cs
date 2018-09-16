@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLineadenegocios));
             this.gbDatosForm = new System.Windows.Forms.GroupBox();
             this.gbStatus = new System.Windows.Forms.GroupBox();
             this.rbInactivo = new System.Windows.Forms.RadioButton();
@@ -333,6 +334,7 @@
             this.Controls.Add(this.gbDatosGrid);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FrmLineadenegocios";
             this.Text = "Frmlineadenegocios";

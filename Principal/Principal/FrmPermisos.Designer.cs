@@ -412,6 +412,7 @@
             this.Controls.Add(this.gbPermisos);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPermisos";
             this.Text = "FrmPermisos";
             this.Load += new System.EventHandler(this.FrmPermisos_Load);

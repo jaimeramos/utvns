@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDetalledeventaservicios));
             this.gbDvservicio = new System.Windows.Forms.GroupBox();
             this.txtDvsfiltro = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -141,6 +142,7 @@
             this.Controls.Add(this.gbDvservicio);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDetalledeventaservicios";
             this.Text = "FrmDetalledeventaservicios";
             this.gbDvservicio.ResumeLayout(false);

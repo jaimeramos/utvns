@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOutcomes));
             this.gbDatosForm = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.cmbBussinesline = new System.Windows.Forms.ComboBox();
@@ -426,6 +427,7 @@
             this.Controls.Add(this.gbDatosForm);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmOutcomes";
             this.Text = "UTVNS.- Gestion de Permisionarios del Sistema";
             this.Load += new System.EventHandler(this.FrmOutcomes_Load);

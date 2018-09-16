@@ -34,14 +34,14 @@
             this.gbUsuarios = new System.Windows.Forms.GroupBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtUapellidos = new System.Windows.Forms.TextBox();
-            this.txtUnombre = new System.Windows.Forms.TextBox();
             this.btnUcancelar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnUguardar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.dtpUfvencimiento = new System.Windows.Forms.DateTimePicker();
+            this.txtUapellidos = new System.Windows.Forms.TextBox();
             this.txtUccontraseña = new System.Windows.Forms.TextBox();
+            this.txtUnombre = new System.Windows.Forms.TextBox();
             this.gbUtipo = new System.Windows.Forms.GroupBox();
             this.chbUadmin = new System.Windows.Forms.CheckBox();
             this.chbUactivo = new System.Windows.Forms.CheckBox();
@@ -130,44 +130,6 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Apellidos:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 60);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Nombre:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 27);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Usuario:";
-            // 
-            // txtUapellidos
-            // 
-            this.txtUapellidos.Location = new System.Drawing.Point(71, 86);
-            this.txtUapellidos.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.txtUapellidos.Name = "txtUapellidos";
-            this.txtUapellidos.Size = new System.Drawing.Size(164, 23);
-            this.txtUapellidos.TabIndex = 2;
-            this.txtUapellidos.Validated += new System.EventHandler(this.txtUapellidos_Validated);
-            // 
-            // txtUnombre
-            // 
-            this.txtUnombre.Location = new System.Drawing.Point(71, 55);
-            this.txtUnombre.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.txtUnombre.Name = "txtUnombre";
-            this.txtUnombre.Size = new System.Drawing.Size(164, 23);
-            this.txtUnombre.TabIndex = 1;
-            this.txtUnombre.Validated += new System.EventHandler(this.txtUnombre_Validated);
-            // 
             // btnUcancelar
             // 
             this.btnUcancelar.FlatAppearance.BorderSize = 0;
@@ -186,6 +148,16 @@
             this.btnUcancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUcancelar.UseVisualStyleBackColor = true;
             this.btnUcancelar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 60);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 15);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Nombre:";
             // 
             // btnUguardar
             // 
@@ -207,6 +179,16 @@
             this.btnUguardar.UseVisualStyleBackColor = true;
             this.btnUguardar.Click += new System.EventHandler(this.btnUactualizar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 27);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Usuario:";
+            // 
             // dtpUfvencimiento
             // 
             this.dtpUfvencimiento.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 7.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -219,6 +201,15 @@
             this.dtpUfvencimiento.Size = new System.Drawing.Size(142, 23);
             this.dtpUfvencimiento.TabIndex = 6;
             // 
+            // txtUapellidos
+            // 
+            this.txtUapellidos.Location = new System.Drawing.Point(71, 86);
+            this.txtUapellidos.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.txtUapellidos.Name = "txtUapellidos";
+            this.txtUapellidos.Size = new System.Drawing.Size(164, 23);
+            this.txtUapellidos.TabIndex = 2;
+            this.txtUapellidos.Validated += new System.EventHandler(this.txtUapellidos_Validated);
+            // 
             // txtUccontraseña
             // 
             this.txtUccontraseña.Location = new System.Drawing.Point(409, 57);
@@ -227,6 +218,15 @@
             this.txtUccontraseña.PasswordChar = '*';
             this.txtUccontraseña.Size = new System.Drawing.Size(142, 23);
             this.txtUccontraseña.TabIndex = 5;
+            // 
+            // txtUnombre
+            // 
+            this.txtUnombre.Location = new System.Drawing.Point(71, 55);
+            this.txtUnombre.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.txtUnombre.Name = "txtUnombre";
+            this.txtUnombre.Size = new System.Drawing.Size(164, 23);
+            this.txtUnombre.TabIndex = 1;
+            this.txtUnombre.Validated += new System.EventHandler(this.txtUnombre_Validated);
             // 
             // gbUtipo
             // 
@@ -460,6 +460,7 @@
             this.Controls.Add(this.gbUsuarios);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "FrmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

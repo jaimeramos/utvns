@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIncometypes));
             this.gbDatosGrid = new System.Windows.Forms.GroupBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.btnPreditar = new System.Windows.Forms.Button();
@@ -330,6 +331,7 @@
             this.Controls.Add(this.gbDatosForm);
             this.Controls.Add(this.gbDatosGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmIncometypes";
             this.Text = "FrmWorkshopsvcs";
             this.Load += new System.EventHandler(this.FrmWorkshopsvcs_Load);
