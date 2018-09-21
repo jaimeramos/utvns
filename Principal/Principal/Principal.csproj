@@ -123,6 +123,7 @@
       <DependentUpon>Buscarvehiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="EnlaceDatos\Data.cs" />
+    <Compile Include="Entidades\Credit.cs" />
     <Compile Include="Entidades\Detalleventa.cs" />
     <Compile Include="Entidades\Detalleventasvc.cs" />
     <Compile Include="Entidades\Driverassign.cs" />

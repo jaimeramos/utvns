@@ -454,6 +454,14 @@ namespace Principal
                     dvsvc.Idsale = sale.Id;
                     dvsvc.upSert();
                 }
+                if (cmbTipo.Text.Equals("Credito"))
+                {
+                    Credit credit = new Credit();
+                    credit.Idsale = sale.Id;
+                    credit.Idpermitholder = sale.Idpermitholder;
+                    credit.Amount = sale.Amount;
+                    credit.upSert();
+                }
                 reloadInitialState();
             }
             else

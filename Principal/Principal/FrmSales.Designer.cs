@@ -160,6 +160,7 @@
             this.btnRegCredito.TabIndex = 21;
             this.btnRegCredito.Text = "Registrar crédito";
             this.btnRegCredito.UseVisualStyleBackColor = true;
+            this.btnRegCredito.Visible = false;
             // 
             // btnConfirmar
             // 
