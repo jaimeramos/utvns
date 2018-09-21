@@ -5,9 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Principal.Entidades;
+using Principal.Tools;
+
 namespace Principal
 {
     public partial class FrmIncometypes : Form
@@ -209,6 +212,15 @@ namespace Principal
                     r.Visible = true;
                 }
             }
+        }
+
+        private void txtPrcosto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Util.validaDecimal(sender, e);
+        }
+
+        private void txtPrcosto_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }

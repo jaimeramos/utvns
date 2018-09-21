@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
@@ -299,6 +300,26 @@ namespace Principal
             {
                 DataGridViewRow row = this.dataGrid.Rows[e.RowIndex];
                 loadDataFromGrid(row);
+            }
+        }
+
+        private void txtMonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar)
+            && !char.IsDigit(e.KeyChar)
+            && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+            // only allow one decimal point 
+            if (e.KeyChar == '.'
+                && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+            if (Regex.IsMatch(((TextBox)sender).Text, @"\.\d\d") && e.KeyChar != 8)
+            {
+                e.Handled = true;
             }
         }
     }

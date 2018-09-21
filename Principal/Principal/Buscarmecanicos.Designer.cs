@@ -1,6 +1,6 @@
 ﻿namespace Principal
 {
-    partial class Buscarproveedores
+    partial class Buscarmecanicos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buscarproveedores));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buscarmecanicos));
             this.gbPermisos = new System.Windows.Forms.GroupBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.btnVeditar = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             this.gbPermisos.Controls.Add(this.label1);
             this.gbPermisos.Controls.Add(this.btnPeregresar);
             this.gbPermisos.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbPermisos.Location = new System.Drawing.Point(10, 24);
+            this.gbPermisos.Location = new System.Drawing.Point(12, 12);
             this.gbPermisos.Name = "gbPermisos";
             this.gbPermisos.Size = new System.Drawing.Size(781, 370);
             this.gbPermisos.TabIndex = 29;
@@ -64,13 +64,13 @@
             this.dataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.Location = new System.Drawing.Point(16, 69);
+            this.dataGrid.MultiSelect = false;
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ReadOnly = true;
             this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGrid.Size = new System.Drawing.Size(759, 270);
             this.dataGrid.TabIndex = 94;
-            this.dataGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentDoubleClick);
-            this.dataGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellDoubleClick);
+            this.dataGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgChoferes_CellContentDoubleClick);
             // 
             // btnVeditar
             // 
@@ -158,7 +158,7 @@
             this.btnPeregresar.UseVisualStyleBackColor = true;
             this.btnPeregresar.Click += new System.EventHandler(this.btnPeregresar_Click);
             // 
-            // Buscarproveedores
+            // Buscarmecanicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -166,10 +166,10 @@
             this.Controls.Add(this.gbPermisos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Buscarproveedores";
+            this.Name = "Buscarmecanicos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Buscarproveedores";
-            this.Load += new System.EventHandler(this.Buscarproveedores_Load);
+            this.Text = "Buscarchoferes";
+            this.Load += new System.EventHandler(this.Buscarchoferes_Load);
             this.gbPermisos.ResumeLayout(false);
             this.gbPermisos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();

@@ -51,12 +51,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnVtcancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtPrnumero = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.txtPrprecio = new System.Windows.Forms.TextBox();
             this.txtPrdescripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtPrnumero = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.gbDatosGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.gbDatosForm.SuspendLayout();
@@ -73,7 +73,7 @@
             this.gbDatosGrid.Controls.Add(this.btnPrfiltrar);
             this.gbDatosGrid.Controls.Add(this.txtPrfiltro);
             this.gbDatosGrid.Controls.Add(this.label1);
-            this.gbDatosGrid.Location = new System.Drawing.Point(12, 12);
+            this.gbDatosGrid.Location = new System.Drawing.Point(19, 12);
             this.gbDatosGrid.Name = "gbDatosGrid";
             this.gbDatosGrid.Size = new System.Drawing.Size(710, 359);
             this.gbDatosGrid.TabIndex = 17;
@@ -196,6 +196,8 @@
             // 
             // gbDatosForm
             // 
+            this.gbDatosForm.Controls.Add(this.txtPrnumero);
+            this.gbDatosForm.Controls.Add(this.label15);
             this.gbDatosForm.Controls.Add(this.btnProveedor);
             this.gbDatosForm.Controls.Add(this.cmbProveedor);
             this.gbDatosForm.Controls.Add(this.gbStatus);
@@ -206,13 +208,11 @@
             this.gbDatosForm.Controls.Add(this.label2);
             this.gbDatosForm.Controls.Add(this.btnVtcancelar);
             this.gbDatosForm.Controls.Add(this.btnGuardar);
-            this.gbDatosForm.Controls.Add(this.txtPrnumero);
-            this.gbDatosForm.Controls.Add(this.label15);
             this.gbDatosForm.Controls.Add(this.txtPrprecio);
             this.gbDatosForm.Controls.Add(this.txtPrdescripcion);
             this.gbDatosForm.Controls.Add(this.label4);
             this.gbDatosForm.Controls.Add(this.label3);
-            this.gbDatosForm.Location = new System.Drawing.Point(12, 391);
+            this.gbDatosForm.Location = new System.Drawing.Point(19, 391);
             this.gbDatosForm.Name = "gbDatosForm";
             this.gbDatosForm.Size = new System.Drawing.Size(710, 158);
             this.gbDatosForm.TabIndex = 16;
@@ -302,6 +302,7 @@
             this.txtPrcosto.Size = new System.Drawing.Size(159, 22);
             this.txtPrcosto.TabIndex = 2;
             this.txtPrcosto.TextChanged += new System.EventHandler(this.txtPrcosto_TextChanged);
+            this.txtPrcosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrcosto_KeyPress);
             // 
             // label2
             // 
@@ -349,22 +350,6 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtPrnumero
-            // 
-            this.txtPrnumero.Location = new System.Drawing.Point(78, 29);
-            this.txtPrnumero.Name = "txtPrnumero";
-            this.txtPrnumero.Size = new System.Drawing.Size(159, 22);
-            this.txtPrnumero.TabIndex = 0;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(10, 32);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(50, 14);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Numero:";
-            // 
             // txtPrprecio
             // 
             this.txtPrprecio.Location = new System.Drawing.Point(78, 122);
@@ -372,6 +357,7 @@
             this.txtPrprecio.Size = new System.Drawing.Size(159, 22);
             this.txtPrprecio.TabIndex = 3;
             this.txtPrprecio.TextChanged += new System.EventHandler(this.txtPrprecio_TextChanged);
+            this.txtPrprecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrprecio_KeyPress);
             // 
             // txtPrdescripcion
             // 
@@ -398,6 +384,23 @@
             this.label3.Size = new System.Drawing.Size(67, 14);
             this.label3.TabIndex = 6;
             this.label3.Text = "Descripción:";
+            // 
+            // txtPrnumero
+            // 
+            this.txtPrnumero.Enabled = false;
+            this.txtPrnumero.Location = new System.Drawing.Point(78, 32);
+            this.txtPrnumero.Name = "txtPrnumero";
+            this.txtPrnumero.Size = new System.Drawing.Size(159, 22);
+            this.txtPrnumero.TabIndex = 31;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(10, 35);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(50, 14);
+            this.label15.TabIndex = 32;
+            this.label15.Text = "Numero:";
             // 
             // FrmPiezasrecambios
             // 
@@ -439,8 +442,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnVtcancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtPrnumero;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtPrprecio;
         private System.Windows.Forms.TextBox txtPrdescripcion;
         private System.Windows.Forms.Label label4;
@@ -453,5 +454,7 @@
         private System.Windows.Forms.RadioButton rbActivo;
         private System.Windows.Forms.ComboBox cmbProveedor;
         private System.Windows.Forms.Button btnProveedor;
+        private System.Windows.Forms.TextBox txtPrnumero;
+        private System.Windows.Forms.Label label15;
     }
 }

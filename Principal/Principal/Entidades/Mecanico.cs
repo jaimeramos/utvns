@@ -8,7 +8,7 @@ using System.Web.Script.Serialization;
 
 namespace Principal.Entidades
 {
-    class Mecanico
+    public class Mecanico
     {
         #region Atributos privados
         static string Entity = "mechanics";
@@ -224,7 +224,15 @@ namespace Principal.Entidades
                 return false;
             }
         }
+        /// <summary>
+        /// Obtiene un DataTable con todos los Permisionarios
+        /// </summary>
+        /// <returns>DataTable con los datos</returns>
+        public string readById(string ID)
+        {
+            return Data.getData(Entity + "/" + ID);
 
+        }
         #endregion
     }
 }

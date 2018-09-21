@@ -113,16 +113,16 @@
             this.txtPrname.Location = new System.Drawing.Point(362, 29);
             this.txtPrname.Name = "txtPrname";
             this.txtPrname.Size = new System.Drawing.Size(136, 20);
-            this.txtPrname.TabIndex = 2;
+            this.txtPrname.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(306, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 99;
-            this.label2.Text = "Costo:";
+            this.label2.Text = "Nombre:";
             // 
             // btnVtcancelar
             // 
@@ -182,7 +182,7 @@
             this.txtPrdescripcion.Location = new System.Drawing.Point(118, 72);
             this.txtPrdescripcion.Name = "txtPrdescripcion";
             this.txtPrdescripcion.Size = new System.Drawing.Size(159, 20);
-            this.txtPrdescripcion.TabIndex = 1;
+            this.txtPrdescripcion.TabIndex = 2;
             // 
             // label3
             // 

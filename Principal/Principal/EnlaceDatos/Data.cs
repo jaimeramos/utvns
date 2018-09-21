@@ -57,6 +57,7 @@ namespace Principal.EnlaceDatos
             request.Method = "GET";
             request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
             request.Headers["x-access-token"] = Data.TOKEN;
+            request.Headers["usr"] = Data.user;
             var response = (HttpWebResponse)request.GetResponse();
             string content = string.Empty;
             using (var stream = response.GetResponseStream())
@@ -120,6 +121,7 @@ namespace Principal.EnlaceDatos
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = action;
             httpWebRequest.Headers["x-access-token"] = Data.TOKEN;
+            httpWebRequest.Headers["usr"] = Data.user;
             using (var streamWriter = new
 
             StreamWriter(httpWebRequest.GetRequestStream()))

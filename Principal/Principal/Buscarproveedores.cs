@@ -81,6 +81,11 @@ namespace Principal
 
         private void dataGrid_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+
+        private void dataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
             if (dataGrid.CurrentRow == null)
             {
                 return;

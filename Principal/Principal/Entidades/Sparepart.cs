@@ -46,7 +46,7 @@ namespace Principal.Entidades
             string json = new JavaScriptSerializer().Serialize(new
             {
                 _id = this.Id,
-                number = this.Number,
+                number = 1,
                 description = this.Description,
                 cost = this.Cost,
                 price = this.Price,
@@ -71,6 +71,15 @@ namespace Principal.Entidades
 
                 return false;
             }
+        }
+        /// <summary>
+        /// Obtiene un DataTable con todos los Permisionarios
+        /// </summary>
+        /// <returns>DataTable con los datos</returns>
+        public string readById(string ID)
+        {
+            return Data.getData(Entity + "/" + ID);
+
         }
 
         #endregion

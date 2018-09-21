@@ -126,16 +126,16 @@ namespace Principal
 
         public void loadDataFromForm()
         {
-            permitholder.Number = txtPnumero.Text;
-            permitholder.Firstname = txtPnombre.Text;
-            permitholder.Lastname = txtPapellido.Text;
-            permitholder.Address = txtPapellido.Text;
-            permitholder.Rfc = txtPrfc.Text;
-            permitholder.Phone1 = txtPtelefono.Text;
-            permitholder.Phone2 = txtPcelular.Text;
-            permitholder.Email = txtPemail.Text;
-            permitholder.Type = cmbPtipo.Text;
-            permitholder.License = txtPlicencia.Text;
+            permitholder.Number     = txtPnumero.Text;
+            permitholder.Firstname  = txtPnombre.Text;
+            permitholder.Lastname   = txtPapellido.Text;
+            permitholder.Address    = txtPdireccion.Text;
+            permitholder.Rfc        = txtPrfc.Text;
+            permitholder.Phone1     = txtPtelefono.Text;
+            permitholder.Phone2     = txtPcelular.Text;
+            permitholder.Email      = txtPemail.Text;
+            permitholder.Type       = cmbPtipo.Text;
+            permitholder.License    = txtPlicencia.Text;
             DateTime dt1 = DateTime.ParseExact(dtpPvigencia.Text, "dd/MM/yyyy",
                                        System.Globalization.CultureInfo.CreateSpecificCulture("en-US"));
             permitholder.LicenseValidity = dt1.Month + "/" + dt1.Day + "/" + dt1.Year;

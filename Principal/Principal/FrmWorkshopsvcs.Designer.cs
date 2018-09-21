@@ -244,6 +244,7 @@
             this.txtPrcosto.Name = "txtPrcosto";
             this.txtPrcosto.Size = new System.Drawing.Size(130, 20);
             this.txtPrcosto.TabIndex = 2;
+            this.txtPrcosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrcosto_KeyPress);
             // 
             // label2
             // 

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
@@ -143,21 +144,21 @@ namespace Principal
             sparepart.Cost = txtPrcosto.Text = row.Cells["cost"].Value.ToString();
             sparepart.Price = txtPrprecio.Text = row.Cells["price"].Value.ToString();
             sparepart.Stock = txtPrstock.Text = row.Cells["stock"].Value.ToString();
-            //sparepart.Idprovider = txtPr.Text = row.Cells["phone1"].Value.ToString();
+            sparepart.Idprovider =  row.Cells["idprovider"].Value.ToString();
+            cmbProveedor.SelectedValue = sparepart.Idprovider;
             sparepart.Active = rbActivo.Checked = (bool)row.Cells["active"].Value;
             rbInactivo.Checked = !rbActivo.Checked;
         }
 
         public void loadDataFromForm()
         {
-            sparepart.Number = txtPrnumero.Text;
+            //sparepart.Number = txtPrnumero.Text;
             sparepart.Description = txtPrdescripcion.Text;
             sparepart.Cost = txtPrcosto.Text;
             sparepart.Price = txtPrprecio.Text;
             sparepart.Stock = txtPrstock.Text;
-            //sparepart.Idprovider = txtPremail.Text;
+            sparepart.Idprovider = cmbProveedor.SelectedValue.ToString();
             sparepart.Active = rbActivo.Checked;
-
         }
 
         private bool validar(Form formulario)
@@ -165,7 +166,7 @@ namespace Principal
             bool todoOk = true;
             foreach (Control oControls in gbDatosForm.Controls) // Buscamos en cada TextBox de nuestro Formulario. 
             {
-                if (oControls is TextBox)
+                if (oControls is TextBox && oControls.Enabled)
                 {
                     if (oControls.Text == String.Empty) // Verificamos que no este vacio. 
                     {
@@ -276,6 +277,46 @@ namespace Principal
                 cmbProveedor.DataSource = new BindingSource(datasource, null);
                 cmbProveedor.DisplayMember = "Value";
                 cmbProveedor.ValueMember = "Key";
+            }
+        }
+
+        private void txtPrcosto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar)
+            && !char.IsDigit(e.KeyChar)
+            && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+            // only allow one decimal point 
+            if (e.KeyChar == '.'
+                && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+            if (Regex.IsMatch(((TextBox)sender).Text, @"\.\d\d") && e.KeyChar != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPrprecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar)
+            && !char.IsDigit(e.KeyChar)
+            && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+            // only allow one decimal point 
+            if (e.KeyChar == '.'
+                && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+            if (Regex.IsMatch(((TextBox)sender).Text, @"\.\d\d") && e.KeyChar != 8)
+            {
+                e.Handled = true;
             }
         }
     }

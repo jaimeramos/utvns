@@ -145,7 +145,7 @@
             this.btnPrnuevo.Location = new System.Drawing.Point(343, 30);
             this.btnPrnuevo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPrnuevo.Name = "btnPrnuevo";
-            this.btnPrnuevo.Size = new System.Drawing.Size(112, 40);
+            this.btnPrnuevo.Size = new System.Drawing.Size(103, 40);
             this.btnPrnuevo.TabIndex = 2;
             this.btnPrnuevo.Text = "Nuevo tipo de ingreso";
             this.btnPrnuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -160,7 +160,7 @@
             this.btnPrfiltrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPrfiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrfiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrfiltrar.Location = new System.Drawing.Point(222, 30);
+            this.btnPrfiltrar.Location = new System.Drawing.Point(222, 29);
             this.btnPrfiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPrfiltrar.Name = "btnPrfiltrar";
             this.btnPrfiltrar.Size = new System.Drawing.Size(117, 40);
@@ -174,7 +174,7 @@
             // 
             this.txtPrfiltro.Location = new System.Drawing.Point(62, 40);
             this.txtPrfiltro.Name = "txtPrfiltro";
-            this.txtPrfiltro.Size = new System.Drawing.Size(136, 20);
+            this.txtPrfiltro.Size = new System.Drawing.Size(155, 20);
             this.txtPrfiltro.TabIndex = 0;
             this.txtPrfiltro.TextChanged += new System.EventHandler(this.txtPrfiltro_TextChanged);
             // 
@@ -244,6 +244,8 @@
             this.txtPrcosto.Name = "txtPrcosto";
             this.txtPrcosto.Size = new System.Drawing.Size(130, 20);
             this.txtPrcosto.TabIndex = 2;
+            this.txtPrcosto.TextChanged += new System.EventHandler(this.txtPrcosto_TextChanged);
+            this.txtPrcosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrcosto_KeyPress);
             // 
             // label2
             // 

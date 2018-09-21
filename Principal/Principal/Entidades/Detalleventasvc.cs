@@ -6,26 +6,24 @@ using System.Threading.Tasks;
 using Principal.EnlaceDatos;
 using System.Web.Script.Serialization;
 
-
 namespace Principal.Entidades
 {
-    class Detalleventa
+    class Detalleventasvc
     {
         #region Atributos privados
-        static string Entity = "saledetails";
-        string _id, _folio, _idsale, _idsparepart,_description, _price, _quantity, _createdAt, _updatedAt;
+        static string Entity = "saledetailsvcs";
+        string _id, _folio, _idsale, _idworkshopsvc, _svcdescription, _idmechanic, _mechname, _price, _quantity, _createdAt, _updatedAt;
         bool _active;
-
-
         #endregion
 
         #region Propiedades públicas
-
         public string Id { get => _id; set => _id = value; }
         public string Folio { get => _folio; set => _folio = value; }
         public string Idsale { get => _idsale; set => _idsale = value; }
-        public string Idsparepart { get => _idsparepart; set => _idsparepart = value; }
-        public string Description { get => _description; set => _description = value; }
+        public string Idworkshopsvc { get => _idworkshopsvc; set => _idworkshopsvc = value; }
+        public string Svcdescription { get => _svcdescription; set => _svcdescription = value; }
+        public string Idmechanic { get => _idmechanic; set => _idmechanic = value; }
+        public string Mechname { get => _mechname; set => _mechname = value; }
         public string Price { get => _price; set => _price = value; }
         public string Quantity { get => _quantity; set => _quantity = value; }
         public string CreatedAt { get => _createdAt; set => _createdAt = value; }
@@ -56,11 +54,13 @@ namespace Principal.Entidades
                 _id = this.Id,
                 folio = 1,
                 idsale = this.Idsale,
-                idsparepart = this.Idsparepart,
-                description = this.Description,
+                idworkshopsvc = this.Idworkshopsvc,
+                svcdescription = this.Svcdescription,
+                idmechanic = this.Idmechanic,
+                mechname = this.Mechname,
                 price = this.Price,
                 quantity = this.Quantity,
-                active= this. Active
+                active= this.Active
             });
 
             string data;

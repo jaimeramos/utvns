@@ -7,7 +7,7 @@ using System.Web.Script.Serialization;
 using Principal.EnlaceDatos;
 namespace Principal.Entidades
 {
-    class Workshopsvc
+    public class Workshopsvc
     {
         #region Atributos
         static string Entity = "workshopsvcs";
@@ -66,7 +66,15 @@ namespace Principal.Entidades
                 return false;
             }
         }
+        /// <summary>
+        /// Obtiene un DataTable con todos los Permisionarios
+        /// </summary>
+        /// <returns>DataTable con los datos</returns>
+        public string readById(string ID)
+        {
+            return Data.getData(Entity + "/" + ID);
 
+        }
         #endregion
     }
 }
