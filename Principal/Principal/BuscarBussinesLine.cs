@@ -73,23 +73,12 @@ namespace Principal
 
          private void dtgPermisos_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGrid.CurrentRow == null)
-            {
-                return;
-            }
-            int selectedrowindex = e.RowIndex;
-            DataGridViewRow selectedRow = dataGrid.Rows[selectedrowindex];
-            string a = Convert.ToString(selectedRow.Cells["_id"].Value);
-            Lineanegocio lineanegocio = new Lineanegocio();
-            lineanegocio.Id = a;
-            _caller.Selected((Lineanegocio)lineanegocio);
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            
         }
 
         private void btnVeditar_Click(object sender, EventArgs e)
         {
-
+            seleccionar(rowSelected);
         }
 
         private void txtPefiltro_TextChanged(object sender, EventArgs e)
@@ -105,6 +94,32 @@ namespace Principal
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            seleccionar(e.RowIndex);
+        }
+        int rowSelected = 0;
+        private void dataGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            rowSelected = e.RowIndex;
+        }
+        private void seleccionar(int i) {
+            if (dataGrid.CurrentRow == null)
+            {
+                return;
+            }
+            int selectedrowindex = i;
+            DataGridViewRow selectedRow = dataGrid.Rows[selectedrowindex];
+            string a = Convert.ToString(selectedRow.Cells["_id"].Value);
+            string b = Convert.ToString(selectedRow.Cells["name"].Value);
+            Lineanegocio lineanegocio = new Lineanegocio();
+            lineanegocio.Id = a;
+            lineanegocio.Name = b;
+            _caller.Selected((Lineanegocio)lineanegocio);
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

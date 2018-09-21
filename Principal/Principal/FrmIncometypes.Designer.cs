@@ -66,11 +66,12 @@
             this.gbDatosGrid.Controls.Add(this.btnPrfiltrar);
             this.gbDatosGrid.Controls.Add(this.txtPrfiltro);
             this.gbDatosGrid.Controls.Add(this.label1);
-            this.gbDatosGrid.Location = new System.Drawing.Point(43, 15);
+            this.gbDatosGrid.Location = new System.Drawing.Point(13, 15);
             this.gbDatosGrid.Name = "gbDatosGrid";
-            this.gbDatosGrid.Size = new System.Drawing.Size(710, 359);
+            this.gbDatosGrid.Size = new System.Drawing.Size(710, 350);
             this.gbDatosGrid.TabIndex = 18;
             this.gbDatosGrid.TabStop = false;
+            this.gbDatosGrid.Text = "Registro de Tipos de Ingreso ";
             // 
             // dataGrid
             // 
@@ -78,7 +79,7 @@
             this.dataGrid.AllowUserToDeleteRows = false;
             this.dataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(11, 82);
+            this.dataGrid.Location = new System.Drawing.Point(11, 73);
             this.dataGrid.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ReadOnly = true;
@@ -94,8 +95,9 @@
             this.btnPreditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnPreditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPreditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPreditar.Image = ((System.Drawing.Image)(resources.GetObject("btnPreditar.Image")));
             this.btnPreditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPreditar.Location = new System.Drawing.Point(474, 30);
+            this.btnPreditar.Location = new System.Drawing.Point(474, 21);
             this.btnPreditar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPreditar.Name = "btnPreditar";
             this.btnPreditar.Size = new System.Drawing.Size(113, 40);
@@ -112,11 +114,12 @@
             this.btnPrregresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnPrregresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPrregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrregresar.Image = ((System.Drawing.Image)(resources.GetObject("btnPrregresar.Image")));
             this.btnPrregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrregresar.Location = new System.Drawing.Point(612, 30);
+            this.btnPrregresar.Location = new System.Drawing.Point(607, 21);
             this.btnPrregresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPrregresar.Name = "btnPrregresar";
-            this.btnPrregresar.Size = new System.Drawing.Size(86, 40);
+            this.btnPrregresar.Size = new System.Drawing.Size(91, 40);
             this.btnPrregresar.TabIndex = 4;
             this.btnPrregresar.Text = "Regresar";
             this.btnPrregresar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -126,7 +129,7 @@
             // chbRecambios
             // 
             this.chbRecambios.AutoSize = true;
-            this.chbRecambios.Location = new System.Drawing.Point(461, 336);
+            this.chbRecambios.Location = new System.Drawing.Point(461, 327);
             this.chbRecambios.Name = "chbRecambios";
             this.chbRecambios.Size = new System.Drawing.Size(183, 17);
             this.chbRecambios.TabIndex = 5;
@@ -141,8 +144,9 @@
             this.btnPrnuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnPrnuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPrnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrnuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnPrnuevo.Image")));
             this.btnPrnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrnuevo.Location = new System.Drawing.Point(343, 30);
+            this.btnPrnuevo.Location = new System.Drawing.Point(343, 21);
             this.btnPrnuevo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPrnuevo.Name = "btnPrnuevo";
             this.btnPrnuevo.Size = new System.Drawing.Size(103, 40);
@@ -159,8 +163,9 @@
             this.btnPrfiltrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnPrfiltrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPrfiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrfiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnPrfiltrar.Image")));
             this.btnPrfiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrfiltrar.Location = new System.Drawing.Point(222, 29);
+            this.btnPrfiltrar.Location = new System.Drawing.Point(222, 20);
             this.btnPrfiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPrfiltrar.Name = "btnPrfiltrar";
             this.btnPrfiltrar.Size = new System.Drawing.Size(117, 40);
@@ -172,7 +177,7 @@
             // 
             // txtPrfiltro
             // 
-            this.txtPrfiltro.Location = new System.Drawing.Point(62, 40);
+            this.txtPrfiltro.Location = new System.Drawing.Point(62, 31);
             this.txtPrfiltro.Name = "txtPrfiltro";
             this.txtPrfiltro.Size = new System.Drawing.Size(155, 20);
             this.txtPrfiltro.TabIndex = 0;
@@ -181,7 +186,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 43);
+            this.label1.Location = new System.Drawing.Point(20, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 10;
@@ -198,20 +203,20 @@
             this.gbDatosForm.Controls.Add(this.label15);
             this.gbDatosForm.Controls.Add(this.txtPrdescripcion);
             this.gbDatosForm.Controls.Add(this.label3);
-            this.gbDatosForm.Location = new System.Drawing.Point(43, 390);
+            this.gbDatosForm.Location = new System.Drawing.Point(13, 369);
             this.gbDatosForm.Name = "gbDatosForm";
-            this.gbDatosForm.Size = new System.Drawing.Size(710, 141);
+            this.gbDatosForm.Size = new System.Drawing.Size(710, 112);
             this.gbDatosForm.TabIndex = 19;
             this.gbDatosForm.TabStop = false;
-            this.gbDatosForm.Text = "Datos de los tipos de ingreso";
+            this.gbDatosForm.Text = "Datos del Tipo de Ingreso";
             // 
             // gbStatus
             // 
             this.gbStatus.Controls.Add(this.rbInactivo);
             this.gbStatus.Controls.Add(this.rbActivo);
-            this.gbStatus.Location = new System.Drawing.Point(350, 59);
+            this.gbStatus.Location = new System.Drawing.Point(350, 53);
             this.gbStatus.Name = "gbStatus";
-            this.gbStatus.Size = new System.Drawing.Size(174, 50);
+            this.gbStatus.Size = new System.Drawing.Size(174, 36);
             this.gbStatus.TabIndex = 120;
             this.gbStatus.TabStop = false;
             this.gbStatus.Text = "Estado";
@@ -219,7 +224,7 @@
             // rbInactivo
             // 
             this.rbInactivo.AutoSize = true;
-            this.rbInactivo.Location = new System.Drawing.Point(92, 22);
+            this.rbInactivo.Location = new System.Drawing.Point(92, 15);
             this.rbInactivo.Name = "rbInactivo";
             this.rbInactivo.Size = new System.Drawing.Size(63, 17);
             this.rbInactivo.TabIndex = 4;
@@ -230,7 +235,7 @@
             // rbActivo
             // 
             this.rbActivo.AutoSize = true;
-            this.rbActivo.Location = new System.Drawing.Point(31, 22);
+            this.rbActivo.Location = new System.Drawing.Point(31, 15);
             this.rbActivo.Name = "rbActivo";
             this.rbActivo.Size = new System.Drawing.Size(55, 17);
             this.rbActivo.TabIndex = 3;
@@ -263,8 +268,9 @@
             this.btnVtcancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnVtcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVtcancelar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVtcancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnVtcancelar.Image")));
             this.btnVtcancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVtcancelar.Location = new System.Drawing.Point(568, 82);
+            this.btnVtcancelar.Location = new System.Drawing.Point(568, 66);
             this.btnVtcancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVtcancelar.Name = "btnVtcancelar";
             this.btnVtcancelar.Size = new System.Drawing.Size(115, 40);
@@ -282,8 +288,9 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(568, 24);
+            this.btnGuardar.Location = new System.Drawing.Point(568, 15);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(115, 40);
@@ -311,7 +318,7 @@
             // 
             // txtPrdescripcion
             // 
-            this.txtPrdescripcion.Location = new System.Drawing.Point(78, 75);
+            this.txtPrdescripcion.Location = new System.Drawing.Point(78, 61);
             this.txtPrdescripcion.Name = "txtPrdescripcion";
             this.txtPrdescripcion.Size = new System.Drawing.Size(252, 20);
             this.txtPrdescripcion.TabIndex = 1;
@@ -319,7 +326,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 78);
+            this.label3.Location = new System.Drawing.Point(10, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 6;
@@ -329,7 +336,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 571);
+            this.ClientSize = new System.Drawing.Size(735, 488);
             this.Controls.Add(this.gbDatosForm);
             this.Controls.Add(this.gbDatosGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

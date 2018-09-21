@@ -8,7 +8,7 @@ using Principal.EnlaceDatos;
 
 namespace Principal.Entidades
 {
-    class Incometype
+    public class Incometype
     {
         #region Atributos
         static string Entity = "incometypes";
@@ -35,6 +35,15 @@ namespace Principal.Entidades
 
         }
         /// <summary>
+        /// Obtiene un DataTable con todos los Permisionarios
+        /// </summary>
+        /// <returns>DataTable con los datos</returns>
+        public string readById(string ID)
+        {
+            return Data.getData(Entity + "/" + ID);
+
+        }
+        /// <summary>
         /// Agrega registros de Proveedores
         /// </summary>
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
@@ -44,7 +53,7 @@ namespace Principal.Entidades
             string json = new JavaScriptSerializer().Serialize(new
             {
                 _id = this.Id,
-                number = this.Number,
+                number = 1,
                 description = this.Description,
                 amount = this.Amount,
                 active = this.Active

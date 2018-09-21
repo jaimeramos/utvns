@@ -59,7 +59,7 @@ namespace Principal.Entidades
             string json = new JavaScriptSerializer().Serialize(new
             {
                 _id = this.Id,
-                number = this.Number,
+                number = 1,
                 linenumber = this.Linenumber,
                 imei = this.Imei,
                 simcard = this.Simcard,

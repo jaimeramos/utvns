@@ -74,6 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuscarIncometypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarIncometypes.Designer.cs">
+      <DependentUpon>BuscarIncometypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Buscarmecanicos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,7 @@
     <Compile Include="Entidades\Driverassign.cs" />
     <Compile Include="Entidades\Egreso.cs" />
     <Compile Include="Entidades\Executivesvc.cs" />
+    <Compile Include="Entidades\Incomedetail.cs" />
     <Compile Include="Entidades\Incometype.cs" />
     <Compile Include="Entidades\Ingreso.cs" />
     <Compile Include="Entidades\Lineanegocio.cs" />
@@ -144,30 +151,6 @@
     <Compile Include="Entidades\Vehiculo.cs" />
     <Compile Include="Entidades\Venta.cs" />
     <Compile Include="Entidades\Workshopsvc.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frmbitacora.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frmbitacora.Designer.cs">
-      <DependentUpon>Frmbitacora.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmDetalledeingresos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmDetalledeingresos.Designer.cs">
-      <DependentUpon>FrmDetalledeingresos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmDetalledeventaservicios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmDetalledeventaservicios.Designer.cs">
-      <DependentUpon>FrmDetalledeventaservicios.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmEjecutivos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +261,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Tools\Util.cs" />
+    <EmbeddedResource Include="BuscarIncometypes.resx">
+      <DependentUpon>BuscarIncometypes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Buscarmecanicos.resx">
       <DependentUpon>Buscarmecanicos.cs</DependentUpon>
     </EmbeddedResource>
@@ -301,18 +287,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Buscarvehiculos.resx">
       <DependentUpon>Buscarvehiculos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frmbitacora.resx">
-      <DependentUpon>Frmbitacora.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmDetalledeingresos.resx">
-      <DependentUpon>FrmDetalledeingresos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmDetalledeventaservicios.resx">
-      <DependentUpon>FrmDetalledeventaservicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEjecutivos.resx">
       <DependentUpon>FrmEjecutivos.cs</DependentUpon>

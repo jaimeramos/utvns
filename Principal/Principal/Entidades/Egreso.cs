@@ -51,7 +51,7 @@ namespace Principal.Entidades
             string json = new JavaScriptSerializer().Serialize(new
             {
                 _id = this.Id,
-                folio = this.Folio,
+                folio = 1,
                 description = this.Description,
                 reference = this.Reference,
                 type = this.Type,

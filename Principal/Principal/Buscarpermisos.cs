@@ -76,23 +76,12 @@ namespace Principal
 
          private void dtgPermisos_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGrid.CurrentRow == null)
-            {
-                return;
-            }
-            int selectedrowindex = e.RowIndex;
-            DataGridViewRow selectedRow = dataGrid.Rows[selectedrowindex];
-            string a = Convert.ToString(selectedRow.Cells["_id"].Value);
-            Permiso permiso = new Permiso();
-            permiso.Id = a;
-            _caller.Selected((Permiso)permiso);
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            seleccionar(e.RowIndex);
         }
-
+        int rowSelected = 0;
         private void btnVeditar_Click(object sender, EventArgs e)
         {
-
+            seleccionar(rowSelected);
         }
 
         private void txtPefiltro_TextChanged(object sender, EventArgs e)
@@ -108,6 +97,24 @@ namespace Principal
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+        private void seleccionar(int i) {
+            if (dataGrid.CurrentRow == null)
+            {
+                return;
+            }
+            int selectedrowindex = i;
+            DataGridViewRow selectedRow = dataGrid.Rows[selectedrowindex];
+            string a = Convert.ToString(selectedRow.Cells["_id"].Value);
+            Permiso permiso = new Permiso();
+            permiso.Id = a;
+            _caller.Selected((Permiso)permiso);
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+        private void dataGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            rowSelected = e.RowIndex;
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buscarrefacciones));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Buscarservicios));
             this.gbPermisos = new System.Windows.Forms.GroupBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.btnVeditar = new System.Windows.Forms.Button();
@@ -51,11 +51,12 @@
             this.gbPermisos.Controls.Add(this.label1);
             this.gbPermisos.Controls.Add(this.btnPeregresar);
             this.gbPermisos.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbPermisos.Location = new System.Drawing.Point(10, 40);
+            this.gbPermisos.Location = new System.Drawing.Point(10, 4);
             this.gbPermisos.Name = "gbPermisos";
             this.gbPermisos.Size = new System.Drawing.Size(781, 370);
             this.gbPermisos.TabIndex = 28;
             this.gbPermisos.TabStop = false;
+            this.gbPermisos.Text = "Selección de Servicios de Taller ";
             // 
             // dataGrid
             // 
@@ -63,14 +64,15 @@
             this.dataGrid.AllowUserToDeleteRows = false;
             this.dataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(16, 69);
+            this.dataGrid.Location = new System.Drawing.Point(6, 69);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ReadOnly = true;
             this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid.Size = new System.Drawing.Size(759, 270);
+            this.dataGrid.Size = new System.Drawing.Size(769, 270);
             this.dataGrid.TabIndex = 94;
             this.dataGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPermisos_CellContentDoubleClick_1);
             this.dataGrid.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGrid_CellMouseDoubleClick);
+            this.dataGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_RowEnter);
             // 
             // btnVeditar
             // 
@@ -81,19 +83,20 @@
             this.btnVeditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVeditar.Image = ((System.Drawing.Image)(resources.GetObject("btnVeditar.Image")));
             this.btnVeditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVeditar.Location = new System.Drawing.Point(500, 17);
+            this.btnVeditar.Location = new System.Drawing.Point(522, 17);
             this.btnVeditar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVeditar.Name = "btnVeditar";
-            this.btnVeditar.Size = new System.Drawing.Size(136, 40);
+            this.btnVeditar.Size = new System.Drawing.Size(109, 40);
             this.btnVeditar.TabIndex = 93;
             this.btnVeditar.Text = "Seleccionar";
             this.btnVeditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVeditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVeditar.UseVisualStyleBackColor = true;
             this.btnVeditar.Click += new System.EventHandler(this.btnVeditar_Click);
             // 
             // txtPefiltro
             // 
-            this.txtPefiltro.Location = new System.Drawing.Point(72, 22);
+            this.txtPefiltro.Location = new System.Drawing.Point(72, 26);
             this.txtPefiltro.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtPefiltro.Name = "txtPefiltro";
             this.txtPefiltro.Size = new System.Drawing.Size(303, 23);
@@ -108,9 +111,9 @@
             this.checkBox1.Location = new System.Drawing.Point(507, 345);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(175, 19);
+            this.checkBox1.Size = new System.Drawing.Size(223, 19);
             this.checkBox1.TabIndex = 26;
-            this.checkBox1.Text = "Mostrar todos los Permisos";
+            this.checkBox1.Text = "Mostrar todos los Servicios de Taller.";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -123,7 +126,7 @@
             this.btnPefiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPefiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnPefiltrar.Image")));
             this.btnPefiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPefiltrar.Location = new System.Drawing.Point(379, 14);
+            this.btnPefiltrar.Location = new System.Drawing.Point(379, 16);
             this.btnPefiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPefiltrar.Name = "btnPefiltrar";
             this.btnPefiltrar.Size = new System.Drawing.Size(117, 43);
@@ -136,7 +139,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 25);
+            this.label1.Location = new System.Drawing.Point(28, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 15);
@@ -152,7 +155,7 @@
             this.btnPeregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPeregresar.Image = ((System.Drawing.Image)(resources.GetObject("btnPeregresar.Image")));
             this.btnPeregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPeregresar.Location = new System.Drawing.Point(655, 14);
+            this.btnPeregresar.Location = new System.Drawing.Point(655, 16);
             this.btnPeregresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPeregresar.Name = "btnPeregresar";
             this.btnPeregresar.Size = new System.Drawing.Size(98, 43);
@@ -162,15 +165,16 @@
             this.btnPeregresar.UseVisualStyleBackColor = true;
             this.btnPeregresar.Click += new System.EventHandler(this.btnPeregresar_Click);
             // 
-            // Buscarrefacciones
+            // Buscarservicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Turquoise;
+            this.ClientSize = new System.Drawing.Size(800, 379);
             this.Controls.Add(this.gbPermisos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Buscarrefacciones";
+            this.Name = "Buscarservicios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Buscarpermisos";
             this.Load += new System.EventHandler(this.Buscarpermisos_Load);

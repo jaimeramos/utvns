@@ -95,18 +95,47 @@ namespace Principal
         private void dtgVehiculos_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            if (dtgVehiculo.CurrentRow==null)
+            
+        }
+
+        private void dtgVehiculo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            seleccionar(e.RowIndex);   
+        }
+
+        private void dtgVehiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        int rowSelected = 0;
+        private void btnVeditar_Click(object sender, EventArgs e)
+        {
+            seleccionar(rowSelected);
+        }
+        private void seleccionar(int i) {
+            if (dtgVehiculo.CurrentRow == null)
             {
                 return;
             }
-            int selectedrowindex = e.RowIndex;
+            int selectedrowindex = i;
             DataGridViewRow selectedRow = dtgVehiculo.Rows[selectedrowindex];
             string a = Convert.ToString(selectedRow.Cells["_id"].Value);
+            string brand = Convert.ToString(selectedRow.Cells["brand"].Value);
+            string model = Convert.ToString(selectedRow.Cells["model"].Value);
+            string year = Convert.ToString(selectedRow.Cells["year"].Value);
             Vehiculo vehiculo = new Vehiculo();
             vehiculo.Id = a;
+            vehiculo.Brand = brand;
+            vehiculo.Model = model;
+            vehiculo.Year = year;
             _caller.Selected((Vehiculo)vehiculo);
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void dtgVehiculo_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            rowSelected = e.RowIndex;
         }
     }
 }

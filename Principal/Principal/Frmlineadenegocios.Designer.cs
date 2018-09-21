@@ -70,10 +70,10 @@
             this.gbDatosForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.gbDatosForm.Location = new System.Drawing.Point(21, 386);
             this.gbDatosForm.Name = "gbDatosForm";
-            this.gbDatosForm.Size = new System.Drawing.Size(710, 138);
+            this.gbDatosForm.Size = new System.Drawing.Size(710, 119);
             this.gbDatosForm.TabIndex = 21;
             this.gbDatosForm.TabStop = false;
-            this.gbDatosForm.Text = "Datos de las líneas de negocio";
+            this.gbDatosForm.Text = "Datos de la línea de negocio";
             // 
             // gbStatus
             // 
@@ -81,7 +81,7 @@
             this.gbStatus.Controls.Add(this.rbActivo);
             this.gbStatus.Location = new System.Drawing.Point(302, 69);
             this.gbStatus.Name = "gbStatus";
-            this.gbStatus.Size = new System.Drawing.Size(196, 50);
+            this.gbStatus.Size = new System.Drawing.Size(196, 35);
             this.gbStatus.TabIndex = 120;
             this.gbStatus.TabStop = false;
             this.gbStatus.Text = "Estado";
@@ -89,7 +89,7 @@
             // rbInactivo
             // 
             this.rbInactivo.AutoSize = true;
-            this.rbInactivo.Location = new System.Drawing.Point(102, 20);
+            this.rbInactivo.Location = new System.Drawing.Point(102, 14);
             this.rbInactivo.Name = "rbInactivo";
             this.rbInactivo.Size = new System.Drawing.Size(63, 17);
             this.rbInactivo.TabIndex = 4;
@@ -100,7 +100,7 @@
             // rbActivo
             // 
             this.rbActivo.AutoSize = true;
-            this.rbActivo.Location = new System.Drawing.Point(31, 21);
+            this.rbActivo.Location = new System.Drawing.Point(31, 15);
             this.rbActivo.Name = "rbActivo";
             this.rbActivo.Size = new System.Drawing.Size(55, 17);
             this.rbActivo.TabIndex = 3;
@@ -118,7 +118,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(306, 32);
+            this.label2.Location = new System.Drawing.Point(306, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 99;
@@ -131,8 +131,9 @@
             this.btnVtcancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnVtcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVtcancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnVtcancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnVtcancelar.Image")));
             this.btnVtcancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVtcancelar.Location = new System.Drawing.Point(556, 82);
+            this.btnVtcancelar.Location = new System.Drawing.Point(556, 66);
             this.btnVtcancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVtcancelar.Name = "btnVtcancelar";
             this.btnVtcancelar.Size = new System.Drawing.Size(115, 40);
@@ -150,8 +151,9 @@
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(556, 24);
+            this.btnGuardar.Location = new System.Drawing.Point(556, 19);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(115, 40);
@@ -163,7 +165,7 @@
             // 
             // txtPrnumero
             // 
-            this.txtPrnumero.Location = new System.Drawing.Point(118, 34);
+            this.txtPrnumero.Location = new System.Drawing.Point(118, 29);
             this.txtPrnumero.Name = "txtPrnumero";
             this.txtPrnumero.Size = new System.Drawing.Size(159, 20);
             this.txtPrnumero.TabIndex = 0;
@@ -171,7 +173,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(29, 37);
+            this.label15.Location = new System.Drawing.Point(29, 33);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(47, 13);
             this.label15.TabIndex = 30;
@@ -179,7 +181,7 @@
             // 
             // txtPrdescripcion
             // 
-            this.txtPrdescripcion.Location = new System.Drawing.Point(118, 72);
+            this.txtPrdescripcion.Location = new System.Drawing.Point(118, 76);
             this.txtPrdescripcion.Name = "txtPrdescripcion";
             this.txtPrdescripcion.Size = new System.Drawing.Size(159, 20);
             this.txtPrdescripcion.TabIndex = 2;
@@ -187,7 +189,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 75);
+            this.label3.Location = new System.Drawing.Point(29, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 6;
@@ -232,14 +234,16 @@
             this.btnPreditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnPreditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPreditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPreditar.Image = ((System.Drawing.Image)(resources.GetObject("btnPreditar.Image")));
             this.btnPreditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPreditar.Location = new System.Drawing.Point(474, 30);
+            this.btnPreditar.Location = new System.Drawing.Point(498, 30);
             this.btnPreditar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPreditar.Name = "btnPreditar";
-            this.btnPreditar.Size = new System.Drawing.Size(113, 40);
+            this.btnPreditar.Size = new System.Drawing.Size(94, 40);
             this.btnPreditar.TabIndex = 3;
             this.btnPreditar.Text = "Editar línea";
             this.btnPreditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPreditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPreditar.UseVisualStyleBackColor = true;
             this.btnPreditar.Click += new System.EventHandler(this.btnPreditar_Click);
             // 
@@ -250,8 +254,9 @@
             this.btnPrregresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnPrregresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPrregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrregresar.Image = ((System.Drawing.Image)(resources.GetObject("btnPrregresar.Image")));
             this.btnPrregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrregresar.Location = new System.Drawing.Point(612, 30);
+            this.btnPrregresar.Location = new System.Drawing.Point(611, 30);
             this.btnPrregresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPrregresar.Name = "btnPrregresar";
             this.btnPrregresar.Size = new System.Drawing.Size(86, 40);
@@ -279,14 +284,16 @@
             this.btnPrnuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnPrnuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPrnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrnuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnPrnuevo.Image")));
             this.btnPrnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrnuevo.Location = new System.Drawing.Point(343, 30);
+            this.btnPrnuevo.Location = new System.Drawing.Point(379, 30);
             this.btnPrnuevo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPrnuevo.Name = "btnPrnuevo";
-            this.btnPrnuevo.Size = new System.Drawing.Size(112, 40);
+            this.btnPrnuevo.Size = new System.Drawing.Size(100, 40);
             this.btnPrnuevo.TabIndex = 2;
-            this.btnPrnuevo.Text = "Nuevo línea";
+            this.btnPrnuevo.Text = "Nueva línea";
             this.btnPrnuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrnuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPrnuevo.UseVisualStyleBackColor = true;
             this.btnPrnuevo.Click += new System.EventHandler(this.btnPrnuevo_Click);
             // 
@@ -297,8 +304,9 @@
             this.btnPrfiltrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnPrfiltrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPrfiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrfiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnPrfiltrar.Image")));
             this.btnPrfiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrfiltrar.Location = new System.Drawing.Point(222, 30);
+            this.btnPrfiltrar.Location = new System.Drawing.Point(248, 30);
             this.btnPrfiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPrfiltrar.Name = "btnPrfiltrar";
             this.btnPrfiltrar.Size = new System.Drawing.Size(117, 40);
@@ -312,14 +320,14 @@
             // 
             this.txtPrfiltro.Location = new System.Drawing.Point(62, 40);
             this.txtPrfiltro.Name = "txtPrfiltro";
-            this.txtPrfiltro.Size = new System.Drawing.Size(136, 20);
+            this.txtPrfiltro.Size = new System.Drawing.Size(181, 20);
             this.txtPrfiltro.TabIndex = 0;
             this.txtPrfiltro.TextChanged += new System.EventHandler(this.txtPrfiltro_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 43);
+            this.label1.Location = new System.Drawing.Point(20, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 10;
@@ -329,7 +337,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 555);
+            this.ClientSize = new System.Drawing.Size(753, 511);
             this.Controls.Add(this.gbDatosForm);
             this.Controls.Add(this.gbDatosGrid);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

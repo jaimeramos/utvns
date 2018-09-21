@@ -157,7 +157,7 @@ namespace Principal.Entidades
             string json = new JavaScriptSerializer().Serialize(new
             {
                 _id = this.Id,
-                number = this.Number,
+                number = 1,
                 type = this.Type,
                 description = this.Description,
                 validity_at = this.ValidityAt,

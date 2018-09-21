@@ -484,6 +484,7 @@
             this.btnMingresos.Text = "Ingresos";
             this.btnMingresos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMingresos.UseVisualStyleBackColor = true;
+            this.btnMingresos.Click += new System.EventHandler(this.btnMingresos_Click);
             // 
             // btnSistemas
             // 

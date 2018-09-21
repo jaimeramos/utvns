@@ -105,7 +105,7 @@
             this.gbDatospermisionario.Controls.Add(this.label3);
             this.gbDatospermisionario.Location = new System.Drawing.Point(23, 377);
             this.gbDatospermisionario.Name = "gbDatospermisionario";
-            this.gbDatospermisionario.Size = new System.Drawing.Size(885, 190);
+            this.gbDatospermisionario.Size = new System.Drawing.Size(885, 168);
             this.gbDatospermisionario.TabIndex = 6;
             this.gbDatospermisionario.TabStop = false;
             this.gbDatospermisionario.Text = "Datos del Permisionario";
@@ -392,6 +392,7 @@
             this.gbPermisionarios.Size = new System.Drawing.Size(885, 359);
             this.gbPermisionarios.TabIndex = 9;
             this.gbPermisionarios.TabStop = false;
+            this.gbPermisionarios.Text = "Registro de Socios/Permisionarios ";
             // 
             // dtgPermisionario
             // 
@@ -399,12 +400,12 @@
             this.dtgPermisionario.AllowUserToDeleteRows = false;
             this.dtgPermisionario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgPermisionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgPermisionario.Location = new System.Drawing.Point(11, 82);
+            this.dtgPermisionario.Location = new System.Drawing.Point(5, 82);
             this.dtgPermisionario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.dtgPermisionario.Name = "dtgPermisionario";
             this.dtgPermisionario.ReadOnly = true;
             this.dtgPermisionario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgPermisionario.Size = new System.Drawing.Size(839, 246);
+            this.dtgPermisionario.Size = new System.Drawing.Size(875, 246);
             this.dtgPermisionario.TabIndex = 6;
             this.dtgPermisionario.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPermisionario_RowEnter);
             // 
@@ -417,7 +418,7 @@
             this.btnPeditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPeditar.Image = ((System.Drawing.Image)(resources.GetObject("btnPeditar.Image")));
             this.btnPeditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPeditar.Location = new System.Drawing.Point(567, 30);
+            this.btnPeditar.Location = new System.Drawing.Point(600, 24);
             this.btnPeditar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPeditar.Name = "btnPeditar";
             this.btnPeditar.Size = new System.Drawing.Size(152, 40);
@@ -436,7 +437,7 @@
             this.btnPregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPregresar.Image = ((System.Drawing.Image)(resources.GetObject("btnPregresar.Image")));
             this.btnPregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPregresar.Location = new System.Drawing.Point(742, 30);
+            this.btnPregresar.Location = new System.Drawing.Point(777, 24);
             this.btnPregresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPregresar.Name = "btnPregresar";
             this.btnPregresar.Size = new System.Drawing.Size(98, 40);
@@ -466,7 +467,7 @@
             this.btnPnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPnuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnPnuevo.Image")));
             this.btnPnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPnuevo.Location = new System.Drawing.Point(382, 30);
+            this.btnPnuevo.Location = new System.Drawing.Point(418, 24);
             this.btnPnuevo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPnuevo.Name = "btnPnuevo";
             this.btnPnuevo.Size = new System.Drawing.Size(157, 40);
@@ -485,7 +486,7 @@
             this.btnPfiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPfiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnPfiltrar.Image")));
             this.btnPfiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPfiltrar.Location = new System.Drawing.Point(237, 30);
+            this.btnPfiltrar.Location = new System.Drawing.Point(259, 24);
             this.btnPfiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPfiltrar.Name = "btnPfiltrar";
             this.btnPfiltrar.Size = new System.Drawing.Size(117, 40);
@@ -497,16 +498,16 @@
             // 
             // txtPfiltro
             // 
-            this.txtPfiltro.Location = new System.Drawing.Point(62, 40);
+            this.txtPfiltro.Location = new System.Drawing.Point(51, 33);
             this.txtPfiltro.Name = "txtPfiltro";
-            this.txtPfiltro.Size = new System.Drawing.Size(136, 22);
+            this.txtPfiltro.Size = new System.Drawing.Size(203, 22);
             this.txtPfiltro.TabIndex = 0;
             this.txtPfiltro.TextChanged += new System.EventHandler(this.txtPfiltro_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 43);
+            this.label1.Location = new System.Drawing.Point(9, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 14);
             this.label1.TabIndex = 10;
@@ -516,7 +517,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 601);
+            this.ClientSize = new System.Drawing.Size(928, 557);
             this.Controls.Add(this.gbPermisionarios);
             this.Controls.Add(this.gbDatospermisionario);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

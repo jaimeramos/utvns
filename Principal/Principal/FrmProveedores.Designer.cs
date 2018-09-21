@@ -81,6 +81,7 @@
             this.gbDatosGrid.Size = new System.Drawing.Size(813, 359);
             this.gbDatosGrid.TabIndex = 13;
             this.gbDatosGrid.TabStop = false;
+            this.gbDatosGrid.Text = "Registro de Proveedores ";
             // 
             // dtgProveedor
             // 
@@ -88,12 +89,12 @@
             this.dtgProveedor.AllowUserToDeleteRows = false;
             this.dtgProveedor.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgProveedor.Location = new System.Drawing.Point(11, 82);
+            this.dtgProveedor.Location = new System.Drawing.Point(5, 59);
             this.dtgProveedor.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.dtgProveedor.Name = "dtgProveedor";
             this.dtgProveedor.ReadOnly = true;
             this.dtgProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgProveedor.Size = new System.Drawing.Size(781, 246);
+            this.dtgProveedor.Size = new System.Drawing.Size(803, 269);
             this.dtgProveedor.TabIndex = 6;
             this.dtgProveedor.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProveedor_RowEnter);
             // 
@@ -106,7 +107,7 @@
             this.btnPreditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPreditar.Image = ((System.Drawing.Image)(resources.GetObject("btnPreditar.Image")));
             this.btnPreditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPreditar.Location = new System.Drawing.Point(511, 30);
+            this.btnPreditar.Location = new System.Drawing.Point(555, 12);
             this.btnPreditar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPreditar.Name = "btnPreditar";
             this.btnPreditar.Size = new System.Drawing.Size(139, 40);
@@ -125,7 +126,7 @@
             this.btnPrregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrregresar.Image = ((System.Drawing.Image)(resources.GetObject("btnPrregresar.Image")));
             this.btnPrregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrregresar.Location = new System.Drawing.Point(693, 30);
+            this.btnPrregresar.Location = new System.Drawing.Point(705, 12);
             this.btnPrregresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPrregresar.Name = "btnPrregresar";
             this.btnPrregresar.Size = new System.Drawing.Size(98, 40);
@@ -155,7 +156,7 @@
             this.btnPrnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrnuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnPrnuevo.Image")));
             this.btnPrnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrnuevo.Location = new System.Drawing.Point(364, 30);
+            this.btnPrnuevo.Location = new System.Drawing.Point(408, 12);
             this.btnPrnuevo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPrnuevo.Name = "btnPrnuevo";
             this.btnPrnuevo.Size = new System.Drawing.Size(136, 40);
@@ -174,7 +175,7 @@
             this.btnPrfiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrfiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnPrfiltrar.Image")));
             this.btnPrfiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrfiltrar.Location = new System.Drawing.Point(237, 30);
+            this.btnPrfiltrar.Location = new System.Drawing.Point(237, 12);
             this.btnPrfiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPrfiltrar.Name = "btnPrfiltrar";
             this.btnPrfiltrar.Size = new System.Drawing.Size(117, 40);
@@ -186,16 +187,16 @@
             // 
             // txtPrfiltro
             // 
-            this.txtPrfiltro.Location = new System.Drawing.Point(62, 40);
+            this.txtPrfiltro.Location = new System.Drawing.Point(50, 21);
             this.txtPrfiltro.Name = "txtPrfiltro";
-            this.txtPrfiltro.Size = new System.Drawing.Size(136, 22);
+            this.txtPrfiltro.Size = new System.Drawing.Size(182, 22);
             this.txtPrfiltro.TabIndex = 0;
             this.txtPrfiltro.TextChanged += new System.EventHandler(this.txtPrfiltro_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 43);
+            this.label1.Location = new System.Drawing.Point(8, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 14);
             this.label1.TabIndex = 10;
@@ -222,24 +223,24 @@
             this.gbDatosForm.Controls.Add(this.label6);
             this.gbDatosForm.Controls.Add(this.label4);
             this.gbDatosForm.Controls.Add(this.label3);
-            this.gbDatosForm.Location = new System.Drawing.Point(12, 391);
+            this.gbDatosForm.Location = new System.Drawing.Point(12, 380);
             this.gbDatosForm.Name = "gbDatosForm";
-            this.gbDatosForm.Size = new System.Drawing.Size(813, 170);
+            this.gbDatosForm.Size = new System.Drawing.Size(813, 162);
             this.gbDatosForm.TabIndex = 12;
             this.gbDatosForm.TabStop = false;
             this.gbDatosForm.Text = "Datos del Proveedor";
             // 
             // txtPrapellido
             // 
-            this.txtPrapellido.Location = new System.Drawing.Point(111, 84);
+            this.txtPrapellido.Location = new System.Drawing.Point(111, 75);
             this.txtPrapellido.Name = "txtPrapellido";
             this.txtPrapellido.Size = new System.Drawing.Size(187, 22);
-            this.txtPrapellido.TabIndex = 120;
+            this.txtPrapellido.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(57, 88);
+            this.label5.Location = new System.Drawing.Point(53, 79);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 14);
             this.label5.TabIndex = 121;
@@ -249,7 +250,7 @@
             // 
             this.gbStatus.Controls.Add(this.rbInactivo);
             this.gbStatus.Controls.Add(this.rbActivo);
-            this.gbStatus.Location = new System.Drawing.Point(342, 115);
+            this.gbStatus.Location = new System.Drawing.Point(342, 106);
             this.gbStatus.Name = "gbStatus";
             this.gbStatus.Size = new System.Drawing.Size(242, 43);
             this.gbStatus.TabIndex = 119;
@@ -259,10 +260,10 @@
             // rbInactivo
             // 
             this.rbInactivo.AutoSize = true;
-            this.rbInactivo.Location = new System.Drawing.Point(154, 21);
+            this.rbInactivo.Location = new System.Drawing.Point(154, 16);
             this.rbInactivo.Name = "rbInactivo";
             this.rbInactivo.Size = new System.Drawing.Size(64, 18);
-            this.rbInactivo.TabIndex = 115;
+            this.rbInactivo.TabIndex = 9;
             this.rbInactivo.TabStop = true;
             this.rbInactivo.Text = "Inactivo";
             this.rbInactivo.UseVisualStyleBackColor = true;
@@ -270,25 +271,25 @@
             // rbActivo
             // 
             this.rbActivo.AutoSize = true;
-            this.rbActivo.Location = new System.Drawing.Point(50, 21);
+            this.rbActivo.Location = new System.Drawing.Point(50, 16);
             this.rbActivo.Name = "rbActivo";
             this.rbActivo.Size = new System.Drawing.Size(56, 18);
-            this.rbActivo.TabIndex = 114;
+            this.rbActivo.TabIndex = 8;
             this.rbActivo.TabStop = true;
             this.rbActivo.Text = "Activo";
             this.rbActivo.UseVisualStyleBackColor = true;
             // 
             // txtPrdireccion
             // 
-            this.txtPrdireccion.Location = new System.Drawing.Point(111, 112);
+            this.txtPrdireccion.Location = new System.Drawing.Point(111, 103);
             this.txtPrdireccion.Name = "txtPrdireccion";
             this.txtPrdireccion.Size = new System.Drawing.Size(187, 22);
-            this.txtPrdireccion.TabIndex = 2;
+            this.txtPrdireccion.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 115);
+            this.label2.Location = new System.Drawing.Point(53, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 14);
             this.label2.TabIndex = 99;
@@ -303,11 +304,11 @@
             this.btnPrcancelar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrcancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnPrcancelar.Image")));
             this.btnPrcancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrcancelar.Location = new System.Drawing.Point(625, 85);
+            this.btnPrcancelar.Location = new System.Drawing.Point(642, 89);
             this.btnPrcancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPrcancelar.Name = "btnPrcancelar";
             this.btnPrcancelar.Size = new System.Drawing.Size(115, 40);
-            this.btnPrcancelar.TabIndex = 15;
+            this.btnPrcancelar.TabIndex = 11;
             this.btnPrcancelar.Text = "Cancelar";
             this.btnPrcancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrcancelar.UseVisualStyleBackColor = true;
@@ -323,11 +324,11 @@
             this.btnPrguardar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnPrguardar.Image")));
             this.btnPrguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrguardar.Location = new System.Drawing.Point(625, 30);
+            this.btnPrguardar.Location = new System.Drawing.Point(642, 34);
             this.btnPrguardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPrguardar.Name = "btnPrguardar";
             this.btnPrguardar.Size = new System.Drawing.Size(115, 40);
-            this.btnPrguardar.TabIndex = 14;
+            this.btnPrguardar.TabIndex = 10;
             this.btnPrguardar.Text = "Guardar";
             this.btnPrguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrguardar.UseVisualStyleBackColor = true;
@@ -335,15 +336,15 @@
             // 
             // txtPrnumero
             // 
-            this.txtPrnumero.Location = new System.Drawing.Point(111, 30);
+            this.txtPrnumero.Location = new System.Drawing.Point(111, 21);
             this.txtPrnumero.Name = "txtPrnumero";
-            this.txtPrnumero.Size = new System.Drawing.Size(87, 22);
+            this.txtPrnumero.Size = new System.Drawing.Size(187, 22);
             this.txtPrnumero.TabIndex = 0;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(57, 33);
+            this.label15.Location = new System.Drawing.Point(53, 24);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(50, 14);
             this.label15.TabIndex = 30;
@@ -351,7 +352,7 @@
             // 
             // txtPremail
             // 
-            this.txtPremail.Location = new System.Drawing.Point(408, 87);
+            this.txtPremail.Location = new System.Drawing.Point(408, 78);
             this.txtPremail.Name = "txtPremail";
             this.txtPremail.Size = new System.Drawing.Size(156, 22);
             this.txtPremail.TabIndex = 7;
@@ -359,7 +360,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(365, 90);
+            this.label8.Location = new System.Drawing.Point(342, 81);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 14);
             this.label8.TabIndex = 11;
@@ -367,28 +368,28 @@
             // 
             // txtPrcelular
             // 
-            this.txtPrcelular.Location = new System.Drawing.Point(408, 57);
+            this.txtPrcelular.Location = new System.Drawing.Point(408, 48);
             this.txtPrcelular.Name = "txtPrcelular";
-            this.txtPrcelular.Size = new System.Drawing.Size(103, 22);
+            this.txtPrcelular.Size = new System.Drawing.Size(156, 22);
             this.txtPrcelular.TabIndex = 6;
             // 
             // txtPrtelefono
             // 
-            this.txtPrtelefono.Location = new System.Drawing.Point(408, 27);
+            this.txtPrtelefono.Location = new System.Drawing.Point(408, 18);
             this.txtPrtelefono.Name = "txtPrtelefono";
-            this.txtPrtelefono.Size = new System.Drawing.Size(105, 22);
+            this.txtPrtelefono.Size = new System.Drawing.Size(156, 22);
             this.txtPrtelefono.TabIndex = 5;
             // 
             // txtPrrfc
             // 
-            this.txtPrrfc.Location = new System.Drawing.Point(111, 140);
+            this.txtPrrfc.Location = new System.Drawing.Point(111, 131);
             this.txtPrrfc.Name = "txtPrrfc";
-            this.txtPrrfc.Size = new System.Drawing.Size(141, 22);
-            this.txtPrrfc.TabIndex = 3;
+            this.txtPrrfc.Size = new System.Drawing.Size(187, 22);
+            this.txtPrrfc.TabIndex = 4;
             // 
             // txtPrnombre
             // 
-            this.txtPrnombre.Location = new System.Drawing.Point(111, 57);
+            this.txtPrnombre.Location = new System.Drawing.Point(111, 48);
             this.txtPrnombre.Name = "txtPrnombre";
             this.txtPrnombre.Size = new System.Drawing.Size(187, 22);
             this.txtPrnombre.TabIndex = 1;
@@ -396,7 +397,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(339, 60);
+            this.label7.Location = new System.Drawing.Point(342, 51);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 14);
             this.label7.TabIndex = 10;
@@ -405,7 +406,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(351, 30);
+            this.label6.Location = new System.Drawing.Point(342, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 14);
             this.label6.TabIndex = 9;
@@ -414,7 +415,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(76, 143);
+            this.label4.Location = new System.Drawing.Point(53, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 14);
             this.label4.TabIndex = 7;
@@ -423,7 +424,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 61);
+            this.label3.Location = new System.Drawing.Point(53, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 14);
             this.label3.TabIndex = 6;
@@ -433,7 +434,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 574);
+            this.ClientSize = new System.Drawing.Size(837, 548);
             this.Controls.Add(this.gbDatosGrid);
             this.Controls.Add(this.gbDatosForm);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

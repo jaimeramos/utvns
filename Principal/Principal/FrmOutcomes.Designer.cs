@@ -87,14 +87,14 @@
             this.gbDatosForm.Controls.Add(this.label3);
             this.gbDatosForm.Location = new System.Drawing.Point(23, 377);
             this.gbDatosForm.Name = "gbDatosForm";
-            this.gbDatosForm.Size = new System.Drawing.Size(885, 190);
+            this.gbDatosForm.Size = new System.Drawing.Size(885, 179);
             this.gbDatosForm.TabIndex = 6;
             this.gbDatosForm.TabStop = false;
-            this.gbDatosForm.Text = "Datos del egreso";
+            this.gbDatosForm.Text = "Datos del Egreso";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(284, 147);
+            this.button1.Location = new System.Drawing.Point(458, 147);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 23);
             this.button1.TabIndex = 119;
@@ -107,8 +107,8 @@
             this.cmbBussinesline.FormattingEnabled = true;
             this.cmbBussinesline.Location = new System.Drawing.Point(122, 147);
             this.cmbBussinesline.Name = "cmbBussinesline";
-            this.cmbBussinesline.Size = new System.Drawing.Size(156, 22);
-            this.cmbBussinesline.TabIndex = 117;
+            this.cmbBussinesline.Size = new System.Drawing.Size(301, 22);
+            this.cmbBussinesline.TabIndex = 4;
             // 
             // label4
             // 
@@ -123,7 +123,7 @@
             // 
             this.gbStatus.Controls.Add(this.rbInactivo);
             this.gbStatus.Controls.Add(this.rbActivo);
-            this.gbStatus.Location = new System.Drawing.Point(421, 95);
+            this.gbStatus.Location = new System.Drawing.Point(458, 95);
             this.gbStatus.Name = "gbStatus";
             this.gbStatus.Size = new System.Drawing.Size(225, 49);
             this.gbStatus.TabIndex = 116;
@@ -133,10 +133,10 @@
             // rbInactivo
             // 
             this.rbInactivo.AutoSize = true;
-            this.rbInactivo.Location = new System.Drawing.Point(125, 21);
+            this.rbInactivo.Location = new System.Drawing.Point(134, 21);
             this.rbInactivo.Name = "rbInactivo";
             this.rbInactivo.Size = new System.Drawing.Size(64, 18);
-            this.rbInactivo.TabIndex = 115;
+            this.rbInactivo.TabIndex = 8;
             this.rbInactivo.TabStop = true;
             this.rbInactivo.Text = "Inactivo";
             this.rbInactivo.UseVisualStyleBackColor = true;
@@ -147,7 +147,7 @@
             this.rbActivo.Location = new System.Drawing.Point(50, 21);
             this.rbActivo.Name = "rbActivo";
             this.rbActivo.Size = new System.Drawing.Size(56, 18);
-            this.rbActivo.TabIndex = 114;
+            this.rbActivo.TabIndex = 7;
             this.rbActivo.TabStop = true;
             this.rbActivo.Text = "Activo";
             this.rbActivo.UseVisualStyleBackColor = true;
@@ -155,15 +155,15 @@
             // dtpFecha
             // 
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFecha.Location = new System.Drawing.Point(490, 61);
+            this.dtpFecha.Location = new System.Drawing.Point(527, 61);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(156, 22);
-            this.dtpFecha.TabIndex = 10;
+            this.dtpFecha.TabIndex = 6;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(418, 63);
+            this.label12.Location = new System.Drawing.Point(455, 63);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(39, 14);
             this.label12.TabIndex = 102;
@@ -173,7 +173,7 @@
             // 
             this.txtReferencia.Location = new System.Drawing.Point(122, 89);
             this.txtReferencia.Name = "txtReferencia";
-            this.txtReferencia.Size = new System.Drawing.Size(156, 22);
+            this.txtReferencia.Size = new System.Drawing.Size(301, 22);
             this.txtReferencia.TabIndex = 2;
             // 
             // label2
@@ -192,12 +192,13 @@
             this.btnPcancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPcancelar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPcancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnPcancelar.Image")));
             this.btnPcancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPcancelar.Location = new System.Drawing.Point(741, 104);
             this.btnPcancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPcancelar.Name = "btnPcancelar";
             this.btnPcancelar.Size = new System.Drawing.Size(115, 40);
-            this.btnPcancelar.TabIndex = 15;
+            this.btnPcancelar.TabIndex = 10;
             this.btnPcancelar.Text = "Cancelar";
             this.btnPcancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPcancelar.UseVisualStyleBackColor = true;
@@ -211,12 +212,13 @@
             this.btnPguardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPguardar.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnPguardar.Image")));
             this.btnPguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPguardar.Location = new System.Drawing.Point(741, 37);
             this.btnPguardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPguardar.Name = "btnPguardar";
             this.btnPguardar.Size = new System.Drawing.Size(115, 40);
-            this.btnPguardar.TabIndex = 14;
+            this.btnPguardar.TabIndex = 9;
             this.btnPguardar.Text = "Guardar";
             this.btnPguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPguardar.UseVisualStyleBackColor = true;
@@ -228,7 +230,7 @@
             this.cmbTipo.Location = new System.Drawing.Point(122, 118);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(156, 22);
-            this.cmbTipo.TabIndex = 8;
+            this.cmbTipo.TabIndex = 3;
             // 
             // txtFolio
             // 
@@ -257,23 +259,23 @@
             // 
             // txtMonto
             // 
-            this.txtMonto.Location = new System.Drawing.Point(490, 30);
+            this.txtMonto.Location = new System.Drawing.Point(527, 30);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(156, 22);
-            this.txtMonto.TabIndex = 4;
+            this.txtMonto.TabIndex = 5;
             this.txtMonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMonto_KeyPress);
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(122, 60);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(156, 22);
+            this.txtDescripcion.Size = new System.Drawing.Size(301, 22);
             this.txtDescripcion.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(418, 33);
+            this.label5.Location = new System.Drawing.Point(455, 33);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 14);
             this.label5.TabIndex = 8;
@@ -310,12 +312,12 @@
             this.dataGrid.AllowUserToDeleteRows = false;
             this.dataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(11, 82);
+            this.dataGrid.Location = new System.Drawing.Point(5, 66);
             this.dataGrid.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ReadOnly = true;
             this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid.Size = new System.Drawing.Size(839, 246);
+            this.dataGrid.Size = new System.Drawing.Size(875, 262);
             this.dataGrid.TabIndex = 6;
             this.dataGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_RowEnter_1);
             // 
@@ -326,14 +328,16 @@
             this.btnPeditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnPeditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPeditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPeditar.Image = ((System.Drawing.Image)(resources.GetObject("btnPeditar.Image")));
             this.btnPeditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPeditar.Location = new System.Drawing.Point(567, 30);
+            this.btnPeditar.Location = new System.Drawing.Point(644, 19);
             this.btnPeditar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPeditar.Name = "btnPeditar";
-            this.btnPeditar.Size = new System.Drawing.Size(152, 40);
+            this.btnPeditar.Size = new System.Drawing.Size(109, 40);
             this.btnPeditar.TabIndex = 3;
-            this.btnPeditar.Text = "Editar egreso";
+            this.btnPeditar.Text = "Editar Egreso";
             this.btnPeditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPeditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPeditar.UseVisualStyleBackColor = true;
             this.btnPeditar.Click += new System.EventHandler(this.btnPeditar_Click);
             // 
@@ -344,8 +348,9 @@
             this.btnPregresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnPregresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPregresar.Image = ((System.Drawing.Image)(resources.GetObject("btnPregresar.Image")));
             this.btnPregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPregresar.Location = new System.Drawing.Point(742, 30);
+            this.btnPregresar.Location = new System.Drawing.Point(777, 19);
             this.btnPregresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPregresar.Name = "btnPregresar";
             this.btnPregresar.Size = new System.Drawing.Size(98, 40);
@@ -373,14 +378,16 @@
             this.btnPnuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnPnuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPnuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnPnuevo.Image")));
             this.btnPnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPnuevo.Location = new System.Drawing.Point(382, 30);
+            this.btnPnuevo.Location = new System.Drawing.Point(504, 19);
             this.btnPnuevo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPnuevo.Name = "btnPnuevo";
-            this.btnPnuevo.Size = new System.Drawing.Size(157, 40);
+            this.btnPnuevo.Size = new System.Drawing.Size(116, 40);
             this.btnPnuevo.TabIndex = 2;
-            this.btnPnuevo.Text = "Nuevo egreso";
+            this.btnPnuevo.Text = "Nuevo Egreso";
             this.btnPnuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPnuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPnuevo.UseVisualStyleBackColor = true;
             this.btnPnuevo.Click += new System.EventHandler(this.btnPnuevo_Click);
             // 
@@ -391,8 +398,9 @@
             this.btnPfiltrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnPfiltrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPfiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPfiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnPfiltrar.Image")));
             this.btnPfiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPfiltrar.Location = new System.Drawing.Point(237, 30);
+            this.btnPfiltrar.Location = new System.Drawing.Point(260, 19);
             this.btnPfiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPfiltrar.Name = "btnPfiltrar";
             this.btnPfiltrar.Size = new System.Drawing.Size(117, 40);
@@ -404,16 +412,16 @@
             // 
             // txtPfiltro
             // 
-            this.txtPfiltro.Location = new System.Drawing.Point(62, 40);
+            this.txtPfiltro.Location = new System.Drawing.Point(62, 29);
             this.txtPfiltro.Name = "txtPfiltro";
-            this.txtPfiltro.Size = new System.Drawing.Size(136, 22);
+            this.txtPfiltro.Size = new System.Drawing.Size(193, 22);
             this.txtPfiltro.TabIndex = 0;
             this.txtPfiltro.TextChanged += new System.EventHandler(this.txtPfiltro_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 43);
+            this.label1.Location = new System.Drawing.Point(20, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 14);
             this.label1.TabIndex = 10;
@@ -423,7 +431,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 601);
+            this.ClientSize = new System.Drawing.Size(928, 565);
             this.Controls.Add(this.gbDatosGrid);
             this.Controls.Add(this.gbDatosForm);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

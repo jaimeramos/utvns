@@ -54,7 +54,7 @@ namespace Principal
                 Dictionary<String, String> datasource = new Dictionary<string, string>();
                 foreach (Vehiculo p in x)
                 {
-                    datasource.Add(p.Id, p.Number);
+                    datasource.Add(p.Id, p.Number+" "+p.Brand+" "+p.Model + " " +p.Year);
                 }
                 cmbVehicle.DataSource = new BindingSource(datasource, null);
                 cmbVehicle.DisplayMember = "Value";

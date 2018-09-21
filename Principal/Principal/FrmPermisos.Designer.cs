@@ -79,7 +79,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 25);
+            this.label1.Location = new System.Drawing.Point(6, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 15);
@@ -95,7 +95,7 @@
             this.btnPeeditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPeeditar.Image = ((System.Drawing.Image)(resources.GetObject("btnPeeditar.Image")));
             this.btnPeeditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPeeditar.Location = new System.Drawing.Point(507, 14);
+            this.btnPeeditar.Location = new System.Drawing.Point(527, 12);
             this.btnPeeditar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPeeditar.Name = "btnPeeditar";
             this.btnPeeditar.Size = new System.Drawing.Size(136, 43);
@@ -111,12 +111,12 @@
             this.dtgPermiso.AllowUserToDeleteRows = false;
             this.dtgPermiso.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgPermiso.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgPermiso.Location = new System.Drawing.Point(23, 72);
+            this.dtgPermiso.Location = new System.Drawing.Point(5, 62);
             this.dtgPermiso.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.dtgPermiso.Name = "dtgPermiso";
             this.dtgPermiso.ReadOnly = true;
             this.dtgPermiso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgPermiso.Size = new System.Drawing.Size(730, 267);
+            this.dtgPermiso.Size = new System.Drawing.Size(771, 277);
             this.dtgPermiso.TabIndex = 25;
             this.dtgPermiso.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPermiso_RowEnter);
             // 
@@ -129,7 +129,7 @@
             this.btnPeregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPeregresar.Image = ((System.Drawing.Image)(resources.GetObject("btnPeregresar.Image")));
             this.btnPeregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPeregresar.Location = new System.Drawing.Point(655, 14);
+            this.btnPeregresar.Location = new System.Drawing.Point(675, 12);
             this.btnPeregresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPeregresar.Name = "btnPeregresar";
             this.btnPeregresar.Size = new System.Drawing.Size(98, 43);
@@ -141,10 +141,10 @@
             // 
             // txtPefiltro
             // 
-            this.txtPefiltro.Location = new System.Drawing.Point(72, 22);
+            this.txtPefiltro.Location = new System.Drawing.Point(50, 22);
             this.txtPefiltro.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtPefiltro.Name = "txtPefiltro";
-            this.txtPefiltro.Size = new System.Drawing.Size(148, 23);
+            this.txtPefiltro.Size = new System.Drawing.Size(178, 23);
             this.txtPefiltro.TabIndex = 20;
             this.txtPefiltro.TextChanged += new System.EventHandler(this.txtPefiltro_TextChanged);
             // 
@@ -157,7 +157,7 @@
             this.btnPenuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPenuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnPenuevo.Image")));
             this.btnPenuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPenuevo.Location = new System.Drawing.Point(361, 14);
+            this.btnPenuevo.Location = new System.Drawing.Point(381, 12);
             this.btnPenuevo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPenuevo.Name = "btnPenuevo";
             this.btnPenuevo.Size = new System.Drawing.Size(134, 43);
@@ -176,7 +176,7 @@
             this.btnPefiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPefiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnPefiltrar.Image")));
             this.btnPefiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPefiltrar.Location = new System.Drawing.Point(232, 14);
+            this.btnPefiltrar.Location = new System.Drawing.Point(232, 12);
             this.btnPefiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPefiltrar.Name = "btnPefiltrar";
             this.btnPefiltrar.Size = new System.Drawing.Size(117, 43);
@@ -202,6 +202,7 @@
             this.gbPermisos.Size = new System.Drawing.Size(781, 370);
             this.gbPermisos.TabIndex = 27;
             this.gbPermisos.TabStop = false;
+            this.gbPermisos.Text = "Registro de Permisos ";
             // 
             // gbdatospermisos
             // 
@@ -223,17 +224,17 @@
             this.gbdatospermisos.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbdatospermisos.Location = new System.Drawing.Point(12, 388);
             this.gbdatospermisos.Name = "gbdatospermisos";
-            this.gbdatospermisos.Size = new System.Drawing.Size(781, 186);
+            this.gbdatospermisos.Size = new System.Drawing.Size(781, 156);
             this.gbdatospermisos.TabIndex = 28;
             this.gbdatospermisos.TabStop = false;
-            this.gbdatospermisos.Text = "Datos de Permisos";
+            this.gbdatospermisos.Text = "Datos del Permiso";
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(535, 32);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 117;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -244,7 +245,7 @@
             this.cmbPermitholder.Location = new System.Drawing.Point(341, 33);
             this.cmbPermitholder.Name = "cmbPermitholder";
             this.cmbPermitholder.Size = new System.Drawing.Size(184, 23);
-            this.cmbPermitholder.TabIndex = 116;
+            this.cmbPermitholder.TabIndex = 3;
             this.cmbPermitholder.SelectedIndexChanged += new System.EventHandler(this.cmbPermitholder_SelectedIndexChanged);
             // 
             // gbStatus
@@ -264,7 +265,7 @@
             this.rbInactivo.Location = new System.Drawing.Point(63, 14);
             this.rbInactivo.Name = "rbInactivo";
             this.rbInactivo.Size = new System.Drawing.Size(67, 19);
-            this.rbInactivo.TabIndex = 115;
+            this.rbInactivo.TabIndex = 7;
             this.rbInactivo.TabStop = true;
             this.rbInactivo.Text = "Inactivo";
             this.rbInactivo.UseVisualStyleBackColor = true;
@@ -275,7 +276,7 @@
             this.rbActivo.Location = new System.Drawing.Point(6, 15);
             this.rbActivo.Name = "rbActivo";
             this.rbActivo.Size = new System.Drawing.Size(59, 19);
-            this.rbActivo.TabIndex = 114;
+            this.rbActivo.TabIndex = 6;
             this.rbActivo.TabStop = true;
             this.rbActivo.Text = "Activo";
             this.rbActivo.UseVisualStyleBackColor = true;
@@ -293,7 +294,7 @@
             this.btnPecancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPecancelar.Name = "btnPecancelar";
             this.btnPecancelar.Size = new System.Drawing.Size(115, 40);
-            this.btnPecancelar.TabIndex = 111;
+            this.btnPecancelar.TabIndex = 9;
             this.btnPecancelar.Text = "Cancelar";
             this.btnPecancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPecancelar.UseVisualStyleBackColor = true;
@@ -313,7 +314,7 @@
             this.btnPeguardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnPeguardar.Name = "btnPeguardar";
             this.btnPeguardar.Size = new System.Drawing.Size(115, 40);
-            this.btnPeguardar.TabIndex = 110;
+            this.btnPeguardar.TabIndex = 8;
             this.btnPeguardar.Text = "Guardar";
             this.btnPeguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPeguardar.UseVisualStyleBackColor = true;
@@ -342,7 +343,7 @@
             this.dtpPevencimiento.Location = new System.Drawing.Point(341, 71);
             this.dtpPevencimiento.Name = "dtpPevencimiento";
             this.dtpPevencimiento.Size = new System.Drawing.Size(146, 23);
-            this.dtpPevencimiento.TabIndex = 103;
+            this.dtpPevencimiento.TabIndex = 5;
             // 
             // label12
             // 
@@ -359,14 +360,14 @@
             this.cmbPetipo.Location = new System.Drawing.Point(92, 71);
             this.cmbPetipo.Name = "cmbPetipo";
             this.cmbPetipo.Size = new System.Drawing.Size(114, 23);
-            this.cmbPetipo.TabIndex = 34;
+            this.cmbPetipo.TabIndex = 1;
             // 
             // txtPenumero
             // 
             this.txtPenumero.Location = new System.Drawing.Point(92, 33);
             this.txtPenumero.Name = "txtPenumero";
             this.txtPenumero.Size = new System.Drawing.Size(114, 23);
-            this.txtPenumero.TabIndex = 31;
+            this.txtPenumero.TabIndex = 0;
             // 
             // label15
             // 
@@ -391,8 +392,8 @@
             this.txtPedescripcion.Location = new System.Drawing.Point(92, 109);
             this.txtPedescripcion.Multiline = true;
             this.txtPedescripcion.Name = "txtPedescripcion";
-            this.txtPedescripcion.Size = new System.Drawing.Size(543, 62);
-            this.txtPedescripcion.TabIndex = 32;
+            this.txtPedescripcion.Size = new System.Drawing.Size(543, 37);
+            this.txtPedescripcion.TabIndex = 2;
             // 
             // label4
             // 
@@ -407,7 +408,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 586);
+            this.ClientSize = new System.Drawing.Size(811, 553);
             this.Controls.Add(this.gbdatospermisos);
             this.Controls.Add(this.gbPermisos);
             this.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

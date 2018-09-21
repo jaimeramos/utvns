@@ -273,6 +273,13 @@ namespace Principal
         {
             Application.Exit();
         }
+
+        private void btnMingresos_Click(object sender, EventArgs e)
+        {
+            abrirfrmMenu(new FrmIngresos());
+            pnlMenuvertical.Enabled = false;
+            Barratitulo.Enabled = false;
+        }
     }
   }
 

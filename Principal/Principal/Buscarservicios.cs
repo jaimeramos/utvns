@@ -75,10 +75,10 @@ namespace Principal
         {
             
         }
-
+        int rowSelected = 0;
         private void btnVeditar_Click(object sender, EventArgs e)
         {
-
+            seleccionar(rowSelected);
         }
 
         private void txtPefiltro_TextChanged(object sender, EventArgs e)
@@ -98,16 +98,24 @@ namespace Principal
 
         private void dataGrid_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            seleccionar(e.RowIndex);
+        }
+
+        private void dataGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            rowSelected = e.RowIndex;
+        }
+        private void seleccionar(int i) {
             if (dataGrid.CurrentRow == null)
             {
                 return;
             }
-            int selectedrowindex = e.RowIndex;
+            int selectedrowindex = i;
             DataGridViewRow selectedRow = dataGrid.Rows[selectedrowindex];
             Workshopsvc workshopsvc = new Workshopsvc();
-            workshopsvc.Id          = Convert.ToString(selectedRow.Cells["_id"].Value); ;
+            workshopsvc.Id = Convert.ToString(selectedRow.Cells["_id"].Value); ;
             workshopsvc.Description = Convert.ToString(selectedRow.Cells["description"].Value);
-            workshopsvc.Cost        = Convert.ToString(selectedRow.Cells["cost"].Value);
+            workshopsvc.Cost = Convert.ToString(selectedRow.Cells["cost"].Value);
             _caller.SelectedWorkshopsvc((Workshopsvc)workshopsvc);
             this.DialogResult = DialogResult.OK;
             this.Close();

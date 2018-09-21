@@ -86,11 +86,24 @@ namespace Principal
 
         private void dataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            seleccionar(e.RowIndex);
+        }
+        int rowSelected = 0;
+        private void btnVeditar_Click(object sender, EventArgs e)
+        {
+            seleccionar(rowSelected);
+        }
+
+        private void dataGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            rowSelected = e.RowIndex;
+        }
+        private void seleccionar(int i) {
             if (dataGrid.CurrentRow == null)
             {
                 return;
             }
-            int selectedrowindex = e.RowIndex;
+            int selectedrowindex = i;
             DataGridViewRow selectedRow = dataGrid.Rows[selectedrowindex];
             string a = Convert.ToString(selectedRow.Cells["_id"].Value);
             Proveedor proveedor = new Proveedor();

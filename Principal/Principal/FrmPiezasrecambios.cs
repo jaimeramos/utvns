@@ -152,7 +152,7 @@ namespace Principal
 
         public void loadDataFromForm()
         {
-            //sparepart.Number = txtPrnumero.Text;
+            sparepart.Number = txtPrnumero.Text;
             sparepart.Description = txtPrdescripcion.Text;
             sparepart.Cost = txtPrcosto.Text;
             sparepart.Price = txtPrprecio.Text;

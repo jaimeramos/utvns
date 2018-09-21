@@ -106,24 +106,24 @@
             this.gbDatosForm.Controls.Add(this.label15);
             this.gbDatosForm.Controls.Add(this.label9);
             this.gbDatosForm.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosForm.Location = new System.Drawing.Point(30, 425);
+            this.gbDatosForm.Location = new System.Drawing.Point(16, 412);
             this.gbDatosForm.Name = "gbDatosForm";
             this.gbDatosForm.Size = new System.Drawing.Size(969, 204);
             this.gbDatosForm.TabIndex = 32;
             this.gbDatosForm.TabStop = false;
-            this.gbDatosForm.Text = "Datos del servicio ejecutivos";
+            this.gbDatosForm.Text = "Datos del servicio ejecutivo";
             // 
             // cmbVehicle
             // 
             this.cmbVehicle.FormattingEnabled = true;
-            this.cmbVehicle.Location = new System.Drawing.Point(389, 129);
+            this.cmbVehicle.Location = new System.Drawing.Point(375, 161);
             this.cmbVehicle.Name = "cmbVehicle";
-            this.cmbVehicle.Size = new System.Drawing.Size(139, 23);
+            this.cmbVehicle.Size = new System.Drawing.Size(164, 23);
             this.cmbVehicle.TabIndex = 8;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(552, 128);
+            this.button1.Location = new System.Drawing.Point(552, 161);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 23);
             this.button1.TabIndex = 12;
@@ -135,7 +135,7 @@
             // 
             this.gbStatus.Controls.Add(this.rbInactivo);
             this.gbStatus.Controls.Add(this.rbActivo);
-            this.gbStatus.Location = new System.Drawing.Point(552, 154);
+            this.gbStatus.Location = new System.Drawing.Point(552, 103);
             this.gbStatus.Name = "gbStatus";
             this.gbStatus.Size = new System.Drawing.Size(235, 44);
             this.gbStatus.TabIndex = 137;
@@ -167,7 +167,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 169);
+            this.label4.Location = new System.Drawing.Point(6, 165);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 15);
             this.label4.TabIndex = 136;
@@ -176,7 +176,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(278, 137);
+            this.label11.Location = new System.Drawing.Point(294, 165);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(57, 15);
             this.label11.TabIndex = 134;
@@ -184,15 +184,15 @@
             // 
             // txtEjmonto
             // 
-            this.txtEjmonto.Location = new System.Drawing.Point(389, 97);
+            this.txtEjmonto.Location = new System.Drawing.Point(375, 97);
             this.txtEjmonto.Name = "txtEjmonto";
-            this.txtEjmonto.Size = new System.Drawing.Size(139, 23);
+            this.txtEjmonto.Size = new System.Drawing.Size(164, 23);
             this.txtEjmonto.TabIndex = 7;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(278, 105);
+            this.label12.Location = new System.Drawing.Point(294, 101);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(48, 15);
             this.label12.TabIndex = 132;
@@ -234,32 +234,32 @@
             // 
             // txtEjnumcontrato
             // 
-            this.txtEjnumcontrato.Location = new System.Drawing.Point(389, 65);
+            this.txtEjnumcontrato.Location = new System.Drawing.Point(375, 65);
             this.txtEjnumcontrato.Name = "txtEjnumcontrato";
-            this.txtEjnumcontrato.Size = new System.Drawing.Size(139, 23);
+            this.txtEjnumcontrato.Size = new System.Drawing.Size(164, 23);
             this.txtEjnumcontrato.TabIndex = 6;
             // 
             // dtpEjfvigencia
             // 
             this.dtpEjfvigencia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEjfvigencia.Location = new System.Drawing.Point(389, 161);
+            this.dtpEjfvigencia.Location = new System.Drawing.Point(375, 131);
             this.dtpEjfvigencia.Name = "dtpEjfvigencia";
-            this.dtpEjfvigencia.Size = new System.Drawing.Size(139, 23);
+            this.dtpEjfvigencia.Size = new System.Drawing.Size(164, 23);
             this.dtpEjfvigencia.TabIndex = 9;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(278, 169);
+            this.label7.Location = new System.Drawing.Point(294, 135);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 15);
+            this.label7.Size = new System.Drawing.Size(56, 15);
             this.label7.TabIndex = 124;
-            this.label7.Text = "Fecha de Vigencia:";
+            this.label7.Text = "Vigencia:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(278, 73);
+            this.label6.Location = new System.Drawing.Point(294, 69);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 15);
             this.label6.TabIndex = 122;
@@ -267,15 +267,15 @@
             // 
             // txtEjmarca
             // 
-            this.txtEjmarca.Location = new System.Drawing.Point(389, 33);
+            this.txtEjmarca.Location = new System.Drawing.Point(375, 33);
             this.txtEjmarca.Name = "txtEjmarca";
-            this.txtEjmarca.Size = new System.Drawing.Size(139, 23);
+            this.txtEjmarca.Size = new System.Drawing.Size(164, 23);
             this.txtEjmarca.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(278, 41);
+            this.label5.Location = new System.Drawing.Point(294, 37);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 15);
             this.label5.TabIndex = 120;
@@ -285,20 +285,20 @@
             // 
             this.txtEjmodelo.Location = new System.Drawing.Point(119, 161);
             this.txtEjmodelo.Name = "txtEjmodelo";
-            this.txtEjmodelo.Size = new System.Drawing.Size(139, 23);
+            this.txtEjmodelo.Size = new System.Drawing.Size(169, 23);
             this.txtEjmodelo.TabIndex = 4;
             // 
             // txtEjsim
             // 
-            this.txtEjsim.Location = new System.Drawing.Point(119, 129);
+            this.txtEjsim.Location = new System.Drawing.Point(119, 131);
             this.txtEjsim.Name = "txtEjsim";
-            this.txtEjsim.Size = new System.Drawing.Size(139, 23);
+            this.txtEjsim.Size = new System.Drawing.Size(169, 23);
             this.txtEjsim.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 137);
+            this.label3.Location = new System.Drawing.Point(6, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 15);
             this.label3.TabIndex = 116;
@@ -308,13 +308,13 @@
             // 
             this.txtEjimei.Location = new System.Drawing.Point(119, 97);
             this.txtEjimei.Name = "txtEjimei";
-            this.txtEjimei.Size = new System.Drawing.Size(139, 23);
+            this.txtEjimei.Size = new System.Drawing.Size(169, 23);
             this.txtEjimei.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 105);
+            this.label2.Location = new System.Drawing.Point(6, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 15);
             this.label2.TabIndex = 114;
@@ -324,7 +324,7 @@
             // 
             this.txtEjnumlinea.Location = new System.Drawing.Point(119, 65);
             this.txtEjnumlinea.Name = "txtEjnumlinea";
-            this.txtEjnumlinea.Size = new System.Drawing.Size(139, 23);
+            this.txtEjnumlinea.Size = new System.Drawing.Size(169, 23);
             this.txtEjnumlinea.TabIndex = 1;
             // 
             // btnEjcancelar
@@ -370,13 +370,13 @@
             // 
             this.txtEjnumero.Location = new System.Drawing.Point(119, 33);
             this.txtEjnumero.Name = "txtEjnumero";
-            this.txtEjnumero.Size = new System.Drawing.Size(139, 23);
+            this.txtEjnumero.Size = new System.Drawing.Size(169, 23);
             this.txtEjnumero.TabIndex = 0;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 41);
+            this.label15.Location = new System.Drawing.Point(6, 37);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(57, 15);
             this.label15.TabIndex = 36;
@@ -385,7 +385,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 73);
+            this.label9.Location = new System.Drawing.Point(6, 69);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(106, 15);
             this.label9.TabIndex = 35;
@@ -402,18 +402,19 @@
             this.gbDatosGrid.Controls.Add(this.btnEjregresar);
             this.gbDatosGrid.Controls.Add(this.dtgEjecutivo);
             this.gbDatosGrid.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosGrid.Location = new System.Drawing.Point(30, 22);
+            this.gbDatosGrid.Location = new System.Drawing.Point(16, 9);
             this.gbDatosGrid.Name = "gbDatosGrid";
             this.gbDatosGrid.Size = new System.Drawing.Size(969, 397);
             this.gbDatosGrid.TabIndex = 31;
             this.gbDatosGrid.TabStop = false;
+            this.gbDatosGrid.Text = "Registro de y asignación de líneas a taxis Ejecutivos ";
             // 
             // txtEjfiltro
             // 
             this.txtEjfiltro.Location = new System.Drawing.Point(72, 22);
             this.txtEjfiltro.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtEjfiltro.Name = "txtEjfiltro";
-            this.txtEjfiltro.Size = new System.Drawing.Size(148, 23);
+            this.txtEjfiltro.Size = new System.Drawing.Size(256, 23);
             this.txtEjfiltro.TabIndex = 20;
             this.txtEjfiltro.TextChanged += new System.EventHandler(this.txtEjfiltro_TextChanged);
             // 
@@ -440,7 +441,7 @@
             this.btnEjfiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEjfiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEjfiltrar.Image")));
             this.btnEjfiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEjfiltrar.Location = new System.Drawing.Point(232, 14);
+            this.btnEjfiltrar.Location = new System.Drawing.Point(332, 14);
             this.btnEjfiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnEjfiltrar.Name = "btnEjfiltrar";
             this.btnEjfiltrar.Size = new System.Drawing.Size(117, 43);
@@ -469,7 +470,7 @@
             this.btnEjnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEjnuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnEjnuevo.Image")));
             this.btnEjnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEjnuevo.Location = new System.Drawing.Point(361, 14);
+            this.btnEjnuevo.Location = new System.Drawing.Point(552, 14);
             this.btnEjnuevo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnEjnuevo.Name = "btnEjnuevo";
             this.btnEjnuevo.Size = new System.Drawing.Size(142, 43);
@@ -488,7 +489,7 @@
             this.btnEjeditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEjeditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEjeditar.Image")));
             this.btnEjeditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEjeditar.Location = new System.Drawing.Point(507, 14);
+            this.btnEjeditar.Location = new System.Drawing.Point(698, 14);
             this.btnEjeditar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnEjeditar.Name = "btnEjeditar";
             this.btnEjeditar.Size = new System.Drawing.Size(136, 43);
@@ -507,7 +508,7 @@
             this.btnEjregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEjregresar.Image = ((System.Drawing.Image)(resources.GetObject("btnEjregresar.Image")));
             this.btnEjregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEjregresar.Location = new System.Drawing.Point(655, 14);
+            this.btnEjregresar.Location = new System.Drawing.Point(846, 14);
             this.btnEjregresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnEjregresar.Name = "btnEjregresar";
             this.btnEjregresar.Size = new System.Drawing.Size(98, 43);
@@ -523,12 +524,12 @@
             this.dtgEjecutivo.AllowUserToDeleteRows = false;
             this.dtgEjecutivo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgEjecutivo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgEjecutivo.Location = new System.Drawing.Point(23, 72);
+            this.dtgEjecutivo.Location = new System.Drawing.Point(9, 72);
             this.dtgEjecutivo.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.dtgEjecutivo.Name = "dtgEjecutivo";
             this.dtgEjecutivo.ReadOnly = true;
             this.dtgEjecutivo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEjecutivo.Size = new System.Drawing.Size(927, 293);
+            this.dtgEjecutivo.Size = new System.Drawing.Size(955, 293);
             this.dtgEjecutivo.TabIndex = 25;
             this.dtgEjecutivo.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEjecutivo_RowEnter);
             // 
@@ -536,7 +537,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1011, 657);
+            this.ClientSize = new System.Drawing.Size(997, 631);
             this.Controls.Add(this.gbDatosForm);
             this.Controls.Add(this.gbDatosGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

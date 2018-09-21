@@ -89,23 +89,43 @@ namespace Principal
 
         private void dtgChoferes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
+        int rowSelected=0;
+        private void Buscarchoferes_Load(object sender, EventArgs e)
+        {
+            fillGridView();
+        }
+
+        private void dtgChoferes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            seleccionar(e.RowIndex);
+        }
+
+        private void btnVeditar_Click(object sender, EventArgs e)
+        {
+            seleccionar(rowSelected);
+        }
+        private void seleccionar(int i)
+        {
             if (dtgChoferes.CurrentRow == null)
             {
                 return;
             }
-            int selectedrowindex = e.RowIndex;
+            int selectedrowindex = i;
             DataGridViewRow selectedRow = dtgChoferes.Rows[selectedrowindex];
             string a = Convert.ToString(selectedRow.Cells["_id"].Value);
             Permisionario chofer = new Permisionario();
             chofer.Id = a;
+            chofer.Firstname= Convert.ToString(selectedRow.Cells["firstname"].Value);
             _caller.SelectedDriver((Permisionario)chofer);
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
-        private void Buscarchoferes_Load(object sender, EventArgs e)
+        private void dtgChoferes_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-
+            rowSelected = e.RowIndex;
         }
     }
 }

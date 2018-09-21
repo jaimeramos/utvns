@@ -43,7 +43,7 @@ namespace Principal.Entidades
             string json = new JavaScriptSerializer().Serialize(new
             {
                 _id = this.Id,
-                number = this.Number,
+                number = 1,
                 description = this.Description,
                 cost = this.Cost,
                 active = this.Active

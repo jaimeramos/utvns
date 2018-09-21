@@ -80,10 +80,10 @@ namespace Principal
         {
             
         }
-
+        int rowSelected = 0;
         private void btnVeditar_Click(object sender, EventArgs e)
         {
-
+            seleccionar(rowSelected);
         }
 
         private void txtPefiltro_TextChanged(object sender, EventArgs e)
@@ -103,16 +103,29 @@ namespace Principal
 
         private void dataGrid_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            
+        }
+
+        private void dataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            seleccionar(e.RowIndex);
+        }
+
+        private void dataGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            rowSelected = e.RowIndex;
+        }
+        private void seleccionar(int i) {
             if (dataGrid.CurrentRow == null)
             {
                 return;
             }
-            int selectedrowindex = e.RowIndex;
+            int selectedrowindex = i;
             DataGridViewRow selectedRow = dataGrid.Rows[selectedrowindex];
             Sparepart sparepart = new Sparepart();
-            sparepart.Id            = Convert.ToString(selectedRow.Cells["_id"].Value); ;
-            sparepart.Description   = Convert.ToString(selectedRow.Cells["description"].Value);
-            sparepart.Price         = Convert.ToString(selectedRow.Cells["price"].Value);
+            sparepart.Id = Convert.ToString(selectedRow.Cells["_id"].Value); ;
+            sparepart.Description = Convert.ToString(selectedRow.Cells["description"].Value);
+            sparepart.Price = Convert.ToString(selectedRow.Cells["price"].Value);
             _caller.Selected((Sparepart)sparepart);
             this.DialogResult = DialogResult.OK;
             this.Close();

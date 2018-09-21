@@ -86,7 +86,7 @@
             // 
             // txtVseriemotor
             // 
-            this.txtVseriemotor.Location = new System.Drawing.Point(427, 46);
+            this.txtVseriemotor.Location = new System.Drawing.Point(427, 48);
             this.txtVseriemotor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVseriemotor.Name = "txtVseriemotor";
             this.txtVseriemotor.Size = new System.Drawing.Size(160, 23);
@@ -94,7 +94,7 @@
             // 
             // txtVserie
             // 
-            this.txtVserie.Location = new System.Drawing.Point(427, 16);
+            this.txtVserie.Location = new System.Drawing.Point(427, 17);
             this.txtVserie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVserie.Name = "txtVserie";
             this.txtVserie.Size = new System.Drawing.Size(160, 23);
@@ -102,7 +102,7 @@
             // 
             // txtVcolor
             // 
-            this.txtVcolor.Location = new System.Drawing.Point(111, 104);
+            this.txtVcolor.Location = new System.Drawing.Point(111, 106);
             this.txtVcolor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVcolor.Name = "txtVcolor";
             this.txtVcolor.Size = new System.Drawing.Size(183, 23);
@@ -111,7 +111,7 @@
             // 
             // txtVaño
             // 
-            this.txtVaño.Location = new System.Drawing.Point(111, 132);
+            this.txtVaño.Location = new System.Drawing.Point(111, 136);
             this.txtVaño.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVaño.Name = "txtVaño";
             this.txtVaño.Size = new System.Drawing.Size(183, 23);
@@ -119,12 +119,12 @@
             // 
             // txtVdescripcion
             // 
-            this.txtVdescripcion.Location = new System.Drawing.Point(111, 160);
+            this.txtVdescripcion.Location = new System.Drawing.Point(111, 163);
             this.txtVdescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVdescripcion.Multiline = true;
             this.txtVdescripcion.Name = "txtVdescripcion";
             this.txtVdescripcion.Size = new System.Drawing.Size(622, 45);
-            this.txtVdescripcion.TabIndex = 10;
+            this.txtVdescripcion.TabIndex = 12;
             // 
             // txtVmodelo
             // 
@@ -136,7 +136,7 @@
             // 
             // txtVnumero
             // 
-            this.txtVnumero.Location = new System.Drawing.Point(111, 20);
+            this.txtVnumero.Location = new System.Drawing.Point(111, 17);
             this.txtVnumero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVnumero.Name = "txtVnumero";
             this.txtVnumero.Size = new System.Drawing.Size(183, 23);
@@ -145,7 +145,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(319, 139);
+            this.label11.Location = new System.Drawing.Point(319, 140);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(48, 15);
@@ -155,17 +155,17 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(319, 79);
+            this.label10.Location = new System.Drawing.Point(319, 80);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(104, 15);
             this.label10.TabIndex = 68;
-            this.label10.Text = "Numero de Placa:";
+            this.label10.Text = "Número de Placa:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(319, 49);
+            this.label9.Location = new System.Drawing.Point(319, 52);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(97, 15);
@@ -175,7 +175,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(319, 19);
+            this.label8.Location = new System.Drawing.Point(319, 21);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(39, 15);
@@ -185,7 +185,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(36, 107);
+            this.label7.Location = new System.Drawing.Point(36, 110);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 15);
@@ -195,7 +195,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 135);
+            this.label6.Location = new System.Drawing.Point(36, 140);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 15);
@@ -205,7 +205,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 163);
+            this.label5.Location = new System.Drawing.Point(36, 166);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 15);
@@ -215,7 +215,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 79);
+            this.label3.Location = new System.Drawing.Point(36, 80);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 15);
@@ -225,12 +225,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 23);
+            this.label2.Location = new System.Drawing.Point(36, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 53;
-            this.label2.Text = "Numero:";
+            this.label2.Text = "Número:";
             // 
             // gbVehiculos
             // 
@@ -262,21 +262,21 @@
             this.gbVehiculos.Controls.Add(this.label9);
             this.gbVehiculos.Controls.Add(this.label8);
             this.gbVehiculos.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbVehiculos.Location = new System.Drawing.Point(29, 367);
+            this.gbVehiculos.Location = new System.Drawing.Point(29, 355);
             this.gbVehiculos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbVehiculos.Name = "gbVehiculos";
             this.gbVehiculos.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbVehiculos.Size = new System.Drawing.Size(939, 212);
             this.gbVehiculos.TabIndex = 79;
             this.gbVehiculos.TabStop = false;
-            this.gbVehiculos.Text = "Datos del Vehiculo";
+            this.gbVehiculos.Text = "Datos del Vehículo";
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(627, 136);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 23);
-            this.button2.TabIndex = 13;
+            this.button2.TabIndex = 11;
             this.button2.Text = "Buscar chofer";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -286,7 +286,7 @@
             this.button1.Location = new System.Drawing.Point(627, 106);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 23);
-            this.button1.TabIndex = 12;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Buscar permiso";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -305,10 +305,10 @@
             // rbInactivo
             // 
             this.rbInactivo.AutoSize = true;
-            this.rbInactivo.Location = new System.Drawing.Point(34, 47);
+            this.rbInactivo.Location = new System.Drawing.Point(24, 47);
             this.rbInactivo.Name = "rbInactivo";
             this.rbInactivo.Size = new System.Drawing.Size(67, 19);
-            this.rbInactivo.TabIndex = 11;
+            this.rbInactivo.TabIndex = 14;
             this.rbInactivo.TabStop = true;
             this.rbInactivo.Text = "Inactivo";
             this.rbInactivo.UseVisualStyleBackColor = true;
@@ -316,10 +316,10 @@
             // rbActivo
             // 
             this.rbActivo.AutoSize = true;
-            this.rbActivo.Location = new System.Drawing.Point(34, 22);
+            this.rbActivo.Location = new System.Drawing.Point(24, 22);
             this.rbActivo.Name = "rbActivo";
             this.rbActivo.Size = new System.Drawing.Size(59, 19);
-            this.rbActivo.TabIndex = 10;
+            this.rbActivo.TabIndex = 13;
             this.rbActivo.TabStop = true;
             this.rbActivo.Text = "Activo";
             this.rbActivo.UseVisualStyleBackColor = true;
@@ -339,12 +339,12 @@
             this.cmbPermitholder.Location = new System.Drawing.Point(427, 136);
             this.cmbPermitholder.Name = "cmbPermitholder";
             this.cmbPermitholder.Size = new System.Drawing.Size(194, 23);
-            this.cmbPermitholder.TabIndex = 9;
+            this.cmbPermitholder.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(319, 109);
+            this.label4.Location = new System.Drawing.Point(319, 110);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 15);
@@ -362,7 +362,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(36, 51);
+            this.label14.Location = new System.Drawing.Point(36, 52);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(44, 15);
@@ -382,7 +382,7 @@
             this.btnVcancelar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVcancelar.Name = "btnVcancelar";
             this.btnVcancelar.Size = new System.Drawing.Size(115, 40);
-            this.btnVcancelar.TabIndex = 15;
+            this.btnVcancelar.TabIndex = 16;
             this.btnVcancelar.Text = "Cancelar";
             this.btnVcancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVcancelar.UseVisualStyleBackColor = true;
@@ -402,7 +402,7 @@
             this.btnVguardar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVguardar.Name = "btnVguardar";
             this.btnVguardar.Size = new System.Drawing.Size(115, 40);
-            this.btnVguardar.TabIndex = 14;
+            this.btnVguardar.TabIndex = 15;
             this.btnVguardar.Text = "Guardar";
             this.btnVguardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVguardar.UseVisualStyleBackColor = true;
@@ -425,11 +425,12 @@
             this.gbVehiculos1.Controls.Add(this.txtVfiltro);
             this.gbVehiculos1.Controls.Add(this.label1);
             this.gbVehiculos1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbVehiculos1.Location = new System.Drawing.Point(29, 26);
+            this.gbVehiculos1.Location = new System.Drawing.Point(29, 11);
             this.gbVehiculos1.Name = "gbVehiculos1";
             this.gbVehiculos1.Size = new System.Drawing.Size(939, 336);
             this.gbVehiculos1.TabIndex = 87;
             this.gbVehiculos1.TabStop = false;
+            this.gbVehiculos1.Text = "Registro de Usuarios del sistema ";
             // 
             // chbVehiculos
             // 
@@ -454,7 +455,7 @@
             this.btnVeditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVeditar.Image = ((System.Drawing.Image)(resources.GetObject("btnVeditar.Image")));
             this.btnVeditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVeditar.Location = new System.Drawing.Point(631, 29);
+            this.btnVeditar.Location = new System.Drawing.Point(676, 17);
             this.btnVeditar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVeditar.Name = "btnVeditar";
             this.btnVeditar.Size = new System.Drawing.Size(136, 40);
@@ -473,7 +474,7 @@
             this.btnVregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVregresar.Image = ((System.Drawing.Image)(resources.GetObject("btnVregresar.Image")));
             this.btnVregresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVregresar.Location = new System.Drawing.Point(817, 29);
+            this.btnVregresar.Location = new System.Drawing.Point(833, 17);
             this.btnVregresar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVregresar.Name = "btnVregresar";
             this.btnVregresar.Size = new System.Drawing.Size(98, 40);
@@ -492,7 +493,7 @@
             this.btnVnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVnuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnVnuevo.Image")));
             this.btnVnuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVnuevo.Location = new System.Drawing.Point(435, 29);
+            this.btnVnuevo.Location = new System.Drawing.Point(509, 17);
             this.btnVnuevo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVnuevo.Name = "btnVnuevo";
             this.btnVnuevo.Size = new System.Drawing.Size(146, 40);
@@ -511,7 +512,7 @@
             this.btnVFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVFiltrar.Image = ((System.Drawing.Image)(resources.GetObject("btnVFiltrar.Image")));
             this.btnVFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVFiltrar.Location = new System.Drawing.Point(268, 29);
+            this.btnVFiltrar.Location = new System.Drawing.Point(291, 17);
             this.btnVFiltrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVFiltrar.Name = "btnVFiltrar";
             this.btnVFiltrar.Size = new System.Drawing.Size(117, 40);
@@ -527,29 +528,29 @@
             this.dtgVehiculo.AllowUserToDeleteRows = false;
             this.dtgVehiculo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgVehiculo.Location = new System.Drawing.Point(21, 76);
+            this.dtgVehiculo.Location = new System.Drawing.Point(5, 64);
             this.dtgVehiculo.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.dtgVehiculo.Name = "dtgVehiculo";
             this.dtgVehiculo.ReadOnly = true;
             this.dtgVehiculo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgVehiculo.Size = new System.Drawing.Size(895, 228);
+            this.dtgVehiculo.Size = new System.Drawing.Size(929, 240);
             this.dtgVehiculo.TabIndex = 89;
             this.dtgVehiculo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgVehiculo_CellContentClick);
             this.dtgVehiculo.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgVehiculo_RowEnter);
             // 
             // txtVfiltro
             // 
-            this.txtVfiltro.Location = new System.Drawing.Point(68, 39);
+            this.txtVfiltro.Location = new System.Drawing.Point(49, 26);
             this.txtVfiltro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVfiltro.Name = "txtVfiltro";
-            this.txtVfiltro.Size = new System.Drawing.Size(144, 23);
+            this.txtVfiltro.Size = new System.Drawing.Size(237, 23);
             this.txtVfiltro.TabIndex = 88;
             this.txtVfiltro.TextChanged += new System.EventHandler(this.txtVfiltro_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 42);
+            this.label1.Location = new System.Drawing.Point(6, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 15);
             this.label1.TabIndex = 87;
@@ -559,7 +560,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 593);
+            this.ClientSize = new System.Drawing.Size(996, 574);
             this.Controls.Add(this.gbVehiculos1);
             this.Controls.Add(this.gbVehiculos);
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

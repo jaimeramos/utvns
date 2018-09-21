@@ -81,11 +81,24 @@ namespace Principal
 
         private void dtgChoferes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            seleccionar(e.RowIndex);
+        }
+
+        private void Buscarchoferes_Load(object sender, EventArgs e)
+        {
+
+        }
+        int rowSelected = 0;
+        private void btnVeditar_Click(object sender, EventArgs e)
+        {
+            seleccionar(rowSelected);
+        }
+        private void seleccionar(int i) {
             if (dataGrid.CurrentRow == null)
             {
                 return;
             }
-            int selectedrowindex = e.RowIndex;
+            int selectedrowindex = i;
             DataGridViewRow selectedRow = dataGrid.Rows[selectedrowindex];
             string a = Convert.ToString(selectedRow.Cells["_id"].Value);
             Mecanico mechanic = new Mecanico();
@@ -95,9 +108,9 @@ namespace Principal
             this.Close();
         }
 
-        private void Buscarchoferes_Load(object sender, EventArgs e)
+        private void dataGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-
+            rowSelected = e.RowIndex;
         }
     }
 }

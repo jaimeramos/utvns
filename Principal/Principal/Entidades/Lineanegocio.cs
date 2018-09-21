@@ -122,6 +122,15 @@ namespace Principal.Entidades
 
         }
         /// <summary>
+        /// Obtiene un DataTable con todos los Permisionarios
+        /// </summary>
+        /// <returns>DataTable con los datos</returns>
+        public string readById(string ID)
+        {
+            return Data.getData(Entity + "/" + ID);
+
+        }
+        /// <summary>
         /// Agrega registros del la Linea de Negocio
         /// </summary>
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
@@ -131,7 +140,7 @@ namespace Principal.Entidades
             string json = new JavaScriptSerializer().Serialize(new
             {
                 _id = this.Id,
-                number = this.Number,
+                number = 1,
                 name = this.Name,
                 description = this.Description,
                 active= this.Active

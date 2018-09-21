@@ -196,7 +196,7 @@ namespace Principal.Entidades
             string json = new JavaScriptSerializer().Serialize(new
             {
                 _id = this.Id,
-                number = this.Number,
+                number = 1,
                 firstname = this.Firstname,
                 lastname = this.Lastname,
                 address = this.Address,
