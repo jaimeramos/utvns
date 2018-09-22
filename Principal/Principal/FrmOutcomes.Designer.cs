@@ -234,6 +234,7 @@
             // 
             // txtFolio
             // 
+            this.txtFolio.Enabled = false;
             this.txtFolio.Location = new System.Drawing.Point(122, 31);
             this.txtFolio.Name = "txtFolio";
             this.txtFolio.Size = new System.Drawing.Size(156, 22);

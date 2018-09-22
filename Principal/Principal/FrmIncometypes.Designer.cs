@@ -302,6 +302,7 @@
             // 
             // txtPrnumero
             // 
+            this.txtPrnumero.Enabled = false;
             this.txtPrnumero.Location = new System.Drawing.Point(78, 29);
             this.txtPrnumero.Name = "txtPrnumero";
             this.txtPrnumero.Size = new System.Drawing.Size(107, 20);

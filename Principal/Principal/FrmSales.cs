@@ -159,12 +159,16 @@ namespace Principal
 
         private void btnAgregarRefaccion_Click(object sender, EventArgs e)
         {
+            double cantidad = 0, stock=0;
+            Double.TryParse(txtCantidad.Text, out cantidad);
+            Double.TryParse(sparepart.Stock, out stock);
             if (txtCantidad.Text.Trim() == "")
             {
                 MessageBox.Show("Indique la cantidad");
                 txtCantidad.Focus();
             }
-            else {
+            else if (stock >= cantidad)
+            {
                 Detalleventa saledetail = new Detalleventa();
                 if (saledetailgral != null)
                     saledetail.Idsparepart = saledetailgral.Idsparepart;
@@ -175,24 +179,26 @@ namespace Principal
                 saledetailslist.Add(saledetail);
                 dataGridRefacciones.DataSource = null;
 
-                double total = 0, cantidad = 0, precio = 0;
+                double total = 0, precio = 0;
                 Double.TryParse(txtTotal.Text, out total);
-                Double.TryParse(txtCantidad.Text, out cantidad);
+                //Double.TryParse(txtCantidad.Text, out cantidad);
                 Double.TryParse(txtPrecio.Text, out precio);
                 total += cantidad * precio;
                 txtTotal.Text = "" + total;
                 reloadInitialStateRef();
-                
+
+            }
+            else {
+                MessageBox.Show("Cantidad de artículos solicitada es mayor a la existencia en inventario.");
             }
         }
-
+        Sparepart sparepart = new Sparepart();
         private void cmbRefacciones_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Sparepart sparepart = new Sparepart();
-            string json = sparepart.readById(cmbRefacciones.SelectedValue.ToString());
-            sparepart = JsonConvert.DeserializeObject<Sparepart>(json.Replace("_id", "id"));
-            txtDescripcion.Text = sparepart.Description;
-            txtPrecio.Text = sparepart.Price;
+                string json = sparepart.readById(cmbRefacciones.SelectedValue.ToString());
+                sparepart = JsonConvert.DeserializeObject<Sparepart>(json.Replace("_id", "id"));
+                txtDescripcion.Text = sparepart.Description;
+                txtPrecio.Text = sparepart.Price;
         }
 
         private void txtFolio_KeyPress(object sender, KeyPressEventArgs e)
@@ -438,7 +444,24 @@ namespace Principal
             }
             return todoOk;
         }
-
+        private void actualizaStock(string idsp, double qty) {
+            Sparepart sparepart = new Sparepart();
+            string json = sparepart.read();
+            List<Sparepart> x = JsonConvert.DeserializeObject<List<Sparepart>>(json.Replace("_id", "id"));
+            if (!json.Equals("[]"))
+            {
+                foreach (Sparepart p in x)
+                {
+                    if (p.Id.Equals(idsp)) {
+                        double newStock = 0;
+                        Double.TryParse(p.Stock, out newStock);
+                        p.Stock =""+(newStock-qty);
+                        p.upSert();
+                        break;
+                    }
+                }
+            }
+        }
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             if (validar(this))
@@ -448,6 +471,10 @@ namespace Principal
                 foreach (Detalleventa dv in saledetailslist) {
                     dv.Idsale = sale.Id;
                     dv.upSert();
+                    double qty = 0;
+                    Double.TryParse(dv.Quantity, out qty);
+                    actualizaStock(dv.Idsparepart, qty);
+                    //actualizar el stock
                 }
                 foreach (Detalleventasvc dvsvc in saledetailssvclist)
                 {

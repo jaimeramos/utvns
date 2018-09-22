@@ -137,7 +137,7 @@ namespace Principal
             bool todoOk = true;
             foreach (Control oControls in gbDatosForm.Controls) // Buscamos en cada TextBox de nuestro Formulario. 
             {
-                if (oControls is TextBox)
+                if (oControls is TextBox && oControls.Enabled)
                 {
                     if (oControls.Text == String.Empty) // Verificamos que no este vacio. 
                     {
@@ -179,6 +179,7 @@ namespace Principal
                 this.dataGrid.Columns["active"].Visible = true;
                 this.dataGrid.Columns["created_at"].Visible = false;
                 this.dataGrid.Columns["updated_at"].Visible = false;
+                this.dataGrid.Columns["idbusinessline"].Visible = false;
                 this.dataGrid.Columns["__v"].Visible = false;
                 this.dataGrid.Columns["_id"].Visible = false;
 

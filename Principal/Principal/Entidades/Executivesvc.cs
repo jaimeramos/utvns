@@ -50,7 +50,8 @@ namespace Principal.Entidades
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
         /// <param name="opt">opt indica si trae o no contraseña</param>
         public string upSert()
-        {
+        {           
+            if (this.Id == null) { }
             string json = new JavaScriptSerializer().Serialize(new
             {
                 _id = this.Id,

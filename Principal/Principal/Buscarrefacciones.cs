@@ -126,6 +126,7 @@ namespace Principal
             sparepart.Id = Convert.ToString(selectedRow.Cells["_id"].Value); ;
             sparepart.Description = Convert.ToString(selectedRow.Cells["description"].Value);
             sparepart.Price = Convert.ToString(selectedRow.Cells["price"].Value);
+            sparepart.Stock = Convert.ToString(selectedRow.Cells["stock"].Value);
             _caller.Selected((Sparepart)sparepart);
             this.DialogResult = DialogResult.OK;
             this.Close();

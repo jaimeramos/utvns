@@ -148,7 +148,7 @@ namespace Principal
             bool todoOk = true;
             foreach (Control oControls in gbDatosForm.Controls) // Buscamos en cada TextBox de nuestro Formulario. 
             {
-                if (oControls is TextBox)
+                if (oControls is TextBox && oControls.Enabled)
                 {
                     if (oControls.Text == String.Empty) // Verificamos que no este vacio. 
                     {
