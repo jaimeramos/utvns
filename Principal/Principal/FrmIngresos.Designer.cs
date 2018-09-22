@@ -298,6 +298,7 @@
             this.btnConfirmar.TabIndex = 20;
             this.btnConfirmar.Text = "Confirmar ingreso";
             this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnGuardar
             // 
@@ -307,6 +308,7 @@
             this.btnGuardar.TabIndex = 19;
             this.btnGuardar.Text = "Guardar ingreso";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label5
             // 

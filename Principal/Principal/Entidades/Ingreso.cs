@@ -165,34 +165,31 @@ namespace Principal.Entidades
         /// </summary>
         /// <returns>'true' si fue correcto, 'false' si fue incorrecto</returns>
 
-        public bool upSert(bool opt)
+        public string upSert()
         {
             string json = new JavaScriptSerializer().Serialize(new
             {
                 _id = this.Id,
                 folio = 1,
-                receiptnumber = this.Receiptnumber,
+                receiptnumber = 1,
                 Idvehicle = this.Idvehicle,
                 idpermitholder = this.Idpermitholder,
                 amount = this.Amount,
                 date = this.Date,
-
-
+                active=this.Active
             });
 
             string data;
             data = json;
             if (this.Id == null)
             {
-                Data.sendData(Entity, data, "POST");
-
-                return this.Id != String.Empty;
+               return Data.sendData(Entity, data, "POST");
+                //return this.Id != String.Empty;
             }
             else
             {
-                Data.sendData(Entity + "/" + this.Id, data, "PUT");
-
-                return false;
+                return Data.sendData(Entity + "/" + this.Id, data, "PUT");
+                //return false;
             }
         }
 

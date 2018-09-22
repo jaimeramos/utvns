@@ -209,5 +209,78 @@ namespace Principal
                 reloadInitialStateRef();
             }
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (validar(this) && dataGridID.Rows.Count > 0 )
+            {
+                loadDataFromForm();
+                string json = income.upSert();
+                income = JsonConvert.DeserializeObject<Ingreso>(json.Replace("_id", "id"));
+                txtFolio.Text = income.Folio;
+                txtRecibo.Text = income.Receiptnumber;
+                btnGuardar.Enabled = false;
+                btnConfirmar.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Verifique haber ingresado todos los datos.");
+            }
+        }
+        private bool validar(Form formulario)
+        {
+            bool todoOk = true;
+            foreach (Control oControls in this.Controls) // Buscamos en cada TextBox de nuestro Formulario. 
+            {
+                if (oControls is TextBox && oControls.Enabled)
+                {
+                    if (oControls.Text == String.Empty) // Verificamos que no este vacio. 
+                    {
+                        MessageBox.Show("Favor de llenar los campos vacios."); // Si nuestra variable es verdadera mostramos un mensaje.
+                        todoOk = false;
+                        break;
+                    }
+                }
+            }
+            return todoOk;
+        }
+        public void loadDataFromForm()
+        {
+            income.Idvehicle = cmbVehicles.SelectedValue.ToString();
+            income.Amount = txtTotal.Text;
+            DateTime dt1 = DateTime.ParseExact(dtpFechaCubierta.Text, "dd/MM/yyyy",
+                                      System.Globalization.CultureInfo.CreateSpecificCulture("en-US"));
+            income.Date = dt1.Month + "/" + dt1.Day + "/" + dt1.Year;
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            if (validar(this))
+            {
+                loadDataFromForm();
+                string json = income.upSert();
+                foreach(Incomedetail dv in incomedetailslist)
+                {
+                    dv.Idincome = income.Id;
+                    dv.upSert();
+                }
+               
+                reloadInitialState();
+            }
+            else
+            {
+            }
+        }
+        private void reloadInitialState()
+        {
+            incomedetailslist.Clear();
+            reloadInitialStateRef();
+            txtFolio.Text = "";
+            txtRecibo.Text = "";
+            txtTotal.Text = "";
+            income = new Ingreso();
+            btnGuardar.Enabled = true;
+            btnConfirmar.Enabled = false;
+        }
     }
 }
